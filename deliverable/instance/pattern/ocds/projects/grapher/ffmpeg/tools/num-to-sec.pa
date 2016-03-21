@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="572" operatorIdOut="569" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="478" operatorIdOut="516" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+    </layouts>
+    <composerscreen viewx="-5420" viewy="2500" viewscale="-3" windowsx="0" windowsy="40" windowswidth="1366" windowsheight="728" numscreen="0" fullscreen="true"/>
+    <compositions>
+        <currentComposition id="96"/>
+        <composition id="96" name="num-to-sec" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc."/>
+        <connector compositionId="96" connectorId="1" side="IN" name="num.num" x="-55" y="0"/>
+        <connector compositionId="96" connectorId="2" side="OUT" name="sec.num" x="55" y="0"/>
+        <operatorconnector opId="569" connectorId="0" x="-65.9805" y="-1.60447"/>
+        <operatorconnector opId="569" connectorId="1" x="64.6109" y="13.4695"/>
+        <operatorconnector opId="516" connectorId="0" x="-62.1947" y="22.0867"/>
+        <operatorconnector opId="516" connectorId="1" x="-62.4033" y="-21.4902"/>
+        <operatorconnector opId="516" connectorId="2" x="65.9903" y="-1.13394"/>
+        <operator id="516" type="NumberdivNumber" x="31.0808" y="57.8574" z="3" parentId="96"/>
+        <operatorconnector opId="516" connectorId="0" x="-62.1947" y="22.0867"/>
+        <operatorconnector opId="516" connectorId="1" x="-62.4033" y="-21.4902"/>
+        <operatorconnector opId="516" connectorId="2" x="65.9903" y="-1.13394"/>
+        <compositioncontrol id="478" type="NumberView" x="61.3931" y="145.532" z="1" width="162" height="75" parentId="96" content=""/>
+        <compositioncontrol id="572" type="EditorNumber" x="-207.798" y="-194.35" z="1" width="192" height="85" parentId="96" content="25"/>
+        <text x="-63.9146" y="-225.532" z="0" parentId="96" color="#ffffff" police="10" font="Droid Sans" italic="false" bold="false" underline="false" content="num to sec&#10;sec to num"/>
+        <operator id="569" type="id" x="-147.413" y="-43.5271" z="0" parentId="96"/>
+        <operatorconnector opId="569" connectorId="0" x="-65.9805" y="-1.60447"/>
+        <operatorconnector opId="569" connectorId="1" x="64.6109" y="13.4695"/>
+        <text x="111.085" y="-67.5316" z="0" parentId="96" color="#ffffff" police="10" font="Droid Sans" italic="false" bold="false" underline="false" content="secondes"/>
+        <connection controlId="478" operatorIdOut="516" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="572" operatorIdOut="569" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection operatorId1="516" compositionId2="96" connectorId1="0" connectorId2="1"/>
+        <connection connectorId1="1" operatorId1="516" connectorId2="1" operatorId2="569"/>
+        <connection operatorId1="516" compositionId2="96" connectorId1="2" connectorId2="2"/>
+        <connection connectorId1="1" operatorId1="569" connectorId2="1" operatorId2="516"/>
+        <connection compositionId1="96" operatorId2="516" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="96" operatorId2="516" connectorId1="2" connectorId2="2"/>
+    </compositions>
+</cameleon>

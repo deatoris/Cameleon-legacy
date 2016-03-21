@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="66" operatorIdOut="1" controlConnectorIdIn="1" operatorConnectorIdOut="0"/>
+        <connection controlId="66" operatorIdOut="0" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="67" operatorIdOut="13" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="68" operatorIdOut="6" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="69" operatorIdOut="7" controlConnectorIdIn="1" operatorConnectorIdOut="0"/>
+    </layouts>
+    <composerscreen viewx="69" viewy="27" viewscale="-14" windowsx="0" windowsy="40" windowswidth="1366" windowsheight="728" numscreen="0" fullscreen="true"/>
+    <compositions>
+        <currentComposition id="3"/>
+        <composition id="3" name="editHTML" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc."/>
+        <composition id="2" name="editHTML" x="-38.6567" y="-352.145" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="-319" viewy="-239" viewscale="0" parentId="3"/>
+        <composition id="1" name="article-pattern.html" x="-859.548" y="-42.2338" z="-700" informations="In your project directory: ressource/article-pattern.html" viewx="-549" viewy="-329" viewscale="0" parentId="2"/>
+        <connector compositionId="1" connectorId="1" side="OUT" name="article-pattern.html.str" x="53.0433" y="14.54"/>
+        <compositioncontrol id="66" type="texteditorstringtext2" x="-749.5" y="-201.795" z="2" width="738" height="605" parentId="3" content="&#10;&lt;html&gt;&lt;head&gt;&#10;&lt;title&gt;productions shinoe&lt;/title&gt;&#10;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot;&gt;&#10;&#10;&lt;meta name=&quot;Author&quot;&#9;&#9;content=&quot;Olivier Cugnon de Svricourt&quot;&gt;&#10;&#10;&lt;meta name=&quot;Publisher&quot;&#9;&#9;content=&quot;shinoe&quot;&gt;&#10;&#10;&lt;meta name=&quot;Keywords&quot;&#9;&#9;content=&quot;film,films,cinema,art,processing&quot;&gt;&#10;&#10;&lt;meta name=&quot;Copyright&quot; &#9;&#9;content=&quot;All contents copyright 2000-2012, Olivier Cugnon de Svricourt&quot;&gt;&#10;&#10;&lt;link rel=&quot;stylesheet&quot; href=&quot;shinoe.css&quot;&gt;&#10;&lt;script type=&quot;text/javascript&quot;&gt;&#10;&#10;  var _gaq = _gaq || [];&#10;  _gaq.push(['_setAccount', 'UA-10195778-8']);&#10;  _gaq.push(['_trackPageview']);&#10;&#10;&#10;  (function() {&#10;    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;&#10;    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';&#10;    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);&#10;  })();&#10;&#10;&lt;/script&gt;&#10;&lt;body&gt; &#10;&lt;div id=&quot;homedescribe&quot;&gt;olivier's work|&lt;a href=&quot;postmortem.html&quot;&gt;post mortems&lt;/a&gt;&lt;dd&gt;&lt;dd&gt;&lt;dd&gt;&lt;dd&gt;&lt;dd&gt;&lt;/div&gt; &#10;&lt;div id=&quot;imagegrid&quot;&gt; &#10;    &lt;table width=&quot;580&quot; border=&quot;0&quot; cellpadding=&quot;2&quot; cellspacing=&quot;16&quot;&gt;    &#10;&#9; &lt;tr&gt; &#10;      &lt;td&gt;&lt;a href=&quot;films/lppp.html&quot;&gt;&lt;img src=&quot;images/Test01.jpg&quot; onMouseOver=&quot;this.src='images/Test01_h.jpg'&quot; onMouseOut=&quot;this.src='images/Test01.jpg'&quot; width=&quot;140&quot; height=&quot;280&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/td&gt; &#10;      &lt;td&gt;&lt;a href=&quot;films/JLG.html&quot;&gt;&lt;img src=&quot;images/Test03.jpg&quot; onMouseOver=&quot;this.src='images/Test03_h.jpg'&quot; onMouseOut=&quot;this.src='images/Test03.jpg'&quot; width=&quot;140&quot; height=&quot;280&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/td&gt; &#10;      &lt;td&gt;&lt;a href=&quot;films/spirit.html&quot;&gt;&lt;img src=&quot;images/Test04.jpg&quot; onMouseOver=&quot;this.src='images/Test04_h.jpg'&quot; onMouseOut=&quot;this.src='images/Test04.jpg'&quot; width=&quot;140&quot; height=&quot;280&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/td&gt; &#10;      &lt;td&gt;&lt;a href=&quot;films/kita.html&quot;&gt;&lt;img src=&quot;images/Test02.jpg&quot; onMouseOver=&quot;this.src='images/Test02_h.jpg'&quot; onMouseOut=&quot;this.src='images/Test02.jpg'&quot; width=&quot;140&quot; height=&quot;280&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/td&gt; &#10;    &lt;/tr&gt;        &#10;&#9;&lt;/table&gt;&#9;&#10;    &lt;table width=&quot;580&quot; border=&quot;0&quot; cellpadding=&quot;2&quot; cellspacing=&quot;16&quot;&gt;    &#10;&#9; &lt;tr&gt;   &#10;&#9;&#9;&lt;td align=&quot;right&quot;&gt;copyle blabl aldlq ksdlkj       ft olivier cug no    n de svricourt 2000/12|&lt;a href=&quot;http://cameleon.shinoe.org/blog/?page_id=58&quot;&gt;contacts&lt;/a&gt;&lt;/td&gt; &#10;    &lt;/tr&gt;        &#10;&#9;&lt;/table&gt; &#10;&#9;&lt;/div&gt; &#10;&#10;&lt;/div&gt; &#10;&lt;/body&gt; &#10;&lt;/html&gt; &#10;"/>
+        <compositioncontrol id="67" type="Browser" x="-55.5" y="-203.855" z="1" width="805" height="611" parentId="3" content=""/>
+        <connection controlId="66" operatorIdOut="0" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="66" operatorIdOut="1" controlConnectorIdIn="1" operatorConnectorIdOut="0"/>
+        <connection controlId="67" operatorIdOut="13" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <operator id="9" type="OperatorSaveString" x="675.528" y="-114.766" z="1" parentId="2"/>
+        <operatorconnector opId="9" connectorId="0" x="-65.9548" y="2.44277"/>
+        <operatorconnector opId="9" connectorId="1" x="-49.6701" y="43.4613"/>
+        <operatorconnector opId="9" connectorId="2" x="42.4433" y="42.4095"/>
+        <operator id="2" type="id" x="-272.548" y="114.766" z="0" parentId="2"/>
+        <operatorconnector opId="2" connectorId="0" x="-62.2197" y="-22.0162"/>
+        <operatorconnector opId="2" connectorId="1" x="65.9949" y="0.824427"/>
+        <operator id="13" type="sync" x="844.548" y="93.9361" z="0" parentId="2"/>
+        <operatorconnector opId="13" connectorId="0" x="-60.8508" y="25.5573"/>
+        <operatorconnector opId="13" connectorId="1" x="-57.047" y="-33.191"/>
+        <operatorconnector opId="13" connectorId="2" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="13" connectorId="3" x="60" y="0"/>
+        <operator id="12" type="Copy" x="371.293" y="104.224" z="0" parentId="2"/>
+        <operatorconnector opId="12" connectorId="0" x="-61.8407" y="-23.0592"/>
+        <operatorconnector opId="12" connectorId="1" x="65.2932" y="9.63342"/>
+        <operatorconnector opId="12" connectorId="2" x="44.0085" y="-49.1859"/>
+        <operator id="0" type="inputstring" x="-519.548" y="-65.2338" z="0" parentId="2"/>
+        <operatorconnector opId="0" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="0" connectorId="1" x="42.4433" y="42.4095"/>
+        <operator id="1" type="id" x="-83.4609" y="-41.643" z="0" parentId="2"/>
+        <operatorconnector opId="1" connectorId="0" x="-64.6612" y="13.2262"/>
+        <operatorconnector opId="1" connectorId="1" x="49.7941" y="43.3192"/>
+        <operator id="8" type="id" x="144.954" y="41.0257" z="0" parentId="2"/>
+        <operatorconnector opId="8" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="8" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="8" connectorId="2" x="55.8947" y="35.0967"/>
+        <operatorconnector opId="8" connectorId="3" x="61.1785" y="-24.7627"/>
+        <operatoraction opId="8" actionKey="AddPlug"/>
+        <operator id="3" type="Copy" x="-661.548" y="97.7662" z="0" parentId="2"/>
+        <operatorconnector opId="3" connectorId="0" x="-45.907" y="46.0168"/>
+        <operatorconnector opId="3" connectorId="1" x="45.9802" y="45.9436"/>
+        <operatorconnector opId="3" connectorId="2" x="60.0571" y="24.8625"/>
+        <operatorconnector opId="3" connectorId="3" x="65" y="0"/>
+        <operatorconnector opId="3" connectorId="4" x="53.2648" y="-46.9453"/>
+        <operatoraction opId="3" actionKey="AddPlug"/>
+        <operatoraction opId="3" actionKey="AddPlug"/>
+        <compositioncontrol id="69" type="EditorCheckBox" x="-430" y="213" z="1" width="77" height="78" parentId="1" content="TRUE"/>
+        <compositioncontrol id="68" type="LineEditorString" x="-766" y="-166" z="1" width="536" height="85" parentId="1" content="ressource/article-pattern.html"/>
+        <operator id="5" type="stringconcatstring" x="152" y="40" z="1" parentId="1"/>
+        <operatorconnector opId="5" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="5" connectorId="1" x="-62.2684" y="-21.8781"/>
+        <operatorconnector opId="5" connectorId="2" x="65.9564" y="-2.39841"/>
+        <operator id="7" type="stringCSDOperatorProjectPathstring" x="-169" y="192" z="0" parentId="1"/>
+        <operatorconnector opId="7" connectorId="0" x="-63.4606" y="18.1316"/>
+        <operatorconnector opId="7" connectorId="1" x="65.729" y="-5.97536"/>
+        <operator id="6" type="id" x="-127" y="-33" z="0" parentId="1"/>
+        <operatorconnector opId="6" connectorId="0" x="-64.2268" y="15.1959"/>
+        <operatorconnector opId="6" connectorId="1" x="62.1862" y="22.1106"/>
+        <connection controlId="69" operatorIdOut="7" controlConnectorIdIn="1" operatorConnectorIdOut="0"/>
+        <connection controlId="68" operatorIdOut="6" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection connectorId1="0" operatorId1="9" connectorId2="3" operatorId2="8"/>
+        <connection connectorId1="1" operatorId1="9" connectorId2="2" operatorId2="12"/>
+        <connection connectorId1="2" operatorId1="9" connectorId2="1" operatorId2="13"/>
+        <connection connectorId1="0" operatorId1="2" connectorId2="3" operatorId2="3"/>
+        <connection connectorId1="1" operatorId1="2" connectorId2="0" operatorId2="8"/>
+        <connection connectorId1="0" operatorId1="13" connectorId2="1" operatorId2="12"/>
+        <connection connectorId1="1" operatorId1="13" connectorId2="2" operatorId2="9"/>
+        <connection connectorId1="0" operatorId1="12" connectorId2="2" operatorId2="8"/>
+        <connection connectorId1="1" operatorId1="12" connectorId2="0" operatorId2="13"/>
+        <connection connectorId1="2" operatorId1="12" connectorId2="1" operatorId2="9"/>
+        <connection connectorId1="0" operatorId1="0" connectorId2="4" operatorId2="3"/>
+        <connection connectorId1="1" operatorId1="1" connectorId2="1" operatorId2="8"/>
+        <connection connectorId1="0" operatorId1="8" connectorId2="1" operatorId2="2"/>
+        <connection connectorId1="1" operatorId1="8" connectorId2="1" operatorId2="1"/>
+        <connection connectorId1="2" operatorId1="8" connectorId2="0" operatorId2="12"/>
+        <connection connectorId1="3" operatorId1="8" connectorId2="0" operatorId2="9"/>
+        <connection operatorId1="3" compositionId2="1" connectorId1="0" connectorId2="1"/>
+        <connection connectorId1="3" operatorId1="3" connectorId2="0" operatorId2="2"/>
+        <connection connectorId1="4" operatorId1="3" connectorId2="0" operatorId2="0"/>
+        <connection compositionId1="1" operatorId2="3" connectorId1="1" connectorId2="0"/>
+        <connection connectorId1="0" operatorId1="5" connectorId2="1" operatorId2="7"/>
+        <connection connectorId1="1" operatorId1="5" connectorId2="1" operatorId2="6"/>
+        <connection operatorId1="5" compositionId2="1" connectorId1="2" connectorId2="1"/>
+        <connection connectorId1="1" operatorId1="7" connectorId2="0" operatorId2="5"/>
+        <connection connectorId1="1" operatorId1="6" connectorId2="1" operatorId2="5"/>
+        <connection compositionId1="1" operatorId2="5" connectorId1="1" connectorId2="2"/>
+    </compositions>
+</cameleon>

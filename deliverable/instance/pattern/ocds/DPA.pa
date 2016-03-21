@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <readme text="=========================&#10;README&#10;=========================&#10;Here we work with video, image using CLI external tools to manipualte those media.&#10;We design &amp; create interactive &amp; easy to modify &amp; personnalize workflows.&#10;The target is to process video movies, this is the place where we create &amp; innovate around new thechnologies applied to video post production &amp; mastering management.&#10;&#10;Each lab version highlight a new innovative step in the videography Caméléon pattern field.&#10;&#10;This lab is maintain by Olivier Cugnon de Sévricourt, engineer &amp; one of the two Caméléon inventors.&#10;&#10;Olivier Cugnon de Sévricourt &amp; Vincent Tariel had designed &amp; created Caméléon.&#10;&#10;We create python CLI tools to generate videography functional patterns from external command line tools.&#10;"/>
+    <log path="log" active="true">
+        <rule component="FUNCTIONAL" level="INFO"/>
+        <rule component="MACHINE" level="DEBG"/>
+        <rule component="POP" level="DEBG"/>
+        <rule component="SCD" level="DEBG"/>
+    </log>
+    <structure showmachine="true" showproject="true" showglossary="true" showcontroller="false"/>
+    <tmp path="tmp"/>
+    <ressource path="ressource"/>
+    <name name="Videographer lab"/>
+    <version version="0.0.5"/>
+    <connectorOrder mode="HARD"/>
+    <target path="target"/>
+    <threads max="1"/>
+    <numbers nb_operators="0" nb_controls="" nb_compositions="7"/>
+    <controllerscreen viewx="0" viewy="0" viewscale="0" windowsx="0" windowsy="40" windowswidth="1366" windowsheight="728" numscreen="0" fullscreen="false"/>
+    <layouts>
+        <currentLayout id="1"/>
+        <layout id="0" type="interface" name="" viewx="0" viewy="0" viewscale="0" popup="false" resolution=""/>
+        <layout id="1" type="interface" name="interface" viewx="0" viewy="0" viewscale="0" popup="false" resolution=""/>
+    </layouts>
+    <composerscreen viewx="-1590" viewy="412" viewscale="-4" windowsx="0" windowsy="40" windowswidth="1366" windowsheight="728" numscreen="0" fullscreen="true"/>
+    <compositions>
+        <currentComposition id="0"/>
+        <composition id="0" name="INSTANCE" viewx="-1590" viewy="412" viewscale="-4"/>
+        <composition id="1" name="CAM" x="-1753.25" y="891.242" z="-700" informations="DPA produce code from specification file. It's an high valuable activity. DPA can maintain &amp; insure your code.&#10;The validity of your specification is insure by Test team." viewx="-1152" viewy="-268" viewscale="-2" parentId="0"/>
+        <connector compositionId="1" connectorId="1" side="IN" name="target.txt" x="-59.967" y="-1.98954"/>
+        <connector compositionId="1" connectorId="2" side="OUT" name="specification.txt" x="59.9473" y="-2.51527"/>
+        <composition id="2" name="Writting" x="239" y="418" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="-311" viewy="-233" viewscale="0" parentId="1"/>
+        <connector compositionId="2" connectorId="1" side="IN" name="input0.gen" x="-55" y="0"/>
+        <connector compositionId="2" connectorId="2" side="OUT" name="output0.gen" x="55" y="0"/>
+        <composition id="3" name="Modeling" x="237" y="154" z="-700" informations="DPA produce code from specification file. It's an high valuable activity. DPA can maintain &amp; insure your code.&#10;The validity of your specification is insure by Test team." viewx="-311" viewy="-232" viewscale="0" parentId="1"/>
+        <connector compositionId="3" connectorId="1" side="IN" name="spec.txt" x="-54.9857" y="-1.25329"/>
+        <connector compositionId="3" connectorId="2" side="OUT" name="code.txt" x="54.9418" y="2.52897"/>
+        <composition id="4" name="Exploring" x="-730.453" y="-93.3047" z="-700" informations="DPA produce code from specification file. It's an high valuable activity. DPA can maintain &amp; insure your code.&#10;The validity of your specification is insure by Test team." viewx="-311" viewy="-232" viewscale="0" parentId="1"/>
+        <connector compositionId="4" connectorId="1" side="IN" name="spec.txt" x="-59.8978" y="3.50126"/>
+        <connector compositionId="4" connectorId="2" side="OUT" name="code.txt" x="54.9263" y="2.84586"/>
+        <composition id="5" name="Designing" x="-375.594" y="285.35" z="-700" informations="DPA produce code from specification file. It's an high valuable activity. DPA can maintain &amp; insure your code.&#10;The validity of your specification is insure by Test team." viewx="-311" viewy="-232" viewscale="0" parentId="1"/>
+        <connector compositionId="5" connectorId="1" side="IN" name="spec.txt" x="-4.63541" y="-59.8207"/>
+        <connector compositionId="5" connectorId="2" side="OUT" name="code.txt" x="54.9418" y="2.52897"/>
+        <composition id="6" name="Validation?" x="490.874" y="-59.4268" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="-549" viewy="-194" viewscale="0" parentId="1"/>
+        <connector compositionId="6" connectorId="1" side="IN" name="Other side not connected" x="3.22971" y="54.9051"/>
+        <connector compositionId="6" connectorId="2" side="OUT" name="Other side not connected" x="59.969" y="1.92698"/>
+        <connector compositionId="6" connectorId="3" side="OUT" name="Other side not connected" x="-54.2517" y="-9.04195"/>
+        <composition id="7" name="DPA" x="-1219.12" y="890.182" z="-700" informations="DPA produce code from specification file. It's an high valuable activity. DPA can maintain &amp; insure your code.&#10;The validity of your specification is insure by Test team." viewx="-549" viewy="-192" viewscale="0" parentId="0"/>
+        <connector compositionId="7" connectorId="1" side="IN" name="spec.txt" x="-54.9857" y="-1.25329"/>
+        <connector compositionId="7" connectorId="2" side="OUT" name="code.txt" x="54.9418" y="2.52897"/>
+        <operator id="2" type="Copy" x="-14" y="297" z="0" parentId="1"/>
+        <operatorconnector opId="2" connectorId="0" x="-65.2556" y="-9.88457"/>
+        <operatorconnector opId="2" connectorId="1" x="52.4554" y="40.0554"/>
+        <operatorconnector opId="2" connectorId="2" x="54.5287" y="-37.1837"/>
+        <operator id="1" type="merge" x="486" y="263" z="0" parentId="1"/>
+        <operatorconnector opId="1" connectorId="0" x="-40.313" y="52.2576"/>
+        <operatorconnector opId="1" connectorId="1" x="-64.3902" y="-14.4878"/>
+        <operatorconnector opId="1" connectorId="2" x="9.79047" y="-65.2698"/>
+        <operator id="0" type="merge" x="-367.326" y="-84.1212" z="0" parentId="1"/>
+        <operatorconnector opId="0" connectorId="0" x="-65.8443" y="-4.5313"/>
+        <operatorconnector opId="0" connectorId="1" x="65.6032" y="7.22677"/>
+        <operatorconnector opId="0" connectorId="2" x="-4.84855" y="65.8217"/>
+        <operator id="3" type="id" x="2" y="0" z="0" parentId="2"/>
+        <operatorconnector opId="3" connectorId="0" x="-61.0129" y="25.1678"/>
+        <operatorconnector opId="3" connectorId="1" x="56.5261" y="34.0705"/>
+        <operator id="4" type="id" x="10" y="-53" z="0" parentId="3"/>
+        <operatorconnector opId="4" connectorId="0" x="-61.0129" y="25.1678"/>
+        <operatorconnector opId="4" connectorId="1" x="56.5261" y="34.0705"/>
+        <operator id="5" type="id" x="10" y="-53" z="0" parentId="4"/>
+        <operatorconnector opId="5" connectorId="0" x="-61.0129" y="25.1678"/>
+        <operatorconnector opId="5" connectorId="1" x="56.5261" y="34.0705"/>
+        <operator id="6" type="id" x="-38" y="-4" z="0" parentId="5"/>
+        <operatorconnector opId="6" connectorId="0" x="-36.6102" y="-54.9153"/>
+        <operatorconnector opId="6" connectorId="1" x="56.5261" y="34.0705"/>
+        <operator id="7" type="If" x="20" y="-38" z="1" parentId="6"/>
+        <operatorconnector opId="7" connectorId="0" x="-16.8189" y="63.821"/>
+        <operatorconnector opId="7" connectorId="1" x="-15.1379" y="64.2405"/>
+        <operatorconnector opId="7" connectorId="2" x="64.5976" y="13.5331"/>
+        <operatorconnector opId="7" connectorId="3" x="-65.6584" y="-6.70645"/>
+        <operator id="8" type="id" x="-1" y="-10" z="0" parentId="7"/>
+        <operatorconnector opId="8" connectorId="0" x="-62.2586" y="-21.9058"/>
+        <operatorconnector opId="8" connectorId="1" x="56.5261" y="34.0705"/>
+        <connection compositionId1="7" compositionId2="1" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="1" compositionId2="7" connectorId1="2" connectorId2="1"/>
+        <connection operatorId1="2" compositionId2="5" connectorId1="0" connectorId2="2"/>
+        <connection operatorId1="2" compositionId2="2" connectorId1="1" connectorId2="1"/>
+        <connection operatorId1="2" compositionId2="3" connectorId1="2" connectorId2="1"/>
+        <connection operatorId1="1" compositionId2="2" connectorId1="0" connectorId2="2"/>
+        <connection operatorId1="1" compositionId2="3" connectorId1="1" connectorId2="2"/>
+        <connection operatorId1="1" compositionId2="6" connectorId1="2" connectorId2="1"/>
+        <connection operatorId1="0" compositionId2="4" connectorId1="0" connectorId2="2"/>
+        <connection operatorId1="0" compositionId2="6" connectorId1="1" connectorId2="3"/>
+        <connection operatorId1="0" compositionId2="5" connectorId1="2" connectorId2="1"/>
+        <connection compositionId1="6" operatorId2="1" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="6" compositionId2="1" connectorId1="2" connectorId2="2"/>
+        <connection compositionId1="6" operatorId2="0" connectorId1="3" connectorId2="1"/>
+        <connection compositionId1="5" operatorId2="0" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="5" operatorId2="2" connectorId1="2" connectorId2="0"/>
+        <connection compositionId1="4" compositionId2="1" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="4" operatorId2="0" connectorId1="2" connectorId2="0"/>
+        <connection compositionId1="3" operatorId2="2" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="3" operatorId2="1" connectorId1="2" connectorId2="1"/>
+        <connection compositionId1="2" operatorId2="2" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="2" operatorId2="1" connectorId1="2" connectorId2="0"/>
+        <connection compositionId1="1" compositionId2="4" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="1" compositionId2="6" connectorId1="2" connectorId2="2"/>
+        <connection operatorId1="3" compositionId2="2" connectorId1="0" connectorId2="1"/>
+        <connection operatorId1="3" compositionId2="2" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="2" operatorId2="3" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="2" operatorId2="3" connectorId1="2" connectorId2="1"/>
+        <connection operatorId1="4" compositionId2="3" connectorId1="0" connectorId2="1"/>
+        <connection operatorId1="4" compositionId2="3" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="3" operatorId2="4" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="3" operatorId2="4" connectorId1="2" connectorId2="1"/>
+        <connection operatorId1="5" compositionId2="4" connectorId1="0" connectorId2="1"/>
+        <connection operatorId1="5" compositionId2="4" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="4" operatorId2="5" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="4" operatorId2="5" connectorId1="2" connectorId2="1"/>
+        <connection operatorId1="6" compositionId2="5" connectorId1="0" connectorId2="1"/>
+        <connection operatorId1="6" compositionId2="5" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="5" operatorId2="6" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="5" operatorId2="6" connectorId1="2" connectorId2="1"/>
+        <connection operatorId1="7" compositionId2="6" connectorId1="0" connectorId2="1"/>
+        <connection operatorId1="7" compositionId2="6" connectorId1="2" connectorId2="2"/>
+        <connection operatorId1="7" compositionId2="6" connectorId1="3" connectorId2="3"/>
+        <connection compositionId1="6" operatorId2="7" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="6" operatorId2="7" connectorId1="2" connectorId2="2"/>
+        <connection compositionId1="6" operatorId2="7" connectorId1="3" connectorId2="3"/>
+        <connection operatorId1="8" compositionId2="7" connectorId1="0" connectorId2="1"/>
+        <connection operatorId1="8" compositionId2="7" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="7" operatorId2="8" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="7" operatorId2="8" connectorId1="2" connectorId2="1"/>
+    </compositions>
+</cameleon>

@@ -1,0 +1,28 @@
+04.11.2014 00:00:09.240 - INSTANCE - =========================
+04.11.2014 00:00:09.324 - INSTANCE - Application started ...
+04.11.2014 00:00:09.337 - INSTANCE - Init instance ...
+04.11.2014 00:00:09.353 - INSTANCE - Instance Initialized.
+04.11.2014 00:00:09.354 - INSTANCE - Launch cameleon ...
+04.11.2014 00:00:09.354 - INSTANCE - ===========================
+04.11.2014 00:00:09.354 - INSTANCE - Start IDE Process
+04.11.2014 00:00:09.391 - INSTANCE - Init client ...
+04.11.2014 00:00:09.395 - INSTANCE - INNER Start machine ...
+04.11.2014 00:00:09.396 - INSTANCE - INNER Machine started
+04.11.2014 00:00:09.396 - INSTANCE - Client initialized.
+04.11.2014 00:00:09.430 - INSTANCE - Connect to server ...
+04.11.2014 00:00:09.430 - INSTANCE - Server connected.
+04.11.2014 00:00:09.431 - INSTANCE - Start machine ...
+04.11.2014 00:00:09.432 - INSTANCE - Machine started.
+04.11.2014 00:00:09.433 - INSTANCE - Start instance ...
+04.11.2014 00:00:09.519 - INSTANCE - Population disabled
+04.11.2014 00:00:09.519 - INSTANCE - Opencv disabled
+04.11.2014 00:00:09.519 - INSTANCE - Number of datas loaded 10
+04.11.2014 00:00:09.519 - INSTANCE - Number of controls loaded 32
+04.11.2014 00:00:09.519 - INSTANCE - Number of operators loaded 93
+04.11.2014 00:00:09.535 - INSTANCE - Population disabled
+04.11.2014 00:00:09.535 - INSTANCE - Opencv disabled
+04.11.2014 00:00:09.535 - INSTANCE - Number of datas loaded 10
+04.11.2014 00:00:09.535 - INSTANCE - Number of controls loaded 32
+04.11.2014 00:00:09.535 - INSTANCE - Number of operators loaded 93
+04.11.2014 00:00:09.687 - INSTANCE - Instance started.
+04.11.2014 00:00:09.784 - INSTANCE - Cameleon launched.

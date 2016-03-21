@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="446" operatorIdOut="610" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+    </layouts>
+    <composerscreen viewx="-1228" viewy="-1022" viewscale="-5" windowsx="0" windowsy="40" windowswidth="1366" windowsheight="728" numscreen="0" fullscreen="false"/>
+    <compositions>
+        <currentComposition id="12"/>
+        <composition id="12" name="StringStack" informations="Concat all new input strings to output string"/>
+        <connector compositionId="12" connectorId="1" side="IN" name="string.str" x="-55" y="0"/>
+        <connector compositionId="12" connectorId="2" side="OUT" name="string.str" x="55" y="0"/>
+        <operatorconnector opId="610" connectorId="0" x="64.7183" y="12.9437"/>
+        <operatorconnector opId="610" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="610" connectorId="2" x="29.5161" y="-59.0322"/>
+        <operatorconnector opId="611" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="611" connectorId="1" x="-45.6869" y="-47.631"/>
+        <operatorconnector opId="611" connectorId="2" x="58.1456" y="31.2264"/>
+        <operatorconnector opId="611" connectorId="3" x="64.5033" y="-13.9757"/>
+        <operatorconnector opId="612" connectorId="0" x="-61.4927" y="-23.9717"/>
+        <operatorconnector opId="612" connectorId="1" x="-55.3373" y="35.9692"/>
+        <operatorconnector opId="612" connectorId="2" x="60" y="0"/>
+        <operatorconnector opId="609" connectorId="0" x="-42.0013" y="50.9106"/>
+        <operatorconnector opId="609" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="609" connectorId="2" x="65.6497" y="6.79134"/>
+        <operator id="609" type="stringconcatstring" x="60.0938" y="-84.1151" z="5" parentId="12"/>
+        <operatorconnector opId="609" connectorId="0" x="-42.0013" y="50.9106"/>
+        <operatorconnector opId="609" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="609" connectorId="2" x="65.6497" y="6.79134"/>
+        <compositioncontrol id="446" type="LineEditorString" x="-330.423" y="-35.0373" z="1" width="80" height="85" parentId="12" content=""/>
+        <operator id="612" type="Copy" x="260.423" y="0.637306" z="0" parentId="12"/>
+        <operatorconnector opId="612" connectorId="0" x="-61.4927" y="-23.9717"/>
+        <operatorconnector opId="612" connectorId="1" x="-55.3373" y="35.9692"/>
+        <operatorconnector opId="612" connectorId="2" x="60" y="0"/>
+        <operator id="611" type="sync" x="-130.198" y="-74.8977" z="0" parentId="12"/>
+        <operatorconnector opId="611" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="611" connectorId="1" x="-45.6869" y="-47.631"/>
+        <operatorconnector opId="611" connectorId="2" x="58.1456" y="31.2264"/>
+        <operatorconnector opId="611" connectorId="3" x="64.5033" y="-13.9757"/>
+        <operator id="610" type="merge" x="-245.236" y="84.1151" z="0" parentId="12"/>
+        <operatorconnector opId="610" connectorId="0" x="64.7183" y="12.9437"/>
+        <operatorconnector opId="610" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="610" connectorId="2" x="29.5161" y="-59.0322"/>
+        <connection controlId="446" operatorIdOut="610" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection connectorId1="0" operatorId1="609" connectorId2="2" operatorId2="611"/>
+        <connection connectorId1="1" operatorId1="609" connectorId2="3" operatorId2="611"/>
+        <connection connectorId1="2" operatorId1="609" connectorId2="0" operatorId2="612"/>
+        <connection connectorId1="0" operatorId1="612" connectorId2="2" operatorId2="609"/>
+        <connection connectorId1="1" operatorId1="612" connectorId2="0" operatorId2="610"/>
+        <connection operatorId1="612" compositionId2="12" connectorId1="2" connectorId2="2"/>
+        <connection connectorId1="0" operatorId1="611" connectorId2="2" operatorId2="610"/>
+        <connection operatorId1="611" compositionId2="12" connectorId1="1" connectorId2="1"/>
+        <connection connectorId1="2" operatorId1="611" connectorId2="0" operatorId2="609"/>
+        <connection connectorId1="3" operatorId1="611" connectorId2="1" operatorId2="609"/>
+        <connection connectorId1="0" operatorId1="610" connectorId2="1" operatorId2="612"/>
+        <connection connectorId1="2" operatorId1="610" connectorId2="0" operatorId2="611"/>
+        <connection compositionId1="12" operatorId2="611" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="12" operatorId2="612" connectorId1="2" connectorId2="2"/>
+    </compositions>
+</cameleon>

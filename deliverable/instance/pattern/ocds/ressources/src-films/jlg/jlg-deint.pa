@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="100" operatorIdOut="38" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+    </layouts>
+    <composerscreen viewx="-1886" viewy="-74" viewscale="-4" windowsx="0" windowsy="40" windowswidth="1366" windowsheight="728" numscreen="0" fullscreen="true"/>
+    <compositions>
+        <currentComposition id="17"/>
+        <composition id="17" name="jlg-deint" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc."/>
+        <connector compositionId="17" connectorId="1" side="OUT" name="" x="55" y="0"/>
+        <operatorconnector opId="38" connectorId="0" x="-65.3044" y="9.55675"/>
+        <operatorconnector opId="38" connectorId="1" x="62.1862" y="22.1106"/>
+        <compositioncontrol id="100" type="LineEditorString" x="-381.941" y="-50.874" z="1" width="536.8" height="85" parentId="17" content="/home/ocds/Shinoe/camBox/dev/del/project/vg/ressource/JLG-deint.mov"/>
+        <operator id="38" type="id" x="309.755" y="0" z="0" parentId="17"/>
+        <operatorconnector opId="38" connectorId="0" x="-65.3044" y="9.55675"/>
+        <operatorconnector opId="38" connectorId="1" x="62.1862" y="22.1106"/>
+        <connection controlId="100" operatorIdOut="38" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection operatorId1="38" compositionId2="17" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="17" operatorId2="38" connectorId1="1" connectorId2="1"/>
+    </compositions>
+</cameleon>

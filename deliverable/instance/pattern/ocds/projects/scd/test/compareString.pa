@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="73" operatorIdOut="14" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="77" operatorIdOut="15" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="78" operatorIdOut="15" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+    </layouts>
+    <composerscreen viewx="-1936" viewy="-562" viewscale="-3" windowsx="0" windowsy="61" windowswidth="1920" windowsheight="1019" numscreen="0" fullscreen="false"/>
+    <compositions>
+        <currentComposition id="1"/>
+        <composition id="1" name="compareString" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc."/>
+        <connector compositionId="1" connectorId="1" side="OUT" name="test.bool" x="55" y="0"/>
+        <operatorconnector opId="14" connectorId="0" x="-65.7871" y="5.29705"/>
+        <operatorconnector opId="14" connectorId="1" x="-46.4136" y="-46.9231"/>
+        <operatorconnector opId="14" connectorId="2" x="65.9994" y="-0.276455"/>
+        <operatorconnector opId="15" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="15" connectorId="1" x="-66" y="9.23762e-14"/>
+        <operatorconnector opId="15" connectorId="2" x="65.8774" y="4.02073"/>
+        <operatorconnector opId="18" connectorId="0" x="-65.9956" y="0.758571"/>
+        <operatorconnector opId="18" connectorId="1" x="65.0616" y="11.09"/>
+        <operator id="14" type="COperatorAssert" x="324" y="45" z="7" parentId="1"/>
+        <operatorconnector opId="14" connectorId="0" x="-65.7871" y="5.29705"/>
+        <operatorconnector opId="14" connectorId="1" x="-46.4136" y="-46.9231"/>
+        <operatorconnector opId="14" connectorId="2" x="65.9994" y="-0.276455"/>
+        <compositioncontrol id="77" type="LineEditorString" x="-388" y="94" z="1" width="188" height="84" parentId="1" content="0"/>
+        <compositioncontrol id="78" type="LineEditorString" x="-370" y="-63" z="1" width="168" height="84" parentId="1" content="1"/>
+        <compositioncontrol id="73" type="LineEditorString" x="-154" y="-248" z="1" width="221" height="84" parentId="1" content="compareString001"/>
+        <operator id="18" type="booleaninverse" x="61" y="42" z="0" parentId="1"/>
+        <operatorconnector opId="18" connectorId="0" x="-65.9956" y="0.758571"/>
+        <operatorconnector opId="18" connectorId="1" x="65.0616" y="11.09"/>
+        <operator id="15" type="stringcomparestring" x="-161" y="37" z="0" parentId="1"/>
+        <operatorconnector opId="15" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="15" connectorId="1" x="-66" y="9.23762e-14"/>
+        <operatorconnector opId="15" connectorId="2" x="65.8774" y="4.02073"/>
+        <connection controlId="77" operatorIdOut="15" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="78" operatorIdOut="15" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="73" operatorIdOut="14" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection connectorId1="0" operatorId1="14" connectorId2="1" operatorId2="18"/>
+        <connection operatorId1="14" compositionId2="1" connectorId1="2" connectorId2="1"/>
+        <connection connectorId1="0" operatorId1="18" connectorId2="2" operatorId2="15"/>
+        <connection connectorId1="1" operatorId1="18" connectorId2="0" operatorId2="14"/>
+        <connection connectorId1="2" operatorId1="15" connectorId2="0" operatorId2="18"/>
+        <connection compositionId1="1" operatorId2="14" connectorId1="1" connectorId2="2"/>
+    </compositions>
+</cameleon>

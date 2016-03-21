@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="589" operatorIdOut="596" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="590" operatorIdOut="597" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="593" operatorIdOut="599" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="592" operatorIdOut="599" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="591" operatorIdOut="600" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="594" operatorIdOut="601" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="595" operatorIdOut="602" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+    </layouts>
+    <composerscreen viewx="-5762" viewy="2969" viewscale="-2" windowsx="0" windowsy="40" windowswidth="1366" windowsheight="728" numscreen="0" fullscreen="true"/>
+    <compositions>
+        <currentComposition id="93"/>
+        <composition id="93" name="trim-sync-1" informations="ffmpeg -i ~/Shinoe/prdBox/masters/JLG.dv  -vcodec copy -acodec copy -ss 30.28 -t 20.120 ressource/trimmed_video.avi"/>
+        <connector compositionId="93" connectorId="1" side="OUT" name="code.num" x="42.598" y="49.0959"/>
+        <connector compositionId="93" connectorId="2" side="OUT" name="trimedPath.str" x="63.2824" y="-14.844"/>
+        <connector compositionId="93" connectorId="3" side="IN" name="videopath.str" x="-47.041" y="44.857"/>
+        <connector compositionId="93" connectorId="4" side="IN" name="trimedPath.str" x="-47.4028" y="-44.4744"/>
+        <connector compositionId="93" connectorId="5" side="IN" name="duration.str" x="-62.7139" y="17.087"/>
+        <connector compositionId="93" connectorId="6" side="IN" name="start.str" x="-63.363" y="-14.4957"/>
+        <operatorconnector opId="596" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="596" connectorId="1" x="-57.9328" y="15.6137"/>
+        <operatorconnector opId="596" connectorId="2" x="-64.9402" y="-11.7799"/>
+        <operatorconnector opId="596" connectorId="3" x="65.3201" y="-9.44898"/>
+        <operatorconnector opId="597" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="597" connectorId="1" x="-57.9328" y="15.6137"/>
+        <operatorconnector opId="597" connectorId="2" x="-65.9963" y="-0.700753"/>
+        <operatorconnector opId="597" connectorId="3" x="64.899" y="12.005"/>
+        <operatorconnector opId="598" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="598" connectorId="1" x="-65.3725" y="-9.07951"/>
+        <operatorconnector opId="598" connectorId="2" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="598" connectorId="3" x="65.5204" y="-7.94187"/>
+        <operatorconnector opId="599" connectorId="0" x="-56.465" y="34.1716"/>
+        <operatorconnector opId="599" connectorId="1" x="-64.1332" y="-15.5863"/>
+        <operatorconnector opId="599" connectorId="2" x="-8.68102" y="65.4266"/>
+        <operatorconnector opId="599" connectorId="3" x="-3.2345" y="-65.9207"/>
+        <operatorconnector opId="600" connectorId="0" x="-64.9023" y="-11.9872"/>
+        <operatorconnector opId="600" connectorId="1" x="-6.23511" y="65.7048"/>
+        <operatorconnector opId="600" connectorId="2" x="49.6059" y="43.5345"/>
+        <operatorconnector opId="601" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="601" connectorId="1" x="-49.7765" y="-43.3393"/>
+        <operatorconnector opId="601" connectorId="2" x="36.8843" y="-54.7316"/>
+        <operatorconnector opId="601" connectorId="3" x="62.7874" y="16.8149"/>
+        <operatorconnector opId="601" connectorId="4" x="62.7874" y="-16.8149"/>
+        <operatorconnector opId="602" connectorId="0" x="-25.5183" y="60.8672"/>
+        <operatorconnector opId="602" connectorId="1" x="-62.9636" y="19.7886"/>
+        <operatorconnector opId="602" connectorId="2" x="-60.0253" y="-27.4401"/>
+        <operatorconnector opId="602" connectorId="3" x="60.2867" y="26.861"/>
+        <operatorconnector opId="603" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="603" connectorId="1" x="57.9411" y="31.6042"/>
+        <operatorconnector opId="603" connectorId="2" x="64.6127" y="-13.461"/>
+        <operator id="600" type="stringsplitstring" x="131" y="-178" z="3" parentId="93"/>
+        <operatorconnector opId="600" connectorId="0" x="-64.9023" y="-11.9872"/>
+        <operatorconnector opId="600" connectorId="1" x="-6.23511" y="65.7048"/>
+        <operatorconnector opId="600" connectorId="2" x="49.6059" y="43.5345"/>
+        <operator id="599" type="stringreplacestring" x="-232" y="259" z="3" parentId="93"/>
+        <operatorconnector opId="599" connectorId="0" x="-56.465" y="34.1716"/>
+        <operatorconnector opId="599" connectorId="1" x="-64.1332" y="-15.5863"/>
+        <operatorconnector opId="599" connectorId="2" x="-8.68102" y="65.4266"/>
+        <operatorconnector opId="599" connectorId="3" x="-3.2345" y="-65.9207"/>
+        <operator id="598" type="sync" x="496" y="-324" z="3" parentId="93"/>
+        <operatorconnector opId="598" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="598" connectorId="1" x="-65.3725" y="-9.07951"/>
+        <operatorconnector opId="598" connectorId="2" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="598" connectorId="3" x="65.5204" y="-7.94187"/>
+        <operator id="597" type="stringreplacestring" x="-459" y="-28" z="3" parentId="93"/>
+        <operatorconnector opId="597" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="597" connectorId="1" x="-57.9328" y="15.6137"/>
+        <operatorconnector opId="597" connectorId="2" x="-65.9963" y="-0.700753"/>
+        <operatorconnector opId="597" connectorId="3" x="64.899" y="12.005"/>
+        <operator id="596" type="stringreplacestring" x="-266" y="-133" z="3" parentId="93"/>
+        <operatorconnector opId="596" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="596" connectorId="1" x="-57.9328" y="15.6137"/>
+        <operatorconnector opId="596" connectorId="2" x="-64.9402" y="-11.7799"/>
+        <operatorconnector opId="596" connectorId="3" x="65.3201" y="-9.44898"/>
+        <compositioncontrol id="595" type="LineEditorString" x="-570" y="-277" z="1" width="211" height="85" parentId="93" content="$PATH_OUT"/>
+        <compositioncontrol id="594" type="LineEditorString" x="-37" y="125" z="1" width="227" height="85" parentId="93" content="ffmpeg"/>
+        <compositioncontrol id="593" type="LineEditorString" x="-993" y="218" z="1" width="618" height="85" parentId="93" content="-i $PATH_TO_VID  -vcodec copy -acodec copy -ss $IN -t $DURATION $PATH_OUT"/>
+        <compositioncontrol id="592" type="LineEditorString" x="-692" y="134" z="1" width="273" height="85" parentId="93" content="$PATH_TO_VID"/>
+        <compositioncontrol id="591" type="LineEditorString" x="-180" y="7" z="1" width="283" height="85" parentId="93" content=" "/>
+        <compositioncontrol id="590" type="LineEditorString" x="-812" y="-51" z="1" width="235" height="85" parentId="93" content="$DURATION"/>
+        <compositioncontrol id="589" type="LineEditorString" x="-677" y="-180" z="1" width="191" height="85" parentId="93" content="$IN"/>
+        <operator id="602" type="stringreplacestring" x="-159" y="-284" z="1" parentId="93"/>
+        <operatorconnector opId="602" connectorId="0" x="-25.5183" y="60.8672"/>
+        <operatorconnector opId="602" connectorId="1" x="-62.9636" y="19.7886"/>
+        <operatorconnector opId="602" connectorId="2" x="-60.0253" y="-27.4401"/>
+        <operatorconnector opId="602" connectorId="3" x="60.2867" y="26.861"/>
+        <operator id="601" type="CommandLineSync" x="345" y="-9" z="1" parentId="93"/>
+        <operatorconnector opId="601" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="601" connectorId="1" x="-49.7765" y="-43.3393"/>
+        <operatorconnector opId="601" connectorId="2" x="36.8843" y="-54.7316"/>
+        <operatorconnector opId="601" connectorId="3" x="62.7874" y="16.8149"/>
+        <operatorconnector opId="601" connectorId="4" x="62.7874" y="-16.8149"/>
+        <text x="-448" y="-547" z="0" parentId="93" color="#ffffff" police="12" font="Droid Sans" italic="false" bold="false" underline="false" content="ffmpeg -i $PATH_TO_VID  -vcodec copy -acodec copy -ss $IN -t $DURATION $PATH_OUT"/>
+        <operator id="603" type="Copy" x="-458" y="-398" z="0" parentId="93"/>
+        <operatorconnector opId="603" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="603" connectorId="1" x="57.9411" y="31.6042"/>
+        <operatorconnector opId="603" connectorId="2" x="64.6127" y="-13.461"/>
+        <connection controlId="595" operatorIdOut="602" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="594" operatorIdOut="601" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="593" operatorIdOut="599" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="592" operatorIdOut="599" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="591" operatorIdOut="600" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="590" operatorIdOut="597" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="589" operatorIdOut="596" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection connectorId1="0" operatorId1="600" connectorId2="3" operatorId2="602"/>
+        <connection connectorId1="2" operatorId1="600" connectorId2="1" operatorId2="601"/>
+        <connection operatorId1="599" compositionId2="93" connectorId1="2" connectorId2="3"/>
+        <connection connectorId1="3" operatorId1="599" connectorId2="0" operatorId2="597"/>
+        <connection connectorId1="0" operatorId1="598" connectorId2="2" operatorId2="601"/>
+        <connection connectorId1="1" operatorId1="598" connectorId2="2" operatorId2="603"/>
+        <connection operatorId1="598" compositionId2="93" connectorId1="2" connectorId2="1"/>
+        <connection operatorId1="598" compositionId2="93" connectorId1="3" connectorId2="2"/>
+        <connection connectorId1="0" operatorId1="597" connectorId2="3" operatorId2="599"/>
+        <connection operatorId1="597" compositionId2="93" connectorId1="2" connectorId2="5"/>
+        <connection connectorId1="3" operatorId1="597" connectorId2="0" operatorId2="596"/>
+        <connection connectorId1="0" operatorId1="596" connectorId2="3" operatorId2="597"/>
+        <connection operatorId1="596" compositionId2="93" connectorId1="2" connectorId2="6"/>
+        <connection connectorId1="3" operatorId1="596" connectorId2="0" operatorId2="602"/>
+        <connection connectorId1="0" operatorId1="602" connectorId2="3" operatorId2="596"/>
+        <connection connectorId1="2" operatorId1="602" connectorId2="1" operatorId2="603"/>
+        <connection connectorId1="3" operatorId1="602" connectorId2="0" operatorId2="600"/>
+        <connection connectorId1="1" operatorId1="601" connectorId2="2" operatorId2="600"/>
+        <connection connectorId1="2" operatorId1="601" connectorId2="0" operatorId2="598"/>
+        <connection operatorId1="603" compositionId2="93" connectorId1="0" connectorId2="4"/>
+        <connection connectorId1="1" operatorId1="603" connectorId2="2" operatorId2="602"/>
+        <connection connectorId1="2" operatorId1="603" connectorId2="1" operatorId2="598"/>
+        <connection compositionId1="93" operatorId2="598" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="93" operatorId2="598" connectorId1="2" connectorId2="3"/>
+        <connection compositionId1="93" operatorId2="599" connectorId1="3" connectorId2="2"/>
+        <connection compositionId1="93" operatorId2="603" connectorId1="4" connectorId2="0"/>
+        <connection compositionId1="93" operatorId2="597" connectorId1="5" connectorId2="2"/>
+        <connection compositionId1="93" operatorId2="596" connectorId1="6" connectorId2="2"/>
+    </compositions>
+</cameleon>

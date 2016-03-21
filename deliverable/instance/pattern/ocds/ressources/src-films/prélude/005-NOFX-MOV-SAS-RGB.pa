@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="1360" operatorIdOut="1636" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+    </layouts>
+    <composerscreen viewx="-10646" viewy="-4315" viewscale="4" windowsx="0" windowsy="40" windowswidth="1366" windowsheight="728" numscreen="0" fullscreen="true"/>
+    <compositions>
+        <currentComposition id="86"/>
+        <composition id="86" name="005-NOFX-MOV-SAS-RGB" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc."/>
+        <connector compositionId="86" connectorId="1" side="OUT" name="output0.gen" x="55" y="0"/>
+        <operatorconnector opId="1636" connectorId="0" x="-65.3044" y="9.55675"/>
+        <operatorconnector opId="1636" connectorId="1" x="62.1862" y="22.1106"/>
+        <compositioncontrol id="1360" type="LineEditorString" x="-381" y="-50" z="1" width="536" height="85" parentId="86" content="/home/ocds/Shinoe/prdBox/masters/Prélude-essais/005-NOFX-MOV-SAS-RGB.mov"/>
+        <operator id="1636" type="id" x="309" y="0" z="0" parentId="86"/>
+        <operatorconnector opId="1636" connectorId="0" x="-65.3044" y="9.55675"/>
+        <operatorconnector opId="1636" connectorId="1" x="62.1862" y="22.1106"/>
+        <connection controlId="1360" operatorIdOut="1636" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection operatorId1="1636" compositionId2="86" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="86" operatorId2="1636" connectorId1="1" connectorId2="1"/>
+    </compositions>
+</cameleon>

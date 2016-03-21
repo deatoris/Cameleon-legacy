@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="123" operatorIdOut="21" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="122" operatorIdOut="21" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="121" operatorIdOut="21" controlConnectorIdIn="0" operatorConnectorIdOut="3"/>
+    </layouts>
+    <composerscreen viewx="-1634" viewy="-929" viewscale="-1" windowsx="0" windowsy="61" windowswidth="1914" windowsheight="1019" numscreen="0" fullscreen="false"/>
+    <compositions>
+        <currentComposition id="1"/>
+        <composition id="1" name="bugMissing" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc."/>
+        <operatorconnector opId="21" connectorId="0" x="-51.4148" y="41.3826"/>
+        <operatorconnector opId="21" connectorId="1" x="-57.9328" y="15.6137"/>
+        <operatorconnector opId="21" connectorId="2" x="-57.9823" y="-15.4291"/>
+        <operatorconnector opId="21" connectorId="3" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="20" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="20" connectorId="1" x="65.7067" y="6.2155"/>
+        <operatorconnector opId="20" connectorId="2" x="49.79" y="-43.3238"/>
+        <operatorconnector opId="22" connectorId="0" x="-65.6043" y="-7.21647"/>
+        <operatorconnector opId="22" connectorId="1" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="22" connectorId="2" x="60" y="0"/>
+        <compositioncontrol id="122" type="EditorNumber" x="-324.331" y="-165.988" z="1" width="175.344" height="84" parentId="1" content="0"/>
+        <compositioncontrol id="121" type="ControlImageGrid" x="298.738" y="-183.956" z="1" width="149" height="149" parentId="1" content=""/>
+        <compositioncontrol id="123" type="EditorNumber" x="-293.452" y="-71.5328" z="1" width="120" height="84" parentId="1" content="0"/>
+        <operator id="22" type="Copy" x="390.494" y="123.956" z="0" parentId="1"/>
+        <operatorconnector opId="22" connectorId="0" x="-65.6043" y="-7.21647"/>
+        <operatorconnector opId="22" connectorId="1" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="22" connectorId="2" x="60" y="0"/>
+        <operator id="20" type="Copy" x="-408.738" y="101.251" z="0" parentId="1"/>
+        <operatorconnector opId="20" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="20" connectorId="1" x="65.7067" y="6.2155"/>
+        <operatorconnector opId="20" connectorId="2" x="49.79" y="-43.3238"/>
+        <operator id="21" type="PopulationOperatorErosionImageGridMissing" x="-15.4795" y="-10.4603" z="0" parentId="1"/>
+        <operatorconnector opId="21" connectorId="0" x="-51.4148" y="41.3826"/>
+        <operatorconnector opId="21" connectorId="1" x="-57.9328" y="15.6137"/>
+        <operatorconnector opId="21" connectorId="2" x="-57.9823" y="-15.4291"/>
+        <operatorconnector opId="21" connectorId="3" x="42.4433" y="42.4095"/>
+        <connection controlId="122" operatorIdOut="21" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="121" operatorIdOut="21" controlConnectorIdIn="0" operatorConnectorIdOut="3"/>
+        <connection controlId="123" operatorIdOut="21" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection connectorId1="1" operatorId1="20" connectorId2="0" operatorId2="21"/>
+        <connection connectorId1="0" operatorId1="21" connectorId2="1" operatorId2="20"/>
+        <connection connectorId1="3" operatorId1="21" connectorId2="0" operatorId2="22"/>
+    </compositions>
+</cameleon>

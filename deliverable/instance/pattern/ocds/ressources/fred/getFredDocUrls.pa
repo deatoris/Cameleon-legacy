@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="77" operatorIdOut="15" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="75" operatorIdOut="16" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="76" operatorIdOut="18" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+    </layouts>
+    <composerscreen viewx="-3991" viewy="-2721" viewscale="12" windowsx="0" windowsy="40" windowswidth="1366" windowsheight="728" numscreen="0" fullscreen="true"/>
+    <compositions>
+        <currentComposition id="1"/>
+        <composition id="1" name="getFredDocUrls" informations=""/>
+        <connector compositionId="1" connectorId="1" side="OUT" name="scipts.vec" x="54.9931" y="-0.872907"/>
+        <connector compositionId="1" connectorId="2" side="IN" name="url.str" x="-54.9939" y="0.820805"/>
+        <operatorconnector opId="15" connectorId="0" x="-65.1336" y="10.659"/>
+        <operatorconnector opId="15" connectorId="1" x="-48.4143" y="-44.856"/>
+        <operatorconnector opId="15" connectorId="2" x="63.2964" y="18.6967"/>
+        <operatorconnector opId="16" connectorId="0" x="-65.924" y="-3.16701"/>
+        <operatorconnector opId="16" connectorId="1" x="63.911" y="-16.4736"/>
+        <operatorconnector opId="16" connectorId="2" x="61.7201" y="23.3801"/>
+        <operatorconnector opId="17" connectorId="0" x="-58.7559" y="30.0624"/>
+        <operatorconnector opId="17" connectorId="1" x="-64.8475" y="-12.2804"/>
+        <operatorconnector opId="17" connectorId="2" x="65.146" y="10.5827"/>
+        <operatorconnector opId="17" connectorId="3" x="21.4652" y="-62.4119"/>
+        <operatorconnector opId="18" connectorId="0" x="-64.9412" y="-11.7747"/>
+        <operatorconnector opId="18" connectorId="1" x="65.9191" y="-3.26761"/>
+        <compositioncontrol id="75" type="StringView" x="-276" y="-4" z="2" width="718" height="85" parentId="1" content=""/>
+        <compositioncontrol id="77" type="LineEditorString" x="-186" y="-304" z="1" width="460" height="85" parentId="1" content="http://www.fmwconcepts.com/imagemagick(?:\w|[/.-])*index.php"/>
+        <compositioncontrol id="76" type="StringViewText" x="-428" y="113" z="1" width="1475" height="600" parentId="1" content=""/>
+        <operator id="17" type="If" x="-120" y="-123" z="1" parentId="1"/>
+        <operatorconnector opId="17" connectorId="0" x="-58.7559" y="30.0624"/>
+        <operatorconnector opId="17" connectorId="1" x="-64.8475" y="-12.2804"/>
+        <operatorconnector opId="17" connectorId="2" x="65.146" y="10.5827"/>
+        <operatorconnector opId="17" connectorId="3" x="21.4652" y="-62.4119"/>
+        <operator id="16" type="DownloadFile" x="-419" y="-81" z="1" parentId="1"/>
+        <operatorconnector opId="16" connectorId="0" x="-65.924" y="-3.16701"/>
+        <operatorconnector opId="16" connectorId="1" x="63.911" y="-16.4736"/>
+        <operatorconnector opId="16" connectorId="2" x="61.7201" y="23.3801"/>
+        <operator id="15" type="stringregexpstring" x="356" y="-105" z="1" parentId="1"/>
+        <operatorconnector opId="15" connectorId="0" x="-65.1336" y="10.659"/>
+        <operatorconnector opId="15" connectorId="1" x="-48.4143" y="-44.856"/>
+        <operatorconnector opId="15" connectorId="2" x="63.2964" y="18.6967"/>
+        <operator id="18" type="inputstring" x="97" y="-90" z="0" parentId="1"/>
+        <operatorconnector opId="18" connectorId="0" x="-64.9412" y="-11.7747"/>
+        <operatorconnector opId="18" connectorId="1" x="65.9191" y="-3.26761"/>
+        <connection controlId="75" operatorIdOut="16" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="77" operatorIdOut="15" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="76" operatorIdOut="18" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection connectorId1="0" operatorId1="17" connectorId2="2" operatorId2="16"/>
+        <connection connectorId1="2" operatorId1="17" connectorId2="0" operatorId2="18"/>
+        <connection operatorId1="16" compositionId2="1" connectorId1="0" connectorId2="2"/>
+        <connection connectorId1="1" operatorId1="16" connectorId2="1" operatorId2="17"/>
+        <connection connectorId1="2" operatorId1="16" connectorId2="0" operatorId2="17"/>
+        <connection operatorId1="15" compositionId2="1" connectorId1="2" connectorId2="1"/>
+        <connection connectorId1="0" operatorId1="18" connectorId2="2" operatorId2="17"/>
+        <connection connectorId1="1" operatorId1="18" connectorId2="0" operatorId2="15"/>
+        <connection compositionId1="1" operatorId2="15" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="1" operatorId2="16" connectorId1="2" connectorId2="0"/>
+    </compositions>
+</cameleon>

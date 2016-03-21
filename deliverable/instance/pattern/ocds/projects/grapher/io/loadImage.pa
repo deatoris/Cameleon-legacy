@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="76" operatorIdOut="15" controlConnectorIdIn="3" operatorConnectorIdOut="0"/>
+        <connection controlId="75" operatorIdOut="15" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+    </layouts>
+    <composerscreen viewx="-7473" viewy="114" viewscale="2" windowsx="0" windowsy="40" windowswidth="1366" windowsheight="728" numscreen="0" fullscreen="true"/>
+    <compositions>
+        <currentComposition id="2"/>
+        <composition id="2" name="li2" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc."/>
+        <operatorconnector opId="15" connectorId="0" x="-65.9298" y="3.04221"/>
+        <operatorconnector opId="15" connectorId="1" x="65.9767" y="-1.75509"/>
+        <compositioncontrol id="76" type="InFile" x="-361" y="-57" z="1" width="143" height="85" parentId="2" content=""/>
+        <compositioncontrol id="75" type="ViewImage" x="68" y="-164" z="1" width="331" height="351" parentId="2" content=""/>
+        <operator id="15" type="SCDLoadImageQT" x="-77" y="-69" z="0" parentId="2"/>
+        <operatorconnector opId="15" connectorId="0" x="-65.9298" y="3.04221"/>
+        <operatorconnector opId="15" connectorId="1" x="65.9767" y="-1.75509"/>
+        <connection controlId="76" operatorIdOut="15" controlConnectorIdIn="3" operatorConnectorIdOut="0"/>
+        <connection controlId="75" operatorIdOut="15" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+    </compositions>
+</cameleon>

@@ -1,0 +1,3762 @@
+<b>Operators</b>
+<a href="#operatorData">Data</a>
+
+<a href="#operatorImageGrid">ImageGrid</a>
+
+<a href="#operatorInOut">InOut</a>
+<a href="#operatorFormat">Format</a>
+<a href="#operatorTool">Tool</a>
+<a href="#operatorAffect">Affect</a>
+<a href="#operatorArithmetic">Arithmetic</a>
+
+<a href="#operatorDistribution">Distribution</a>
+
+<a href="#operatorInOut">InOut</a>
+<a href="#operatorCatalog">Catalog</a>
+
+<a href="#operatorContinuous">Continuous</a>
+<a href="#operatorDiscrete">Discrete</a>
+
+<a href="#operatorArithmetic">Arithmetic</a>
+<a href="#operatorTool">Tool</a>
+<a href="#operatorConvert">Convert</a>
+
+<a href="#operatorDistributionMultiVariate">DistributionMultiVariate</a>
+
+<a href="#operatorInOut">InOut</a>
+<a href="#operatorCatalog">Catalog</a>
+<a href="#operatorArithmetic">Arithmetic</a>
+<a href="#operatorTool">Tool</a>
+
+<a href="#operatorMatrix">Matrix</a>
+
+<a href="#operatorArithmetic">Arithmetic</a>
+<a href="#operatorTool">Tool</a>
+<a href="#operatorInOut">InOut</a>
+<a href="#operatorConvert">Convert</a>
+
+<a href="#operatorPoint">Point</a>
+
+<a href="#operatorArithmetic">Arithmetic</a>
+<a href="#operatorTool">Tool</a>
+<a href="#operatorInOut">InOut</a>
+
+<a href="#operatorPlot">Plot</a>
+
+<a href="#operatorAlgorithm">Algorithm</a>
+
+<a href="#operatorProcessing">Processing</a>
+
+<a href="#operatorPoint">Point</a>
+<a href="#operatorGenerator">Generator</a>
+<a href="#operatorNeighborhood">Neighborhood</a>
+<a href="#operatorRegionGrowing">RegionGrowing</a>
+<a href="#operatorConvolution">Convolution</a>
+<a href="#operatorRecursive">Recursive</a>
+<a href="#operatorSeed">Seed</a>
+
+<a href="#operatorPDE">PDE</a>
+
+<a href="#operatorPhaseField">PhaseField</a>
+
+<a href="#operatorVisualization">Visualization</a>
+
+<a href="#operatorLabel">Label</a>
+<a href="#operatorOpenGl">OpenGl</a>
+
+<a href="#operatorRandomGeometry">RandomGeometry</a>
+
+<a href="#operatorGerm">Germ</a>
+<a href="#operatorGrain">Grain</a>
+<a href="#operatorLattice">Lattice</a>
+<a href="#operatorModel">Model</a>
+<a href="#operatorColor">Color</a>
+<a href="#operatorArt">Art</a>
+<a href="#operatorFitGeometry">FitGeometry</a>
+
+<a href="#operatorAnalysis">Analysis</a>
+
+<a href="#operatorGeometry">Geometry</a>
+
+<a href="#operatorREV">REV</a>
+<a href="#operatorScalar">Scalar</a>
+<a href="#operatorStatistic">Statistic</a>
+<a href="#operatorLabel">Label</a>
+
+<a href="#operatorTopology">Topology</a>
+
+<a href="#operatorScalar">Scalar</a>
+<a href="#operatorSkeleton">Skeleton</a>
+
+<a href="#operatorPhysical">Physical</a>
+
+<a href="#operatorRepresentation">Representation</a>
+<a href="#operatorStatistics">Statistics</a>
+
+<a href="#operatorDistribution">Distribution</a>
+<a href="#operatorDistributionMultiVariate">DistributionMultiVariate</a>
+
+<a href="#operatorLinearAlgebra">LinearAlgebra</a>
+
+
+<b>Controls</b>
+<a href="#controlImageGrid">ImageGrid</a>
+<a href="#controlPoint">Point</a>
+<a href="#controlMatrix">Matrix</a>
+<a href="#controlOpenGl">OpenGl</a>
+
+<a name="operatorData"></a>
+<b>Data (<a href="#" >Back to top</a>)</b><br>
+<a name="operatorImageGrid"></a>
+<b>ImageGrid (<a href="#" >Back to top</a>)</b><br>
+<a name="operatorInOut"></a>
+<b>InOut (<a href="#" >Back to top</a>)</b><br>
+<a name="load"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>load</b>
+<p><div class="operator-inputs">Inputs:  file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Load image by file where the supported format: bmp, pgm, png
+</div></div>
+
+<a name="save"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>save</b>
+<p><div class="operator-inputs">Inputs:  h.pgm(or h.bmp) (DATAIMAGEGRID) file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Save image by file with the format given by the extention.
+ For a 3d image the supported format is only pgm and for a 2d image, You should use pgm however  the supported formats are
+</div></div>
+
+<a name="loadFromDirectory"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>loadFromDirectory</b>
+<p><div class="operator-inputs">Inputs:  dir.str (DATASTRING) basefilename.str (DATASTRING) extension.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Load a stack of images from a directory where the supported format are
+</div></div>
+
+<a name="saveFromDirectory"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>saveFromDirectory</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) dir.str (DATASTRING) filename.str (DATASTRING) extension.str(by default .pgm) (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Save all slices of the  3D image f in the  directory dir with the given filename and the extenion,
+ for instance dir=/home/vincent/Project/ENPC/ROCK/Seg/  filename=seg and extension=.bmp, will save the slices as follows 
+  /home/vincent/Project/ENPC/ROCK/Seg/seg0000.bmp, /home/vincent/Project/ENPC/ROCK/Seg/seg0001.bmp, /home/vincent/Project/ENPC/ROCK/Seg/seg0002.bmp and so one.
+ The supported formats are
+</div></div>
+
+<a name="isReadable"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>isReadable</b>
+<p><div class="operator-inputs">Inputs:  file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  bool.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+bool =true is input file is readable otherwise false
+</div></div>
+
+<a name="loadRaw"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>loadRaw</b>
+<p><div class="operator-inputs">Inputs:  file.str (DATASTRING) size.v (DATAPOINT) type.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+LoadRaw image by file where size is the image size and 
+ type=P5 for 2d image in unsigned 1Byte,
+ type=PA for 2d image in signed 2Bytes,
+ type=PB for 2d image in signed 4Bytes
+ type=PC for 2d image in float 8Bytes,
+ type=P6 or 2d image in Color in 3*1Byte,
+ type=PL for 3d image in unsigned 1Byte,
+ type=PN for 2d image in signed 2Bytes,
+ type=PP for 2d image in signed 4Bytes
+ type=PR for 2d image in float 8Bytes,
+ type=PT or 2d image in Color in 3*1Byte
+</div></div>
+
+<a name="saveRaw"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>saveRaw</b>
+<p><div class="operator-inputs">Inputs:  h.pgm (DATAIMAGEGRID) file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Save the image in raw format in the given file
+
+</div></div>
+
+<a name="operatorFormat"></a>
+<b>Format (<a href="#" >Back to top</a>)</b><br>
+<a name="convert1Byte"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>convert1Byte</b>
+<p><div class="operator-inputs">Inputs:  label.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=f(x) with a pixel type coded in one byte for h
+
+</div></div>
+
+<a name="convert2Byte"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>convert2Byte</b>
+<p><div class="operator-inputs">Inputs:  label.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=f(x) with a pixel type coded in two bytes for h
+
+</div></div>
+
+<a name="convert4Byte"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>convert4Byte</b>
+<p><div class="operator-inputs">Inputs:  label.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=f(x) with a pixel type coded in four byte for h
+
+</div></div>
+
+<a name="convertFloat"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>convertFloat</b>
+<p><div class="operator-inputs">Inputs:  label.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=f(x) with a pixel type coded in float for h
+
+</div></div>
+
+<a name="convertColor2Grey"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>convertColor2Grey</b>
+<p><div class="operator-inputs">Inputs:  color.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  grey.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+grey(x)=luminance(color(x)) http://fr.wikipedia.org/wiki/Luminance
+
+</div></div>
+
+<a name="convertGrey2Color"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>convertGrey2Color</b>
+<p><div class="operator-inputs">Inputs:  grey.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  color.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+color(x).r()=grey(x), color(x).g()=grey(x), color(x).b()=grey(x), for grey a color image color =grey
+
+</div></div>
+
+<a name="convertColor2RGB"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/13.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>convertColor2RGB</b>
+<p><div class="operator-inputs">Inputs:  color.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  r.pgm (DATAIMAGEGRID) g.pgm (DATAIMAGEGRID) b.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+r(x)=color(x).r(),  g(x)=color(x).g(), b(x)=color(x).b()
+
+</div></div>
+
+<a name="convertRGBToColor"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>convertRGBToColor</b>
+<p><div class="operator-inputs">Inputs:  r.pgm (DATAIMAGEGRID) g.pgm (DATAIMAGEGRID) b.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  color.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+r(x)=color(x).r(),  g(x)=color(x).g(), b(x)=color(x).b()
+
+</div></div>
+
+<a name="convertScalarToComplex"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>convertScalarToComplex</b>
+<p><div class="operator-inputs">Inputs:  real.pgm (DATAIMAGEGRID) img.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  complex.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+complex(x)=real(x) + i img(x) with img(x)=0 for default value
+
+</div></div>
+
+<a name="convertComplex2Scalar"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/12.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>convertComplex2Scalar</b>
+<p><div class="operator-inputs">Inputs:  complex.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  real.pgm (DATAIMAGEGRID) img.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+complex(x)=real(x) + i img(x) with img(x)=0 for default value
+
+</div></div>
+
+<a name="convertToImageQT"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>convertToImageQT</b>
+<p><div class="operator-inputs">Inputs:  in.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  out.bmp (DataImageQt)</div>
+<p><b><br>Description</b></p>
+h(x)=f(x)
+
+</div></div>
+
+<a name="convertFromImageQT"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>convertFromImageQT</b>
+<p><div class="operator-inputs">Inputs:  f.bmp (DataImageQt)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=f(x)
+
+</div></div>
+
+<a name="convertImage3DToVector"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>convertImage3DToVector</b>
+<p><div class="operator-inputs">Inputs:  in.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  out.vec (DATAVECTOR)</div>
+<p><b><br>Description</b></p>
+h(x)=f(x)
+
+</div></div>
+
+<a name="convertVectorToImage3D"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>convertVectorToImage3D</b>
+<p><div class="operator-inputs">Inputs:  out.vec (DATAVECTOR)</div>
+<div class="operator-outputs">Outputs:  in.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=f(x)
+
+</div></div>
+
+<a name="operatorTool"></a>
+<b>Tool (<a href="#" >Back to top</a>)</b><br>
+<a name="domain"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>domain</b>
+<p><div class="operator-inputs">Inputs:  h.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  d.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+d = domain(h)
+
+</div></div>
+
+<a name="resize"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>resize</b>
+<p><div class="operator-inputs">Inputs:  h.pgm (DATAIMAGEGRID) d.v (DATAPOINT)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+d = domain(h)
+
+</div></div>
+
+<a name="type"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>type</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  type.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+Get the type of the input image
+</div></div>
+
+<a name="labelToImageVector"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>labelToImageVector</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  vector(h).vec (DATAVECTOR)</div>
+<p><b><br>Description</b></p>
+Decompose the input image in a vector of image where each image contains a label of the input image,
+ vector(h)=$(h_0,...,h_n)$ where $h_i$(x)=255 for f(x)=i, 0 otherwise
+</div></div>
+
+<a name="isEmpty"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>isEmpty</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  bool.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+bool =true for forall x in E h(x)=0, false otherwise
+
+</div></div>
+
+<a name="crop"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>crop</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) xmin.v (DATAPOINT) xmax.v (DATAPOINT)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)= f(x+xmin) with domain(h) = (xmax-xmin)+1 
+
+</div></div>
+
+<a name="insertImage"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>insertImage</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) postit.pgm (DATAIMAGEGRID) t.v (DATAPOINT)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)= postit(x') for x' in domain(postit), f(x) otherwise with x= x'+t) 
+
+</div></div>
+
+<a name="scale"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>scale</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) lambdaX.num (DATANUMBER) lambdaY.num (DATANUMBER) lambdaZ.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)= f(x') with x'(i) = lambda(i) x(i)
+</div></div>
+
+<a name="translation"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>translation</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) t.v (DATAPOINT)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)= f(x+t)
+
+</div></div>
+
+<a name="rotation"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>rotation</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) R.m (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)= f(R(x-center)+center) with center the center of the image domain
+
+</div></div>
+
+<a name="blank"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>blank</b>
+<p><div class="operator-inputs">Inputs:  domain.v (DATAPOINT) type.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=0 domain(h)=domain and pixel type = 1Byte by default, type otherwise where 
+ type=P5 for 2d image in unsigned 1Byte,
+ type=PA for 2d image in signed 2Bytes,
+ type=PB for 2d image in signed 4Bytes
+ type=PC for 2d image in float 8Bytes,
+ type=P6 or 2d image in Color in 3*1Byte,
+ type=PL for 3d image in unsigned 1Byte,
+ type=PN for 3d image in signed 2Bytes,
+ type=PP for 3d image in signed 4Bytes
+ type=PR for 3d image in float 8Bytes,
+ type=PT or 3d image in Color in 3*1Byte 
+
+</div></div>
+
+<a name="operatorAffect"></a>
+<b>Affect (<a href="#" >Back to top</a>)</b><br>
+<a name="getPlane"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>getPlane</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) index.pgm (DATANUMBER) coordinate.pgm (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Extract the plane of the given index for the given coordinate of the input 3d image
+
+</div></div>
+
+<a name="setPlane"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>setPlane</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) plane.pgm (DATAIMAGEGRID) index.pgm (DATANUMBER) coordinate.pgm (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+the ouput image is equal to the input image except the plane for the given coordinate and the given index
+</div></div>
+
+<a name="getValue"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/23.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>getValue</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) x.v (DATAPOINT)</div>
+<div class="operator-outputs">Outputs:  scalar.point (or R for a color image) (DATANUMBER) G.v (DATANUMBER) B.v (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+get the pixel value at the point x (for a scalar image, only the first input is updated for a color image image, the thre output representing rgb are updated
+
+</div></div>
+
+<a name="setValue"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/51.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>setValue</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) x.v (DATAPOINT) scalar.point (or R for a color image) (DATANUMBER) G.v (DATANUMBER) B.v (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Set the pixel value at the point x (for a scalar image, only the first input is updated for a color image image, the thre output representing rgb are updated
+
+</div></div>
+
+<a name="setValueBall"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/71.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>setValueBall</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) x.v (DATAPOINT) scalar.num (or R for a color image) (DATANUMBER) G.num (DATANUMBER) B.num (DATANUMBER) radius.num (DATANUMBER) B.v (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Set the value in the Ball centered at x, radius r and norm n (x,r,n) (for a scalar image, only the first input is updated for a color image image, the thre output representing rgb are updated
+
+</div></div>
+
+<a name="setWhiteFace"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>setWhiteFace</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) coordinate.num (DATANUMBER) LeftRight.num (left or down=0 and right or top=1) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)= f(x) for x does not belong to the face at the given coordinate
+
+</div></div>
+
+<a name="operatorArithmetic"></a>
+<b>Arithmetic (<a href="#" >Back to top</a>)</b><br>
+<a name="addition"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>addition</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID) f2.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h=f1+f2
+
+</div></div>
+
+<a name="subtraction"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>subtraction</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID) f2.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h=f1-f2
+
+</div></div>
+
+<a name="maximum"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>maximum</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID) f2.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h=max(f1,f2)
+
+</div></div>
+
+<a name="minimum"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>minimum</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID) f2.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h=min(f1,f2)
+
+</div></div>
+
+<a name="multiplicationTermByTerm"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>multiplicationTermByTerm</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID) f2.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h=f1*f2
+
+</div></div>
+
+<a name="division"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>division</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID) f2.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h=f1/f2
+
+</div></div>
+
+<a name="opposite"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>opposite</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID) value.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h=value-f1 (by default the value is equal to maxValue of the pixel range)
+</div></div>
+
+<a name="XOR"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>XOR</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID) f2.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=255 for f1(x) neq f2(x), 0 otherwise
+
+</div></div>
+
+<a name="additionScalar"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>additionScalar</b>
+<p><div class="operator-inputs">Inputs:  v.num (DATANUMBER) f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=v+f(x)
+
+</div></div>
+
+<a name="subtractionScalar"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>subtractionScalar</b>
+<p><div class="operator-inputs">Inputs:  v.num (DATANUMBER) f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=v-f(x)
+
+</div></div>
+
+<a name="multiplicationScalar"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>multiplicationScalar</b>
+<p><div class="operator-inputs">Inputs:  v.num (DATANUMBER) f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=v*f(x)
+
+</div></div>
+
+<a name="divisionScalar"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>divisionScalar</b>
+<p><div class="operator-inputs">Inputs:  v.num (DATANUMBER) f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=v/f(x)
+
+</div></div>
+
+<a name="operatorDistribution"></a>
+<b>Distribution (<a href="#" >Back to top</a>)</b><br>
+<a name="operatorInOut"></a>
+<b>InOut (<a href="#" >Back to top</a>)</b><br>
+<a name="load"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>load</b>
+<p><div class="operator-inputs">Inputs:  file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+Load distribution by file
+</div></div>
+
+<a name="save"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>save</b>
+<p><div class="operator-inputs">Inputs:  h.pgm (DATADISTRIBUTION) file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Save distribution to the given file,  out= false for bad writing, true otherwise
+</div></div>
+
+<a name="operatorCatalog"></a>
+<b>Catalog (<a href="#" >Back to top</a>)</b><br>
+<a name="operatorContinuous"></a>
+<b>Continuous (<a href="#" >Back to top</a>)</b><br>
+<a name="uniformReal"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>uniformReal</b>
+<p><div class="operator-inputs">Inputs:  xmin.num (DATANUMBER) xmax.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  f.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+Uniform Real probability distribution in the range (xmin,xmax)
+
+</div></div>
+
+<a name="exponential"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>exponential</b>
+<p><div class="operator-inputs">Inputs:  lambda.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  f.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+f(x)=$ \lambda e^\{-\lambda x\}$ if x">"0;0 otherwise
+
+</div></div>
+
+<a name="normal"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>normal</b>
+<p><div class="operator-inputs">Inputs:  mean.num (DATANUMBER) sigma.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  f.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+f(x)=$\frac\{1\}\{\sqrt\{2 \pi \sigma^2\}\} e^\{ - \frac\{(x-mean)^2\}\{2 \sigma^2\}\}$
+</div></div>
+
+<a name="dirac"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>dirac</b>
+<p><div class="operator-inputs">Inputs:  v.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  P.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+As function f(x)=1/step for v-step/2"<"=x"<"v+step/2, 0 otherwise 
+ as probability distribution P(X=x)=1 for x = v, 0 otherwise
+
+</div></div>
+
+<a name="regularExpression"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>regularExpression</b>
+<p><div class="operator-inputs">Inputs:  expression.string (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  f.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+The distribution is defined from a regulation expression with x as variable
+</div></div>
+
+<a name="regularStep"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>regularStep</b>
+<p><div class="operator-inputs">Inputs:  matrix.m (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs:  f.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+f is a step function defined by the input matrix first column is x and the second one f(x)
+
+</div></div>
+
+<a name="operatorDiscrete"></a>
+<b>Discrete (<a href="#" >Back to top</a>)</b><br>
+<a name="uniformInt"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>uniformInt</b>
+<p><div class="operator-inputs">Inputs:  xmin.num (DATANUMBER) xmax.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  f.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+Uniform integer probability distribution in the range (xmin,xmax)
+
+</div></div>
+
+<a name="poisson"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>poisson</b>
+<p><div class="operator-inputs">Inputs:  lambda.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  f.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+f(n)=$\exp(-\lambda)\frac\{lambda^n\}\{n!\}$
+</div></div>
+
+<a name="binomial"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>binomial</b>
+<p><div class="operator-inputs">Inputs:  p.num (DATANUMBER) n.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  f.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+f(k)=$p^k(1-p)^\{n-k\}$ for 0"<"=k"<"n, 0 otherwise
+
+</div></div>
+
+<a name="pencil"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>pencil</b>
+<p><div class="operator-inputs">Inputs:  matrix.m (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs:  f.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+f is a pencil function defined by the input matrix first column is x and the second one f(x)
+
+</div></div>
+
+<a name="operatorArithmetic"></a>
+<b>Arithmetic (<a href="#" >Back to top</a>)</b><br>
+<a name="addition"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>addition</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) g.dist (DATADISTRIBUTION)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+h=f+g
+
+</div></div>
+
+<a name="composition"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>composition</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) g.dist (DATADISTRIBUTION)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+h=f rho g
+
+</div></div>
+
+<a name="division"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>division</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) g.dist (DATADISTRIBUTION)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+h=f/g
+
+</div></div>
+
+<a name="inverse"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>inverse</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+h=1/f
+
+</div></div>
+
+<a name="multiplication"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>multiplication</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) g.dist (DATADISTRIBUTION)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+h=f*g
+
+</div></div>
+
+<a name="oppoiste"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>oppoiste</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+h=-f
+
+</div></div>
+
+<a name="subtraction"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>subtraction</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) g.dist (DATADISTRIBUTION)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+h=f-g
+
+</div></div>
+
+<a name="maximum"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>maximum</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) g.dist (DATADISTRIBUTION)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+h=max(f,g)
+
+</div></div>
+
+<a name="operatorTool"></a>
+<b>Tool (<a href="#" >Back to top</a>)</b><br>
+<a name="fofx"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>fofx</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) x.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  y.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+y=f(x)
+</div></div>
+
+<a name="randomVariable"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>randomVariable</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+X a random variable following the probability distribution f
+</div></div>
+
+<a name="operatorConvert"></a>
+<b>Convert (<a href="#" >Back to top</a>)</b><br>
+<a name="toMatrix"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>toMatrix</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) xmin.num (DATANUMBER) xmax.num (DATANUMBER) step.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  M.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+M(i,0)=xmin+i*step  and M(i,1)=f(xmin+i*step) 
+</div></div>
+
+<a name="operatorDistributionMultiVariate"></a>
+<b>DistributionMultiVariate (<a href="#" >Back to top</a>)</b><br>
+<a name="operatorInOut"></a>
+<b>InOut (<a href="#" >Back to top</a>)</b><br>
+<a name="save"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>save</b>
+<p><div class="operator-inputs">Inputs:  h.pgm (DATADISTRIBUTIONMULTIVARIATE) file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Save DistributionMultiVariate to the given file,  out= false for bad writing, true otherwise
+</div></div>
+
+<a name="load"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>load</b>
+<p><div class="operator-inputs">Inputs:  file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<p><b><br>Description</b></p>
+Load DistributionMultiVariate by file
+</div></div>
+
+<a name="operatorCatalog"></a>
+<b>Catalog (<a href="#" >Back to top</a>)</b><br>
+<a name="normal"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>normal</b>
+<p><div class="operator-inputs">Inputs:  mean.num location (DATAPOINT) sigma.num covariance (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<p><b><br>Description</b></p>
+http://en.wikipedia.org/wiki/Multivariate_normal_distribution f(x)=$\frac\{1\}\{\sqrt\{2 \pi \sigma^2\}\} e^\{ - \frac\{(x-mean)^2\}\{2 \sigma^2\}\}$
+</div></div>
+
+<a name="expression"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>expression</b>
+<p><div class="operator-inputs">Inputs:  regular.str as x*y (DATASTRING) variable.str as x,y (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<p><b><br>Description</b></p>
+The distribution is defined from a regulation expression with the variables defined in the secound string input with a comma to separate their
+</div></div>
+
+<a name="coupled"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>coupled</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) number.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<p><b><br>Description</b></p>
+generate a random number H(X={x,...,z,})=F(X={x}) for x =...=z, 0 otherwise
+</div></div>
+
+<a name="Independant"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>Independant</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE) g.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<p><b><br>Description</b></p>
+Construct a distribution such that h(x,y)=f(x)*g(y) Idem for the probability distribution H(X={x,y})=F(X={x})G(Y={y})
+</div></div>
+
+<a name="fromDistribution"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>fromDistribution</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<p><b><br>Description</b></p>
+generate a random number H(X={x})=F(X={x})
+</div></div>
+
+<a name="operatorArithmetic"></a>
+<b>Arithmetic (<a href="#" >Back to top</a>)</b><br>
+<a name="addition"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>addition</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE) g.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<p><b><br>Description</b></p>
+h=f+g
+
+</div></div>
+
+<a name="composition"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>composition</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE) g.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<p><b><br>Description</b></p>
+h=f rho g
+
+</div></div>
+
+<a name="division"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>division</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE) g.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<p><b><br>Description</b></p>
+h=f/g
+
+</div></div>
+
+<a name="inverse"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>inverse</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<p><b><br>Description</b></p>
+h=1/f
+
+</div></div>
+
+<a name="multiplication"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>multiplication</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE) g.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<p><b><br>Description</b></p>
+h=f*g
+
+</div></div>
+
+<a name="oppoiste"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>oppoiste</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<p><b><br>Description</b></p>
+h=-f
+
+</div></div>
+
+<a name="subtraction"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>subtraction</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE) g.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<p><b><br>Description</b></p>
+h=f-g
+
+</div></div>
+
+<a name="maximum"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>maximum</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE) g.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<p><b><br>Description</b></p>
+h=max(f,g)
+
+</div></div>
+
+<a name="operatorTool"></a>
+<b>Tool (<a href="#" >Back to top</a>)</b><br>
+<a name="randomVariable"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>randomVariable</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<div class="operator-outputs">Outputs:  X.vec (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+X a random multivariate random variable following the probability DistributionMultiVariate f
+</div></div>
+
+<a name="fofx"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>fofx</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE) x.vec (DATAPOINT)</div>
+<div class="operator-outputs">Outputs:  y.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+y=f(x)
+</div></div>
+
+<a name="operatorMatrix"></a>
+<b>Matrix (<a href="#" >Back to top</a>)</b><br>
+<a name="operatorArithmetic"></a>
+<b>Arithmetic (<a href="#" >Back to top</a>)</b><br>
+<a name="addition"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>addition</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX) B.m (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs:  C.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+C=A+B
+</div></div>
+
+<a name="subtraction"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>subtraction</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX) B.m (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs:  C.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+C=A-B
+</div></div>
+
+<a name="multiplication"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>multiplication</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX) B.m (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs:  C.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+C=A*B
+</div></div>
+
+<a name="multiplicationPoint"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>multiplicationPoint</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX) b.v (DATAPOINT)</div>
+<div class="operator-outputs">Outputs:  c.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+c=A*b
+</div></div>
+
+<a name="multiplicationScalar"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>multiplicationScalar</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX) b.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  C.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+C=A*b
+</div></div>
+
+<a name="operatorTool"></a>
+<b>Tool (<a href="#" >Back to top</a>)</b><br>
+<a name="transpose"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>transpose</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs:  C.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+C=$A^t$
+</div></div>
+
+<a name="blank"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>blank</b>
+<p><div class="operator-inputs">Inputs:  sizei.num (DATANUMBER) sizej.num (DATANUMBER) value.num(by default O) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  A.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+A(i,j)=value with dimension sizei and sizej
+</div></div>
+
+<a name="setValue"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>setValue</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX) i.num (DATANUMBER) j.num (DATANUMBER) a.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  B.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+B(k,p)= a for i=k and j=p, A(k,p) otherwise
+</div></div>
+
+<a name="getValue"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>getValue</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX) i.num (DATANUMBER) j.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  a.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+a=A(i,j)
+</div></div>
+
+<a name="setRaw"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>setRaw</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX) V.v (DATAPOINT) i.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  B.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+B(k,j)=A(k,j) for k neq i, V(j) otherwise
+</div></div>
+
+<a name="setCol"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>setCol</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX) V.v (DATAPOINT) j.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  B.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+B(i,k)=A(i,k) for k neq k, V(i) otherwise
+</div></div>
+
+<a name="getCol"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>getCol</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX) j.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  V.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+V(i)= A(i,j)
+</div></div>
+
+<a name="getRaw"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>getRaw</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX) i.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  V.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+V(j)= A(i,j)
+</div></div>
+
+<a name="resize"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>resize</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX) sizei.num (DATANUMBER) sizej.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  B.num (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+B(i,j)=A(i,j) with nbr rows of B = sizei and  nbr cols of B = sizej
+</div></div>
+
+<a name="domain"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/12.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>domain</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs:  sizei.num (DATANUMBER) sizej.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+sizei is the number of rows of A and sizej the number of cols
+</div></div>
+
+<a name="operatorInOut"></a>
+<b>InOut (<a href="#" >Back to top</a>)</b><br>
+<a name="load"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>load</b>
+<p><div class="operator-inputs">Inputs:  file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  A.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+Load matrix from file
+</div></div>
+
+<a name="save"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>save</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX) file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Save matrix to given file,  out= false for bad writing, true otherwise
+</div></div>
+
+<a name="operatorConvert"></a>
+<b>Convert (<a href="#" >Back to top</a>)</b><br>
+<a name="toTable"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>toTable</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs:  t.table (DataTable)</div>
+<p><b><br>Description</b></p>
+t(row,col)=A(i,j)
+</div></div>
+
+<a name="fromTable"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>fromTable</b>
+<p><div class="operator-inputs">Inputs:  t.table (DataTable)</div>
+<div class="operator-outputs">Outputs:  A.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+A(i,j)=t(col,raw)
+</div></div>
+
+<a name="toImageGrid"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>toImageGrid</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs:  t. (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+img(x(j,i))=A(i,j= with a Float Pixel type
+</div></div>
+
+<a name="fromImageGrid"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>fromImageGrid</b>
+<p><div class="operator-inputs">Inputs:  t. (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  A.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+A(i,j)=img(x(j,i))
+</div></div>
+
+<a name="operatorPoint"></a>
+<b>Point (<a href="#" >Back to top</a>)</b><br>
+<a name="operatorArithmetic"></a>
+<b>Arithmetic (<a href="#" >Back to top</a>)</b><br>
+<a name="addition"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>addition</b>
+<p><div class="operator-inputs">Inputs:  a.v (DATAPOINT) b.v (DATAPOINT)</div>
+<div class="operator-outputs">Outputs:  c.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+c=a + b
+</div></div>
+
+<a name="additionScalar"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>additionScalar</b>
+<p><div class="operator-inputs">Inputs:  A.v (DATAPOINT) b.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  c.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+C(i)=A(i)+b
+</div></div>
+
+<a name="subtraction"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>subtraction</b>
+<p><div class="operator-inputs">Inputs:  a.v (DATAPOINT) b.v (DATAPOINT)</div>
+<div class="operator-outputs">Outputs:  c.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+c=a - b
+</div></div>
+
+<a name="productInner"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>productInner</b>
+<p><div class="operator-inputs">Inputs:  A.v (DATAPOINT) B.v (DATAPOINT)</div>
+<div class="operator-outputs">Outputs:  c.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+c=sum$_i$ A(i) * B(i) 
+</div></div>
+
+<a name="multiplicationTermByTerm"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>multiplicationTermByTerm</b>
+<p><div class="operator-inputs">Inputs:  a.v (DATAPOINT) b.v (DATAPOINT)</div>
+<div class="operator-outputs">Outputs:  c.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+c(i)=a(i)*b(i)
+</div></div>
+
+<a name="multiplicationScalar"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>multiplicationScalar</b>
+<p><div class="operator-inputs">Inputs:  A.v (DATAPOINT) b.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  c.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+C(i)=A(i)*b
+</div></div>
+
+<a name="maximum"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>maximum</b>
+<p><div class="operator-inputs">Inputs:  a.v (DATAPOINT) b.v (DATAPOINT)</div>
+<div class="operator-outputs">Outputs:  c.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+c(i)=max(a(i),b(i))
+</div></div>
+
+<a name="minimum"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>minimum</b>
+<p><div class="operator-inputs">Inputs:  a.v (DATAPOINT) b.v (DATAPOINT)</div>
+<div class="operator-outputs">Outputs:  c.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+c(i)=Min(a(i),b(i))
+</div></div>
+
+<a name="operatorTool"></a>
+<b>Tool (<a href="#" >Back to top</a>)</b><br>
+<a name="blank"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>blank</b>
+<p><div class="operator-inputs">Inputs:  size.num (DATANUMBER) value.num(by default O) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  V.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+V(i)=value with the given size
+</div></div>
+
+<a name="blank2D"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>blank2D</b>
+<p><div class="operator-inputs">Inputs:  vx.num (DATANUMBER) vy.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  V.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+V(0)=vx and V(1)=vy
+</div></div>
+
+<a name="blank3D"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>blank3D</b>
+<p><div class="operator-inputs">Inputs:  vx.num (DATANUMBER) vy.num (DATANUMBER) vz.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  V.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+V(0)=vx, V(1)=vy and V(2)=vz
+</div></div>
+
+<a name="setValue"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>setValue</b>
+<p><div class="operator-inputs">Inputs:  A.v (DATAPOINT) i.num (DATANUMBER) a.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  B.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+B(j)= a for i=j, A(j) otherwise
+</div></div>
+
+<a name="getValue"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>getValue</b>
+<p><div class="operator-inputs">Inputs:  V.v (DATAPOINT) i.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  v.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+v=V(i)
+</div></div>
+
+<a name="resize"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>resize</b>
+<p><div class="operator-inputs">Inputs:  V.m (DATAPOINT) size.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  V'.num (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+B(j)=0 for j">"=size(A), A(j) otherwise
+</div></div>
+
+<a name="domain"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>domain</b>
+<p><div class="operator-inputs">Inputs:  V.v (DATAPOINT)</div>
+<div class="operator-outputs">Outputs:  size.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+size is the number of elements of V
+</div></div>
+
+<a name="pushBack"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>pushBack</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAPOINT) value.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  B.num (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+B(j)=A(j) and  B(A.size())=value
+</div></div>
+
+<a name="multiplicationCoordinate"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>multiplicationCoordinate</b>
+<p><div class="operator-inputs">Inputs:  V.v (DATAPOINT)</div>
+<div class="operator-outputs">Outputs:  c.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+c = mult$_i$ V(i)
+</div></div>
+
+<a name="operatorInOut"></a>
+<b>InOut (<a href="#" >Back to top</a>)</b><br>
+<a name="load"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>load</b>
+<p><div class="operator-inputs">Inputs:  file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  A.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+Load Point from file
+</div></div>
+
+<a name="save"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>save</b>
+<p><div class="operator-inputs">Inputs:  A.v (DATAPOINT) file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Save point to the given file, out= false for bad writing, true otherwise
+</div></div>
+
+<a name="operatorPlot"></a>
+<b>Plot (<a href="#" >Back to top</a>)</b><br>
+<a name="fromMatrix"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>fromMatrix</b>
+<p><div class="operator-inputs">Inputs:  matrix.m (DATAMATRIX) IndexX.num(by default 0) (DATANUMBER) IndexY.num(by default 1) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  g.plot (DATAPLOT)</div>
+<p><b><br>Description</b></p>
+Create a graph from a matrix where the points of x-axis are the column of IndexX and the points of y-axis are IndexY
+</div></div>
+
+<a name="fromDistribution"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>fromDistribution</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) xmin.num(default xmin value of the distribution) (DATANUMBER) xmax.num(default xmax value of the distribution) (DATANUMBER) step.num(default step value of the distribution usually 0.01) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  g.plot (DATAPLOT)</div>
+<p><b><br>Description</b></p>
+A graph with these points: X(i)=xmin+i*step  and Y(i)=f(xmin+i*step)
+</div></div>
+
+<a name="fromTable"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>fromTable</b>
+<p><div class="operator-inputs">Inputs:  Table.m (DataTable) IndexX.num(by default 0) (DATANUMBER) IndexY.num(by default 1) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  g.plot (DATAPLOT)</div>
+<p><b><br>Description</b></p>
+Create a graph from a Table where the points of x-axis are the column of IndexX and the points of y-axis are the column of IndexY
+</div></div>
+
+<a name="addGraph"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>addGraph</b>
+<p><div class="operator-inputs">Inputs:  gmaster.plot (DATAPLOT) h.plot (DATAPLOT)</div>
+<div class="operator-outputs">Outputs:  f.plot (DATAPLOT)</div>
+<p><b><br>Description</b></p>
+Add the two graph in order to plot both
+</div></div>
+
+<a name="blank"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/01.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>blank</b>
+<p><div class="operator-inputs">Inputs: </div>
+<div class="operator-outputs">Outputs:  g.plot (DATAPLOT)</div>
+<p><b><br>Description</b></p>
+Create a blank graph
+</div></div>
+
+<a name="popPoint"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>popPoint</b>
+<p><div class="operator-inputs">Inputs:  g.plot (DATAPLOT)</div>
+<div class="operator-outputs">Outputs:  f.plot (DATAPLOT)</div>
+<p><b><br>Description</b></p>
+Pop the first point of the graph
+</div></div>
+
+<a name="pushPoint"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>pushPoint</b>
+<p><div class="operator-inputs">Inputs:  g.plot (DATAPLOT) x.num (DATANUMBER) y.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  f.plot (DATAPLOT)</div>
+<p><b><br>Description</b></p>
+add the point (x,y) to the graph
+</div></div>
+
+<a name="color"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>color</b>
+<p><div class="operator-inputs">Inputs:  g.plot (DATAPLOT) r.num(by default 0) (DATANUMBER) g.num(by default 0) (DATANUMBER) b.num(by default 0) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  f.plot (DATAPLOT)</div>
+<p><b><br>Description</b></p>
+set the color of the graph where red coresponds to (r=255,g=0,b=0), green (r=0,g=255,b=0) and blue (r=0,g=0,b=255) and any color a ratio of these three colors
+</div></div>
+
+<a name="legend"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>legend</b>
+<p><div class="operator-inputs">Inputs:  g.plot (DATAPLOT) legend.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  f.plot (DATAPLOT)</div>
+<p><b><br>Description</b></p>
+set the Legend of the graph
+</div></div>
+
+<a name="title"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>title</b>
+<p><div class="operator-inputs">Inputs:  g.plot (DATAPLOT) Title.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  f.plot (DATAPLOT)</div>
+<p><b><br>Description</b></p>
+set the Title of the graph
+</div></div>
+
+<a name="width"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>width</b>
+<p><div class="operator-inputs">Inputs:  g.plot (DATAPLOT) width.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  f.plot (DATAPLOT)</div>
+<p><b><br>Description</b></p>
+set the Width of the graph
+</div></div>
+
+<a name="alpha"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>alpha</b>
+<p><div class="operator-inputs">Inputs:  g.plot (DATAPLOT) alpha.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  f.plot (DATAPLOT)</div>
+<p><b><br>Description</b></p>
+set the transparency of the brush with a value in the range [0,1]
+</div></div>
+
+<a name="brushColor"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>brushColor</b>
+<p><div class="operator-inputs">Inputs:  g.plot (DATAPLOT) r.num(by default 0) (DATANUMBER) g.num(by default 0) (DATANUMBER) b.num(by default 0) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  f.plot (DATAPLOT)</div>
+<p><b><br>Description</b></p>
+set the Brush (color under the plot) of the graph where red coresponds to (r=255,g=0,b=0), green (r=0,g=255,b=0) and blue (r=0,g=0,b=255) and any color a ratio of these three colors
+</div></div>
+
+<a name="xAxisLegend"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>xAxisLegend</b>
+<p><div class="operator-inputs">Inputs:  g.plot (DATAPLOT) XAxis.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  f.plot (DATAPLOT)</div>
+<p><b><br>Description</b></p>
+set the XAxis legend of the graph
+</div></div>
+
+<a name="yAxisLegend"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>yAxisLegend</b>
+<p><div class="operator-inputs">Inputs:  g.plot (DATAPLOT) YAxis.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  f.plot (DATAPLOT)</div>
+<p><b><br>Description</b></p>
+set the YAxis of the graph
+</div></div>
+
+<a name="logXAxis"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>logXAxis</b>
+<p><div class="operator-inputs">Inputs:  g.plot (DATAPLOT)</div>
+<div class="operator-outputs">Outputs:  f.plot (DATAPLOT)</div>
+<p><b><br>Description</b></p>
+set log scale of X-Axis
+</div></div>
+
+<a name="logYAxis"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>logYAxis</b>
+<p><div class="operator-inputs">Inputs:  g.plot (DATAPLOT)</div>
+<div class="operator-outputs">Outputs:  f.plot (DATAPLOT)</div>
+<p><b><br>Description</b></p>
+set log scale of X-Axis
+</div></div>
+
+<a name="operatorAlgorithm"></a>
+<b>Algorithm (<a href="#" >Back to top</a>)</b><br>
+<a name="operatorProcessing"></a>
+<b>Processing (<a href="#" >Back to top</a>)</b><br>
+<a name="operatorPoint"></a>
+<b>Point (<a href="#" >Back to top</a>)</b><br>
+<a name="greylevelRemoveEmptyValue"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>greylevelRemoveEmptyValue</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Contract the grey-level dynamic such that any grey-level without any pixel of this level in the  input image is removed
+
+</div></div>
+
+<a name="greylevelTranslateMeanValue"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>greylevelTranslateMeanValue</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) m1.num (or red.num for color image (DATANUMBER) green.num (DATANUMBER) blue.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)
+
+</div></div>
+
+<a name="greylevelRange"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>greylevelRange</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) min.num (DATANUMBER) max.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=(f(x)-min(f))*(max-min)/(max(f)-min(f))+min
+</div></div>
+
+<a name="threshold"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>threshold</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) v1.num (DATANUMBER) v2.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=255 for v1"<"=f(x) "<"v2, 0 otherwise where 256 is the default value for v2 
+
+</div></div>
+
+<a name="greylevelScaleContrast"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>greylevelScaleContrast</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) scale.pgm (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Let sigma the root mean square contrast (RMSC)  of the input image, the RMSC of the ouput is equal to sigma*scale
+</div></div>
+
+<a name="ContrastScaleColor"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>ContrastScaleColor</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) redscale.num (DATANUMBER) greenscale.num (DATANUMBER) bluescale.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Let sigma the root mean square contrast (RMSC)  of the input image, the RMSC of the ouput is equal to sigma*scale
+</div></div>
+
+<a name="fofx"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>fofx</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) P.dist (DATADISTRIBUTION)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=P(f(x))
+
+</div></div>
+
+<a name="operatorGenerator"></a>
+<b>Generator (<a href="#" >Back to top</a>)</b><br>
+<a name="fill"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>fill</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) c.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=c where domain(h) = domain(f)
+
+</div></div>
+
+<a name="randomField"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>randomField</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) P.dist (DATADISTRIBUTION)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=X~P where X is random variable following the law P and domain(h)=domain(f)
+
+</div></div>
+
+<a name="operatorNeighborhood"></a>
+<b>Neighborhood (<a href="#" >Back to top</a>)</b><br>
+<a name="erosion"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>erosion</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID) r.num (DATANUMBER) n.num(by default 2) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+$h(x)=min_{\forall x'in N(x) }f(x)$ where N(x) is the ball centered in x with radius r and norm n (n=2 by default)
+
+</div></div>
+
+<a name="dilation"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>dilation</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID) r.num (DATANUMBER) n.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+$h(x)=max_{\forall x'in N(x) }f(x)$ where N(x) is the ball centered in x with radius r and norm n (n=2 by default)
+
+</div></div>
+
+<a name="opening"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>opening</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID) r.num (DATANUMBER) n.num(by default 2) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=h(x)=Erosion(Dilation(f)) with a ball with radius r and norm n (n=2 by default)
+
+</div></div>
+
+<a name="closing"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>closing</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID) r.num (DATANUMBER) n.num(by default 2) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=Dilation(Erosion(f)) with a ball with radius r and norm n (n=2 by default)
+
+</div></div>
+
+<a name="alternateSequentialCO"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>alternateSequentialCO</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) maxradius.num (DATANUMBER) n.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=Closing(Opening(....Closing(Opening(h))...)) by progessively increased the size of ball until maxRadius
+
+</div></div>
+
+<a name="alternateSequentialOC"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>alternateSequentialOC</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) maxRadius.num (DATANUMBER) n.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=Opening(Closing(...Opening(Closing(h))...)) by progessively increased the size of ball until maxRadius
+
+</div></div>
+
+<a name="median"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>median</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID) r.num (DATANUMBER) n.num(by default 2) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+$h(x)=median_{\forall x'in N(x) }f(x)$ where N(x) is the ball centered in x with radius r and norm n (n=2 by default)
+
+</div></div>
+
+<a name="mean"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>mean</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID) r.num (DATANUMBER) n.num(by default 2) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+$h(x)=mean_{\forall x'in N(x) }f(x)$ where N(x) is the ball centered in x with radius r and norm n (n=2 by default)
+
+</div></div>
+
+<a name="erosionStructuralElement"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>erosionStructuralElement</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) structelt.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+$h(x)=min_{\forall x'in N(x) }f(x)$ where N(x)={x'+x:strucelt(x'+xcenter) neq 0}
+ for instance, for
+(0,1,0)\\ 
+(1,1,1)=structelt, we have  N={(0,0),(1,0),(-1,0),(0,1),(0,-1)}\\ 
+(0,1,0)
+</div></div>
+
+<a name="dilationStructuralElement"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>dilationStructuralElement</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) structelt.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+$h(x)=min_{\forall x'in N(x) }f(x)$ where N(x)={x'+x:strucelt(x'+xcenter) neq 0}
+ for instance, for
+(0,1,0)\\
+(1,1,1)=strucelt, we have  N={(0,0),(1,0),(-1,0),(0,1),(0,-1)}\\
+(0,1,0)
+</div></div>
+
+<a name="openingStructuralElement"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>openingStructuralElement</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) structelt.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=h(x)=Erosion(Dilation(f,N),N) where N(x)={x'+x:strucelt(x'+xcenter) neq 0}
+ for instance, for
+(0,1,0)\\
+(1,1,1)=structelt, we have  N={(0,0),(1,0),(-1,0),(0,1),(0,-1)}\\
+(0,1,0)
+</div></div>
+
+<a name="closingStructuralElement"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>closingStructuralElement</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) structelt.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=Closing(f(x),N) where N(x)={x'+x:strucelt(x'+xcenter) neq 0}
+ for instance, for
+(0,1,0)\\
+(1,1,1)=structelt, we have  N={(0,0),(1,0),(-1,0),(0,1),(0,-1)}\\
+(0,1,0)
+</div></div>
+
+<a name="alternateSequentialCOStructuralElement"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>alternateSequentialCOStructuralElement</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) maxradius.num (DATANUMBER) structelt.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=Closing(Opening(....Closing(Opening(h))...)) by progessively dilated by the current structural element by the original one
+
+</div></div>
+
+<a name="alternateSequentialOCStructuralElement"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>alternateSequentialOCStructuralElement</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) maxradius.num (DATANUMBER) structelt.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=Closing(Opening(....Closing(Opening(h))...)) by progessively dilated by the current structural element by the original one
+
+</div></div>
+
+<a name="hitOrMiss"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>hitOrMiss</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) C.pgm (DATAIMAGEGRID) D.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=Erosion(f,C) Union Erosion(f$^c$,C) where f$^c$(x)=255 for f(x)=0, 0 otherwise 
+</div></div>
+
+<a name="operatorRegionGrowing"></a>
+<b>RegionGrowing (<a href="#" >Back to top</a>)</b><br>
+<a name="erosionRegionGrowing"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>erosionRegionGrowing</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID) r.num (DATANUMBER) n.num(by default 2) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Fast Erosion for binary image with $h(x)=min_{\forall x'in N(x) }f(x)$ where N(x) is the ball centered in x with radius r and norm n (n=2 by default)
+
+</div></div>
+
+<a name="dilationRegionGrowing"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>dilationRegionGrowing</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID) r.num (DATANUMBER) n.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Fast dilation for binary image with $h(x)=max_{\forall x'in N(x) }f(x)$ where N(x) is the ball centered in x with radius r and norm n (n=2 by default)
+
+</div></div>
+
+<a name="voronoiTesselation"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/32.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>voronoiTesselation</b>
+<p><div class="operator-inputs">Inputs:  seed.pgm (DATAIMAGEGRID) mask.pgm(by default no mask) (DATAIMAGEGRID) n.num(by default 1) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID) dist.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+$h(x) = \{ i : d(x,s_i)"<"=d(x,s_j),\forall j\}$ and $dist(x) = min_i d(x,s_i)$
+ where $s_{j">"0}=\{x:seed(x)=j\}$
+ d(x,si) is the minimum distance between x and all point of si in the set (the euclidean norm doesn't work with a mask)
+</div></div>
+
+<a name="geodesicReconstruction"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>geodesicReconstruction</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) g.pgm (DATAIMAGEGRID) norm.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+$f_{i+1}=max(erosion(f_i),g)$ with $f_0 = f$ and $f_{\infty}=h$ 
+</div></div>
+
+<a name="dynamic"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>dynamic</b>
+<p><div class="operator-inputs">Inputs:  g.pgm (DATAIMAGEGRID) d.num (DATANUMBER) norm.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+$f_{i+1}=max(erosion(f_i),g)$ with $f_0(x) = g(x)+val$ and $f_{\infty}=h$ 
+</div></div>
+
+<a name="distanceFunction"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/32.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>distanceFunction</b>
+<p><div class="operator-inputs">Inputs:  seed.pgm (DATAIMAGEGRID) mask.pgm(by default no mask) (DATAIMAGEGRID) n.num(by default 1) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID) dist.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+$h(x) = \{ i : d(x,s_i)"<"=d(x,s_j),\forall j\}$ and $dist(x) = min_i d(x,s_i)$
+ where $s_{j">"0}=\{x:seed(x)=j\}$
+ d(x,si) is the minimum distance between x and all point of si in the set (the euclidean norm doesn't work with a mask)
+</div></div>
+
+<a name="watershed"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/51.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>watershed</b>
+<p><div class="operator-inputs">Inputs:  seed.pgm (DATAIMAGEGRID) topo.pgm (DATAIMAGEGRID) mask.pgm (DATAIMAGEGRID) n.num(by default 1) (DATANUMBER) boundary.bool(by default false) (DATABOOL)</div>
+<div class="operator-outputs">Outputs:  watershed.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Watershed transformation if bound = true we have watershed line to separate the bassins
+</div></div>
+
+<a name="minimaRegional"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>minimaRegional</b>
+<p><div class="operator-inputs">Inputs:  topo.pgm (DATAIMAGEGRID) n.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  minima.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Regional minima of topo
+</div></div>
+
+<a name="clusterToLabel"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>clusterToLabel</b>
+<p><div class="operator-inputs">Inputs:  cluster.pgm (DATAIMAGEGRID) n.num(by default 0) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  label.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Cluster to label
+
+</div></div>
+
+<a name="clusterMax"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>clusterMax</b>
+<p><div class="operator-inputs">Inputs:  cluster.pgm (DATAIMAGEGRID) n.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  label.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Extract the cluster with the maximum area/volume
+
+</div></div>
+
+<a name="regionGrowingAdamsBisch"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>regionGrowingAdamsBisch</b>
+<p><div class="operator-inputs">Inputs:  seed.pgm (DATAIMAGEGRID) topo.pgm (DATAIMAGEGRID) n.num (DATANUMBER) mode.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  region.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+AdamsBischof algorithm for mode=0 $delta(x,i)= |topo(x)- "<"topo(x)">"_{x in s_i}|$ and   for mode=1 $delta(x,i)= |topo(x)- "<"topo(x)">"_{x in s_i}|/variance()$ 
+</div></div>
+
+<a name="holeFilling"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>holeFilling</b>
+<p><div class="operator-inputs">Inputs:  bin.pgm (DATAIMAGEGRID) n.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  holefilling.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Hole filling
+</div></div>
+
+<a name="operatorConvolution"></a>
+<b>Convolution (<a href="#" >Back to top</a>)</b><br>
+<a name="convolution"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>convolution</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) k.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+$h(x)= \int_O^{\infty} f(x+x')k(-x')dx$
+</div></div>
+
+<a name="gradientMagnitudeSobel"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>gradientMagnitudeSobel</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+ImageGridGradNormSobel f.pgm h.pgm h(x)=|grad(g)| with grad=sobel
+
+</div></div>
+
+<a name="operatorRecursive"></a>
+<b>Recursive (<a href="#" >Back to top</a>)</b><br>
+<a name="smoothGaussian"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>smoothGaussian</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) sigma.pgm (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=smooth(g,sigma) with smooth is the Gaussian's smooth operator with parameter sigma
+
+</div></div>
+
+<a name="gradientMagnitudeGaussian"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>gradientMagnitudeGaussian</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) sigma.pgm(by default 1) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=|grad(g,sigma)| with grad is the Gaussian's gradient with parameter sigma
+
+</div></div>
+
+<a name="recursiveOrder1"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/71.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>recursiveOrder1</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) a0.num (DATANUMBER) a1.num (DATANUMBER) b.num (DATANUMBER) ab.num (DATANUMBER) c.num (DATANUMBER) w.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Apply this formula h(x)= a0 f(x) + a1 f(x-1)  + b h(x-1) and h(x=0) = ab f(x=0)  following the coordinate c and the way w
+
+</div></div>
+
+<a name="recursiveOrder2"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/121.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>recursiveOrder2</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) a0.num (DATANUMBER) a1.num (DATANUMBER) a2.num (DATANUMBER) b1.num (DATANUMBER) b2.num (DATANUMBER) ab0.num (DATANUMBER) ab10.num (DATANUMBER) ab11.num (DATANUMBER) bb1.num (DATANUMBER) c.num (DATANUMBER) w.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Apply this recursive formula h(x)= a0 f(x) + a1 f(x-1) + a2 f(x-2)  + b1 h(x-1) + b2 h(x-2);
+ h(x=0) = $a^{b0}$ f(x=0)
+  h(x=1)= $a^{b1}_0$ f(x) + $a^{b1}_1$ f(x-1)  + $b^{b1}$ h(x-1) 
+ following the coordinate c and the way w
+
+</div></div>
+
+<a name="gradientMagnitudeDeriche"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>gradientMagnitudeDeriche</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) sigma.pgm(by default 1) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=|grad(g,sigma)| with grad is the Deriche's gradient with parameter sigma
+
+</div></div>
+
+<a name="smoothDeriche"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>smoothDeriche</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) sigma.pgm (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=smooth(g,sigma) with smooth is the Deriche's smooth operator with parameter sigma
+
+</div></div>
+
+<a name="operatorSeed"></a>
+<b>Seed (<a href="#" >Back to top</a>)</b><br>
+<a name="labelMerge"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>labelMerge</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) g.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=f(x) for g(x)=0, maxvalue(f)+g(x) otherswise
+</div></div>
+
+<a name="labelFromValue"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>labelFromValue</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) v1.pgm (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=255 for f(x)=v1, 0 otherwise where 256 is the default value for v2 
+
+</div></div>
+
+<a name="labelFromSingleSeed"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>labelFromSingleSeed</b>
+<p><div class="operator-inputs">Inputs:  bin.pgm (DATAIMAGEGRID) label.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h(x)=255  for label(x) = i, 0 otherwise  with  i the label value such that the bin image is included in it
+</div></div>
+
+<a name="operatorPDE"></a>
+<b>PDE (<a href="#" >Back to top</a>)</b><br>
+<a name="nonLinearAnisotropicDiffusionDericheFast"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>nonLinearAnisotropicDiffusionDericheFast</b>
+<p><div class="operator-inputs">Inputs:  init.pgm (DATAIMAGEGRID) stepsnumber.pgm(by default 20) (DATANUMBER) Kappa.num(by default value 50) (DATANUMBER) Sigma.num(by default value 1) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  out.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Non linear anisotropic diffusion (Kappa is little bit smaller than the grey-level dynamic between phases observed in the histogram)
+</div></div>
+
+<a name="operatorPhaseField"></a>
+<b>PhaseField (<a href="#" >Back to top</a>)</b><br>
+<a name="allenCahn"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/32.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>allenCahn</b>
+<p><div class="operator-inputs">Inputs:  labelinit.pgm (DATAIMAGEGRID) bulk.pgm (DATAIMAGEGRID) nbstep.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  label.pgm (DATAIMAGEGRID) phasefield.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Multi phase field for Allen-cahn equation with neuman condition on the boundary
+
+</div></div>
+
+<a name="curvatureFromPhaseField"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>curvatureFromPhaseField</b>
+<p><div class="operator-inputs">Inputs:  scalarfield_singlephasefield.pgm (DATAIMAGEGRID) bulk.num (by default the whole space) (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  curvature.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Multi phase field for Allen-cahn equation with neuman condition on the boundary
+
+</div></div>
+
+<a name="getFieldFromMultiPhaseField"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/51.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>getFieldFromMultiPhaseField</b>
+<p><div class="operator-inputs">Inputs:  scalarfield_multiphasefield.pgm (DATAIMAGEGRID) label_multiphasefield.pgm (DATAIMAGEGRID) label.num (by default 0) (DATANUMBER) interfacewidthd.num(by default 5) (DATANUMBER) bulk.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  scalarfield_singlephasefield.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Multi phase field for Allen-cahn equation with neuman condition on the boundary
+
+</div></div>
+
+<a name="operatorVisualization"></a>
+<b>Visualization (<a href="#" >Back to top</a>)</b><br>
+<a name="operatorLabel"></a>
+<b>Label (<a href="#" >Back to top</a>)</b><br>
+<a name="labelToColorGradation"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>labelToColorGradation</b>
+<p><div class="operator-inputs">Inputs:  label.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+$h(x) = c_\{label(x)\}$ with $c_\{i=0\}=0$ and $c_\{i \neq 0\}$=blue*(maxValue(label)-i)/maxValue(label)+red*i/maxValue(label) 
+</div></div>
+
+<a name="labelToRandomColor"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>labelToRandomColor</b>
+<p><div class="operator-inputs">Inputs:  label.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+$h(x) = c_\{label(x)\}$ with $c_i$ a collection of random colors
+
+</div></div>
+
+<a name="labelAverageColor"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>labelAverageColor</b>
+<p><div class="operator-inputs">Inputs:  label.pgm (DATAIMAGEGRID) f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+$h(x) = c_\{label(x)\}$ where $c_i = "<"f">"_\{label(y)=i\}$
+</div></div>
+
+<a name="labelForeground"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>labelForeground</b>
+<p><div class="operator-inputs">Inputs:  label.pgm (DATAIMAGEGRID) grey.pgm (DATAIMAGEGRID) ratio.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  color.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+color(x) = ratio*grey(x) + (1-ratio)*c$_\{label(x)\}$ with with $c_i$ a collection of random colors and ratio=0.5 as default value
+</div></div>
+
+<a name="operatorOpenGl"></a>
+<b>OpenGl (<a href="#" >Back to top</a>)</b><br>
+<a name="Addition"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>Addition</b>
+<p><div class="operator-inputs">Inputs:  scene1.opengl (DATAOpenGl) scene2.opengl (DATAOpenGl)</div>
+<div class="operator-outputs">Outputs:  sceneout.opengl (DATAOpenGl)</div>
+<p><b><br>Description</b></p>
+Addition of the two opengl scene
+</div></div>
+
+<a name="color"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>color</b>
+<p><div class="operator-inputs">Inputs:  g.OpenGl (DATAOpenGl) r.num(by default 0) (DATANUMBER) g.num(by default 0) (DATANUMBER) b.num(by default 0) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  f.OpenGl (DATAOpenGl)</div>
+<p><b><br>Description</b></p>
+set the color of the opengl elements where red coresponds to (r=255,g=0,b=0), green (r=0,g=255,b=0) and blue (r=0,g=0,b=255) and any color a ratio of these three colors
+</div></div>
+
+<a name="cubel"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>cubel</b>
+<p><div class="operator-inputs">Inputs:  binary.pgm (DATAIMAGEGRID) width.pgm(by default 3) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAOpenGl)</div>
+<p><b><br>Description</b></p>
+Boundary surface of the input 3D binary image with red lines
+</div></div>
+
+<a name="plane"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>plane</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) index.pgm(by default 0) (DATANUMBER) coordinate.pgm(by default 2=z-direction) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAOpenGl)</div>
+<p><b><br>Description</b></p>
+get a plane of the core sample in the given coordinate and in the given index
+</div></div>
+
+<a name="graph"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>graph</b>
+<p><div class="operator-inputs">Inputs:  img.graph (DATAGraph)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAOpenGl)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+
+<a name="surface"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>surface</b>
+<p><div class="operator-inputs">Inputs:  img.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAOpenGl)</div>
+<p><b><br>Description</b></p>
+Opengl Surface of the input 3D image 
+</div></div>
+
+<a name="lineCube"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>lineCube</b>
+<p><div class="operator-inputs">Inputs:  binary.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAOpenGl)</div>
+<p><b><br>Description</b></p>
+Boundary lines of the input 3D binary image 
+</div></div>
+
+<a name="marchingCube"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>marchingCube</b>
+<p><div class="operator-inputs">Inputs:  Color.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAOpenGl)</div>
+<p><b><br>Description</b></p>
+Marching cube of the input 3D Color image 
+</div></div>
+
+<a name="transparency"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>transparency</b>
+<p><div class="operator-inputs">Inputs:  scene1.opengl (DATAOpenGl) t.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  sceneout.opengl (DATAOpenGl)</div>
+<p><b><br>Description</b></p>
+activate the transparency mode and set the transparency objects contained in the input scene between [0,1] of 
+</div></div>
+
+<a name="ambient"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>ambient</b>
+<p><div class="operator-inputs">Inputs:  scene1.opengl (DATAOpenGl) r.num (DATANUMBER) g.num (DATANUMBER) b.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  sceneout.opengl (DATAOpenGl)</div>
+<p><b><br>Description</b></p>
+Set the ambiance contained in the input scene between red=[0,1], g=[0,1] and b=[0,1]
+</div></div>
+
+<a name="diffuse"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>diffuse</b>
+<p><div class="operator-inputs">Inputs:  scene1.opengl (DATAOpenGl) r.num (DATANUMBER) g.num (DATANUMBER) b.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  sceneout.opengl (DATAOpenGl)</div>
+<p><b><br>Description</b></p>
+Set the ambiance contained in the input scene between red=[0,1], g=[0,1] and b=[0,1]
+</div></div>
+
+<a name="operatorRandomGeometry"></a>
+<b>RandomGeometry (<a href="#" >Back to top</a>)</b><br>
+<a name="operatorGerm"></a>
+<b>Germ (<a href="#" >Back to top</a>)</b><br>
+<a name="hardCoreFilter"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>hardCoreFilter</b>
+<p><div class="operator-inputs">Inputs:  phi.grainlist (DATAGrainList) radius.dist (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  phi'.grainlist (DATAGrainList)</div>
+<p><b><br>Description</b></p>
+phi'=f(phi,radius) where f is the hard core filter 
+
+</div></div>
+
+<a name="minOverlapFilter"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>minOverlapFilter</b>
+<p><div class="operator-inputs">Inputs:  phi.grainlist (DATAGrainList) radius.dist (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  phi'.grainlist (DATAGrainList)</div>
+<p><b><br>Description</b></p>
+phi'=f(phi,radius) where f is the min overlap filter
+
+</div></div>
+
+<a name="poissonPointProcessNonUniform"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>poissonPointProcessNonUniform</b>
+<p><div class="operator-inputs">Inputs:  lambda.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  phi.grainlist (DATAGrainList)</div>
+<p><b><br>Description</b></p>
+phi=$\{x_0,...,x_\{n-1\}\}$ is collection of random points following the lambda field
+
+</div></div>
+
+<a name="poissonPointProcessUniform"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>poissonPointProcessUniform</b>
+<p><div class="operator-inputs">Inputs:  D.v (DATAPOINT) lambda.dist (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  phi.grainlist (DATAGrainList)</div>
+<p><b><br>Description</b></p>
+phi=$\{x_0,...,x_\{n-1\}\}$ where x are random variables thrown in the space D with intensity lmabda 
+
+</div></div>
+
+<a name="operatorGrain"></a>
+<b>Grain (<a href="#" >Back to top</a>)</b><br>
+<a name="box"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>box</b>
+<p><div class="operator-inputs">Inputs:  phi.grainlist (DATAGrainList) R.dist (DATADISTRIBUTIONMULTIVARIATE) Thetax.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<div class="operator-outputs">Outputs:  phi'.grainlist (DATAGrainList)</div>
+<p><b><br>Description</b></p>
+phi'=$\{S_0(x_0,R_0,\Theta_0),...S_0(x_\{n-1\},R_\{n-1\},\Theta_\{n-1\}))$ where
+*phi=$\{x_0,...,x_\{n-1\}\}$ is the input germ,
+* $R_i$ are 2 random variables for a 2D space (and 3 for a 3D space) following the probability distribution (P0,P1)
+*
+*$\Theta$ is 1D random variable for 2D space (without input, we sample a random angle in the unit sphere) and 3D random variable for a 3d space
+ *B(x,R,theta) is a Box centered in x of radius R and angle theta
+</div></div>
+
+<a name="cylinder"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>cylinder</b>
+<p><div class="operator-inputs">Inputs:  phi.grainlist (DATAGrainList) R.dist (DATADISTRIBUTION) H.dist (DATADISTRIBUTION) Theta.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<div class="operator-outputs">Outputs:  phi'.grainlist (DATAGrainList)</div>
+<p><b><br>Description</b></p>
+phi'=$\{C_0(x_0,R_0,H_0,\Theta_0),...C_0(x_\{n-1\},C_\{n-1\},H_\{n-1\},\Theta_{n-1}))$ where
+*phi=$\{x_0,...,x_\{n-1\}\}$ is the input germ,
+* $R_i$ are 2 random variables for a 2D space (and 3 for a 3D space) following the probability distribution (P0,P1)
+*
+*Theta is 1D random variable for 2D space (without input, we sample a random angle in the unit sphere) and 3D random variable for a 3d space
+ * C(x,R,H,theta) is a Cylinder centered in x of radius R, heigh H, and angle theta
+</div></div>
+
+<a name="ellipsoid"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>ellipsoid</b>
+<p><div class="operator-inputs">Inputs:  phi.grainlist (DATAGrainList) R.dist (DATADISTRIBUTIONMULTIVARIATE) Thetax.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<div class="operator-outputs">Outputs:  phi.grainlist (DATAGrainList)</div>
+<p><b><br>Description</b></p>
+phi'=$\{S_0(x_0,R_0,\Theta_0),...S_0(x_\{n-1\},R_\{n-1\},\Theta_\{n-1\}))$ where
+*phi=$\{x_0,...,x_\{n-1\}\}$ is the input germ,
+* $R_i$ are 2 random variables for a 2D space (and 3 for a 3D space) following the probability distribution (P0,P1)
+*
+*Theta is 1D random variable for 2D space (without input, we sample a random angle in the unit sphere) and 3D random variable for a 3d space
+ *B(x,R,theta) is a Ellipsoid centered in x of radius R and angle theta
+</div></div>
+
+<a name="polyhedra"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/61.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>polyhedra</b>
+<p><div class="operator-inputs">Inputs:  phi.grainlist (DATAGrainList) vradius.dist (DATAVECTOR) vnorma.dist (DATAVECTOR) Thetax.dist (DATADISTRIBUTION) Thetay.dist (DATADISTRIBUTION) Thetaz.dist (DATADISTRIBUTION)</div>
+<div class="operator-outputs">Outputs:  phi'.grainlist (DATAGrainList)</div>
+<p><b><br>Description</b></p>
+phi'=$\{C_0(x_0,r_{0,0},n_{0,0}...,r_{0,p},n_{0,p},\Theta_0),...C_0(x_\{n-1\},,r_\{n-1,0\},n_\{n-1,0\}...,r_\{n-1,p\},n_\{n-1,p\},\Theta_\{n-1\}))$ where
+*phi'=$\{x_0,...,x_\{n-1\}\}$ is the input germ,
+* $R_i$ are 2 random variables for a 2D space (and 3 for a 3D space) following the probability distribution (P0,P1)
+*
+*Theta is 1D random variable for 2D space (without input, we sample a random angle in the unit sphere) and 3D random variable for a 3d space
+ * C(x,R,A,theta) is a Polyhedra centered in x delimited by p plane at a given radius and normal, and angle theta of orientation
+</div></div>
+
+<a name="rhombohedron"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>rhombohedron</b>
+<p><div class="operator-inputs">Inputs:  phi.grainlist (DATAGrainList) R.dist (DATADISTRIBUTION) A.dist (DATADISTRIBUTION) Theta.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<div class="operator-outputs">Outputs:  phi.grainlist (DATAGrainList)</div>
+<p><b><br>Description</b></p>
+phi'=$\{C_0(x_0,R_0,A_0,\Theta_0),...C_0(x_\{n-1\},R_\{n-1\},A_\{n-1\},\Theta_\{n-1\}))$ where
+*phi=${x_0,...,x_\{n-1}\}$ is the input germ,
+* $R_i$ are 2 random variables for a 2D space (and 3 for a 3D space) following the probability distribution (P0,P1)
+*
+*Theta is 1D random variable for 2D space (without input, we sample a random angle in the unit sphere) and 3D random variable for a 3d space
+ * C(x,R,A,theta) is a Rhombohedron centered in x of radius R, parallelepiped of angle A, and angle theta of orientation
+</div></div>
+
+<a name="sphere"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>sphere</b>
+<p><div class="operator-inputs">Inputs:  phi.grainlist (DATAGrainList) P.dist (DATADISTRIBUTION)</div>
+<div class="operator-outputs">Outputs:  phi.grainlist (DATAGrainList)</div>
+<p><b><br>Description</b></p>
+phi'=$\{S_0(x_0,R_0),...S_0(x_\{n-1\},R_\{n-1\}))$ where phi=$\{x_0,...,x_\{n-1\}\}$ is the input germ, $R_i$ are random variable following the probability distribution P and S(x,R) is a sphere centered in x of radius R 
+
+</div></div>
+
+<a name="operatorLattice"></a>
+<b>Lattice (<a href="#" >Back to top</a>)</b><br>
+<a name="continuousToDiscrete"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>continuousToDiscrete</b>
+<p><div class="operator-inputs">Inputs:  phi.grainlist (DATAGrainList) buttoncorner.v (DATAPOINT) topcorner.v (DATAPOINT)</div>
+<div class="operator-outputs">Outputs:  lattice.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Lattice the continuous model where the domain is defined by its topcorner and buttoncorner and the defauld domain is the continuous model domain by default with periodic condition
+</div></div>
+
+<a name="operatorModel"></a>
+<b>Model (<a href="#" >Back to top</a>)</b><br>
+<a name="boolean"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>boolean</b>
+<p><div class="operator-inputs">Inputs:  phi.grainlist (DATAGrainList)</div>
+<div class="operator-outputs">Outputs:  phi'.grainlist (DATAGrainList)</div>
+<p><b><br>Description</b></p>
+phi'=ph where the model of phi' is boolean
+
+</div></div>
+
+<a name="deadLeave"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>deadLeave</b>
+<p><div class="operator-inputs">Inputs:  phi.grainlist (DATAGrainList)</div>
+<div class="operator-outputs">Outputs:  phi'.grainlist (DATAGrainList)</div>
+<p><b><br>Description</b></p>
+phi'=pho where the mdoel of phi' is dead leaves
+
+</div></div>
+
+<a name="deadLeaveTransparent"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>deadLeaveTransparent</b>
+<p><div class="operator-inputs">Inputs:  phi.grainlist (DATAGrainList) alpha.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  phi'.grainlist (DATAGrainList)</div>
+<p><b><br>Description</b></p>
+phi'=phi where the model of phi' is transparent dead leaves
+
+</div></div>
+
+<a name="operatorColor"></a>
+<b>Color (<a href="#" >Back to top</a>)</b><br>
+<a name="colorFromImage"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>colorFromImage</b>
+<p><div class="operator-inputs">Inputs:  phi.grainlist (DATAGrainList) img.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  phi'.grainlist (DATAGrainList)</div>
+<p><b><br>Description</b></p>
+phi'=phi such that each grain take the color of the pixel located at the grain position  
+
+</div></div>
+
+<a name="colorRandomBlackOrWhite"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>colorRandomBlackOrWhite</b>
+<p><div class="operator-inputs">Inputs:  phi.grainlist (DATAGrainList)</div>
+<div class="operator-outputs">Outputs:  phi'.grainlist (DATAGrainList)</div>
+<p><b><br>Description</b></p>
+phi'=phi such that each grain take a random black or white color
+</div></div>
+
+<a name="colorRandom"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>colorRandom</b>
+<p><div class="operator-inputs">Inputs:  phi.grainlist (DATAGrainList) Pr.dist (DATADISTRIBUTION) Pg.dist (DATADISTRIBUTION) Pb.dist (DATADISTRIBUTION)</div>
+<div class="operator-outputs">Outputs:  phi'.grainlist (DATAGrainList)</div>
+<p><b><br>Description</b></p>
+phi'=phi such that each grain take a random color (R,G,B) following the probabilitu distribution Pr, Pg, Pb
+</div></div>
+
+<a name="operatorArt"></a>
+<b>Art (<a href="#" >Back to top</a>)</b><br>
+<a name="randomWalk"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>randomWalk</b>
+<p><div class="operator-inputs">Inputs:  phi.grainlist (DATAGrainList) radius.dist (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  phi'.grainlist (DATAGrainList)</div>
+<p><b><br>Description</b></p>
+phi'=f(phi,radius) where f is the hard core filter 
+
+</div></div>
+
+<a name="operatorFitGeometry"></a>
+<b>FitGeometry (<a href="#" >Back to top</a>)</b><br>
+<a name="gaussianRandomField"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>gaussianRandomField</b>
+<p><div class="operator-inputs">Inputs:  x.v (DATAPOINT) corr.m (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs:  binary.num (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+binary is a realisation of the gaussian random field with  domain=x and the 2-point correlation function corr (used correlation operator) 
+
+</div></div>
+
+<a name="randomStructure"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>randomStructure</b>
+<p><div class="operator-inputs">Inputs:  domain.v (DATAPOINT) volumefraction.m (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs:  binary.num (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+generate a random structure at the given volume fraction 
+
+</div></div>
+
+<a name="annealingSimulated"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>annealingSimulated</b>
+<p><div class="operator-inputs">Inputs:  reference.pgm (DATAIMAGEGRID) model.pgm(at time t=0) (DATAIMAGEGRID) length correlation (by default 150) (DATANUMBER) number of permutations by pixel/voxel (by default 8) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  model.pgm(at end time) (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+annealing simulated method for 3d reconstruction based on correlation function
+
+</div></div>
+
+<a name="operatorAnalysis"></a>
+<b>Analysis (<a href="#" >Back to top</a>)</b><br>
+<a name="operatorGeometry"></a>
+<b>Geometry (<a href="#" >Back to top</a>)</b><br>
+<a name="operatorREV"></a>
+<b>REV (<a href="#" >Back to top</a>)</b><br>
+<a name="REVPointPorosity"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>REVPointPorosity</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) x.v(by default the center of the image) (DATAPOINT) rmax.num (by default max radius of a ball centered in x included in the domain of f) (DATANUMBER) norm.num(by default 0) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  A.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+Caluated the grey-level Porosity inside the ball centered in x by progressively increased the radius from rmin to rmax
+A(i,0)=i and A(i,j) = |Sigma$^j_i$(x)|/|Sigma$^j$(x)| where Sigma$^j$(x)={x' in E: |x'-x|"<"rmin+j } and Sigma$^j_i$(x)={x' in E: |x'-x|"<"rmin+j and f(x')=i }
+ The distance |.| uses the euclidean norm
+</div></div>
+
+<a name="REVPointHistogram"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>REVPointHistogram</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) x.v (DATAPOINT) rmax.num (by default max radius of a ball centered in x included in the domain of f) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  A.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+Calculate the grey-level histogram inside the ball centered in x by progressively increased the radius from rmin to rmax
+M(i,0)=i and M(i,j) = |X$_{j-1}$ cap B(x,i)|/|B(x,i)| where B(x,i)={x': |x'-x|"<"i } the ball centered in x of radius iand X$_j$={x:f(x)=j} the level set of f
+</div></div>
+
+<a name="operatorScalar"></a>
+<b>Scalar (<a href="#" >Back to top</a>)</b><br>
+<a name="area"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>area</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  A.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+A(i,0)=i and A(i,1) = |Sigma$_i$| where Sigma$_i$={x:f(x)=i}
+</div></div>
+
+<a name="histogram"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>histogram</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  A.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+A(i,0)=i and A(i,1) = |Sigma$_i$|/|Sigma| where Sigma$_i$={x in Sigma :f(x)=i}
+</div></div>
+
+<a name="maxValue"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>maxValue</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  max.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+max = max$_\{x \in E\}$ h(x)
+
+</div></div>
+
+<a name="minValue"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>minValue</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  min.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+min = min$_\{x \in E\}$ h(x)
+
+</div></div>
+
+<a name="perimeter"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>perimeter</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  P.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+V(i) = |border(Sigma$_i$)| where Sigma$_i$={x:f(x)=i}
+
+</div></div>
+
+<a name="operatorStatistic"></a>
+<b>Statistic (<a href="#" >Back to top</a>)</b><br>
+<a name="chord"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>chord</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) n.num(by default 5000000) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  P.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+P(i,0)=i and P(i,1) = Proba(|c|=i) with c a random chord, To estimate this value, we random n chord
+
+</div></div>
+
+<a name="correlation"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>correlation</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) n.num(by default 20000) (DATANUMBER) length.num(by default domain(f)/2) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  P.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+P(i,0)=i and P(i,j) = P(f(x) = j-1 and f(x+r)neq j-1) with r any vector of size i. To estimate this value, we sample n*length*dim times.
+</div></div>
+
+<a name="correlationGreyLevel"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>correlationGreyLevel</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) n.num(by default 20000) (DATANUMBER) length.num(by default domain(f)/2) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  P.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+P(i,0)=i and P(i,1) = Proba(f(x)f(x+x')=i) with |x'|=r
+
+</div></div>
+
+<a name="correlationDirectionByFFT"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>correlationDirectionByFFT</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  C.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+C is the 2-point correlation function where C=FFT$^\{-1\}$(FFT(f)FFT(f)$^*$) with double foxel type
+</div></div>
+
+<a name="fractalBox"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>fractalBox</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  P.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+P(*,0)=ln(1/r) and P(*,1)=ln(N)  http://classes.yale.edu/fractals/fracanddim/boxdim/BoxDimDef/BoxDimDef.html and http://www.fast.u-psud.fr/~moisy/ml/boxcount/html/demo.html\#11
+</div></div>
+
+<a name="granulometryMatheron"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/22.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>granulometryMatheron</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) norm.num (default 1) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  M.m (DATAMATRIX) granulomap.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+M(i,0)=i and M(i,1) =|opening(f,norm,i)|, M(i,2)=M(i,1)-M(i-1,1) see granulometry(morphology) in wiki
+</div></div>
+
+<a name="LDistance"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/22.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>LDistance</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) norm.num (default 1) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  M.m (DATAMATRIX) distancemap.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+M(i,0)=r and M(i,1)=P(B$_n$(x,r) where P(B$_n$(x,r)) is the probability to the radius of a maximal ball for a random point x in X. The maximal ball is the largest ball and included in X 
+</div></div>
+
+<a name="operatorLabel"></a>
+<b>Label (<a href="#" >Back to top</a>)</b><br>
+<a name="area"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>area</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  V.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+$V(i)=|\{x:f(x)=i+1 \}$, we count the area of each label
+</div></div>
+
+<a name="perimeter"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>perimeter</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  V.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+Perimeters of each label
+</div></div>
+
+<a name="PerimeterContactBetweenLabelCumulativeDistribution"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>PerimeterContactBetweenLabelCumulativeDistribution</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  A.m (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+Perimeters of contact between labels for each label
+</div></div>
+
+<a name="feretDiameter"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>feretDiameter</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) norm.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  A.m (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+FeretDiameters of each label (for norm=0 , D= 1/n*sum$_i$ diameter(i) and otherwise D= (mult$_i$ diameter(i))$^{1/n}$ 
+</div></div>
+
+<a name="operatorTopology"></a>
+<b>Topology (<a href="#" >Back to top</a>)</b><br>
+<a name="operatorScalar"></a>
+<b>Scalar (<a href="#" >Back to top</a>)</b><br>
+<a name="percolation"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>percolation</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) norm.num (default 1) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  A.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+A(i,0)=i and A(i,1) = 1 if it exists  path included in the binary touching the two opposites faces for the coordinate i, 0 otherwise
+
+</div></div>
+
+<a name="percolationErosion"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>percolationErosion</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) norm.num (default 1) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  A.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+A(i,0)=i and A(i,1) = r for maximum radius such that the binary still percole for the coordinate i after the erosion with this radius (for a diameter 2*r+1)
+
+</div></div>
+
+<a name="percolationOpening"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>percolationOpening</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID) norm.num (default 1) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  A.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+(i,0)=i and A(i,1) = r for maximum radius such that the binary still percole for the coordinate i after the opening with this radius (for a diameter 2*r+1)
+</div></div>
+
+<a name="eulerPoincare"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>eulerPoincare</b>
+<p><div class="operator-inputs">Inputs:  bin.pgm (DATAIMAGEGRID) eulertab.file (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  euler.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+Gaussian curvature of the binary image
+</div></div>
+
+<a name="geometricalTortuosity"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>geometricalTortuosity</b>
+<p><div class="operator-inputs">Inputs:  bin.pgm (DATAIMAGEGRID) n.num(by default 1) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  tortuosity.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+Geometrical Tortuosity of the binary image work with the norm 1 and infinite (n=0) 
+</div></div>
+
+<a name="operatorSkeleton"></a>
+<b>Skeleton (<a href="#" >Back to top</a>)</b><br>
+<a name="medialAxis"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>medialAxis</b>
+<p><div class="operator-inputs">Inputs:  bin.pgm (DATAIMAGEGRID) norm.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  skeleton.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Thinning the binary image at constant topology
+
+</div></div>
+
+<a name="thinningAtConstantTopology"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>thinningAtConstantTopology</b>
+<p><div class="operator-inputs">Inputs:  bin.pgm (DATAIMAGEGRID) topo24.dat (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  skeleton.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Thinning the binary image at constant topology
+
+</div></div>
+
+<a name="fromSkeletonToVertexAndEdge"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/12.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>fromSkeletonToVertexAndEdge</b>
+<p><div class="operator-inputs">Inputs:  skeleton.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  vertex.pgm (DATAIMAGEGRID) edge.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Thinning the binary image at constant topology
+
+</div></div>
+
+<a name="linkEdgeVertex"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/22.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>linkEdgeVertex</b>
+<p><div class="operator-inputs">Inputs:  vertex.pgm (DATAIMAGEGRID) edge.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  g.graph (DATAGraph) tore.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+Link edge and vertex to build the graph
+
+</div></div>
+
+<a name="operatorPhysical"></a>
+<b>Physical (<a href="#" >Back to top</a>)</b><br>
+<a name="permeability"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/34.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>permeability</b>
+<p><div class="operator-inputs">Inputs:  b.pgm (DATAIMAGEGRID) direction.num (DATANUMBER) error.num(by default 0.01) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  k.vec (DATAPOINT) vx.pgm (DATAIMAGEGRID) vy.pgm (DATAIMAGEGRID) vz.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Apparent Permeability of the bulk={x:b(x)neq 0} in the given direction where delta x is the lenght of the image in the given direction (delta P =1 and mu = 1), the output images are the velocity field in the corresponding direction
+
+</div></div>
+
+<a name="randomWalk"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>randomWalk</b>
+<p><div class="operator-inputs">Inputs:  f1.pgm (DATAIMAGEGRID) nbrwalker.num (DATANUMBER) timemax.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  diffusion.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+self diffusion coefficient of normalized self D(t)/D$_0$ 
+
+</div></div>
+
+<a name="operatorRepresentation"></a>
+<b>Representation (<a href="#" >Back to top</a>)</b><br>
+<a name="FFT"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>FFT</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h=FFT(f)
+
+</div></div>
+
+<a name="FFTInverse"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>FFTInverse</b>
+<p><div class="operator-inputs">Inputs:  f.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  h.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+h=FFTInverse(f)
+
+</div></div>
+
+<a name="operatorStatistics"></a>
+<b>Statistics (<a href="#" >Back to top</a>)</b><br>
+<a name="operatorDistribution"></a>
+<b>Distribution (<a href="#" >Back to top</a>)</b><br>
+<a name="argMax"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>argMax</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) xmin.num (DATANUMBER) xmax.num (DATANUMBER) step.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+x=$\mbox{arg}\max_\{\forall x \in R\}f(x)$n
+</div></div>
+
+<a name="argMin"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>argMin</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) xmin.num (DATANUMBER) xmax.num (DATANUMBER) step.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+x=$\mbox{arg}\min_\{\forall x \in R\}f(x)$n
+</div></div>
+
+<a name="maxValue"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>maxValue</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) xmin.num (DATANUMBER) xmax.num (DATANUMBER) step.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+x=$ \max_\{ \forall x \in R\}f(x)$ 
+</div></div>
+
+<a name="minValue"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>minValue</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) xmin.num (DATANUMBER) xmax.num (DATANUMBER) step.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+x=$ \min_\{ \forall x \in R\}f(x)$
+</div></div>
+
+<a name="moment"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/51.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>moment</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) m.num (DATANUMBER) xmin.num (DATANUMBER) xmax.num (DATANUMBER) step.num(by default 0.01) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  E(X$^n$).num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+$E(X^n) = \int_\{xmin\}^\{xmax\} f(x)\cdot x^m dx/ \int_\{xmin\}^\{xmax\} f(x) dx $, for m=1, we have the expected value 
+</div></div>
+
+<a name="norm"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/51.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>norm</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) m.num (DATANUMBER) xmin.num (DATANUMBER) xmax.num (DATANUMBER) step.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  d(f)$_n$.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+$d(f)_n = (\int_\{xmin\}^\{xmax\} |f(x)|^n dx)^(1/n)$, for m=1, we have the expected value 
+</div></div>
+
+<a name="integral"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>integral</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) xmin.num(default xmin value of the distribution) (DATANUMBER) xmax.num(default xmax value of the distribution) (DATANUMBER) step.num(default step value of the distribution usually 0.01) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  F.num (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+F(x) = $\int_\{xmin\}^x f(x)dx$ with x "<"xmax where the integral is the Riemann sum with the given step
+</div></div>
+
+<a name="derivate"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>derivate</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) xmin.num (DATANUMBER) xmax.num (DATANUMBER) step.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  f'.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+f'(x) =  df(x)/dx with xmin x "<"xmax where the derivate is the difference between two steps
+</div></div>
+
+<a name="computedStaticticsFromRealRealizations"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>computedStaticticsFromRealRealizations</b>
+<p><div class="operator-inputs">Inputs:  V.v (DATAPOINT) percentage.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  P.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+$P(x=vmin+i*step)=\frac{\sum_j 1_{vmin+i*step"<"V(j)"<"vmin+i*(step+1)}}{\sum_j 1_{V(j)==i}}$ discrete statistical quantities computed from realizations 
+</div></div>
+
+<a name="toProbabilityDistribution"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>toProbabilityDistribution</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) xmin.num(default xmin value of the distribution) (DATANUMBER) xmax.num(default xmax value of the distribution) (DATANUMBER) step.num(default step value of the distribution usually 0.01) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+ConvertProbabilityDistributio h(x)=|f(x)|/norm for xmin"<"=x"<"xmax, 0 otherwise with norm =$\int_\{xmin\}^\{xmax\} |f(x)|dx$
+</div></div>
+
+<a name="toCumulativeProbabilityDistribution"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>toCumulativeProbabilityDistribution</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) xmin.num(default xmin value of the distribution) (DATANUMBER) xmax.num(default xmax value of the distribution) (DATANUMBER) step.num(default step value of the distribution usually 0.01) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+ConvertProbabilityDistributio $h(x)=\int_\{xmin\}^\{x\}dx |f(x)|/norm$ for xmin"<"=x"<"xmax, 0 otherwise with norm =$\int_\{xmin\}^\{xmax\} |f(x)|dx$
+</div></div>
+
+<a name="toStepFunction"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>toStepFunction</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTION) xmin.num (DATANUMBER) xmax.num (DATANUMBER) step.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATADISTRIBUTION)</div>
+<p><b><br>Description</b></p>
+ConvertProbabilityDistributio h(x)= f(x)for xmin"<"=x"<"xmax where h is a step function of the given step 
+</div></div>
+
+<a name="operatorDistributionMultiVariate"></a>
+<b>DistributionMultiVariate (<a href="#" >Back to top</a>)</b><br>
+<a name="integral"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>integral</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE) xmin.num (DATAPOINT) xmax.num (DATAPOINT) step.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  P.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<p><b><br>Description</b></p>
+F(x) = $\int_\{xmin\}^x f(x)dx$ with x "<"xmax where the integral is the Riemann sum with the given step
+</div></div>
+
+<a name="argMax"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>argMax</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE) xmin.num (DATAPOINT) xmax.num (DATAPOINT) step.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+x=$\mbox{arg}\max_\{\forall x \in R\}f(x)$n
+</div></div>
+
+<a name="argMin"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>argMin</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE) xmin.num (DATAPOINT) xmax.num (DATAPOINT) step.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  h.dist (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+x=$\mbox{arg}\max_\{\forall x \in R\}f(x)$n
+</div></div>
+
+<a name="maxValue"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>maxValue</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE) xmin.num (DATAPOINT) xmax.num (DATAPOINT) step.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  min.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+x=$ \max_\{ \forall x \in R\}f(x)$
+</div></div>
+
+<a name="MinValue"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>MinValue</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE) xmin.num (DATAPOINT) xmax.num (DATAPOINT) step.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  min.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+x=$ \min_\{ \forall x \in R\}f(x)$
+</div></div>
+
+<a name="moment"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/51.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>moment</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE) m.num (DATAPOINT) xmin.num (DATAPOINT) xmax.num (DATAPOINT) step.num(by default 0.01) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  E(X$^n$).num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+$E(X^n) = \int_\{xmin\}^\{xmax\} f(x)\cdot x^m dx/ \int_\{xmin\}^\{xmax\} f(x) dx $, for m=1, we have the expected value 
+</div></div>
+
+<a name="toProbabilityDistributionMultiVariate"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>toProbabilityDistributionMultiVariate</b>
+<p><div class="operator-inputs">Inputs:  f.dist (DATADISTRIBUTIONMULTIVARIATE) xmin.num (DATAPOINT) xmax.num (DATAPOINT) step.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  P.dist (DATADISTRIBUTIONMULTIVARIATE)</div>
+<p><b><br>Description</b></p>
+ConvertProbabilityDistributio h(x)=|f(x)|/norm for xmin"<"=x"<"xmax, 0 otherwise with norm =$\int_\{xmin\}^\{xmax\} |f(x)|dx$
+</div></div>
+
+<a name="operatorLinearAlgebra"></a>
+<b>LinearAlgebra (<a href="#" >Back to top</a>)</b><br>
+<a name="inverseGaussianElimination"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>inverseGaussianElimination</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs:  C.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+C=$A^\{-1\}$
+</div></div>
+
+<a name="identity"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>identity</b>
+<p><div class="operator-inputs">Inputs:  size.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  A.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+A(i,j)=0 for i neq j, 1 otherwise with the a square size
+</div></div>
+
+<a name="trace"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>trace</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs:  t.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+Trace of the matrix
+</div></div>
+
+<a name="determinant"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>determinant</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs:  t.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+Determinant of the matrix
+</div></div>
+
+<a name="orthogonalGramSchmidt"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>orthogonalGramSchmidt</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs:  C.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+Gram–Schmidt process for the orthonormalising a set of vectors defined by the input matrix
+</div></div>
+
+<a name="eigenValueQR"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>eigenValueQR</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX) error.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  C.m (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+Eigen Values of the input matrix with the QR algorithm 
+</div></div>
+
+<a name="eigenVectorGaussianElimination"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>eigenVectorGaussianElimination</b>
+<p><div class="operator-inputs">Inputs:  A.m (DATAMATRIX) eigenvalue.num (DATAPOINT)</div>
+<div class="operator-outputs">Outputs:  C.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+Eigen Vectors contained in the columns of the output matrix by Gauss-Jordan's algorithm where the input vector is the eigen values
+</div></div>
+
+<a name="generate2DRotation"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>generate2DRotation</b>
+<p><div class="operator-inputs">Inputs:  angle.num (radian) (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  R.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+Generate a rotation matrix with a given angle in radian  see http://en.wikipedia.org/wiki/Rotation\_matrix
+</div></div>
+
+<a name="generate3DRotation"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="http://www.shinoe.org/glossary/img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>generate3DRotation</b>
+<p><div class="operator-inputs">Inputs:  angle.num (radian) (DATANUMBER) coordinate.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  R.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+Generate a rotation matrix with a given angle in radian and a given coordinate see http://en.wikipedia.org/wiki/Rotation\_matrix
+</div></div>
+
+<a name="controlImageGrid"></a>
+<b>ImageGrid (<a href="#" >Back to top</a>)</b><br>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="http://www.shinoe.org/glossary/img/ControlEditorImageGrid.png"></div><b>EditorImageGrid3D</b>
+<p><div class="operator-inputs">Inputs: </div>
+<div class="operator-outputs">Outputs:  out.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Create a 3D ImageGrid with float voxel type
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="http://www.shinoe.org/glossary/img/ControlEditorImageGrid2D.png"></div><b>EditorImageGrid2D</b>
+<p><div class="operator-inputs">Inputs: </div>
+<div class="operator-outputs">Outputs:  out.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Create a 2D ImageGrid with float voxel type
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="http://www.shinoe.org/glossary/img/ControlMarkerImageGrid.png"></div><b>MarkerImageGrid</b>
+<p><div class="operator-inputs">Inputs:  background.pgm (DATAIMAGEGRID) InitialMarker.pgm (optionnal) (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  markergreylevel.pgm (DATAIMAGEGRID) markercolorlevel.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Create marker image with background image
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="http://www.shinoe.org/glossary/img/ControlMarker3DImageGrid.png"></div><b>MarkerImageGrid3d</b>
+<p><div class="operator-inputs">Inputs:  background.pgm (DATAIMAGEGRID) InitialMarker.pgm (optionnal) (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  markergreylevel.pgm (DATAIMAGEGRID) markercolorlevel.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+Create marker image with background image
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="http://www.shinoe.org/glossary/img/ControlImageGrid.png"></div><b>ViewImageGrid2D</b>
+<p><div class="operator-inputs">Inputs:  in2d.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs: </div>
+<p><b><br>Description</b></p>
+View 2D ImageGrid
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="http://www.shinoe.org/glossary/img/ControlViewImageGrid3D.png"></div><b>ViewImageGrid3D</b>
+<p><div class="operator-inputs">Inputs:  in3d.pgm (DATAIMAGEGRID) sliceindex.pgm (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  sliceindex.pgm (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+View 3D ImageGrid
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="http://www.shinoe.org/glossary/img/ControlImageGridLabel2D.png"></div><b>ViewImageGridLabel2D</b>
+<p><div class="operator-inputs">Inputs:  label2d.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs: </div>
+<p><b><br>Description</b></p>
+View the labels of a 2D ImageGrid
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="http://www.shinoe.org/glossary/img/ControlViewImageGridLabel3D.png"></div><b>ViewImageGridLabel3D</b>
+<p><div class="operator-inputs">Inputs:  label3d.pgm (DATAIMAGEGRID)</div>
+<div class="operator-outputs">Outputs:  sliceindex.pgm (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+View 3D labeled ImageGrid
+</div></div>
+<a name="controlPoint"></a>
+<b>Point (<a href="#" >Back to top</a>)</b><br>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="http://www.shinoe.org/glossary/img/EditorPoint.png"></div><b>EditorPoint</b>
+<p><div class="operator-inputs">Inputs: </div>
+<div class="operator-outputs">Outputs:  out.v (DATAPOINT)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="http://www.shinoe.org/glossary/img/ControlViewPoint.png"></div><b>ViewPoint</b>
+<p><div class="operator-inputs">Inputs:  in.v (DATAPOINT)</div>
+<div class="operator-outputs">Outputs: </div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<a name="controlMatrix"></a>
+<b>Matrix (<a href="#" >Back to top</a>)</b><br>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="http://www.shinoe.org/glossary/img/EditorMatrix.png"></div><b>EditorMatrix</b>
+<p><div class="operator-inputs">Inputs: </div>
+<div class="operator-outputs">Outputs:  out.m (DATAMATRIX)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="http://www.shinoe.org/glossary/img/ControlViewMatrix.png"></div><b>ViewMatrix</b>
+<p><div class="operator-inputs">Inputs:  in.m (DATAMATRIX)</div>
+<div class="operator-outputs">Outputs: </div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<a name="controlOpenGl"></a>
+<b>OpenGl (<a href="#" >Back to top</a>)</b><br>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="http://www.shinoe.org/glossary/img/ViewOpenGL.png"></div><b>ViewOpenGL</b>
+<p><div class="operator-inputs">Inputs:  in.opengl (DATAOpenGl)</div>
+<div class="operator-outputs">Outputs:  screenshot.pgm (DATAIMAGEGRID)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>

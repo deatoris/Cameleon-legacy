@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="85" operatorIdOut="11" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="83" operatorIdOut="31" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+    </layouts>
+    <composerscreen viewx="-1445" viewy="-227" viewscale="-7" windowsx="0" windowsy="40" windowswidth="1366" windowsheight="728" numscreen="0" fullscreen="true"/>
+    <compositions>
+        <currentComposition id="32"/>
+        <composition id="32" name="projectPath" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc."/>
+        <connector compositionId="32" connectorId="1" side="OUT" name="" x="55" y="0"/>
+        <operatorconnector opId="11" connectorId="0" x="-50.2525" y="42.7865"/>
+        <operatorconnector opId="11" connectorId="1" x="61.7189" y="-23.3832"/>
+        <operatorconnector opId="31" connectorId="0" x="-28.7267" y="59.4203"/>
+        <operatorconnector opId="31" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="31" connectorId="2" x="64.3447" y="14.6888"/>
+        <compositioncontrol id="85" type="editorboolean" x="-153.757" y="140.529" z="1" width="121" height="85" parentId="32" content="FALSE"/>
+        <compositioncontrol id="83" type="LineEditorString" x="-252.672" y="-188.529" z="1" width="245" height="85" parentId="32" content="/buffer/jlg"/>
+        <operator id="11" type="stringCSDOperatorProjectPathstring" x="-109.672" y="66.4706" z="1" parentId="32"/>
+        <operatorconnector opId="11" connectorId="0" x="-50.2525" y="42.7865"/>
+        <operatorconnector opId="11" connectorId="1" x="61.7189" y="-23.3832"/>
+        <operator id="31" type="stringconcatstring" x="178.328" y="-165.529" z="0" parentId="32"/>
+        <operatorconnector opId="31" connectorId="0" x="-28.7267" y="59.4203"/>
+        <operatorconnector opId="31" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="31" connectorId="2" x="64.3447" y="14.6888"/>
+        <connection controlId="85" operatorIdOut="11" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="83" operatorIdOut="31" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection connectorId1="1" operatorId1="11" connectorId2="0" operatorId2="31"/>
+        <connection connectorId1="0" operatorId1="31" connectorId2="1" operatorId2="11"/>
+        <connection operatorId1="31" compositionId2="32" connectorId1="2" connectorId2="1"/>
+        <connection compositionId1="32" operatorId2="31" connectorId1="1" connectorId2="2"/>
+    </compositions>
+</cameleon>

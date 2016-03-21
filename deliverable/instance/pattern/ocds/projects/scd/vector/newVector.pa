@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="97" operatorIdOut="12" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+    </layouts>
+    <composerscreen viewx="-704" viewy="-1262" viewscale="-5" windowsx="0" windowsy="61" windowswidth="1920" windowsheight="1019" numscreen="0" fullscreen="false"/>
+    <compositions>
+        <currentComposition id="1"/>
+        <composition id="1" name="newVector" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc."/>
+        <connector compositionId="1" connectorId="1" side="OUT" name="" x="50.8799" y="-31.7999"/>
+        <operatorconnector opId="12" connectorId="0" x="-65.772" y="5.481"/>
+        <operatorconnector opId="12" connectorId="1" x="65.8454" y="4.51496"/>
+        <operator id="12" type="genericblank" x="103.735" y="-12.8465" z="5" parentId="1"/>
+        <operatorconnector opId="12" connectorId="0" x="-65.772" y="5.481"/>
+        <operatorconnector opId="12" connectorId="1" x="65.8454" y="4.51496"/>
+        <compositioncontrol id="97" type="LineEditorString" x="-176.348" y="-11.1535" z="1" width="120" height="84" parentId="1" content="DATAVECTOR"/>
+        <connection controlId="97" operatorIdOut="12" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection operatorId1="12" compositionId2="1" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="1" operatorId2="12" connectorId1="1" connectorId2="1"/>
+    </compositions>
+</cameleon>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="155" operatorIdOut="123" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="156" operatorIdOut="124" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+    </layouts>
+    <composerscreen viewx="-15963" viewy="-1355" viewscale="8" windowsx="1" windowsy="70" windowswidth="1919" windowsheight="1019" numscreen="0" fullscreen="false"/>
+    <compositions>
+        <currentComposition id="23"/>
+        <composition id="23" name="readVectorNaive" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc."/>
+        <connector compositionId="23" connectorId="1" side="IN" name="in.vec" x="-54.4889" y="7.48084"/>
+        <connector compositionId="23" connectorId="2" side="OUT" name="element.gen" x="47.9038" y="27.0227"/>
+        <connector compositionId="23" connectorId="3" side="OUT" name="end.bool" x="51.7305" y="-18.6805"/>
+        <operatorconnector opId="121" connectorId="0" x="-65.9203" y="-3.24198"/>
+        <operatorconnector opId="121" connectorId="1" x="0" y="66"/>
+        <operatorconnector opId="121" connectorId="2" x="64.6885" y="13.0917"/>
+        <operatorconnector opId="122" connectorId="0" x="-65.9428" y="-2.74762"/>
+        <operatorconnector opId="122" connectorId="1" x="-5.76733" y="-65.7475"/>
+        <operatorconnector opId="122" connectorId="2" x="64.5953" y="13.5442"/>
+        <operatorconnector opId="123" connectorId="0" x="-65.153" y="10.5395"/>
+        <operatorconnector opId="123" connectorId="1" x="64.9722" y="11.6022"/>
+        <operatorconnector opId="123" connectorId="2" x="-1.96927" y="-65.9706"/>
+        <operatorconnector opId="124" connectorId="0" x="-4.46433" y="65.8488"/>
+        <operatorconnector opId="124" connectorId="1" x="65.7475" y="5.76733"/>
+        <operator id="121" type="loop" x="143" y="-212" z="3" parentId="23"/>
+        <operatorconnector opId="121" connectorId="0" x="-65.9203" y="-3.24198"/>
+        <operatorconnector opId="121" connectorId="1" x="0" y="66"/>
+        <operatorconnector opId="121" connectorId="2" x="64.6885" y="13.0917"/>
+        <operator id="122" type="vectorgetvector" x="148" y="86" z="2" parentId="23"/>
+        <operatorconnector opId="122" connectorId="0" x="-65.9428" y="-2.74762"/>
+        <operatorconnector opId="122" connectorId="1" x="-5.76733" y="-65.7475"/>
+        <operatorconnector opId="122" connectorId="2" x="64.5953" y="13.5442"/>
+        <compositioncontrol id="156" type="NumberView" x="396" y="-64" z="1" width="147" height="78" parentId="23" content=""/>
+        <compositioncontrol id="155" type="ViewVector" x="-386" y="151" z="1" width="679" height="219" parentId="23" content=""/>
+        <operator id="124" type="vectorsizevector" x="-219" y="-223" z="0" parentId="23"/>
+        <operatorconnector opId="124" connectorId="0" x="-4.46433" y="65.8488"/>
+        <operatorconnector opId="124" connectorId="1" x="65.7475" y="5.76733"/>
+        <operator id="123" type="Copy" x="-224" y="67" z="0" parentId="23"/>
+        <operatorconnector opId="123" connectorId="0" x="-65.153" y="10.5395"/>
+        <operatorconnector opId="123" connectorId="1" x="64.9722" y="11.6022"/>
+        <operatorconnector opId="123" connectorId="2" x="-1.96927" y="-65.9706"/>
+        <connection controlId="156" operatorIdOut="124" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="155" operatorIdOut="123" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection connectorId1="1" operatorId1="121" connectorId2="1" operatorId2="122"/>
+        <connection operatorId1="121" compositionId2="23" connectorId1="2" connectorId2="3"/>
+        <connection connectorId1="1" operatorId1="122" connectorId2="1" operatorId2="121"/>
+        <connection operatorId1="122" compositionId2="23" connectorId1="2" connectorId2="2"/>
+        <connection connectorId1="0" operatorId1="124" connectorId2="2" operatorId2="123"/>
+        <connection connectorId1="1" operatorId1="124" connectorId2="0" operatorId2="121"/>
+        <connection operatorId1="123" compositionId2="23" connectorId1="0" connectorId2="1"/>
+        <connection connectorId1="1" operatorId1="123" connectorId2="0" operatorId2="122"/>
+        <connection connectorId1="2" operatorId1="123" connectorId2="0" operatorId2="124"/>
+        <connection compositionId1="23" operatorId2="123" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="23" operatorId2="122" connectorId1="2" connectorId2="2"/>
+        <connection compositionId1="23" operatorId2="121" connectorId1="3" connectorId2="2"/>
+    </compositions>
+</cameleon>

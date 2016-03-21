@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="134" operatorIdOut="83" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+    </layouts>
+    <composerscreen viewx="-5692" viewy="-1247" viewscale="-5" windowsx="0" windowsy="61" windowswidth="1920" windowsheight="1019" numscreen="0" fullscreen="false"/>
+    <compositions>
+        <currentComposition id="19"/>
+        <composition id="19" name="04-exclusiveChoice" informations="Description&#10;The divergence of a branch into two or more branches such that when the incoming branch is enabled, the thread of control is immediately passed to precisely one of the outgoing branches based on a mechanism that can select one of the outgoing branches.&#10;&#10;Synonyms&#10;XOR-split, exclusive OR-split, conditional routing, switch, decision, case statement.&#10;&#10;Examples&#10;Depending on the volume of earth to be moved, either the dispatch-backhoe, despatch-bobcat or despatch-D9-excavator task is initiated to complete the job.&#10;After the review election task is completed, either the declare results or the recount votes task is undertaken.&#10;&#10;Motivation&#10;The Exclusive Choice pattern allows the thread of control to be directed to a specific (subsequent) task depending on the outcome of a preceding task, the values of elements of specific data elements in the process, the results of an expression evaluation or some other form of programmatic selection mechanism. The routing decision is made dynamically allowing it to be deferred to the latest possible moment at runtime.&#10;&#10;Overview&#10;The behaviour of the Exclusive Choice pattern is illustrated by the CP-net model in Figure 4. Depending on the results of the cond expression, the thread of control is either routed to task B or C."/>
+        <connector compositionId="19" connectorId="1" side="OUT" name="output0.gen" x="34.1314" y="43.1283"/>
+        <connector compositionId="19" connectorId="2" side="OUT" name="output0.gen" x="53.5101" y="-12.7149"/>
+        <connector compositionId="19" connectorId="3" side="IN" name="input.gen" x="-54.1649" y="9.54822"/>
+        <operatorconnector opId="83" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="83" connectorId="1" x="-65.6244" y="7.03119"/>
+        <operatorconnector opId="83" connectorId="2" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="83" connectorId="3" x="60" y="0"/>
+        <operatorconnector opId="84" connectorId="0" x="-57.6599" y="32.1144"/>
+        <operatorconnector opId="84" connectorId="1" x="56.183" y="34.6334"/>
+        <operatorconnector opId="85" connectorId="0" x="-63.6031" y="17.625"/>
+        <operatorconnector opId="85" connectorId="1" x="42.4433" y="42.4095"/>
+        <compositioncontrol id="134" type="editorboolean" x="-388.5" y="102" z="1" width="221.5" height="90" parentId="19" content="FALSE"/>
+        <operator id="83" type="If" x="-178" y="18" z="1" parentId="19"/>
+        <operatorconnector opId="83" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="83" connectorId="1" x="-65.6244" y="7.03119"/>
+        <operatorconnector opId="83" connectorId="2" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="83" connectorId="3" x="60" y="0"/>
+        <operator id="85" type="id" x="85" y="116" z="0" parentId="19"/>
+        <operatorconnector opId="85" connectorId="0" x="-63.6031" y="17.625"/>
+        <operatorconnector opId="85" connectorId="1" x="42.4433" y="42.4095"/>
+        <operator id="84" type="id" x="137" y="-71" z="0" parentId="19"/>
+        <operatorconnector opId="84" connectorId="0" x="-57.6599" y="32.1144"/>
+        <operatorconnector opId="84" connectorId="1" x="56.183" y="34.6334"/>
+        <connection controlId="134" operatorIdOut="83" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection operatorId1="83" compositionId2="19" connectorId1="1" connectorId2="3"/>
+        <connection connectorId1="2" operatorId1="83" connectorId2="0" operatorId2="85"/>
+        <connection connectorId1="3" operatorId1="83" connectorId2="0" operatorId2="84"/>
+        <connection connectorId1="0" operatorId1="85" connectorId2="2" operatorId2="83"/>
+        <connection operatorId1="85" compositionId2="19" connectorId1="1" connectorId2="1"/>
+        <connection connectorId1="0" operatorId1="84" connectorId2="3" operatorId2="83"/>
+        <connection operatorId1="84" compositionId2="19" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="19" operatorId2="85" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="19" operatorId2="84" connectorId1="2" connectorId2="1"/>
+        <connection compositionId1="19" operatorId2="83" connectorId1="3" connectorId2="1"/>
+    </compositions>
+</cameleon>

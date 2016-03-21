@@ -1,0 +1,1264 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" type="text/css" href="dic.css"></head><body><h2>CSD</h2><b>Operators</b><OL>
+<a href="#operatorBoolean">Boolean</a>
+<OL>
+</OL>
+<a href="#operatorNumber">Number</a>
+<OL>
+</OL>
+<a href="#operatorString">String</a>
+<OL>
+</OL>
+<a href="#operatorVector">Vector</a>
+<OL>
+</OL>
+<a href="#operatorTable">Table</a>
+<OL>
+</OL>
+<a href="#operatorMap">Map</a>
+<OL>
+</OL>
+<a href="#operatorGeneric">Generic</a>
+<OL>
+</OL>
+<a href="#operatorControl-Flow">Control-Flow</a>
+<OL>
+</OL>
+<a href="#operatorFileSystem">FileSystem</a>
+<OL>
+</OL>
+<a href="#operatorIntrospection">Introspection</a>
+<OL>
+</OL>
+<a href="#operatorTest">Test</a>
+<OL>
+</OL>
+</OL>
+<b>Controls</b><OL>
+<a href="#controlFileSystem">FileSystem</a>
+<OL>
+</OL>
+<a href="#controlBoolean">Boolean</a>
+<OL>
+</OL>
+<a href="#controlNumber">Number</a>
+<OL>
+</OL>
+<a href="#controlString">String</a>
+<OL>
+</OL>
+<a href="#controlVector">Vector</a>
+<OL>
+</OL>
+<a href="#controlMap">Map</a>
+<OL>
+</OL>
+<a href="#controlTable">Table</a>
+<OL>
+</OL>
+<a href="#controlCli">Cli</a>
+<OL>
+</OL>
+<a href="#controlInteraction">Interaction</a>
+<OL>
+</OL>
+<a href="#controlIntrospection">Introspection</a>
+<OL>
+</OL>
+</OL>
+<a name="Copy"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/12.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>Copy</b>
+<p><div class="operator-inputs">Inputs:  in.gen (CDATAGENERIC)</div>
+<div class="operator-outputs">Outputs:  copy0.gen (CDATAGENERIC) copy1.gen (CDATAGENERIC)</div>
+<p><b><br>Description</b></p>
+Copy the single input data to the output datas
+</div></div>
+
+<a name="operatorBoolean"></a>
+<b>Boolean (<a href="#" >Back to top</a>)</b><br>
+<a name="AndBoolean"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>AndBoolean</b>
+<p><div class="operator-inputs">Inputs:  in1.bool (DATABOOL) in2.bool (DATABOOL)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+out= true for in1=true and in2=true, false otherwise 
+</div></div>
+
+<a name="InverseBoolean"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>InverseBoolean</b>
+<p><div class="operator-inputs">Inputs:  in.bool (DATABOOL)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+out= true for in1=false, false otherwise 
+</div></div>
+
+<a name="OrBoolean"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>OrBoolean</b>
+<p><div class="operator-inputs">Inputs:  in1.bool (DATABOOL) in2.bool (DATABOOL)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+out= true for in1=true or in2=true, false otherwise 
+</div></div>
+
+<a name="LoadBoolean"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>LoadBoolean</b>
+<p><div class="operator-inputs">Inputs:  file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Load the boolean value in the given file
+</div></div>
+
+<a name="SaveBoolean"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>SaveBoolean</b>
+<p><div class="operator-inputs">Inputs:  in.bool (DATABOOL) file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Save the boolean value in the given file, out= false for bad writing, true otherwise
+</div></div>
+
+<a name="operatorNumber"></a>
+<b>Number (<a href="#" >Back to top</a>)</b><br>
+<a name="AddNumber"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>AddNumber</b>
+<p><div class="operator-inputs">Inputs:  v1.num (DATANUMBER) v2.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  v.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+v=v1+v2
+</div></div>
+
+<a name="SubNumber"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>SubNumber</b>
+<p><div class="operator-inputs">Inputs:  v1.num (DATANUMBER) v2.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  v.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+v=v1-v2
+</div></div>
+
+<a name="DivNumber"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>DivNumber</b>
+<p><div class="operator-inputs">Inputs:  v1.num (DATANUMBER) v2.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  v.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+v=v1/v2
+</div></div>
+
+<a name="EqualNumber"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>EqualNumber</b>
+<p><div class="operator-inputs">Inputs:  v1.num (DATANUMBER) v2.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+out = true for v1=v2, false otherwise
+</div></div>
+
+<a name="InfNumber"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>InfNumber</b>
+<p><div class="operator-inputs">Inputs:  v1.num (DATANUMBER) v2.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+out = true for v1"<"v2, false otherwise
+</div></div>
+
+<a name="MultNumber"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>MultNumber</b>
+<p><div class="operator-inputs">Inputs:  v1.num (DATANUMBER) v2.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  v.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+v=v1*v2
+</div></div>
+
+<a name="SupNumber"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>SupNumber</b>
+<p><div class="operator-inputs">Inputs:  a.num (DATANUMBER) b.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+out = true for  a">"b, false otherwise  
+</div></div>
+
+<a name="MaxNumber"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>MaxNumber</b>
+<p><div class="operator-inputs">Inputs:  v1.num (DATANUMBER) v2.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  v.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+v=max(v1,v2)
+</div></div>
+
+<a name="MinNumber"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>MinNumber</b>
+<p><div class="operator-inputs">Inputs:  v1.num (DATANUMBER) v2.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  v.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+v=Min(v1,v2)
+</div></div>
+
+<a name="AbsNumber"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>AbsNumber</b>
+<p><div class="operator-inputs">Inputs:  vin.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  vout.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+vout = abs(vin)
+</div></div>
+
+<a name="PowNumber"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>PowNumber</b>
+<p><div class="operator-inputs">Inputs:  v.num (DATANUMBER) n.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  x.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+x=v^n
+</div></div>
+
+<a name="FromStringNumber"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>FromStringNumber</b>
+<p><div class="operator-inputs">Inputs:  in1.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  result.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+
+<a name="ToStringNumber"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>ToStringNumber</b>
+<p><div class="operator-inputs">Inputs:  in.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  result.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+
+<a name="LoadNumber"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>LoadNumber</b>
+<p><div class="operator-inputs">Inputs:  file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+Load the number value in the given file
+</div></div>
+
+<a name="SaveNumber"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>SaveNumber</b>
+<p><div class="operator-inputs">Inputs:  in.bool (DATANUMBER) file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Save the Number value in the given file, out= false for bad writing, true otherwise
+</div></div>
+
+<a name="operatorString"></a>
+<b>String (<a href="#" >Back to top</a>)</b><br>
+<a name="ConcatString"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>ConcatString</b>
+<p><div class="operator-inputs">Inputs:  in1.str (DATASTRING) in2.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+out=[in1,in2]
+</div></div>
+
+<a name="SplitRegExpString"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>SplitRegExpString</b>
+<p><div class="operator-inputs">Inputs:  string.str (DATASTRING) regexp.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  v_out.str (DATAVECTOR)</div>
+<p><b><br>Description</b></p>
+Splits the string into substrings wherever the regular expression regexp matches
+The substrings are include in a vector of DataString
+</div></div>
+
+<a name="ReplaceString"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>ReplaceString</b>
+<p><div class="operator-inputs">Inputs:  text.str (DATASTRING) before.str (DATASTRING) after.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+Replaces every occurrence of the string before with the string after in the string text
+</div></div>
+
+<a name="SplitString"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>SplitString</b>
+<p><div class="operator-inputs">Inputs:  in1.str (DATASTRING) separtor.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  string.vec (DATAVECTOR)</div>
+<p><b><br>Description</b></p>
+Splits the string into substrings with the separtor string
+The substrings are included in a vector of DataString
+</div></div>
+
+<a name="CompareString"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>CompareString</b>
+<p><div class="operator-inputs">Inputs:  in1.str (DATASTRING) in2.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  compare.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Compare=true for in1=in2, false otherwise
+</div></div>
+
+<a name="InsertString"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>InsertString</b>
+<p><div class="operator-inputs">Inputs:  in.str (DATASTRING) in.num (DATANUMBER) str.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.num (DATASTRING)</div>
+<p><b><br>Description</b></p>
+The current string content is extended by inserting some additional content at a specific location within the string content.
+</div></div>
+
+<a name="SizeString"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>SizeString</b>
+<p><div class="operator-inputs">Inputs:  in.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+Size of the input string
+</div></div>
+
+<a name="LoadString"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>LoadString</b>
+<p><div class="operator-inputs">Inputs:  file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  in.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+
+<a name="SaveString"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>SaveString</b>
+<p><div class="operator-inputs">Inputs:  in.str (DATASTRING) file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Save the String value in the given file, out= false for bad writing, true otherwise
+</div></div>
+
+<a name="operatorVector"></a>
+<b>Vector (<a href="#" >Back to top</a>)</b><br>
+<a name="GetElementVector"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>GetElementVector</b>
+<p><div class="operator-inputs">Inputs:  in.vec (DATAVECTOR) index.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  element.gen (CDATAGENERIC)</div>
+<p><b><br>Description</b></p>
+Get the data given by the index
+</div></div>
+
+<a name="SetDataVector"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>SetDataVector</b>
+<p><div class="operator-inputs">Inputs:  in.vec (DATAVECTOR) index.num (DATANUMBER) element.gen (CDATAGENERIC)</div>
+<div class="operator-outputs">Outputs:  out.vec (DATAVECTOR)</div>
+<p><b><br>Description</b></p>
+Set the data element of the vector at the given index
+</div></div>
+
+<a name="SizeVector"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>SizeVector</b>
+<p><div class="operator-inputs">Inputs:  in.vec (DATAVECTOR)</div>
+<div class="operator-outputs">Outputs:  size.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+Size of the input vector
+</div></div>
+
+<a name="EraseVector"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>EraseVector</b>
+<p><div class="operator-inputs">Inputs:  in.vec (DATAVECTOR) index1.num (DATANUMBER) index2.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  out.vec (DATAVECTOR)</div>
+<p><b><br>Description</b></p>
+removes from the vector container either a single element (index1) or a range of elements ([index1,index2)).
+</div></div>
+
+<a name="SortVector"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>SortVector</b>
+<p><div class="operator-inputs">Inputs:  in.vec (DATAVECTOR)</div>
+<div class="operator-outputs">Outputs:  out.vec (DATAVECTOR)</div>
+<p><b><br>Description</b></p>
+Sort the input vector following the member toString of the data
+</div></div>
+
+<a name="IteratorVectorIn"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/13.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>IteratorVectorIn</b>
+<p><div class="operator-inputs">Inputs:  in.vec (DATAVECTOR)</div>
+<div class="operator-outputs">Outputs:  out.vec (DATAVECTOR) data.out (CDATAGENERIC) index.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+Iterate over the vector from begin to end every time a NEW . During this itration, boolean state is EMPTY and at the end is NEW with a true value
+</div></div>
+
+<a name="IteratorVectorOut"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>IteratorVectorOut</b>
+<p><div class="operator-inputs">Inputs:  in.vec (DATAVECTOR) index.num (DATANUMBER) data.out (CDATAGENERIC)</div>
+<div class="operator-outputs">Outputs:  out.vec (DATAVECTOR)</div>
+<p><b><br>Description</b></p>
+Iterate over the vector from begin to end every time a NEW . During this itration, boolean state is EMPTY and at the end is NEW with a true value
+</div></div>
+
+<a name="PushBackVector"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>PushBackVector</b>
+<p><div class="operator-inputs">Inputs:  in.vec (DATAVECTOR) data.gen (CDATAGENERIC)</div>
+<div class="operator-outputs">Outputs:  out.vec (DATAVECTOR)</div>
+<p><b><br>Description</b></p>
+Push back data in the vector
+</div></div>
+
+<a name="ResizeVector"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>ResizeVector</b>
+<p><div class="operator-inputs">Inputs:  in.vec (DATAVECTOR) index.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  out.vec (DATAVECTOR)</div>
+<p><b><br>Description</b></p>
+Set the data element of the vector at the given index
+</div></div>
+
+<a name="SaveVector"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>SaveVector</b>
+<p><div class="operator-inputs">Inputs:  in.vec (DATAVECTOR) file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Save the Vector value in the given file, out= false for bad writing, true otherwise
+</div></div>
+
+<a name="LoadVector"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>LoadVector</b>
+<p><div class="operator-inputs">Inputs:  file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  m.vec (DATAVECTOR)</div>
+<p><b><br>Description</b></p>
+Load the Vector in the given file
+</div></div>
+
+<a name="operatorTable"></a>
+<b>Table (<a href="#" >Back to top</a>)</b><br>
+<a name="SizeTable"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/12.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>SizeTable</b>
+<p><div class="operator-inputs">Inputs:  table.tab (DataTable)</div>
+<div class="operator-outputs">Outputs:  colsize.num (DATANUMBER) rowsize.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+Get the size of the input table
+</div></div>
+
+<a name="ResizeTable"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>ResizeTable</b>
+<p><div class="operator-inputs">Inputs:  tablein.tab (DataTable) colsize.num (DATANUMBER) rowsize.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  tableout.tab (DataTable)</div>
+<p><b><br>Description</b></p>
+Resize the input table
+</div></div>
+
+<a name="GetValueTable"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>GetValueTable</b>
+<p><div class="operator-inputs">Inputs:  tablein.tab (DataTable) col.num (DATANUMBER) row.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  elt.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+get the element at the given position row and col 
+</div></div>
+
+<a name="SetValueTable"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/41.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>SetValueTable</b>
+<p><div class="operator-inputs">Inputs:  tablein.tab (DataTable) col.num (DATANUMBER) row.num (DATANUMBER) elt.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  tableout.tab (DataTable)</div>
+<p><b><br>Description</b></p>
+set the value at the given position row col
+</div></div>
+
+<a name="GetColTable"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>GetColTable</b>
+<p><div class="operator-inputs">Inputs:  tablein.tab (DataTable) colmin.num (DATANUMBER) colmax.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  tableout.tab (DataTable)</div>
+<p><b><br>Description</b></p>
+Extract the table between colmin and colmax with colmax=colmin as default value
+</div></div>
+
+<a name="GetRowTable"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>GetRowTable</b>
+<p><div class="operator-inputs">Inputs:  tablein.tab (DataTable) Rowmin.num (DATANUMBER) Rowmax.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  tableout.tab (DataTable)</div>
+<p><b><br>Description</b></p>
+Extract the table between Rowmin and Rowmax with Rowmax=Rowmin as default value
+</div></div>
+
+<a name="RmColTable"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>RmColTable</b>
+<p><div class="operator-inputs">Inputs:  tablein.tab (DataTable) Colmin.num (DATANUMBER) Colmax.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  tableout.tab (DataTable)</div>
+<p><b><br>Description</b></p>
+Remove the columns of the input table the between Colmin and Colmax with Colmax=Colmin as default value
+</div></div>
+
+<a name="RmRowTable"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>RmRowTable</b>
+<p><div class="operator-inputs">Inputs:  tablein.tab (DataTable) Rawmin.num (DATANUMBER) Rawmax.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  tableout.tab (DataTable)</div>
+<p><b><br>Description</b></p>
+Remove the Rawumns of the input table the between Rawmin and Rawmax with Rawmax=Rawmin as default value
+</div></div>
+
+<a name="CSVToTable"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>CSVToTable</b>
+<p><div class="operator-inputs">Inputs:  csv.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  m.Table (DataTable)</div>
+<p><b><br>Description</b></p>
+Load the Table from the given csv format string
+</div></div>
+
+<a name="TableToCSV"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>TableToCSV</b>
+<p><div class="operator-inputs">Inputs:  in.tab (DataTable)</div>
+<div class="operator-outputs">Outputs:  csv.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+Return a string representing the full text CSV file
+</div></div>
+
+<a name="LoadTable"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>LoadTable</b>
+<p><div class="operator-inputs">Inputs:  file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  m.Table (DataTable)</div>
+<p><b><br>Description</b></p>
+Load the Table in the given file
+</div></div>
+
+<a name="SaveTable"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>SaveTable</b>
+<p><div class="operator-inputs">Inputs:  in.tab (DataTable) file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Save the Table value in the given file, out= false for bad writing, true otherwise
+</div></div>
+
+<a name="operatorMap"></a>
+<b>Map (<a href="#" >Back to top</a>)</b><br>
+<a name="GetDataMap"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>GetDataMap</b>
+<p><div class="operator-inputs">Inputs:  in1.map (DATAMAP) key.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  value.gen (CDATAGENERIC)</div>
+<p><b><br>Description</b></p>
+Get the data given by the key
+</div></div>
+
+<a name="InsertMap"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/31.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>InsertMap</b>
+<p><div class="operator-inputs">Inputs:  min.map (DATAMAP) key.str (DATASTRING) dataelt.gen (CDATAGENERIC)</div>
+<div class="operator-outputs">Outputs:  mout.map (DATAMAP)</div>
+<p><b><br>Description</b></p>
+Insert the element data in the map with the given key
+</div></div>
+
+<a name="KeysMap"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>KeysMap</b>
+<p><div class="operator-inputs">Inputs:  m.map (DATAMAP)</div>
+<div class="operator-outputs">Outputs:  keys.vec (DATAVECTOR)</div>
+<p><b><br>Description</b></p>
+Create a vector containing DataString elements with the keys of the input map
+</div></div>
+
+<a name="RemoveMap"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>RemoveMap</b>
+<p><div class="operator-inputs">Inputs:  min.map (DATAMAP) key.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  mout.map (DATAMAP)</div>
+<p><b><br>Description</b></p>
+Remove the element with the given key
+</div></div>
+
+<a name="SaveMap"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>SaveMap</b>
+<p><div class="operator-inputs">Inputs:  in.bool (DATAMAP) file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Save the Map value in the given file, out= false for bad writing, true otherwise
+</div></div>
+
+<a name="LoadMap"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>LoadMap</b>
+<p><div class="operator-inputs">Inputs:  file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  m.map (DATAMAP)</div>
+<p><b><br>Description</b></p>
+Load the map in the given file
+</div></div>
+
+<a name="operatorGeneric"></a>
+<b>Generic (<a href="#" >Back to top</a>)</b><br>
+<a name="Blank"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>Blank</b>
+<p><div class="operator-inputs">Inputs:  datatype.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  blank.gen (CDATAGENERIC)</div>
+<p><b><br>Description</b></p>
+Create a blank data following the data type
+</div></div>
+
+<a name="operatorControl-Flow"></a>
+<b>Control-Flow (<a href="#" >Back to top</a>)</b><br>
+<a name="Id"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>Id</b>
+<p><div class="operator-inputs">Inputs:  input0.gen (CDATAGENERIC)</div>
+<div class="operator-outputs">Outputs:  output0.gen (CDATAGENERIC)</div>
+<p><b><br>Description</b></p>
+Copy the input datas of the output datas of the same index starting from the lowest index to the highest
+</div></div>
+
+<a name="If"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/22.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>If</b>
+<p><div class="operator-inputs">Inputs:  boolean.bool (DATABOOL) input.gen (CDATAGENERIC)</div>
+<div class="operator-outputs">Outputs:  if.gen (CDATAGENERIC) else.gen (CDATAGENERIC)</div>
+<p><b><br>Description</b></p>
+Copy input to if for boolean=true or Copy input to else for boolean=false
+</div></div>
+
+<a name="Merge"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>Merge</b>
+<p><div class="operator-inputs">Inputs:  input0.gen (CDATAGENERIC) input1.gen (CDATAGENERIC)</div>
+<div class="operator-outputs">Outputs:  output.gen (CDATAGENERIC)</div>
+<p><b><br>Description</b></p>
+Copy input data at new to output data.
+"<"b">"Execution Condition:"<"/b">"
+° one input at new,
+° output to OLD.
+Action:
+°can add input connector.
+</div></div>
+
+<a name="Synchrone"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/22.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>Synchrone</b>
+<p><div class="operator-inputs">Inputs:  input0.gen (CDATAGENERIC) input1.gen (CDATAGENERIC)</div>
+<div class="operator-outputs">Outputs:  output0.gen (CDATAGENERIC) output1.gen (CDATAGENERIC)</div>
+<p><b><br>Description</b></p>
+Exec if all input plug states are NEW
+</div></div>
+
+<a name="Asynchrone"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/22.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>Asynchrone</b>
+<p><div class="operator-inputs">Inputs:  input1.gen (CDATAGENERIC) input2.gen (CDATAGENERIC)</div>
+<div class="operator-outputs">Outputs:  output1.gen (CDATAGENERIC) output2.gen (CDATAGENERIC)</div>
+<p><b><br>Description</b></p>
+Exec if at least one input plug state is NEW
+</div></div>
+
+<a name="Locker"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/22.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>Locker</b>
+<p><div class="operator-inputs">Inputs:  lockin.gen (CDATAGENERIC) in0.gen (CDATAGENERIC)</div>
+<div class="operator-outputs">Outputs:  lockout.gen (CDATAGENERIC) out0.gen (CDATAGENERIC)</div>
+<p><b><br>Description</b></p>
+Can be executed if  lock state=NEW
+ the exex is just the copy of the data and the state from in_i to out_i
+</div></div>
+
+<a name="Erase"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>Erase</b>
+<p><div class="operator-inputs">Inputs:  input1.gen (CDATAGENERIC)</div>
+<div class="operator-outputs">Outputs:  output1.gen (CDATAGENERIC)</div>
+<p><b><br>Description</b></p>
+input1 to output1 if input1 == NEW & whatever the state of the output plug.
+</div></div>
+
+<a name="Counter"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/12.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>Counter</b>
+<p><div class="operator-inputs">Inputs:  input.gen (CDATAGENERIC)</div>
+<div class="operator-outputs">Outputs:  output.gen (CDATAGENERIC) count.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+Count the number of execution of this operator for the beginning of play mode
+</div></div>
+
+<a name="Loop"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/12.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>Loop</b>
+<p><div class="operator-inputs">Inputs:  max.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  it.num (DATANUMBER) end.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+for(int it=0;it"<"max;it++), max.num is OLD and end = true when it==max
+</div></div>
+
+<a name="forteleport"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/22.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>forteleport</b>
+<p><div class="operator-inputs">Inputs:  nbrloop.num (DATANUMBER) data_0_iteration_0.gen (CDATAGENERIC)</div>
+<div class="operator-outputs">Outputs:  connectionwithforloopend.num (DATANUMBER) data_0_iteration_i.gen (CDATAGENERIC)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+
+<a name="endforteleport"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>endforteleport</b>
+<p><div class="operator-inputs">Inputs:  connectionwithforloop.num (DATANUMBER) data_0_iteration_i.gen (CDATAGENERIC)</div>
+<div class="operator-outputs">Outputs:  data_0_iteration_exitloop.gen (CDATAGENERIC)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+
+<a name="operatorFileSystem"></a>
+<b>FileSystem (<a href="#" >Back to top</a>)</b><br>
+<a name="IsExist"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>IsExist</b>
+<p><div class="operator-inputs">Inputs:  path.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  exists.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+exists=true if the path exist, false otherwise
+</div></div>
+
+<a name="IsDir"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>IsDir</b>
+<p><div class="operator-inputs">Inputs:  path.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  isDir.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+isDir=true if the path is a directory, false otherwise
+</div></div>
+
+<a name="IsFile"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>IsFile</b>
+<p><div class="operator-inputs">Inputs:  path.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  isFile.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+isFile=true if the path is a file, false otherwise
+</div></div>
+
+<a name="ReadDir"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>ReadDir</b>
+<p><div class="operator-inputs">Inputs:  dirpath.str (DATASTRING) recurcive.bool (by default false) (DATABOOL)</div>
+<div class="operator-outputs">Outputs:  string.vec (DATAVECTOR)</div>
+<p><b><br>Description</b></p>
+List every entries (file and directory) from an absolute dir path.
+</div></div>
+
+<a name="Readfile"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>Readfile</b>
+<p><div class="operator-inputs">Inputs:  file path.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  content.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+
+<a name="AbsoluteDir"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>AbsoluteDir</b>
+<p><div class="operator-inputs">Inputs:  path.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  abspath.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+Get the absolute directory (by removing the file name in case of file)
+</div></div>
+
+<a name="BaseName"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>BaseName</b>
+<p><div class="operator-inputs">Inputs:  path.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  basename.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+Get the base name of the file without the path (for instance path=/home/vincent/lena.pgm -">" basename=lena
+</div></div>
+
+<a name="Suffix"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>Suffix</b>
+<p><div class="operator-inputs">Inputs:  path.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  Suffix.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+Get the suffix of the file without the path without including the dot (for instance path=/home/vincent/lena.pgm -">" Suffix=pgm
+</div></div>
+
+<a name="CopyDir"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>CopyDir</b>
+<p><div class="operator-inputs">Inputs:  source.str (DATASTRING) target.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Copy source path dir content to target path dir
+</div></div>
+
+<a name="CopyFile"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>CopyFile</b>
+<p><div class="operator-inputs">Inputs:  file1.str (DATASTRING) file2.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+copy file1 to file2
+</div></div>
+
+<a name="RmDir"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>RmDir</b>
+<p><div class="operator-inputs">Inputs:  dir.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+remove dir
+</div></div>
+
+<a name="RmFile"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>RmFile</b>
+<p><div class="operator-inputs">Inputs:  file.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+remove file
+</div></div>
+
+<a name="MakeDir"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>MakeDir</b>
+<p><div class="operator-inputs">Inputs:  target.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Create a directory
+</div></div>
+
+<a name="operatorIntrospection"></a>
+<b>Introspection (<a href="#" >Back to top</a>)</b><br>
+<a name="ExitInstance"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/10.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>ExitInstance</b>
+<p><div class="operator-inputs">Inputs:  exit.bool (DATABOOL)</div>
+<div class="operator-outputs">Outputs: </div>
+<p><b><br>Description</b></p>
+exit & kill current Caméléon instance
+</div></div>
+
+<a name="BreakPoint"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/11.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>BreakPoint</b>
+<p><div class="operator-inputs">Inputs:  input0.gen (CDATAGENERIC)</div>
+<div class="operator-outputs">Outputs:  output0.gen (CDATAGENERIC)</div>
+<p><b><br>Description</b></p>
+pause & next the current Caméléon instance
+</div></div>
+
+<a name="operatorTest"></a>
+<b>Test (<a href="#" >Back to top</a>)</b><br>
+<a name="Assert"></a>
+<div class="operator" >
+<div class="operator-image" ><img src="img/21.jpg" height="150" width="150" ></div>
+<div class="operator-content">
+<b>Assert</b>
+<p><div class="operator-inputs">Inputs:  test.bool (DATABOOL) name.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  test.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+
+<a name="controlFileSystem"></a>
+<b>FileSystem (<a href="#" >Back to top</a>)</b><br>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/InFile.png"></div><b>OpenFile</b>
+<p><div class="operator-inputs">Inputs:  out.vec (DATAVECTOR) name.str (DATASTRING) record.bool (DATABOOL)</div>
+<div class="operator-outputs">Outputs:  out.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/OutFile.png"></div><b>SaveFile</b>
+<p><div class="operator-inputs">Inputs:  out.vec (DATAVECTOR) name.str (DATASTRING) record.bool (DATABOOL)</div>
+<div class="operator-outputs">Outputs:  out.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/ControlBrowseDirectory.png"></div><b>OpenDirectory</b>
+<p><div class="operator-inputs">Inputs:  name.str (DATASTRING) record.bool (DATABOOL)</div>
+<div class="operator-outputs">Outputs:  out.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/SelectorFile.png"></div><b>SelectorFile</b>
+<p><div class="operator-inputs">Inputs: </div>
+<div class="operator-outputs">Outputs:  path.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<a name="controlBoolean"></a>
+<b>Boolean (<a href="#" >Back to top</a>)</b><br>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/BooleanView.png"></div><b>ViewBoolean</b>
+<p><div class="operator-inputs">Inputs:  in.bool (DATABOOL)</div>
+<div class="operator-outputs">Outputs: </div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/editorboolean.png"></div><b>EditorBoolean</b>
+<p><div class="operator-inputs">Inputs: </div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/EditorButton.png"></div><b>Button</b>
+<p><div class="operator-inputs">Inputs:  name.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  clicked.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+Set the boolean
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/EditorCheckBox.png"></div><b>EditorCheckBox</b>
+<p><div class="operator-inputs">Inputs:  default.bool (DATABOOL)</div>
+<div class="operator-outputs">Outputs:  out.bool (DATABOOL)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<a name="controlNumber"></a>
+<b>Number (<a href="#" >Back to top</a>)</b><br>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/EditorNumber.png"></div><b>EditorNumber</b>
+<p><div class="operator-inputs">Inputs: </div>
+<div class="operator-outputs">Outputs:  out.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+Press enter to set the value
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/SliderNumber.png"></div><b>SliderNumber</b>
+<p><div class="operator-inputs">Inputs:  min.num (DATANUMBER) max.num (DATANUMBER) step.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs:  out.num (DATANUMBER)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/NumberView.png"></div><b>ViewNumber</b>
+<p><div class="operator-inputs">Inputs:  in.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs: </div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/ControlProgressBar.png"></div><b>ProgressBar</b>
+<p><div class="operator-inputs">Inputs:  min.num (DATANUMBER) max.num (DATANUMBER) current.num (DATANUMBER)</div>
+<div class="operator-outputs">Outputs: </div>
+<p><b><br>Description</b></p>
+Progress bar defined by a range [min,max] and a current value
+</div></div>
+<a name="controlString"></a>
+<b>String (<a href="#" >Back to top</a>)</b><br>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/StringViewText.png"></div><b>ViewStringText</b>
+<p><div class="operator-inputs">Inputs:  in.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs: </div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/LineEditorString.png"></div><b>EditorStringLine</b>
+<p><div class="operator-inputs">Inputs: </div>
+<div class="operator-outputs">Outputs:  out.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/textEditorText.png"></div><b>EditorStringText</b>
+<p><div class="operator-inputs">Inputs: </div>
+<div class="operator-outputs">Outputs:  out.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/StringView.png"></div><b>ViewStringLine</b>
+<p><div class="operator-inputs">Inputs:  in.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs: </div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/LineEditorStringWithInput.png"></div><b>EditorStringLine(input)</b>
+<p><div class="operator-inputs">Inputs:  init.str (DATASTRING)</div>
+<div class="operator-outputs">Outputs:  out.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<a name="controlVector"></a>
+<b>Vector (<a href="#" >Back to top</a>)</b><br>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/ListBoxVector.png"></div><b>ListBoxVector</b>
+<p><div class="operator-inputs">Inputs:  in.vec (DATAVECTOR)</div>
+<div class="operator-outputs">Outputs:  data.str (DATASTRING) type.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/EditorVector.png"></div><b>EditorVector</b>
+<p><div class="operator-inputs">Inputs: </div>
+<div class="operator-outputs">Outputs:  out.vec (DATAVECTOR)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/ViewVector.png"></div><b>ViewVector</b>
+<p><div class="operator-inputs">Inputs:  in.vec (DATAVECTOR)</div>
+<div class="operator-outputs">Outputs: </div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<a name="controlMap"></a>
+<b>Map (<a href="#" >Back to top</a>)</b><br>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/ViewMap.png"></div><b>ViewMap</b>
+<p><div class="operator-inputs">Inputs:  in.map (DATAMAP)</div>
+<div class="operator-outputs">Outputs: </div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/EditorMap.png"></div><b>EditorMap</b>
+<p><div class="operator-inputs">Inputs: </div>
+<div class="operator-outputs">Outputs:  out.map (DATAMAP)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<a name="controlTable"></a>
+<b>Table (<a href="#" >Back to top</a>)</b><br>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/EditorTable.png"></div><b>EditorTable</b>
+<p><div class="operator-inputs">Inputs: </div>
+<div class="operator-outputs">Outputs:  out.table (DataTable)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/ViewTable.png"></div><b>ViewTable</b>
+<p><div class="operator-inputs">Inputs:  in.table (DataTable)</div>
+<div class="operator-outputs">Outputs: </div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<a name="controlCli"></a>
+<b>Cli (<a href="#" >Back to top</a>)</b><br>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/ControlEditorArgument.png"></div><b>Argument</b>
+<p><div class="operator-inputs">Inputs: </div>
+<div class="operator-outputs">Outputs:  out.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<a name="controlInteraction"></a>
+<b>Interaction (<a href="#" >Back to top</a>)</b><br>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/ViewMenu.png"></div><b>ViewMenu</b>
+<p><div class="operator-inputs">Inputs:  description.tab (DataTable)</div>
+<div class="operator-outputs">Outputs:  key.str (DATASTRING)</div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+<a name="controlIntrospection"></a>
+<b>Introspection (<a href="#" >Back to top</a>)</b><br>
+<div class="operator" >
+<div class="operator-content"><div class="control-image" ><img src="img/BackgroundControl.png"></div><b>Background</b>
+<p><div class="operator-inputs">Inputs: </div>
+<div class="operator-outputs">Outputs: </div>
+<p><b><br>Description</b></p>
+<strong">"[WARN]</strong">" No <br">"Description available.
+</div></div>
+</body></html>

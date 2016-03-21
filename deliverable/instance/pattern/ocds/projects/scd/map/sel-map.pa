@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="212" operatorIdOut="176" controlConnectorIdIn="1" operatorConnectorIdOut="1"/>
+        <connection controlId="213" operatorIdOut="176" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="212" operatorIdOut="177" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="214" operatorIdOut="178" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+    </layouts>
+    <composerscreen viewx="-1981" viewy="-827" viewscale="-10" windowsx="0" windowsy="40" windowswidth="1366" windowsheight="728" numscreen="0" fullscreen="true"/>
+    <compositions>
+        <currentComposition id="29"/>
+        <composition id="29" name="sel-map" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc."/>
+        <connector compositionId="29" connectorId="1" side="OUT" name="Other side not connected" x="58.4213" y="-13.6731"/>
+        <connector compositionId="29" connectorId="2" side="IN" name="Other side not connected" x="-59.372" y="-8.65841"/>
+        <composition id="30" name="selectMap" x="-51" y="-290" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="-770" viewy="-203" viewscale="-12" parentId="29"/>
+        <connector compositionId="30" connectorId="1" side="OUT" name="Other side not connected" x="55" y="0"/>
+        <connector compositionId="30" connectorId="2" side="IN" name="Other side not connected" x="-59.3053" y="-9.10388"/>
+        <compositioncontrol id="214" type="ViewMap" x="-499" y="-253" z="1" width="340" height="715" parentId="29" content=""/>
+        <compositioncontrol id="213" type="StringView" x="117" y="-461" z="1" width="381" height="85" parentId="29" content=""/>
+        <compositioncontrol id="212" type="ListBoxVector" x="35" y="-153" z="1" width="391" height="85" parentId="29" content=""/>
+        <connection controlId="214" operatorIdOut="178" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="213" operatorIdOut="176" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="212" operatorIdOut="177" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="212" operatorIdOut="176" controlConnectorIdIn="1" operatorConnectorIdOut="1"/>
+        <operator id="176" type="mapvaluemap" x="120" y="-56" z="7" parentId="30"/>
+        <operatorconnector opId="176" connectorId="0" x="-59.3675" y="-28.8357"/>
+        <operatorconnector opId="176" connectorId="1" x="-63.8048" y="16.8803"/>
+        <operatorconnector opId="176" connectorId="2" x="63.3181" y="18.623"/>
+        <operator id="177" type="mapkeysmap" x="-31.2929" y="213.642" z="5" parentId="30"/>
+        <operatorconnector opId="177" connectorId="0" x="-28.564" y="-59.4987"/>
+        <operatorconnector opId="177" connectorId="1" x="65.9156" y="-3.33712"/>
+        <operator id="178" type="Copy" x="-118" y="-93" z="0" parentId="30"/>
+        <operatorconnector opId="178" connectorId="0" x="-65.8324" y="4.70021"/>
+        <operatorconnector opId="178" connectorId="1" x="18.984" y="63.2108"/>
+        <operatorconnector opId="178" connectorId="2" x="62.678" y="-20.6753"/>
+        <connection compositionId1="30" compositionId2="29" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="30" compositionId2="29" connectorId1="2" connectorId2="2"/>
+        <connection compositionId1="29" compositionId2="30" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="29" compositionId2="30" connectorId1="2" connectorId2="2"/>
+        <connection connectorId1="0" operatorId1="176" connectorId2="2" operatorId2="178"/>
+        <connection operatorId1="176" compositionId2="30" connectorId1="2" connectorId2="1"/>
+        <connection connectorId1="0" operatorId1="177" connectorId2="1" operatorId2="178"/>
+        <connection operatorId1="178" compositionId2="30" connectorId1="0" connectorId2="2"/>
+        <connection connectorId1="1" operatorId1="178" connectorId2="0" operatorId2="177"/>
+        <connection connectorId1="2" operatorId1="178" connectorId2="0" operatorId2="176"/>
+        <connection compositionId1="30" operatorId2="176" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="30" operatorId2="178" connectorId1="2" connectorId2="0"/>
+    </compositions>
+</cameleon>

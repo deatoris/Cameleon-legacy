@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts/>
+    <composerscreen viewx="4499" viewy="-1149" viewscale="0" windowsx="0" windowsy="40" windowswidth="1366" windowsheight="728" numscreen="0" fullscreen="true"/>
+    <compositions>
+        <currentComposition id="26"/>
+        <composition id="26" name="minmax" informations=""/>
+        <connector compositionId="26" connectorId="1" side="IN" name="max.num" x="-40.3568" y="37.3675"/>
+        <connector compositionId="26" connectorId="2" side="IN" name="num.num" x="-54.9243" y="-2.88433"/>
+        <connector compositionId="26" connectorId="3" side="IN" name="min.num" x="30.5755" y="45.718"/>
+        <connector compositionId="26" connectorId="4" side="OUT" name="num.num" x="54.727" y="-5.4727"/>
+        <operatorconnector opId="251" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="251" connectorId="1" x="-66" y="2.43106e-13"/>
+        <operatorconnector opId="251" connectorId="2" x="65.9804" y="-1.60928"/>
+        <operatorconnector opId="252" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="252" connectorId="1" x="-63.3972" y="-18.3518"/>
+        <operatorconnector opId="252" connectorId="2" x="65.7163" y="6.11324"/>
+        <operator id="252" type="OperatorMaxNumber" x="160" y="3" z="0" parentId="26"/>
+        <operatorconnector opId="252" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="252" connectorId="1" x="-63.3972" y="-18.3518"/>
+        <operatorconnector opId="252" connectorId="2" x="65.7163" y="6.11324"/>
+        <operator id="251" type="OperatorMinNumber" x="-160" y="-3" z="0" parentId="26"/>
+        <operatorconnector opId="251" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="251" connectorId="1" x="-66" y="2.43106e-13"/>
+        <operatorconnector opId="251" connectorId="2" x="65.9804" y="-1.60928"/>
+        <connection operatorId1="252" compositionId2="26" connectorId1="0" connectorId2="3"/>
+        <connection connectorId1="1" operatorId1="252" connectorId2="2" operatorId2="251"/>
+        <connection operatorId1="252" compositionId2="26" connectorId1="2" connectorId2="4"/>
+        <connection operatorId1="251" compositionId2="26" connectorId1="0" connectorId2="1"/>
+        <connection operatorId1="251" compositionId2="26" connectorId1="1" connectorId2="2"/>
+        <connection connectorId1="2" operatorId1="251" connectorId2="1" operatorId2="252"/>
+        <connection compositionId1="26" operatorId2="251" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="26" operatorId2="251" connectorId1="2" connectorId2="1"/>
+        <connection compositionId1="26" operatorId2="252" connectorId1="3" connectorId2="0"/>
+        <connection compositionId1="26" operatorId2="252" connectorId1="4" connectorId2="2"/>
+    </compositions>
+</cameleon>

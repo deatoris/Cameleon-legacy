@@ -1,0 +1,1446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="706" operatorIdOut="766" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="701" operatorIdOut="768" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="705" operatorIdOut="769" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="704" operatorIdOut="769" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="697" operatorIdOut="770" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="703" operatorIdOut="771" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="702" operatorIdOut="775" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="709" operatorIdOut="781" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="707" operatorIdOut="782" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="708" operatorIdOut="785" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="693" operatorIdOut="786" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="699" operatorIdOut="788" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="696" operatorIdOut="790" controlConnectorIdIn="4" operatorConnectorIdOut="0"/>
+        <connection controlId="710" operatorIdOut="791" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="715" operatorIdOut="792" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="712" operatorIdOut="792" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="711" operatorIdOut="793" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="716" operatorIdOut="793" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="713" operatorIdOut="794" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="714" operatorIdOut="795" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="719" operatorIdOut="796" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="717" operatorIdOut="796" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="718" operatorIdOut="799" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="696" operatorIdOut="800" controlConnectorIdIn="1" operatorConnectorIdOut="1"/>
+        <connection controlId="721" operatorIdOut="802" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="738" operatorIdOut="802" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="724" operatorIdOut="803" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="728" operatorIdOut="803" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="729" operatorIdOut="804" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="735" operatorIdOut="805" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="731" operatorIdOut="805" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="740" operatorIdOut="805" controlConnectorIdIn="0" operatorConnectorIdOut="3"/>
+        <connection controlId="725" operatorIdOut="805" controlConnectorIdIn="0" operatorConnectorIdOut="4"/>
+        <connection controlId="720" operatorIdOut="807" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="727" operatorIdOut="808" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="723" operatorIdOut="808" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="737" operatorIdOut="809" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="734" operatorIdOut="810" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="730" operatorIdOut="812" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="722" operatorIdOut="812" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="726" operatorIdOut="812" controlConnectorIdIn="0" operatorConnectorIdOut="3"/>
+        <connection controlId="732" operatorIdOut="813" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="739" operatorIdOut="813" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="736" operatorIdOut="816" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="741" operatorIdOut="817" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="742" operatorIdOut="821" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="743" operatorIdOut="822" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="744" operatorIdOut="829" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="745" operatorIdOut="830" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="746" operatorIdOut="830" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="747" operatorIdOut="831" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="748" operatorIdOut="832" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="749" operatorIdOut="833" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="695" operatorIdOut="834" controlConnectorIdIn="1" operatorConnectorIdOut="0"/>
+        <connection controlId="750" operatorIdOut="836" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="695" operatorIdOut="836" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="754" operatorIdOut="838" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="757" operatorIdOut="840" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="756" operatorIdOut="840" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="755" operatorIdOut="841" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="751" operatorIdOut="841" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="758" operatorIdOut="842" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="752" operatorIdOut="842" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="759" operatorIdOut="843" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="753" operatorIdOut="844" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="760" operatorIdOut="847" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="761" operatorIdOut="848" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="763" operatorIdOut="849" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="762" operatorIdOut="850" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="764" operatorIdOut="853" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="698" operatorIdOut="854" controlConnectorIdIn="4" operatorConnectorIdOut="0"/>
+        <connection controlId="700" operatorIdOut="856" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="694" operatorIdOut="858" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="774" operatorIdOut="859" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="773" operatorIdOut="860" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="768" operatorIdOut="860" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="769" operatorIdOut="861" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="772" operatorIdOut="861" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="765" operatorIdOut="862" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="767" operatorIdOut="862" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="770" operatorIdOut="863" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="771" operatorIdOut="864" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="766" operatorIdOut="865" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="698" operatorIdOut="868" controlConnectorIdIn="1" operatorConnectorIdOut="1"/>
+        <connection controlId="776" operatorIdOut="870" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="780" operatorIdOut="870" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="783" operatorIdOut="872" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="787" operatorIdOut="872" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="778" operatorIdOut="872" controlConnectorIdIn="0" operatorConnectorIdOut="3"/>
+        <connection controlId="793" operatorIdOut="872" controlConnectorIdIn="0" operatorConnectorIdOut="4"/>
+        <connection controlId="789" operatorIdOut="873" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="794" operatorIdOut="874" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="790" operatorIdOut="874" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="784" operatorIdOut="876" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="781" operatorIdOut="877" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="791" operatorIdOut="878" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="795" operatorIdOut="878" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="777" operatorIdOut="879" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="782" operatorIdOut="880" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="786" operatorIdOut="883" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="779" operatorIdOut="883" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="788" operatorIdOut="884" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="775" operatorIdOut="884" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="792" operatorIdOut="884" controlConnectorIdIn="0" operatorConnectorIdOut="3"/>
+        <connection controlId="796" operatorIdOut="885" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="798" operatorIdOut="888" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="799" operatorIdOut="889" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="797" operatorIdOut="891" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="802" operatorIdOut="898" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="801" operatorIdOut="898" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="800" operatorIdOut="899" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+    </layouts>
+    <composerscreen viewx="76" viewy="-896" viewscale="-14" windowsx="0" windowsy="40" windowswidth="1366" windowsheight="728" numscreen="0" fullscreen="true"/>
+    <compositions>
+        <currentComposition id="116"/>
+        <composition id="116" name="trim-view3" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc."/>
+        <connector compositionId="116" connectorId="1" side="IN" name="Other side not connected" x="-54.9938" y="-0.828219"/>
+        <composition id="117" name="trim" x="-224" y="475" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="0" viewy="0" viewscale="0" parentId="116"/>
+        <connector compositionId="117" connectorId="1" side="IN" name="Other side not connected" x="-55" y="0"/>
+        <composition id="118" name="view-vidin" x="-903" y="-377" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="0" viewy="0" viewscale="0" parentId="117"/>
+        <connector compositionId="118" connectorId="1" side="OUT" name="Other side not connected" x="54.9314" y="2.74657"/>
+        <connector compositionId="118" connectorId="2" side="IN" name="Other side not connected" x="-53.8203" y="-11.3305"/>
+        <connector compositionId="118" connectorId="3" side="OUT" name="Other side not connected" x="38.3344" y="39.4395"/>
+        <composition id="119" name="SingleImgFromVideo" x="296" y="164" z="-700" informations="ffmpeg -r 25 -i 'RHUBARB1.MP4' -f image2 -vcodec png %05d.png" viewx="0" viewy="0" viewscale="0" parentId="118"/>
+        <connector compositionId="119" connectorId="1" side="OUT" name="code.num" x="50.4601" y="32.4619"/>
+        <connector compositionId="119" connectorId="2" side="OUT" name="imgsPath.str" x="54.7464" y="-24.5527"/>
+        <connector compositionId="119" connectorId="3" side="IN" name="videopath.str" x="-59.8483" y="4.26384"/>
+        <connector compositionId="119" connectorId="4" side="IN" name="imgsPath.str" x="-23.2222" y="-55.3239"/>
+        <connector compositionId="119" connectorId="5" side="IN" name="framenum.str" x="-21.0857" y="56.1729"/>
+        <composition id="120" name="nb_frames" x="47" y="323" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="0" viewy="0" viewscale="0" parentId="118"/>
+        <connector compositionId="120" connectorId="1" side="IN" name="videoPath.str" x="-46.1077" y="-29.9847"/>
+        <connector compositionId="120" connectorId="2" side="OUT" name="nb_frames.num" x="54.5487" y="-7.03141"/>
+        <composition id="121" name="params" x="-233" y="-3" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="0" viewy="0" viewscale="0" parentId="120"/>
+        <connector compositionId="121" connectorId="1" side="OUT" name="Other side not connected" x="54.6223" y="-6.43457"/>
+        <connector compositionId="121" connectorId="2" side="IN" name="Other side not connected" x="-54.5585" y="-6.95505"/>
+        <composition id="122" name="newMap" x="2066" y="-117" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="0" viewy="0" viewscale="0" parentId="121"/>
+        <connector compositionId="122" connectorId="1" side="OUT" name="blank.gen" x="41.6214" y="-35.9536"/>
+        <composition id="123" name="readVetor" x="676" y="-550" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="0" viewy="0" viewscale="0" parentId="121"/>
+        <connector compositionId="123" connectorId="1" side="IN" name="in.vec" x="-55.8212" y="22"/>
+        <connector compositionId="123" connectorId="2" side="OUT" name="element.gen" x="53.1767" y="27.7893"/>
+        <connector compositionId="123" connectorId="3" side="OUT" name="end.bool" x="35.9579" y="-48.0316"/>
+        <connector compositionId="123" connectorId="4" side="OUT" name="current" x="29.4093" y="52.2981"/>
+        <connector compositionId="123" connectorId="5" side="OUT" name="max" x="-3.47973" y="59.899"/>
+        <composition id="124" name="sel-map" x="68" y="0" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="0" viewy="0" viewscale="0" parentId="120"/>
+        <connector compositionId="124" connectorId="1" side="OUT" name="Other side not connected" x="54.1101" y="-9.8538"/>
+        <connector compositionId="124" connectorId="2" side="IN" name="Other side not connected" x="-51.9285" y="-18.1226"/>
+        <composition id="125" name="num-to-sec" x="516" y="180" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="0" viewy="0" viewscale="0" parentId="117"/>
+        <connector compositionId="125" connectorId="1" side="IN" name="num.num" x="14.1518" y="-53.1482"/>
+        <connector compositionId="125" connectorId="2" side="OUT" name="sec.num" x="50.7975" y="21.0858"/>
+        <composition id="126" name="block" x="-100" y="676" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="0" viewy="0" viewscale="0" parentId="117"/>
+        <connector compositionId="126" connectorId="1" side="IN" name="in0.gen" x="-54.1752" y="-9.48934"/>
+        <connector compositionId="126" connectorId="2" side="OUT" name="out0.gen" x="54.4776" y="-7.56255"/>
+        <composition id="127" name="trim-sync-1" x="1463" y="468" z="-700" informations="ffmpeg -i ~/Shinoe/prdBox/masters/JLG.dv  -vcodec copy -acodec copy -ss 30.28 -t 20.120 ressource/trimmed_video.avi" viewx="0" viewy="0" viewscale="0" parentId="117"/>
+        <connector compositionId="127" connectorId="1" side="OUT" name="code.num" x="42.598" y="49.0959"/>
+        <connector compositionId="127" connectorId="2" side="OUT" name="trimedPath.str" x="63.2824" y="-14.844"/>
+        <connector compositionId="127" connectorId="3" side="IN" name="videopath.str" x="-49.9202" y="41.629"/>
+        <connector compositionId="127" connectorId="4" side="IN" name="trimedPath.str" x="-23.8638" y="-60.4609"/>
+        <connector compositionId="127" connectorId="5" side="IN" name="duration.str" x="-64.0541" y="11.0489"/>
+        <connector compositionId="127" connectorId="6" side="IN" name="start.str" x="-59.6927" y="-25.7252"/>
+        <composition id="128" name="num-to-sec" x="121" y="267" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="0" viewy="0" viewscale="0" parentId="117"/>
+        <connector compositionId="128" connectorId="1" side="IN" name="num.num" x="-39.3223" y="-38.4546"/>
+        <connector compositionId="128" connectorId="2" side="OUT" name="sec.num" x="50.324" y="22.1921"/>
+        <composition id="129" name="view-vidin" x="-325" y="-590" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="0" viewy="0" viewscale="0" parentId="117"/>
+        <connector compositionId="129" connectorId="1" side="OUT" name="Other side not connected" x="49.5406" y="-23.89"/>
+        <connector compositionId="129" connectorId="2" side="IN" name="Other side not connected" x="-54.9578" y="2.15521"/>
+        <connector compositionId="129" connectorId="3" side="OUT" name="Other side not connected" x="22.1293" y="50.3517"/>
+        <composition id="130" name="SingleImgFromVideo" x="296" y="164" z="-700" informations="ffmpeg -r 25 -i 'RHUBARB1.MP4' -f image2 -vcodec png %05d.png" viewx="0" viewy="0" viewscale="0" parentId="129"/>
+        <connector compositionId="130" connectorId="1" side="OUT" name="code.num" x="50.4601" y="32.4619"/>
+        <connector compositionId="130" connectorId="2" side="OUT" name="imgsPath.str" x="54.7464" y="-24.5527"/>
+        <connector compositionId="130" connectorId="3" side="IN" name="videopath.str" x="-59.8483" y="4.26384"/>
+        <connector compositionId="130" connectorId="4" side="IN" name="imgsPath.str" x="-23.2222" y="-55.3239"/>
+        <connector compositionId="130" connectorId="5" side="IN" name="framenum.str" x="-21.0857" y="56.1729"/>
+        <composition id="131" name="nb_frames" x="47" y="323" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="0" viewy="0" viewscale="0" parentId="129"/>
+        <connector compositionId="131" connectorId="1" side="IN" name="videoPath.str" x="-46.1077" y="-29.9847"/>
+        <connector compositionId="131" connectorId="2" side="OUT" name="nb_frames.num" x="54.5487" y="-7.03141"/>
+        <composition id="132" name="params" x="-233" y="-3" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="0" viewy="0" viewscale="0" parentId="131"/>
+        <connector compositionId="132" connectorId="1" side="OUT" name="Other side not connected" x="54.6223" y="-6.43457"/>
+        <connector compositionId="132" connectorId="2" side="IN" name="Other side not connected" x="-54.5585" y="-6.95505"/>
+        <composition id="133" name="newMap" x="2066" y="-117" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="0" viewy="0" viewscale="0" parentId="132"/>
+        <connector compositionId="133" connectorId="1" side="OUT" name="blank.gen" x="41.6214" y="-35.9536"/>
+        <composition id="134" name="readVetor" x="676" y="-550" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="0" viewy="0" viewscale="0" parentId="132"/>
+        <connector compositionId="134" connectorId="1" side="IN" name="in.vec" x="-55.8212" y="22"/>
+        <connector compositionId="134" connectorId="2" side="OUT" name="element.gen" x="53.1767" y="27.7893"/>
+        <connector compositionId="134" connectorId="3" side="OUT" name="end.bool" x="35.9579" y="-48.0316"/>
+        <connector compositionId="134" connectorId="4" side="OUT" name="current" x="29.4093" y="52.2981"/>
+        <connector compositionId="134" connectorId="5" side="OUT" name="max" x="-3.47973" y="59.899"/>
+        <composition id="135" name="sel-map" x="68" y="0" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="0" viewy="0" viewscale="0" parentId="131"/>
+        <connector compositionId="135" connectorId="1" side="OUT" name="Other side not connected" x="54.1101" y="-9.8538"/>
+        <connector compositionId="135" connectorId="2" side="IN" name="Other side not connected" x="-51.9285" y="-18.1226"/>
+        <compositioncontrol id="693" type="NumberView" x="-109" y="-67" z="4" width="135.572" height="83.0666" parentId="116" content=""/>
+        <compositioncontrol id="696" type="slidernumber2" x="-735" y="-513" z="3" width="760" height="98" parentId="116" content="0;8991;1;5395"/>
+        <compositioncontrol id="695" type="EditorButton" x="62.866" y="-67.985" z="3" width="682" height="85" parentId="116" content="CUT"/>
+        <compositioncontrol id="694" type="NumberView" x="-14" y="-68" z="3" width="119.669" height="84.0666" parentId="116" content=""/>
+        <compositioncontrol id="698" type="slidernumber2" x="-13" y="-513" z="2" width="765" height="98" parentId="116" content="0;8991;1;5935"/>
+        <compositioncontrol id="697" type="LineEditorString" x="-729.056" y="-68" z="2" width="664" height="85" parentId="116" content="038"/>
+        <compositioncontrol id="700" type="ViewImage" x="-12" y="-450" z="1" width="763" height="423" parentId="116" content="167;236;200;0;0;720;576"/>
+        <compositioncontrol id="699" type="ViewImage" x="-734" y="-449" z="1" width="762" height="422" parentId="116" content="68;152;100;0;0;720;576"/>
+        <connection controlId="693" operatorIdOut="786" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="696" operatorIdOut="800" controlConnectorIdIn="1" operatorConnectorIdOut="1"/>
+        <connection controlId="696" operatorIdOut="790" controlConnectorIdIn="4" operatorConnectorIdOut="0"/>
+        <connection controlId="695" operatorIdOut="836" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="695" operatorIdOut="834" controlConnectorIdIn="1" operatorConnectorIdOut="0"/>
+        <connection controlId="694" operatorIdOut="858" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="698" operatorIdOut="868" controlConnectorIdIn="1" operatorConnectorIdOut="1"/>
+        <connection controlId="698" operatorIdOut="854" controlConnectorIdIn="4" operatorConnectorIdOut="0"/>
+        <connection controlId="697" operatorIdOut="770" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="700" operatorIdOut="856" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="699" operatorIdOut="788" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <operator id="765" type="sync" x="886" y="432" z="15" parentId="117"/>
+        <operatorconnector opId="765" connectorId="0" x="-55.1542" y="82.2132"/>
+        <operatorconnector opId="765" connectorId="1" x="-89.113" y="-43.1263"/>
+        <operatorconnector opId="765" connectorId="2" x="-95.0635" y="27.6394"/>
+        <operatorconnector opId="765" connectorId="3" x="-6.30124" y="-98.7993"/>
+        <operatorconnector opId="765" connectorId="4" x="64.913" y="74.7483"/>
+        <operatorconnector opId="765" connectorId="5" x="98.4706" y="-10.2242"/>
+        <operatorconnector opId="765" connectorId="6" x="95.6514" y="25.5307"/>
+        <operatorconnector opId="765" connectorId="7" x="94.0893" y="-30.7929"/>
+        <operatoraction opId="765" actionKey="AddPlug"/>
+        <operatoraction opId="765" actionKey="AddPlug"/>
+        <operator id="766" type="NumberdiffnumberNumber" x="16" y="-303" z="9" parentId="117"/>
+        <operatorconnector opId="766" connectorId="0" x="-39.4436" y="-52.9169"/>
+        <operatorconnector opId="766" connectorId="1" x="-65.9864" y="1.34136"/>
+        <operatorconnector opId="766" connectorId="2" x="42.4433" y="42.4095"/>
+        <operator id="768" type="stringconcatstring" x="1881" y="-449" z="5" parentId="117"/>
+        <operatorconnector opId="768" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="768" connectorId="1" x="-65.95" y="-2.56948"/>
+        <operatorconnector opId="768" connectorId="2" x="-11.9567" y="64.9079"/>
+        <operator id="767" type="If" x="789" y="73" z="5" parentId="117"/>
+        <operatorconnector opId="767" connectorId="0" x="-61.6762" y="23.4957"/>
+        <operatorconnector opId="767" connectorId="1" x="-22.3211" y="-62.1109"/>
+        <operatorconnector opId="767" connectorId="2" x="1.34666" y="65.9863"/>
+        <operatorconnector opId="767" connectorId="3" x="60" y="0"/>
+        <compositioncontrol id="701" type="LineEditorString" x="1630" y="-628" z="4" width="167" height="85" parentId="117" content=".mov"/>
+        <compositioncontrol id="706" type="NumberView" x="258" y="-373" z="1" width="65" height="75" parentId="117" content=""/>
+        <compositioncontrol id="705" type="LineEditorString" x="776" y="-425" z="1" width="429" height="85" parentId="117" content="ressource/"/>
+        <compositioncontrol id="704" type="StringView" x="939" y="-731" z="1" width="591" height="85" parentId="117" content=""/>
+        <compositioncontrol id="703" type="EditorNumber" x="154" y="122" z="1" width="80" height="85" parentId="117" content="0"/>
+        <compositioncontrol id="702" type="editorboolean" x="655" y="-544" z="1" width="121" height="85" parentId="117" content="TRUE"/>
+        <operator id="771" type="NumberinfNumber" x="323" y="-20" z="1" parentId="117"/>
+        <operatorconnector opId="771" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="771" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="771" connectorId="2" x="42.4433" y="42.4095"/>
+        <operator id="770" type="stringconcatstring" x="1417" y="-508" z="1" parentId="117"/>
+        <operatorconnector opId="770" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="770" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="770" connectorId="2" x="30.051" y="58.7617"/>
+        <operator id="769" type="stringconcatstring" x="1064" y="-574" z="1" parentId="117"/>
+        <operatorconnector opId="769" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="769" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="769" connectorId="2" x="49.3786" y="43.7921"/>
+        <operator id="780" type="execloop" x="642" y="380" z="0" parentId="117"/>
+        <operatorconnector opId="780" connectorId="0" x="33.443" y="-56.8996"/>
+        <operatorconnector opId="780" connectorId="1" x="63.9098" y="16.4786"/>
+        <operator id="779" type="execloop" x="429" y="444" z="0" parentId="117"/>
+        <operatorconnector opId="779" connectorId="0" x="-59.3972" y="-28.7745"/>
+        <operatorconnector opId="779" connectorId="1" x="60.8322" y="25.6016"/>
+        <operator id="778" type="Copy" x="-575" y="-258" z="0" parentId="117"/>
+        <operatorconnector opId="778" connectorId="0" x="-54.9153" y="-36.6102"/>
+        <operatorconnector opId="778" connectorId="1" x="37.1058" y="54.5817"/>
+        <operatorconnector opId="778" connectorId="2" x="60" y="0"/>
+        <operator id="777" type="Copy" x="171" y="-147" z="0" parentId="117"/>
+        <operatorconnector opId="777" connectorId="0" x="-65.1566" y="10.5174"/>
+        <operatorconnector opId="777" connectorId="1" x="57.2049" y="32.9182"/>
+        <operatorconnector opId="777" connectorId="2" x="60" y="0"/>
+        <operator id="776" type="Copy" x="-1208" y="-594" z="0" parentId="117"/>
+        <operatorconnector opId="776" connectorId="0" x="-41.6904" y="51.1655"/>
+        <operatorconnector opId="776" connectorId="1" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="776" connectorId="2" x="60" y="0"/>
+        <operator id="775" type="stringCSDOperatorProjectPathstring" x="787" y="-620" z="0" parentId="117"/>
+        <operatorconnector opId="775" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="775" connectorId="1" x="60.0097" y="27.4743"/>
+        <operator id="774" type="Copy" x="-1881" y="-1" z="0" parentId="117"/>
+        <operatorconnector opId="774" connectorId="0" x="-44.1517" y="49.0574"/>
+        <operatorconnector opId="774" connectorId="1" x="66" y="0.0559476"/>
+        <operatorconnector opId="774" connectorId="2" x="22.7208" y="-61.9658"/>
+        <operator id="773" type="execloop" x="1018" y="158" z="0" parentId="117"/>
+        <operatorconnector opId="773" connectorId="0" x="8.53639" y="-65.4456"/>
+        <operatorconnector opId="773" connectorId="1" x="-20.871" y="62.6131"/>
+        <operator id="772" type="sync" x="564" y="-17" z="0" parentId="117"/>
+        <operatorconnector opId="772" connectorId="0" x="-59.0322" y="29.5161"/>
+        <operatorconnector opId="772" connectorId="1" x="-63.9692" y="-16.2462"/>
+        <operatorconnector opId="772" connectorId="2" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="772" connectorId="3" x="60" y="0"/>
+        <operator id="781" type="NumberuidNumber" x="-415" y="-287" z="9" parentId="118"/>
+        <operatorconnector opId="781" connectorId="0" x="-35.2435" y="55.8023"/>
+        <operatorconnector opId="781" connectorId="1" x="65.849" y="4.46239"/>
+        <operatorconnector opId="781" connectorId="2" x="57.9172" y="-31.6481"/>
+        <operator id="782" type="stringconcatstring" x="154" y="-325" z="5" parentId="118"/>
+        <operatorconnector opId="782" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="782" connectorId="1" x="-65.95" y="-2.56948"/>
+        <operatorconnector opId="782" connectorId="2" x="-11.9567" y="64.9079"/>
+        <compositioncontrol id="707" type="LineEditorString" x="-97" y="-505" z="4" width="167" height="85" parentId="118" content=".png"/>
+        <operator id="784" type="stringconcatstring" x="-142" y="-338" z="3" parentId="118"/>
+        <operatorconnector opId="784" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="784" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="784" connectorId="2" x="30.051" y="58.7617"/>
+        <operator id="783" type="stringconcatstring" x="54" y="-49" z="3" parentId="118"/>
+        <operatorconnector opId="783" connectorId="0" x="-60.442" y="26.5097"/>
+        <operatorconnector opId="783" connectorId="1" x="11.7785" y="-64.9405"/>
+        <operatorconnector opId="783" connectorId="2" x="61.3599" y="24.3097"/>
+        <compositioncontrol id="709" type="LineEditorString" x="-698" y="-175" z="1" width="429" height="85" parentId="118" content="tmp/image-"/>
+        <compositioncontrol id="708" type="editorboolean" x="-358" y="-49" z="1" width="121" height="85" parentId="118" content="TRUE"/>
+        <operator id="785" type="stringCSDOperatorProjectPathstring" x="-192" y="20" z="1" parentId="118"/>
+        <operatorconnector opId="785" connectorId="0" x="-65.9493" y="2.58625"/>
+        <operatorconnector opId="785" connectorId="1" x="65.6448" y="6.838"/>
+        <operator id="790" type="id" x="132" y="503" z="0" parentId="118"/>
+        <operatorconnector opId="790" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="790" connectorId="1" x="49.2571" y="-43.9288"/>
+        <operator id="789" type="Copy" x="619" y="160" z="0" parentId="118"/>
+        <operatorconnector opId="789" connectorId="0" x="-65.9646" y="-2.16277"/>
+        <operatorconnector opId="789" connectorId="1" x="-14.9972" y="64.2735"/>
+        <operatorconnector opId="789" connectorId="2" x="64.3477" y="14.6758"/>
+        <operator id="788" type="SCDLoadImageQT" x="638" y="445" z="0" parentId="118"/>
+        <operatorconnector opId="788" connectorId="0" x="-46.669" y="-46.669"/>
+        <operatorconnector opId="788" connectorId="1" x="42.4433" y="42.4095"/>
+        <operator id="787" type="Copy" x="-316" y="221" z="0" parentId="118"/>
+        <operatorconnector opId="787" connectorId="0" x="-65.2384" y="9.99777"/>
+        <operatorconnector opId="787" connectorId="1" x="57.6179" y="32.1898"/>
+        <operatorconnector opId="787" connectorId="2" x="62.425" y="-21.427"/>
+        <operator id="786" type="Copy" x="290" y="371" z="0" parentId="118"/>
+        <operatorconnector opId="786" connectorId="0" x="-45.9879" y="47.3404"/>
+        <operatorconnector opId="786" connectorId="1" x="49.914" y="43.1809"/>
+        <operatorconnector opId="786" connectorId="2" x="8.72281" y="-65.421"/>
+        <operator id="791" type="stringreplacestring" x="-119" y="138" z="11" parentId="119"/>
+        <operatorconnector opId="791" connectorId="0" x="-36.3946" y="-55.0585"/>
+        <operatorconnector opId="791" connectorId="1" x="30.6675" y="58.4423"/>
+        <operatorconnector opId="791" connectorId="2" x="-24.71" y="61.1998"/>
+        <operatorconnector opId="791" connectorId="3" x="65.7369" y="5.88689"/>
+        <operator id="793" type="stringsplitstring" x="131" y="-178" z="3" parentId="119"/>
+        <operatorconnector opId="793" connectorId="0" x="-64.9023" y="-11.9872"/>
+        <operatorconnector opId="793" connectorId="1" x="-6.23511" y="65.7048"/>
+        <operatorconnector opId="793" connectorId="2" x="49.6059" y="43.5345"/>
+        <operator id="792" type="stringreplacestring" x="-250" y="-19" z="3" parentId="119"/>
+        <operatorconnector opId="792" connectorId="0" x="-56.465" y="34.1716"/>
+        <operatorconnector opId="792" connectorId="1" x="-64.1332" y="-15.5863"/>
+        <operatorconnector opId="792" connectorId="2" x="-8.68102" y="65.4266"/>
+        <operatorconnector opId="792" connectorId="3" x="3.9214" y="-65.8834"/>
+        <compositioncontrol id="719" type="EditorNumber" x="-681" y="471" z="1" width="80" height="85" parentId="119" content="25"/>
+        <compositioncontrol id="718" type="StringView" x="-72" y="381" z="1" width="326" height="85" parentId="119" content=""/>
+        <compositioncontrol id="717" type="NumberView" x="-239" y="551" z="1" width="65" height="75" parentId="119" content=""/>
+        <compositioncontrol id="716" type="ViewVector" x="313" y="189" z="1" width="526" height="301" parentId="119" content=""/>
+        <compositioncontrol id="715" type="LineEditorString" x="-814" y="26" z="1" width="426" height="85" parentId="119" content="-ss $NB_FRAME -i $PATH_TO_VID -vframes 1 $PATH_OUT"/>
+        <compositioncontrol id="714" type="LineEditorString" x="-570" y="-277" z="1" width="211" height="85" parentId="119" content="$PATH_OUT"/>
+        <compositioncontrol id="713" type="LineEditorString" x="47" y="62" z="1" width="227" height="85" parentId="119" content="ffmpeg"/>
+        <compositioncontrol id="712" type="LineEditorString" x="-779" y="-71" z="1" width="273" height="85" parentId="119" content="$PATH_TO_VID"/>
+        <compositioncontrol id="711" type="LineEditorString" x="-17" y="-81" z="1" width="283" height="85" parentId="119" content=" "/>
+        <compositioncontrol id="710" type="LineEditorString" x="-44" y="276" z="1" width="298" height="85" parentId="119" content="$NB_FRAME"/>
+        <operator id="796" type="NumberdivNumber" x="-346" y="561" z="1" parentId="119"/>
+        <operatorconnector opId="796" connectorId="0" x="-27.2267" y="60.1224"/>
+        <operatorconnector opId="796" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="796" connectorId="2" x="42.4433" y="42.4095"/>
+        <operator id="795" type="stringreplacestring" x="-161" y="-266" z="1" parentId="119"/>
+        <operatorconnector opId="795" connectorId="0" x="-25.5183" y="60.8672"/>
+        <operatorconnector opId="795" connectorId="1" x="-62.9636" y="19.7886"/>
+        <operatorconnector opId="795" connectorId="2" x="-60.0253" y="-27.4401"/>
+        <operatorconnector opId="795" connectorId="3" x="60.2867" y="26.861"/>
+        <operator id="794" type="CommandLineSync" x="345" y="-9" z="1" parentId="119"/>
+        <operatorconnector opId="794" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="794" connectorId="1" x="-49.7765" y="-43.3393"/>
+        <operatorconnector opId="794" connectorId="2" x="47.3568" y="-52.8993"/>
+        <operatorconnector opId="794" connectorId="3" x="62.7874" y="16.8149"/>
+        <operatorconnector opId="794" connectorId="4" x="62.7874" y="-16.8149"/>
+        <text x="-793" y="149" z="0" parentId="119" color="#ffffff" police="10" font="Droid Sans" italic="false" bold="false" underline="false" content="-ss 50/25 -i JLG-deint.mov -vframes 1 out1.jpg"/>
+        <operator id="799" type="NumberNumberToStringNumber" x="-139" y="415" z="0" parentId="119"/>
+        <operatorconnector opId="799" connectorId="0" x="-38.6839" y="53.4748"/>
+        <operatorconnector opId="799" connectorId="1" x="25.9987" y="-60.6636"/>
+        <operator id="798" type="id" x="639" y="-321" z="0" parentId="119"/>
+        <operatorconnector opId="798" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="798" connectorId="1" x="-65.9088" y="3.46888"/>
+        <operatorconnector opId="798" connectorId="2" x="17.5338" y="63.6283"/>
+        <operatorconnector opId="798" connectorId="3" x="65.9759" y="-1.78313"/>
+        <operatoraction opId="798" actionKey="AddPlug"/>
+        <operator id="797" type="Copy" x="-437" y="-459" z="0" parentId="119"/>
+        <operatorconnector opId="797" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="797" connectorId="1" x="57.9411" y="31.6042"/>
+        <operatorconnector opId="797" connectorId="2" x="64.6127" y="-13.461"/>
+        <operator id="800" type="NumberNumberFromStringNumber" x="411" y="51" z="0" parentId="120"/>
+        <operatorconnector opId="800" connectorId="0" x="-64.7183" y="12.9437"/>
+        <operatorconnector opId="800" connectorId="1" x="60.3116" y="26.8051"/>
+        <operator id="801" type="OperatorLocker" x="2231" y="-600" z="9" parentId="121"/>
+        <operatorconnector opId="801" connectorId="0" x="9.66705" y="65.2882"/>
+        <operatorconnector opId="801" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="801" connectorId="2" x="55.1399" y="-36.271"/>
+        <operatorconnector opId="801" connectorId="3" x="65.9406" y="2.79916"/>
+        <operator id="802" type="stringreplacestring" x="-454" y="-396" z="5" parentId="121"/>
+        <operatorconnector opId="802" connectorId="0" x="-59.0322" y="29.5161"/>
+        <operatorconnector opId="802" connectorId="1" x="-64.7183" y="-12.9437"/>
+        <operatorconnector opId="802" connectorId="2" x="-29.5161" y="-59.0322"/>
+        <operatorconnector opId="802" connectorId="3" x="42.4433" y="42.4095"/>
+        <operator id="806" type="If" x="2829" y="-639" z="3" parentId="121"/>
+        <operatorconnector opId="806" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="806" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="806" connectorId="2" x="65.9926" y="-0.991312"/>
+        <operatorconnector opId="806" connectorId="3" x="-2.70286" y="-65.9446"/>
+        <operator id="805" type="CommandLineSync" x="-1797" y="-377" z="3" parentId="121"/>
+        <operatorconnector opId="805" connectorId="0" x="-5.1688" y="70.8116"/>
+        <operatorconnector opId="805" connectorId="1" x="-68.3241" y="19.3084"/>
+        <operatorconnector opId="805" connectorId="2" x="36.8843" y="-54.7316"/>
+        <operatorconnector opId="805" connectorId="3" x="68.4993" y="18.6774"/>
+        <operatorconnector opId="805" connectorId="4" x="68.2734" y="-19.4869"/>
+        <operator id="804" type="stringsplitstring" x="-2108" y="-387" z="3" parentId="121"/>
+        <operatorconnector opId="804" connectorId="0" x="-63.9506" y="16.3192"/>
+        <operatorconnector opId="804" connectorId="1" x="-6.23511" y="65.7048"/>
+        <operatorconnector opId="804" connectorId="2" x="58.0292" y="31.4422"/>
+        <operator id="803" type="stringregexpstring" x="-1167" y="-402" z="3" parentId="121"/>
+        <operatorconnector opId="803" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="803" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="803" connectorId="2" x="52.3991" y="40.129"/>
+        <compositioncontrol id="722" type="LineEditorString" x="-241" y="-545" z="2" width="80" height="85" parentId="121" content=""/>
+        <compositioncontrol id="721" type="LineEditorString" x="-823" y="-504" z="2" width="132" height="85" parentId="121" content="[STREAM]"/>
+        <compositioncontrol id="720" type="EditorNumber" x="-1114" y="-550" z="2" width="80" height="85" parentId="121" content="0"/>
+        <compositioncontrol id="740" type="StringViewText" x="-1349" y="-228" z="1" width="703" height="454" parentId="121" content=""/>
+        <compositioncontrol id="739" type="ViewVector" x="720" y="-141" z="1" width="533" height="473" parentId="121" content=""/>
+        <compositioncontrol id="738" type="LineEditorString" x="-663" y="-593" z="1" width="80" height="85" parentId="121" content=""/>
+        <compositioncontrol id="737" type="LineEditorString" x="671" y="-291" z="1" width="166" height="85" parentId="121" content="="/>
+        <compositioncontrol id="736" type="EditorNumber" x="1467" y="-243" z="1" width="80" height="85" parentId="121" content="1"/>
+        <compositioncontrol id="735" type="LineEditorString" x="-2018" y="-168" z="1" width="227" height="85" parentId="121" content="ffprobe"/>
+        <compositioncontrol id="734" type="EditorNumber" x="1242" y="-492" z="1" width="80" height="85" parentId="121" content="0"/>
+        <compositioncontrol id="733" type="LineEditorString" x="-2195" y="-669" z="1" width="395" height="85" parentId="121" content="\[STREAM\][^\[]*codec_type=audio[^\[]*\[/STREAM\]"/>
+        <compositioncontrol id="732" type="LineEditorString" x="96" y="-511" z="1" width="226" height="85" parentId="121" content="[^=\n]*=[^\n]*"/>
+        <compositioncontrol id="731" type="NumberView" x="-1700" y="-305" z="1" width="65" height="75" parentId="121" content=""/>
+        <compositioncontrol id="730" type="LineEditorString" x="-386" y="-482" z="1" width="158" height="85" parentId="121" content="[/STREAM]"/>
+        <compositioncontrol id="729" type="LineEditorString" x="-2491" y="-143" z="1" width="283" height="85" parentId="121" content=" "/>
+        <compositioncontrol id="728" type="ViewVector" x="-631" y="-243" z="1" width="636" height="464" parentId="121" content=""/>
+        <compositioncontrol id="727" type="LineEditorString" x="-2905" y="-210" z="1" width="385" height="85" parentId="121" content="-loglevel error -show_streams $PATH_IN"/>
+        <compositioncontrol id="726" type="StringViewText" x="19" y="-245" z="1" width="584" height="474" parentId="121" content=""/>
+        <compositioncontrol id="725" type="StringViewText" x="-1348" y="260" z="1" width="795" height="455" parentId="121" content=""/>
+        <compositioncontrol id="724" type="LineEditorString" x="-2071" y="-587" z="1" width="394" height="85" parentId="121" content="\[STREAM\][^\[]*codec_type=video[^\[]*\[/STREAM\]"/>
+        <compositioncontrol id="723" type="LineEditorString" x="-2792" y="-339" z="1" width="211" height="85" parentId="121" content="$PATH_IN"/>
+        <operator id="811" type="mapinsertmap" x="2259" y="-303" z="1" parentId="121"/>
+        <operatorconnector opId="811" connectorId="0" x="-17.1557" y="63.7313"/>
+        <operatorconnector opId="811" connectorId="1" x="-65.9835" y="-1.47711"/>
+        <operatorconnector opId="811" connectorId="2" x="-56.744" y="33.7064"/>
+        <operatorconnector opId="811" connectorId="3" x="-11.4439" y="-65.0003"/>
+        <operator id="810" type="vectorgetvector" x="1515" y="-425" z="1" parentId="121"/>
+        <operatorconnector opId="810" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="810" connectorId="1" x="-48.172" y="-45.1161"/>
+        <operatorconnector opId="810" connectorId="2" x="64.5475" y="13.7703"/>
+        <operator id="809" type="stringsplitstring" x="966" y="-266" z="1" parentId="121"/>
+        <operatorconnector opId="809" connectorId="0" x="-43.0245" y="-50.0489"/>
+        <operatorconnector opId="809" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="809" connectorId="2" x="60.6094" y="26.1247"/>
+        <operator id="808" type="stringreplacestring" x="-2394" y="-395" z="1" parentId="121"/>
+        <operatorconnector opId="808" connectorId="0" x="-25.5183" y="60.8672"/>
+        <operatorconnector opId="808" connectorId="1" x="-62.5064" y="21.1883"/>
+        <operatorconnector opId="808" connectorId="2" x="-60.0253" y="-27.4401"/>
+        <operatorconnector opId="808" connectorId="3" x="60.2867" y="26.861"/>
+        <operator id="807" type="vectorgetvector" x="-834" y="-370" z="1" parentId="121"/>
+        <operatorconnector opId="807" connectorId="0" x="-65.6617" y="6.67404"/>
+        <operatorconnector opId="807" connectorId="1" x="-54.8778" y="-36.6665"/>
+        <operatorconnector opId="807" connectorId="2" x="65.9923" y="1.00711"/>
+        <text x="-1669" y="-559" z="0" parentId="121" color="#ffffff" police="10" font="Droid Sans" italic="false" bold="false" underline="false" content="videostream pattern"/>
+        <text x="-546" y="-273" z="0" parentId="121" color="#ffffff" police="20" font="Droid Sans" italic="false" bold="false" underline="false" content="video stream"/>
+        <text x="-1282" y="241" z="0" parentId="121" color="#ffffff" police="20" font="Droid Sans" italic="false" bold="false" underline="false" content="error output"/>
+        <text x="-1310" y="-261" z="0" parentId="121" color="#ffffff" police="20" font="Droid Sans" italic="false" bold="false" underline="false" content="standard output"/>
+        <text x="-1781" y="-635" z="0" parentId="121" color="#ffffff" police="10" font="Droid Sans" italic="false" bold="false" underline="false" content="audiostream pattern"/>
+        <text x="756" y="-147" z="0" parentId="121" color="#ffffff" police="10" font="Droid Sans" italic="false" bold="false" underline="false" content="label/value vector"/>
+        <operator id="816" type="vectorgetvector" x="1619" y="-95" z="0" parentId="121"/>
+        <operatorconnector opId="816" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="816" connectorId="1" x="-11.5752" y="-64.977"/>
+        <operatorconnector opId="816" connectorId="2" x="47.9477" y="-45.3543"/>
+        <operator id="815" type="Copy" x="1249" y="-285" z="0" parentId="121"/>
+        <operatorconnector opId="815" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="815" connectorId="1" x="52.8" y="39.6"/>
+        <operatorconnector opId="815" connectorId="2" x="63.7715" y="-17.0057"/>
+        <operator id="814" type="sync" x="1798" y="-306" z="0" parentId="121"/>
+        <operatorconnector opId="814" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="814" connectorId="1" x="-59.1184" y="-29.3431"/>
+        <operatorconnector opId="814" connectorId="2" x="59.0322" y="29.5161"/>
+        <operatorconnector opId="814" connectorId="3" x="65.4055" y="-8.83858"/>
+        <operator id="813" type="stringregexpstring" x="473" y="-400" z="0" parentId="121"/>
+        <operatorconnector opId="813" connectorId="0" x="-59.4105" y="28.747"/>
+        <operatorconnector opId="813" connectorId="1" x="-41.8426" y="-51.0411"/>
+        <operatorconnector opId="813" connectorId="2" x="49.7013" y="-43.4256"/>
+        <operator id="812" type="stringreplacestring" x="-73" y="-386" z="0" parentId="121"/>
+        <operatorconnector opId="812" connectorId="0" x="-55.9679" y="34.9799"/>
+        <operatorconnector opId="812" connectorId="1" x="-62.1188" y="-22.2991"/>
+        <operatorconnector opId="812" connectorId="2" x="17.2109" y="-63.7164"/>
+        <operatorconnector opId="812" connectorId="3" x="64.7764" y="12.65"/>
+        <operator id="817" type="genericblank" x="103" y="-12" z="5" parentId="122"/>
+        <operatorconnector opId="817" connectorId="0" x="-65.772" y="5.481"/>
+        <operatorconnector opId="817" connectorId="1" x="65.8454" y="4.51496"/>
+        <compositioncontrol id="741" type="LineEditorString" x="-430" y="-38" z="1" width="120" height="84" parentId="122" content="DATAMAP"/>
+        <operator id="818" type="sync" x="-17" y="-69" z="5" parentId="123"/>
+        <operatorconnector opId="818" connectorId="0" x="-56.7082" y="-33.7665"/>
+        <operatorconnector opId="818" connectorId="1" x="-16.9781" y="63.7789"/>
+        <operatorconnector opId="818" connectorId="2" x="50.357" y="42.6635"/>
+        <operatorconnector opId="818" connectorId="3" x="60" y="0"/>
+        <operator id="819" type="OperatorLocker" x="168" y="38" z="3" parentId="123"/>
+        <operatorconnector opId="819" connectorId="0" x="58.858" y="-29.862"/>
+        <operatorconnector opId="819" connectorId="1" x="-62.9028" y="19.9809"/>
+        <operatorconnector opId="819" connectorId="2" x="47.9646" y="45.3364"/>
+        <operatorconnector opId="819" connectorId="3" x="-9.43541" y="65.3221"/>
+        <compositioncontrol id="744" type="ViewVector" x="-16" y="362" z="1" width="679" height="219" parentId="123" content=""/>
+        <compositioncontrol id="743" type="NumberView" x="396" y="-64" z="1" width="147" height="78" parentId="123" content=""/>
+        <compositioncontrol id="742" type="LineEditorString" x="68" y="-437" z="1" width="120" height="84" parentId="123" content="dummy"/>
+        <operator id="822" type="loop" x="143" y="-214" z="1" parentId="123"/>
+        <operatorconnector opId="822" connectorId="0" x="-65.9203" y="-3.24198"/>
+        <operatorconnector opId="822" connectorId="1" x="31.2554" y="58.13"/>
+        <operatorconnector opId="822" connectorId="2" x="64.7816" y="12.6229"/>
+        <operator id="821" type="If" x="385" y="-435" z="1" parentId="123"/>
+        <operatorconnector opId="821" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="821" connectorId="1" x="-65.9531" y="-2.48879"/>
+        <operatorconnector opId="821" connectorId="2" x="-20.5662" y="-62.7139"/>
+        <operatorconnector opId="821" connectorId="3" x="60" y="0"/>
+        <operator id="820" type="vectorgetvector" x="359" y="184" z="1" parentId="123"/>
+        <operatorconnector opId="820" connectorId="0" x="-65.9428" y="-2.74762"/>
+        <operatorconnector opId="820" connectorId="1" x="-41.0638" y="-51.6698"/>
+        <operatorconnector opId="820" connectorId="2" x="64.5953" y="13.5442"/>
+        <operator id="829" type="Copy" x="-309" y="-197" z="0" parentId="123"/>
+        <operatorconnector opId="829" connectorId="0" x="-42.0666" y="-50.8567"/>
+        <operatorconnector opId="829" connectorId="1" x="64.9722" y="11.6022"/>
+        <operatorconnector opId="829" connectorId="2" x="-40.282" y="52.2816"/>
+        <operator id="828" type="vectorsizevector" x="-468" y="115" z="0" parentId="123"/>
+        <operatorconnector opId="828" connectorId="0" x="13.738" y="-64.5544"/>
+        <operatorconnector opId="828" connectorId="1" x="56.6189" y="33.9161"/>
+        <operator id="827" type="Copy" x="-564" y="-393" z="0" parentId="123"/>
+        <operatorconnector opId="827" connectorId="0" x="-61.0087" y="25.1782"/>
+        <operatorconnector opId="827" connectorId="1" x="54.5771" y="37.1125"/>
+        <operatorconnector opId="827" connectorId="2" x="56.8397" y="-33.5447"/>
+        <operator id="826" type="Copy" x="467" y="-240" z="0" parentId="123"/>
+        <operatorconnector opId="826" connectorId="0" x="-58.0161" y="31.4664"/>
+        <operatorconnector opId="826" connectorId="1" x="60.3523" y="26.7133"/>
+        <operatorconnector opId="826" connectorId="2" x="-61.7977" y="-23.1741"/>
+        <operator id="825" type="sync" x="326" y="-681" z="0" parentId="123"/>
+        <operatorconnector opId="825" connectorId="0" x="-4.48834" y="65.8472"/>
+        <operatorconnector opId="825" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="825" connectorId="2" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="825" connectorId="3" x="60" y="0"/>
+        <operator id="824" type="Copy" x="329" y="-102" z="0" parentId="123"/>
+        <operatorconnector opId="824" connectorId="0" x="-65.102" y="-10.8503"/>
+        <operatorconnector opId="824" connectorId="1" x="48.6952" y="44.5509"/>
+        <operatorconnector opId="824" connectorId="2" x="-54.9153" y="36.6102"/>
+        <operator id="823" type="Copy" x="-158" y="209" z="0" parentId="123"/>
+        <operatorconnector opId="823" connectorId="0" x="-60.6883" y="-25.9409"/>
+        <operatorconnector opId="823" connectorId="1" x="10.8767" y="-65.0976"/>
+        <operatorconnector opId="823" connectorId="2" x="2.36848" y="65.9575"/>
+        <operator id="830" type="mapvaluemap" x="69" y="-346" z="7" parentId="124"/>
+        <operatorconnector opId="830" connectorId="0" x="-59.3675" y="-28.8357"/>
+        <operatorconnector opId="830" connectorId="1" x="-63.8048" y="16.8803"/>
+        <operatorconnector opId="830" connectorId="2" x="63.3181" y="18.623"/>
+        <compositioncontrol id="747" type="ViewMap" x="-499" y="-253" z="1" width="340" height="715" parentId="124" content=""/>
+        <compositioncontrol id="746" type="StringView" x="117" y="-461" z="1" width="381" height="85" parentId="124" content=""/>
+        <compositioncontrol id="745" type="LineEditorString" x="-80" y="-140" z="1" width="254" height="85" parentId="124" content="nb_frames"/>
+        <operator id="831" type="Copy" x="-169" y="-383" z="0" parentId="124"/>
+        <operatorconnector opId="831" connectorId="0" x="-65.8324" y="4.70021"/>
+        <operatorconnector opId="831" connectorId="1" x="18.984" y="63.2108"/>
+        <operatorconnector opId="831" connectorId="2" x="62.678" y="-20.6753"/>
+        <operator id="832" type="NumberdivNumber" x="31" y="57" z="3" parentId="125"/>
+        <operatorconnector opId="832" connectorId="0" x="-62.1947" y="22.0867"/>
+        <operatorconnector opId="832" connectorId="1" x="-62.4033" y="-21.4902"/>
+        <operatorconnector opId="832" connectorId="2" x="65.9903" y="-1.13394"/>
+        <compositioncontrol id="749" type="EditorNumber" x="-207" y="-194" z="1" width="192" height="85" parentId="125" content="25"/>
+        <compositioncontrol id="748" type="NumberView" x="61" y="145" z="1" width="162" height="75" parentId="125" content=""/>
+        <text x="111" y="-67" z="0" parentId="125" color="#ffffff" police="10" font="Droid Sans" italic="false" bold="false" underline="false" content="secondes"/>
+        <text x="-63" y="-225" z="0" parentId="125" color="#ffffff" police="10" font="Droid Sans" italic="false" bold="false" underline="false" content="num to sec&#10;sec to num"/>
+        <operator id="833" type="id" x="-147" y="-43" z="0" parentId="125"/>
+        <operatorconnector opId="833" connectorId="0" x="-65.9805" y="-1.60447"/>
+        <operatorconnector opId="833" connectorId="1" x="64.6109" y="13.4695"/>
+        <compositioncontrol id="750" type="LineEditorString" x="-170" y="21" z="1" width="209" height="85" parentId="126" content="CUT"/>
+        <operator id="834" type="OperatorLocker" x="-23" y="-108" z="1" parentId="126"/>
+        <operatorconnector opId="834" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="834" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="834" connectorId="2" x="57.8302" y="31.8066"/>
+        <operatorconnector opId="834" connectorId="3" x="60" y="0"/>
+        <operator id="836" type="id" x="92" y="96" z="0" parentId="126"/>
+        <operatorconnector opId="836" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="836" connectorId="1" x="42.4433" y="42.4095"/>
+        <operator id="835" type="id" x="177" y="-95" z="0" parentId="126"/>
+        <operatorconnector opId="835" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="835" connectorId="1" x="-65.9833" y="1.48277"/>
+        <operatorconnector opId="835" connectorId="2" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="835" connectorId="3" x="65.6575" y="-6.71497"/>
+        <operatoraction opId="835" actionKey="AddPlug"/>
+        <operator id="837" type="NumberNumberToStringNumber" x="-651" y="-232" z="5" parentId="127"/>
+        <operatorconnector opId="837" connectorId="0" x="-65.5299" y="-7.86358"/>
+        <operatorconnector opId="837" connectorId="1" x="54.1284" y="37.764"/>
+        <operator id="841" type="stringsplitstring" x="131" y="-178" z="3" parentId="127"/>
+        <operatorconnector opId="841" connectorId="0" x="-64.9023" y="-11.9872"/>
+        <operatorconnector opId="841" connectorId="1" x="-6.23511" y="65.7048"/>
+        <operatorconnector opId="841" connectorId="2" x="49.6059" y="43.5345"/>
+        <operator id="840" type="stringreplacestring" x="-232" y="259" z="3" parentId="127"/>
+        <operatorconnector opId="840" connectorId="0" x="-56.465" y="34.1716"/>
+        <operatorconnector opId="840" connectorId="1" x="-64.1332" y="-15.5863"/>
+        <operatorconnector opId="840" connectorId="2" x="-8.68102" y="65.4266"/>
+        <operatorconnector opId="840" connectorId="3" x="-3.2345" y="-65.9207"/>
+        <operator id="839" type="sync" x="496" y="-324" z="3" parentId="127"/>
+        <operatorconnector opId="839" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="839" connectorId="1" x="-65.3725" y="-9.07951"/>
+        <operatorconnector opId="839" connectorId="2" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="839" connectorId="3" x="65.5204" y="-7.94187"/>
+        <operator id="838" type="stringreplacestring" x="-459" y="-28" z="3" parentId="127"/>
+        <operatorconnector opId="838" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="838" connectorId="1" x="-57.9328" y="15.6137"/>
+        <operatorconnector opId="838" connectorId="2" x="-61.4368" y="-24.1148"/>
+        <operatorconnector opId="838" connectorId="3" x="64.899" y="12.005"/>
+        <compositioncontrol id="759" type="LineEditorString" x="-570" y="-277" z="1" width="211" height="85" parentId="127" content="$PATH_OUT"/>
+        <compositioncontrol id="758" type="LineEditorString" x="-37" y="125" z="1" width="227" height="85" parentId="127" content="ffmpeg"/>
+        <compositioncontrol id="757" type="LineEditorString" x="-993" y="218" z="1" width="618" height="85" parentId="127" content="-i $PATH_TO_VID -vcodec copy -acodec copy -ss $IN -t $DURATION $PATH_OUT"/>
+        <compositioncontrol id="756" type="LineEditorString" x="-692" y="134" z="1" width="273" height="85" parentId="127" content="$PATH_TO_VID"/>
+        <compositioncontrol id="755" type="LineEditorString" x="-180" y="7" z="1" width="283" height="85" parentId="127" content=" "/>
+        <compositioncontrol id="754" type="LineEditorString" x="-812" y="-51" z="1" width="235" height="85" parentId="127" content="$DURATION"/>
+        <compositioncontrol id="753" type="LineEditorString" x="-677" y="-180" z="1" width="191" height="85" parentId="127" content="$IN"/>
+        <compositioncontrol id="752" type="NumberView" x="524" y="40" z="1" width="65" height="75" parentId="127" content=""/>
+        <compositioncontrol id="751" type="ViewVector" x="313" y="83" z="1" width="808" height="377" parentId="127" content=""/>
+        <operator id="844" type="stringreplacestring" x="-266" y="-133" z="1" parentId="127"/>
+        <operatorconnector opId="844" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="844" connectorId="1" x="-57.9328" y="15.6137"/>
+        <operatorconnector opId="844" connectorId="2" x="-64.9402" y="-11.7799"/>
+        <operatorconnector opId="844" connectorId="3" x="65.3201" y="-9.44898"/>
+        <operator id="843" type="stringreplacestring" x="-159" y="-284" z="1" parentId="127"/>
+        <operatorconnector opId="843" connectorId="0" x="-25.5183" y="60.8672"/>
+        <operatorconnector opId="843" connectorId="1" x="-62.9636" y="19.7886"/>
+        <operatorconnector opId="843" connectorId="2" x="-60.0253" y="-27.4401"/>
+        <operatorconnector opId="843" connectorId="3" x="60.2867" y="26.861"/>
+        <operator id="842" type="CommandLineSync" x="345" y="-9" z="1" parentId="127"/>
+        <operatorconnector opId="842" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="842" connectorId="1" x="-49.7765" y="-43.3393"/>
+        <operatorconnector opId="842" connectorId="2" x="36.8843" y="-54.7316"/>
+        <operatorconnector opId="842" connectorId="3" x="62.7874" y="16.8149"/>
+        <operatorconnector opId="842" connectorId="4" x="62.7874" y="-16.8149"/>
+        <text x="-448" y="-547" z="0" parentId="127" color="#ffffff" police="12" font="Droid Sans" italic="false" bold="false" underline="false" content="ffmpeg -i $PATH_TO_VID  -vcodec copy -acodec copy -ss $IN -t $DURATION $PATH_OUT"/>
+        <operator id="846" type="Copy" x="-458" y="-398" z="0" parentId="127"/>
+        <operatorconnector opId="846" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="846" connectorId="1" x="57.9411" y="31.6042"/>
+        <operatorconnector opId="846" connectorId="2" x="64.6127" y="-13.461"/>
+        <operator id="845" type="NumberNumberToStringNumber" x="-710" y="-73" z="0" parentId="127"/>
+        <operatorconnector opId="845" connectorId="0" x="-61.7977" y="23.1741"/>
+        <operatorconnector opId="845" connectorId="1" x="64.0294" y="16.0074"/>
+        <operator id="847" type="NumberdivNumber" x="31" y="57" z="3" parentId="128"/>
+        <operatorconnector opId="847" connectorId="0" x="-62.1947" y="22.0867"/>
+        <operatorconnector opId="847" connectorId="1" x="-62.4033" y="-21.4902"/>
+        <operatorconnector opId="847" connectorId="2" x="65.9903" y="-1.13394"/>
+        <compositioncontrol id="761" type="EditorNumber" x="-207" y="-194" z="1" width="192" height="85" parentId="128" content="25"/>
+        <compositioncontrol id="760" type="NumberView" x="61" y="145" z="1" width="162" height="75" parentId="128" content=""/>
+        <text x="111" y="-67" z="0" parentId="128" color="#ffffff" police="10" font="Droid Sans" italic="false" bold="false" underline="false" content="secondes"/>
+        <text x="-63" y="-225" z="0" parentId="128" color="#ffffff" police="10" font="Droid Sans" italic="false" bold="false" underline="false" content="num to sec&#10;sec to num"/>
+        <operator id="848" type="id" x="-147" y="-43" z="0" parentId="128"/>
+        <operatorconnector opId="848" connectorId="0" x="-65.9805" y="-1.60447"/>
+        <operatorconnector opId="848" connectorId="1" x="64.6109" y="13.4695"/>
+        <operator id="849" type="NumberuidNumber" x="-415" y="-287" z="9" parentId="129"/>
+        <operatorconnector opId="849" connectorId="0" x="-35.2435" y="55.8023"/>
+        <operatorconnector opId="849" connectorId="1" x="65.849" y="4.46239"/>
+        <operatorconnector opId="849" connectorId="2" x="57.9172" y="-31.6481"/>
+        <operator id="850" type="stringconcatstring" x="154" y="-325" z="5" parentId="129"/>
+        <operatorconnector opId="850" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="850" connectorId="1" x="-65.95" y="-2.56948"/>
+        <operatorconnector opId="850" connectorId="2" x="-11.9567" y="64.9079"/>
+        <compositioncontrol id="762" type="LineEditorString" x="-97" y="-505" z="4" width="167" height="85" parentId="129" content=".png"/>
+        <operator id="852" type="stringconcatstring" x="54" y="-49" z="3" parentId="129"/>
+        <operatorconnector opId="852" connectorId="0" x="-60.442" y="26.5097"/>
+        <operatorconnector opId="852" connectorId="1" x="11.7785" y="-64.9405"/>
+        <operatorconnector opId="852" connectorId="2" x="61.3599" y="24.3097"/>
+        <operator id="851" type="stringconcatstring" x="-142" y="-338" z="3" parentId="129"/>
+        <operatorconnector opId="851" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="851" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="851" connectorId="2" x="30.051" y="58.7617"/>
+        <compositioncontrol id="764" type="editorboolean" x="-358" y="-49" z="1" width="121" height="85" parentId="129" content="TRUE"/>
+        <compositioncontrol id="763" type="LineEditorString" x="-698" y="-175" z="1" width="429" height="85" parentId="129" content="tmp/image-"/>
+        <operator id="853" type="stringCSDOperatorProjectPathstring" x="-192" y="20" z="1" parentId="129"/>
+        <operatorconnector opId="853" connectorId="0" x="-65.9493" y="2.58625"/>
+        <operatorconnector opId="853" connectorId="1" x="65.6448" y="6.838"/>
+        <operator id="858" type="Copy" x="290" y="371" z="0" parentId="129"/>
+        <operatorconnector opId="858" connectorId="0" x="-45.9879" y="47.3404"/>
+        <operatorconnector opId="858" connectorId="1" x="49.914" y="43.1809"/>
+        <operatorconnector opId="858" connectorId="2" x="8.72281" y="-65.421"/>
+        <operator id="857" type="Copy" x="-316" y="221" z="0" parentId="129"/>
+        <operatorconnector opId="857" connectorId="0" x="-65.2384" y="9.99777"/>
+        <operatorconnector opId="857" connectorId="1" x="57.6179" y="32.1898"/>
+        <operatorconnector opId="857" connectorId="2" x="62.425" y="-21.427"/>
+        <operator id="856" type="SCDLoadImageQT" x="638" y="445" z="0" parentId="129"/>
+        <operatorconnector opId="856" connectorId="0" x="-46.669" y="-46.669"/>
+        <operatorconnector opId="856" connectorId="1" x="42.4433" y="42.4095"/>
+        <operator id="855" type="Copy" x="619" y="160" z="0" parentId="129"/>
+        <operatorconnector opId="855" connectorId="0" x="-65.9646" y="-2.16277"/>
+        <operatorconnector opId="855" connectorId="1" x="-14.9972" y="64.2735"/>
+        <operatorconnector opId="855" connectorId="2" x="64.3477" y="14.6758"/>
+        <operator id="854" type="id" x="132" y="503" z="0" parentId="129"/>
+        <operatorconnector opId="854" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="854" connectorId="1" x="49.2571" y="-43.9288"/>
+        <operator id="859" type="stringreplacestring" x="-119" y="138" z="11" parentId="130"/>
+        <operatorconnector opId="859" connectorId="0" x="-36.3946" y="-55.0585"/>
+        <operatorconnector opId="859" connectorId="1" x="30.6675" y="58.4423"/>
+        <operatorconnector opId="859" connectorId="2" x="-24.71" y="61.1998"/>
+        <operatorconnector opId="859" connectorId="3" x="65.7369" y="5.88689"/>
+        <operator id="861" type="stringreplacestring" x="-250" y="-19" z="3" parentId="130"/>
+        <operatorconnector opId="861" connectorId="0" x="-56.465" y="34.1716"/>
+        <operatorconnector opId="861" connectorId="1" x="-64.1332" y="-15.5863"/>
+        <operatorconnector opId="861" connectorId="2" x="-8.68102" y="65.4266"/>
+        <operatorconnector opId="861" connectorId="3" x="3.9214" y="-65.8834"/>
+        <operator id="860" type="stringsplitstring" x="131" y="-178" z="3" parentId="130"/>
+        <operatorconnector opId="860" connectorId="0" x="-64.9023" y="-11.9872"/>
+        <operatorconnector opId="860" connectorId="1" x="-6.23511" y="65.7048"/>
+        <operatorconnector opId="860" connectorId="2" x="49.6059" y="43.5345"/>
+        <compositioncontrol id="774" type="LineEditorString" x="-44" y="276" z="1" width="298" height="85" parentId="130" content="$NB_FRAME"/>
+        <compositioncontrol id="773" type="LineEditorString" x="-17" y="-81" z="1" width="283" height="85" parentId="130" content=" "/>
+        <compositioncontrol id="772" type="LineEditorString" x="-779" y="-71" z="1" width="273" height="85" parentId="130" content="$PATH_TO_VID"/>
+        <compositioncontrol id="771" type="LineEditorString" x="47" y="62" z="1" width="227" height="85" parentId="130" content="ffmpeg"/>
+        <compositioncontrol id="770" type="LineEditorString" x="-570" y="-277" z="1" width="211" height="85" parentId="130" content="$PATH_OUT"/>
+        <compositioncontrol id="769" type="LineEditorString" x="-814" y="26" z="1" width="426" height="85" parentId="130" content="-ss $NB_FRAME -i $PATH_TO_VID -vframes 1 $PATH_OUT"/>
+        <compositioncontrol id="768" type="ViewVector" x="313" y="189" z="1" width="526" height="301" parentId="130" content=""/>
+        <compositioncontrol id="767" type="NumberView" x="-239" y="551" z="1" width="65" height="75" parentId="130" content=""/>
+        <compositioncontrol id="766" type="StringView" x="-72" y="381" z="1" width="326" height="85" parentId="130" content=""/>
+        <compositioncontrol id="765" type="EditorNumber" x="-681" y="471" z="1" width="80" height="85" parentId="130" content="25"/>
+        <operator id="864" type="CommandLineSync" x="345" y="-9" z="1" parentId="130"/>
+        <operatorconnector opId="864" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="864" connectorId="1" x="-49.7765" y="-43.3393"/>
+        <operatorconnector opId="864" connectorId="2" x="47.3568" y="-52.8993"/>
+        <operatorconnector opId="864" connectorId="3" x="62.7874" y="16.8149"/>
+        <operatorconnector opId="864" connectorId="4" x="62.7874" y="-16.8149"/>
+        <operator id="863" type="stringreplacestring" x="-161" y="-266" z="1" parentId="130"/>
+        <operatorconnector opId="863" connectorId="0" x="-25.5183" y="60.8672"/>
+        <operatorconnector opId="863" connectorId="1" x="-62.9636" y="19.7886"/>
+        <operatorconnector opId="863" connectorId="2" x="-60.0253" y="-27.4401"/>
+        <operatorconnector opId="863" connectorId="3" x="60.2867" y="26.861"/>
+        <operator id="862" type="NumberdivNumber" x="-346" y="561" z="1" parentId="130"/>
+        <operatorconnector opId="862" connectorId="0" x="-27.2267" y="60.1224"/>
+        <operatorconnector opId="862" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="862" connectorId="2" x="42.4433" y="42.4095"/>
+        <text x="-793" y="149" z="0" parentId="130" color="#ffffff" police="10" font="Droid Sans" italic="false" bold="false" underline="false" content="-ss 50/25 -i JLG-deint.mov -vframes 1 out1.jpg"/>
+        <operator id="867" type="Copy" x="-437" y="-459" z="0" parentId="130"/>
+        <operatorconnector opId="867" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="867" connectorId="1" x="57.9411" y="31.6042"/>
+        <operatorconnector opId="867" connectorId="2" x="64.6127" y="-13.461"/>
+        <operator id="866" type="id" x="639" y="-321" z="0" parentId="130"/>
+        <operatorconnector opId="866" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="866" connectorId="1" x="-65.9088" y="3.46888"/>
+        <operatorconnector opId="866" connectorId="2" x="17.5338" y="63.6283"/>
+        <operatorconnector opId="866" connectorId="3" x="65.9759" y="-1.78313"/>
+        <operatoraction opId="866" actionKey="AddPlug"/>
+        <operator id="865" type="NumberNumberToStringNumber" x="-139" y="415" z="0" parentId="130"/>
+        <operatorconnector opId="865" connectorId="0" x="-38.6839" y="53.4748"/>
+        <operatorconnector opId="865" connectorId="1" x="25.9987" y="-60.6636"/>
+        <operator id="868" type="NumberNumberFromStringNumber" x="411" y="51" z="0" parentId="131"/>
+        <operatorconnector opId="868" connectorId="0" x="-64.7183" y="12.9437"/>
+        <operatorconnector opId="868" connectorId="1" x="60.3116" y="26.8051"/>
+        <operator id="869" type="OperatorLocker" x="2231" y="-600" z="9" parentId="132"/>
+        <operatorconnector opId="869" connectorId="0" x="9.66705" y="65.2882"/>
+        <operatorconnector opId="869" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="869" connectorId="2" x="55.1399" y="-36.271"/>
+        <operatorconnector opId="869" connectorId="3" x="65.9406" y="2.79916"/>
+        <operator id="870" type="stringreplacestring" x="-454" y="-396" z="5" parentId="132"/>
+        <operatorconnector opId="870" connectorId="0" x="-59.0322" y="29.5161"/>
+        <operatorconnector opId="870" connectorId="1" x="-64.7183" y="-12.9437"/>
+        <operatorconnector opId="870" connectorId="2" x="-29.5161" y="-59.0322"/>
+        <operatorconnector opId="870" connectorId="3" x="42.4433" y="42.4095"/>
+        <operator id="874" type="stringregexpstring" x="-1167" y="-402" z="3" parentId="132"/>
+        <operatorconnector opId="874" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="874" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="874" connectorId="2" x="52.3991" y="40.129"/>
+        <operator id="873" type="stringsplitstring" x="-2108" y="-387" z="3" parentId="132"/>
+        <operatorconnector opId="873" connectorId="0" x="-63.9506" y="16.3192"/>
+        <operatorconnector opId="873" connectorId="1" x="-6.23511" y="65.7048"/>
+        <operatorconnector opId="873" connectorId="2" x="58.0292" y="31.4422"/>
+        <operator id="872" type="CommandLineSync" x="-1797" y="-377" z="3" parentId="132"/>
+        <operatorconnector opId="872" connectorId="0" x="-5.1688" y="70.8116"/>
+        <operatorconnector opId="872" connectorId="1" x="-68.3241" y="19.3084"/>
+        <operatorconnector opId="872" connectorId="2" x="36.8843" y="-54.7316"/>
+        <operatorconnector opId="872" connectorId="3" x="68.4993" y="18.6774"/>
+        <operatorconnector opId="872" connectorId="4" x="68.2734" y="-19.4869"/>
+        <operator id="871" type="If" x="2829" y="-639" z="3" parentId="132"/>
+        <operatorconnector opId="871" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="871" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="871" connectorId="2" x="65.9926" y="-0.991312"/>
+        <operatorconnector opId="871" connectorId="3" x="-2.70286" y="-65.9446"/>
+        <compositioncontrol id="777" type="EditorNumber" x="-1114" y="-550" z="2" width="80" height="85" parentId="132" content="0"/>
+        <compositioncontrol id="776" type="LineEditorString" x="-823" y="-504" z="2" width="132" height="85" parentId="132" content="[STREAM]"/>
+        <compositioncontrol id="775" type="LineEditorString" x="-241" y="-545" z="2" width="80" height="85" parentId="132" content=""/>
+        <compositioncontrol id="795" type="LineEditorString" x="-2792" y="-339" z="1" width="211" height="85" parentId="132" content="$PATH_IN"/>
+        <compositioncontrol id="794" type="LineEditorString" x="-2071" y="-587" z="1" width="394" height="85" parentId="132" content="\[STREAM\][^\[]*codec_type=video[^\[]*\[/STREAM\]"/>
+        <compositioncontrol id="793" type="StringViewText" x="-1348" y="260" z="1" width="795" height="455" parentId="132" content=""/>
+        <compositioncontrol id="792" type="StringViewText" x="19" y="-245" z="1" width="584" height="474" parentId="132" content=""/>
+        <compositioncontrol id="791" type="LineEditorString" x="-2905" y="-210" z="1" width="385" height="85" parentId="132" content="-loglevel error -show_streams $PATH_IN"/>
+        <compositioncontrol id="790" type="ViewVector" x="-631" y="-243" z="1" width="636" height="464" parentId="132" content=""/>
+        <compositioncontrol id="789" type="LineEditorString" x="-2491" y="-143" z="1" width="283" height="85" parentId="132" content=" "/>
+        <compositioncontrol id="788" type="LineEditorString" x="-386" y="-482" z="1" width="158" height="85" parentId="132" content="[/STREAM]"/>
+        <compositioncontrol id="787" type="NumberView" x="-1700" y="-305" z="1" width="65" height="75" parentId="132" content=""/>
+        <compositioncontrol id="786" type="LineEditorString" x="96" y="-511" z="1" width="226" height="85" parentId="132" content="[^=\n]*=[^\n]*"/>
+        <compositioncontrol id="785" type="LineEditorString" x="-2195" y="-669" z="1" width="395" height="85" parentId="132" content="\[STREAM\][^\[]*codec_type=audio[^\[]*\[/STREAM\]"/>
+        <compositioncontrol id="784" type="EditorNumber" x="1242" y="-492" z="1" width="80" height="85" parentId="132" content="0"/>
+        <compositioncontrol id="783" type="LineEditorString" x="-2018" y="-168" z="1" width="227" height="85" parentId="132" content="ffprobe"/>
+        <compositioncontrol id="782" type="EditorNumber" x="1467" y="-243" z="1" width="80" height="85" parentId="132" content="1"/>
+        <compositioncontrol id="781" type="LineEditorString" x="671" y="-291" z="1" width="166" height="85" parentId="132" content="="/>
+        <compositioncontrol id="780" type="LineEditorString" x="-663" y="-593" z="1" width="80" height="85" parentId="132" content=""/>
+        <compositioncontrol id="779" type="ViewVector" x="720" y="-141" z="1" width="533" height="473" parentId="132" content=""/>
+        <compositioncontrol id="778" type="StringViewText" x="-1349" y="-228" z="1" width="703" height="454" parentId="132" content=""/>
+        <operator id="879" type="vectorgetvector" x="-834" y="-370" z="1" parentId="132"/>
+        <operatorconnector opId="879" connectorId="0" x="-65.6617" y="6.67404"/>
+        <operatorconnector opId="879" connectorId="1" x="-54.8778" y="-36.6665"/>
+        <operatorconnector opId="879" connectorId="2" x="65.9923" y="1.00711"/>
+        <operator id="878" type="stringreplacestring" x="-2394" y="-395" z="1" parentId="132"/>
+        <operatorconnector opId="878" connectorId="0" x="-25.5183" y="60.8672"/>
+        <operatorconnector opId="878" connectorId="1" x="-62.5064" y="21.1883"/>
+        <operatorconnector opId="878" connectorId="2" x="-60.0253" y="-27.4401"/>
+        <operatorconnector opId="878" connectorId="3" x="60.2867" y="26.861"/>
+        <operator id="877" type="stringsplitstring" x="966" y="-266" z="1" parentId="132"/>
+        <operatorconnector opId="877" connectorId="0" x="-43.0245" y="-50.0489"/>
+        <operatorconnector opId="877" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="877" connectorId="2" x="60.6094" y="26.1247"/>
+        <operator id="876" type="vectorgetvector" x="1515" y="-425" z="1" parentId="132"/>
+        <operatorconnector opId="876" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="876" connectorId="1" x="-48.172" y="-45.1161"/>
+        <operatorconnector opId="876" connectorId="2" x="64.5475" y="13.7703"/>
+        <operator id="875" type="mapinsertmap" x="2259" y="-303" z="1" parentId="132"/>
+        <operatorconnector opId="875" connectorId="0" x="-17.1557" y="63.7313"/>
+        <operatorconnector opId="875" connectorId="1" x="-65.9835" y="-1.47711"/>
+        <operatorconnector opId="875" connectorId="2" x="-56.744" y="33.7064"/>
+        <operatorconnector opId="875" connectorId="3" x="-11.4439" y="-65.0003"/>
+        <text x="756" y="-147" z="0" parentId="132" color="#ffffff" police="10" font="Droid Sans" italic="false" bold="false" underline="false" content="label/value vector"/>
+        <text x="-1781" y="-635" z="0" parentId="132" color="#ffffff" police="10" font="Droid Sans" italic="false" bold="false" underline="false" content="audiostream pattern"/>
+        <text x="-1310" y="-261" z="0" parentId="132" color="#ffffff" police="20" font="Droid Sans" italic="false" bold="false" underline="false" content="standard output"/>
+        <text x="-1282" y="241" z="0" parentId="132" color="#ffffff" police="20" font="Droid Sans" italic="false" bold="false" underline="false" content="error output"/>
+        <text x="-546" y="-273" z="0" parentId="132" color="#ffffff" police="20" font="Droid Sans" italic="false" bold="false" underline="false" content="video stream"/>
+        <text x="-1669" y="-559" z="0" parentId="132" color="#ffffff" police="10" font="Droid Sans" italic="false" bold="false" underline="false" content="videostream pattern"/>
+        <operator id="884" type="stringreplacestring" x="-73" y="-386" z="0" parentId="132"/>
+        <operatorconnector opId="884" connectorId="0" x="-55.9679" y="34.9799"/>
+        <operatorconnector opId="884" connectorId="1" x="-62.1188" y="-22.2991"/>
+        <operatorconnector opId="884" connectorId="2" x="17.2109" y="-63.7164"/>
+        <operatorconnector opId="884" connectorId="3" x="64.7764" y="12.65"/>
+        <operator id="883" type="stringregexpstring" x="473" y="-400" z="0" parentId="132"/>
+        <operatorconnector opId="883" connectorId="0" x="-59.4105" y="28.747"/>
+        <operatorconnector opId="883" connectorId="1" x="-41.8426" y="-51.0411"/>
+        <operatorconnector opId="883" connectorId="2" x="49.7013" y="-43.4256"/>
+        <operator id="882" type="sync" x="1798" y="-306" z="0" parentId="132"/>
+        <operatorconnector opId="882" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="882" connectorId="1" x="-59.1184" y="-29.3431"/>
+        <operatorconnector opId="882" connectorId="2" x="59.0322" y="29.5161"/>
+        <operatorconnector opId="882" connectorId="3" x="65.4055" y="-8.83858"/>
+        <operator id="881" type="Copy" x="1249" y="-285" z="0" parentId="132"/>
+        <operatorconnector opId="881" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="881" connectorId="1" x="52.8" y="39.6"/>
+        <operatorconnector opId="881" connectorId="2" x="63.7715" y="-17.0057"/>
+        <operator id="880" type="vectorgetvector" x="1619" y="-95" z="0" parentId="132"/>
+        <operatorconnector opId="880" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="880" connectorId="1" x="-11.5752" y="-64.977"/>
+        <operatorconnector opId="880" connectorId="2" x="47.9477" y="-45.3543"/>
+        <operator id="885" type="genericblank" x="103" y="-12" z="5" parentId="133"/>
+        <operatorconnector opId="885" connectorId="0" x="-65.772" y="5.481"/>
+        <operatorconnector opId="885" connectorId="1" x="65.8454" y="4.51496"/>
+        <compositioncontrol id="796" type="LineEditorString" x="-430" y="-38" z="1" width="120" height="84" parentId="133" content="DATAMAP"/>
+        <operator id="886" type="sync" x="-17" y="-69" z="5" parentId="134"/>
+        <operatorconnector opId="886" connectorId="0" x="-56.7082" y="-33.7665"/>
+        <operatorconnector opId="886" connectorId="1" x="-16.9781" y="63.7789"/>
+        <operatorconnector opId="886" connectorId="2" x="50.357" y="42.6635"/>
+        <operatorconnector opId="886" connectorId="3" x="60" y="0"/>
+        <operator id="887" type="OperatorLocker" x="168" y="38" z="3" parentId="134"/>
+        <operatorconnector opId="887" connectorId="0" x="58.858" y="-29.862"/>
+        <operatorconnector opId="887" connectorId="1" x="-62.9028" y="19.9809"/>
+        <operatorconnector opId="887" connectorId="2" x="47.9646" y="45.3364"/>
+        <operatorconnector opId="887" connectorId="3" x="-9.43541" y="65.3221"/>
+        <compositioncontrol id="799" type="LineEditorString" x="68" y="-437" z="1" width="120" height="84" parentId="134" content="dummy"/>
+        <compositioncontrol id="798" type="NumberView" x="396" y="-64" z="1" width="147" height="78" parentId="134" content=""/>
+        <compositioncontrol id="797" type="ViewVector" x="-16" y="362" z="1" width="679" height="219" parentId="134" content=""/>
+        <operator id="890" type="vectorgetvector" x="359" y="184" z="1" parentId="134"/>
+        <operatorconnector opId="890" connectorId="0" x="-65.9428" y="-2.74762"/>
+        <operatorconnector opId="890" connectorId="1" x="-41.0638" y="-51.6698"/>
+        <operatorconnector opId="890" connectorId="2" x="64.5953" y="13.5442"/>
+        <operator id="889" type="If" x="385" y="-435" z="1" parentId="134"/>
+        <operatorconnector opId="889" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="889" connectorId="1" x="-65.9531" y="-2.48879"/>
+        <operatorconnector opId="889" connectorId="2" x="-20.5662" y="-62.7139"/>
+        <operatorconnector opId="889" connectorId="3" x="60" y="0"/>
+        <operator id="888" type="loop" x="143" y="-214" z="1" parentId="134"/>
+        <operatorconnector opId="888" connectorId="0" x="-65.9203" y="-3.24198"/>
+        <operatorconnector opId="888" connectorId="1" x="31.2554" y="58.13"/>
+        <operatorconnector opId="888" connectorId="2" x="64.7816" y="12.6229"/>
+        <operator id="897" type="Copy" x="-158" y="209" z="0" parentId="134"/>
+        <operatorconnector opId="897" connectorId="0" x="-60.6883" y="-25.9409"/>
+        <operatorconnector opId="897" connectorId="1" x="10.8767" y="-65.0976"/>
+        <operatorconnector opId="897" connectorId="2" x="2.36848" y="65.9575"/>
+        <operator id="896" type="Copy" x="329" y="-102" z="0" parentId="134"/>
+        <operatorconnector opId="896" connectorId="0" x="-65.102" y="-10.8503"/>
+        <operatorconnector opId="896" connectorId="1" x="48.6952" y="44.5509"/>
+        <operatorconnector opId="896" connectorId="2" x="-54.9153" y="36.6102"/>
+        <operator id="895" type="sync" x="326" y="-681" z="0" parentId="134"/>
+        <operatorconnector opId="895" connectorId="0" x="-4.48834" y="65.8472"/>
+        <operatorconnector opId="895" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="895" connectorId="2" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="895" connectorId="3" x="60" y="0"/>
+        <operator id="894" type="Copy" x="467" y="-240" z="0" parentId="134"/>
+        <operatorconnector opId="894" connectorId="0" x="-58.0161" y="31.4664"/>
+        <operatorconnector opId="894" connectorId="1" x="60.3523" y="26.7133"/>
+        <operatorconnector opId="894" connectorId="2" x="-61.7977" y="-23.1741"/>
+        <operator id="893" type="Copy" x="-564" y="-393" z="0" parentId="134"/>
+        <operatorconnector opId="893" connectorId="0" x="-61.0087" y="25.1782"/>
+        <operatorconnector opId="893" connectorId="1" x="54.5771" y="37.1125"/>
+        <operatorconnector opId="893" connectorId="2" x="56.8397" y="-33.5447"/>
+        <operator id="892" type="vectorsizevector" x="-468" y="115" z="0" parentId="134"/>
+        <operatorconnector opId="892" connectorId="0" x="13.738" y="-64.5544"/>
+        <operatorconnector opId="892" connectorId="1" x="56.6189" y="33.9161"/>
+        <operator id="891" type="Copy" x="-309" y="-197" z="0" parentId="134"/>
+        <operatorconnector opId="891" connectorId="0" x="-42.0666" y="-50.8567"/>
+        <operatorconnector opId="891" connectorId="1" x="64.9722" y="11.6022"/>
+        <operatorconnector opId="891" connectorId="2" x="-40.282" y="52.2816"/>
+        <operator id="898" type="mapvaluemap" x="69" y="-346" z="7" parentId="135"/>
+        <operatorconnector opId="898" connectorId="0" x="-59.3675" y="-28.8357"/>
+        <operatorconnector opId="898" connectorId="1" x="-63.8048" y="16.8803"/>
+        <operatorconnector opId="898" connectorId="2" x="63.3181" y="18.623"/>
+        <compositioncontrol id="802" type="LineEditorString" x="-80" y="-140" z="1" width="254" height="85" parentId="135" content="nb_frames"/>
+        <compositioncontrol id="801" type="StringView" x="117" y="-461" z="1" width="381" height="85" parentId="135" content=""/>
+        <compositioncontrol id="800" type="ViewMap" x="-499" y="-253" z="1" width="340" height="715" parentId="135" content=""/>
+        <operator id="899" type="Copy" x="-169" y="-383" z="0" parentId="135"/>
+        <operatorconnector opId="899" connectorId="0" x="-65.8324" y="4.70021"/>
+        <operatorconnector opId="899" connectorId="1" x="18.984" y="63.2108"/>
+        <operatorconnector opId="899" connectorId="2" x="62.678" y="-20.6753"/>
+        <connection controlId="701" operatorIdOut="768" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="706" operatorIdOut="766" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="705" operatorIdOut="769" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="704" operatorIdOut="769" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="703" operatorIdOut="771" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="702" operatorIdOut="775" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="707" operatorIdOut="782" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="709" operatorIdOut="781" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="708" operatorIdOut="785" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="719" operatorIdOut="796" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="718" operatorIdOut="799" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="717" operatorIdOut="796" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="716" operatorIdOut="793" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="715" operatorIdOut="792" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="714" operatorIdOut="795" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="713" operatorIdOut="794" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="712" operatorIdOut="792" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="711" operatorIdOut="793" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="710" operatorIdOut="791" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="722" operatorIdOut="812" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="721" operatorIdOut="802" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="720" operatorIdOut="807" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="740" operatorIdOut="805" controlConnectorIdIn="0" operatorConnectorIdOut="3"/>
+        <connection controlId="739" operatorIdOut="813" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="738" operatorIdOut="802" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="737" operatorIdOut="809" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="736" operatorIdOut="816" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="735" operatorIdOut="805" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="734" operatorIdOut="810" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="732" operatorIdOut="813" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="731" operatorIdOut="805" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="730" operatorIdOut="812" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="729" operatorIdOut="804" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="728" operatorIdOut="803" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="727" operatorIdOut="808" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="726" operatorIdOut="812" controlConnectorIdIn="0" operatorConnectorIdOut="3"/>
+        <connection controlId="725" operatorIdOut="805" controlConnectorIdIn="0" operatorConnectorIdOut="4"/>
+        <connection controlId="724" operatorIdOut="803" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="723" operatorIdOut="808" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="741" operatorIdOut="817" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="744" operatorIdOut="829" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="743" operatorIdOut="822" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="742" operatorIdOut="821" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="747" operatorIdOut="831" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="746" operatorIdOut="830" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="745" operatorIdOut="830" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="749" operatorIdOut="833" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="748" operatorIdOut="832" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="750" operatorIdOut="836" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="759" operatorIdOut="843" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="758" operatorIdOut="842" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="757" operatorIdOut="840" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="756" operatorIdOut="840" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="755" operatorIdOut="841" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="754" operatorIdOut="838" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="753" operatorIdOut="844" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="752" operatorIdOut="842" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="751" operatorIdOut="841" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="761" operatorIdOut="848" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="760" operatorIdOut="847" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="762" operatorIdOut="850" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="764" operatorIdOut="853" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="763" operatorIdOut="849" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="774" operatorIdOut="859" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="773" operatorIdOut="860" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="772" operatorIdOut="861" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="771" operatorIdOut="864" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="770" operatorIdOut="863" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="769" operatorIdOut="861" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="768" operatorIdOut="860" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="767" operatorIdOut="862" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="766" operatorIdOut="865" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="765" operatorIdOut="862" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="777" operatorIdOut="879" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="776" operatorIdOut="870" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="775" operatorIdOut="884" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="795" operatorIdOut="878" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="794" operatorIdOut="874" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="793" operatorIdOut="872" controlConnectorIdIn="0" operatorConnectorIdOut="4"/>
+        <connection controlId="792" operatorIdOut="884" controlConnectorIdIn="0" operatorConnectorIdOut="3"/>
+        <connection controlId="791" operatorIdOut="878" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="790" operatorIdOut="874" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="789" operatorIdOut="873" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="788" operatorIdOut="884" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="787" operatorIdOut="872" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="786" operatorIdOut="883" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="784" operatorIdOut="876" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="783" operatorIdOut="872" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="782" operatorIdOut="880" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="781" operatorIdOut="877" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="780" operatorIdOut="870" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="779" operatorIdOut="883" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="778" operatorIdOut="872" controlConnectorIdIn="0" operatorConnectorIdOut="3"/>
+        <connection controlId="796" operatorIdOut="885" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="799" operatorIdOut="889" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="798" operatorIdOut="888" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="797" operatorIdOut="891" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="802" operatorIdOut="898" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="801" operatorIdOut="898" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection controlId="800" operatorIdOut="899" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection compositionId1="117" compositionId2="116" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="116" compositionId2="117" connectorId1="1" connectorId2="1"/>
+        <connection operatorId1="765" compositionId2="126" connectorId1="0" connectorId2="2"/>
+        <connection connectorId1="1" operatorId1="765" connectorId2="1" operatorId2="780"/>
+        <connection connectorId1="2" operatorId1="765" connectorId2="1" operatorId2="779"/>
+        <connection connectorId1="3" operatorId1="765" connectorId2="1" operatorId2="773"/>
+        <connection operatorId1="765" compositionId2="127" connectorId1="4" connectorId2="3"/>
+        <connection operatorId1="765" compositionId2="127" connectorId1="5" connectorId2="5"/>
+        <connection operatorId1="765" compositionId2="127" connectorId1="6" connectorId2="6"/>
+        <connection operatorId1="765" compositionId2="127" connectorId1="7" connectorId2="4"/>
+        <connection operatorId1="766" compositionId2="129" connectorId1="0" connectorId2="3"/>
+        <connection connectorId1="1" operatorId1="766" connectorId2="2" operatorId2="778"/>
+        <connection connectorId1="2" operatorId1="766" connectorId2="0" operatorId2="777"/>
+        <connection connectorId1="0" operatorId1="768" connectorId2="2" operatorId2="770"/>
+        <connection connectorId1="2" operatorId1="768" connectorId2="0" operatorId2="773"/>
+        <connection connectorId1="0" operatorId1="767" connectorId2="2" operatorId2="772"/>
+        <connection connectorId1="1" operatorId1="767" connectorId2="3" operatorId2="772"/>
+        <connection operatorId1="767" compositionId2="125" connectorId1="2" connectorId2="1"/>
+        <connection connectorId1="1" operatorId1="771" connectorId2="1" operatorId2="777"/>
+        <connection connectorId1="2" operatorId1="771" connectorId2="0" operatorId2="772"/>
+        <connection connectorId1="0" operatorId1="770" connectorId2="2" operatorId2="769"/>
+        <connection connectorId1="2" operatorId1="770" connectorId2="0" operatorId2="768"/>
+        <connection connectorId1="0" operatorId1="769" connectorId2="1" operatorId2="775"/>
+        <connection connectorId1="2" operatorId1="769" connectorId2="0" operatorId2="770"/>
+        <connection operatorId1="780" compositionId2="125" connectorId1="0" connectorId2="2"/>
+        <connection connectorId1="1" operatorId1="780" connectorId2="1" operatorId2="765"/>
+        <connection operatorId1="779" compositionId2="128" connectorId1="0" connectorId2="2"/>
+        <connection connectorId1="1" operatorId1="779" connectorId2="2" operatorId2="765"/>
+        <connection operatorId1="778" compositionId2="118" connectorId1="0" connectorId2="3"/>
+        <connection operatorId1="778" compositionId2="128" connectorId1="1" connectorId2="1"/>
+        <connection connectorId1="2" operatorId1="778" connectorId2="1" operatorId2="766"/>
+        <connection connectorId1="0" operatorId1="777" connectorId2="2" operatorId2="766"/>
+        <connection connectorId1="1" operatorId1="777" connectorId2="1" operatorId2="771"/>
+        <connection connectorId1="2" operatorId1="777" connectorId2="1" operatorId2="772"/>
+        <connection connectorId1="0" operatorId1="776" connectorId2="2" operatorId2="774"/>
+        <connection operatorId1="776" compositionId2="118" connectorId1="1" connectorId2="2"/>
+        <connection operatorId1="776" compositionId2="129" connectorId1="2" connectorId2="2"/>
+        <connection connectorId1="1" operatorId1="775" connectorId2="0" operatorId2="769"/>
+        <connection operatorId1="774" compositionId2="117" connectorId1="0" connectorId2="1"/>
+        <connection operatorId1="774" compositionId2="126" connectorId1="1" connectorId2="1"/>
+        <connection connectorId1="2" operatorId1="774" connectorId2="0" operatorId2="776"/>
+        <connection connectorId1="0" operatorId1="773" connectorId2="2" operatorId2="768"/>
+        <connection connectorId1="1" operatorId1="773" connectorId2="3" operatorId2="765"/>
+        <connection connectorId1="0" operatorId1="772" connectorId2="2" operatorId2="771"/>
+        <connection connectorId1="1" operatorId1="772" connectorId2="2" operatorId2="777"/>
+        <connection connectorId1="2" operatorId1="772" connectorId2="0" operatorId2="767"/>
+        <connection connectorId1="3" operatorId1="772" connectorId2="1" operatorId2="767"/>
+        <connection compositionId1="129" operatorId2="776" connectorId1="2" connectorId2="2"/>
+        <connection compositionId1="129" operatorId2="766" connectorId1="3" connectorId2="0"/>
+        <connection compositionId1="128" operatorId2="778" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="128" operatorId2="779" connectorId1="2" connectorId2="0"/>
+        <connection compositionId1="127" operatorId2="765" connectorId1="3" connectorId2="4"/>
+        <connection compositionId1="127" operatorId2="765" connectorId1="4" connectorId2="7"/>
+        <connection compositionId1="127" operatorId2="765" connectorId1="5" connectorId2="5"/>
+        <connection compositionId1="127" operatorId2="765" connectorId1="6" connectorId2="6"/>
+        <connection compositionId1="126" operatorId2="774" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="126" operatorId2="765" connectorId1="2" connectorId2="0"/>
+        <connection compositionId1="125" operatorId2="767" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="125" operatorId2="780" connectorId1="2" connectorId2="0"/>
+        <connection compositionId1="118" operatorId2="776" connectorId1="2" connectorId2="1"/>
+        <connection compositionId1="118" operatorId2="778" connectorId1="3" connectorId2="0"/>
+        <connection compositionId1="117" operatorId2="774" connectorId1="1" connectorId2="0"/>
+        <connection connectorId1="1" operatorId1="781" connectorId2="0" operatorId2="784"/>
+        <connection connectorId1="2" operatorId1="781" connectorId2="1" operatorId2="784"/>
+        <connection connectorId1="0" operatorId1="782" connectorId2="2" operatorId2="784"/>
+        <connection connectorId1="2" operatorId1="782" connectorId2="1" operatorId2="783"/>
+        <connection connectorId1="0" operatorId1="784" connectorId2="1" operatorId2="781"/>
+        <connection connectorId1="1" operatorId1="784" connectorId2="2" operatorId2="781"/>
+        <connection connectorId1="2" operatorId1="784" connectorId2="0" operatorId2="782"/>
+        <connection connectorId1="0" operatorId1="783" connectorId2="1" operatorId2="785"/>
+        <connection connectorId1="1" operatorId1="783" connectorId2="2" operatorId2="782"/>
+        <connection operatorId1="783" compositionId2="119" connectorId1="2" connectorId2="4"/>
+        <connection connectorId1="1" operatorId1="785" connectorId2="0" operatorId2="783"/>
+        <connection connectorId1="1" operatorId1="790" connectorId2="0" operatorId2="786"/>
+        <connection operatorId1="789" compositionId2="119" connectorId1="0" connectorId2="2"/>
+        <connection connectorId1="1" operatorId1="789" connectorId2="0" operatorId2="788"/>
+        <connection operatorId1="789" compositionId2="118" connectorId1="2" connectorId2="1"/>
+        <connection connectorId1="0" operatorId1="788" connectorId2="1" operatorId2="789"/>
+        <connection operatorId1="787" compositionId2="118" connectorId1="0" connectorId2="2"/>
+        <connection operatorId1="787" compositionId2="120" connectorId1="1" connectorId2="1"/>
+        <connection operatorId1="787" compositionId2="119" connectorId1="2" connectorId2="3"/>
+        <connection connectorId1="0" operatorId1="786" connectorId2="1" operatorId2="790"/>
+        <connection operatorId1="786" compositionId2="118" connectorId1="1" connectorId2="3"/>
+        <connection operatorId1="786" compositionId2="119" connectorId1="2" connectorId2="5"/>
+        <connection compositionId1="120" operatorId2="787" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="119" operatorId2="789" connectorId1="2" connectorId2="0"/>
+        <connection compositionId1="119" operatorId2="787" connectorId1="3" connectorId2="2"/>
+        <connection compositionId1="119" operatorId2="783" connectorId1="4" connectorId2="2"/>
+        <connection compositionId1="119" operatorId2="786" connectorId1="5" connectorId2="2"/>
+        <connection compositionId1="118" operatorId2="789" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="118" operatorId2="787" connectorId1="2" connectorId2="0"/>
+        <connection compositionId1="118" operatorId2="786" connectorId1="3" connectorId2="1"/>
+        <connection connectorId1="0" operatorId1="791" connectorId2="3" operatorId2="795"/>
+        <connection connectorId1="2" operatorId1="791" connectorId2="1" operatorId2="799"/>
+        <connection connectorId1="3" operatorId1="791" connectorId2="0" operatorId2="793"/>
+        <connection connectorId1="0" operatorId1="793" connectorId2="3" operatorId2="791"/>
+        <connection connectorId1="2" operatorId1="793" connectorId2="1" operatorId2="794"/>
+        <connection operatorId1="792" compositionId2="119" connectorId1="2" connectorId2="3"/>
+        <connection connectorId1="3" operatorId1="792" connectorId2="0" operatorId2="795"/>
+        <connection operatorId1="796" compositionId2="119" connectorId1="0" connectorId2="5"/>
+        <connection connectorId1="2" operatorId1="796" connectorId2="0" operatorId2="799"/>
+        <connection connectorId1="0" operatorId1="795" connectorId2="3" operatorId2="792"/>
+        <connection connectorId1="2" operatorId1="795" connectorId2="1" operatorId2="797"/>
+        <connection connectorId1="3" operatorId1="795" connectorId2="0" operatorId2="791"/>
+        <connection connectorId1="1" operatorId1="794" connectorId2="2" operatorId2="793"/>
+        <connection connectorId1="2" operatorId1="794" connectorId2="0" operatorId2="798"/>
+        <connection connectorId1="0" operatorId1="799" connectorId2="2" operatorId2="796"/>
+        <connection connectorId1="1" operatorId1="799" connectorId2="2" operatorId2="791"/>
+        <connection connectorId1="0" operatorId1="798" connectorId2="2" operatorId2="794"/>
+        <connection connectorId1="1" operatorId1="798" connectorId2="2" operatorId2="797"/>
+        <connection operatorId1="798" compositionId2="119" connectorId1="2" connectorId2="1"/>
+        <connection operatorId1="798" compositionId2="119" connectorId1="3" connectorId2="2"/>
+        <connection operatorId1="797" compositionId2="119" connectorId1="0" connectorId2="4"/>
+        <connection connectorId1="1" operatorId1="797" connectorId2="2" operatorId2="795"/>
+        <connection connectorId1="2" operatorId1="797" connectorId2="1" operatorId2="798"/>
+        <connection compositionId1="119" operatorId2="798" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="119" operatorId2="798" connectorId1="2" connectorId2="3"/>
+        <connection compositionId1="119" operatorId2="792" connectorId1="3" connectorId2="2"/>
+        <connection compositionId1="119" operatorId2="797" connectorId1="4" connectorId2="0"/>
+        <connection compositionId1="119" operatorId2="796" connectorId1="5" connectorId2="0"/>
+        <connection operatorId1="800" compositionId2="124" connectorId1="0" connectorId2="1"/>
+        <connection operatorId1="800" compositionId2="120" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="124" operatorId2="800" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="124" compositionId2="121" connectorId1="2" connectorId2="1"/>
+        <connection compositionId1="121" compositionId2="124" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="121" compositionId2="120" connectorId1="2" connectorId2="1"/>
+        <connection compositionId1="120" compositionId2="121" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="120" operatorId2="800" connectorId1="2" connectorId2="1"/>
+        <connection connectorId1="0" operatorId1="801" connectorId2="3" operatorId2="811"/>
+        <connection operatorId1="801" compositionId2="123" connectorId1="1" connectorId2="3"/>
+        <connection connectorId1="2" operatorId1="801" connectorId2="1" operatorId2="806"/>
+        <connection connectorId1="3" operatorId1="801" connectorId2="0" operatorId2="806"/>
+        <connection connectorId1="0" operatorId1="802" connectorId2="2" operatorId2="807"/>
+        <connection connectorId1="3" operatorId1="802" connectorId2="0" operatorId2="812"/>
+        <connection connectorId1="0" operatorId1="806" connectorId2="3" operatorId2="801"/>
+        <connection connectorId1="1" operatorId1="806" connectorId2="2" operatorId2="801"/>
+        <connection operatorId1="806" compositionId2="121" connectorId1="2" connectorId2="1"/>
+        <connection connectorId1="1" operatorId1="805" connectorId2="2" operatorId2="804"/>
+        <connection connectorId1="3" operatorId1="805" connectorId2="0" operatorId2="803"/>
+        <connection connectorId1="0" operatorId1="804" connectorId2="3" operatorId2="808"/>
+        <connection connectorId1="2" operatorId1="804" connectorId2="1" operatorId2="805"/>
+        <connection connectorId1="0" operatorId1="803" connectorId2="3" operatorId2="805"/>
+        <connection connectorId1="2" operatorId1="803" connectorId2="0" operatorId2="807"/>
+        <connection operatorId1="811" compositionId2="122" connectorId1="0" connectorId2="1"/>
+        <connection connectorId1="1" operatorId1="811" connectorId2="3" operatorId2="814"/>
+        <connection connectorId1="2" operatorId1="811" connectorId2="2" operatorId2="814"/>
+        <connection connectorId1="3" operatorId1="811" connectorId2="0" operatorId2="801"/>
+        <connection connectorId1="0" operatorId1="810" connectorId2="2" operatorId2="815"/>
+        <connection connectorId1="2" operatorId1="810" connectorId2="1" operatorId2="814"/>
+        <connection operatorId1="809" compositionId2="123" connectorId1="0" connectorId2="2"/>
+        <connection connectorId1="2" operatorId1="809" connectorId2="0" operatorId2="815"/>
+        <connection operatorId1="808" compositionId2="121" connectorId1="2" connectorId2="2"/>
+        <connection connectorId1="3" operatorId1="808" connectorId2="0" operatorId2="804"/>
+        <connection connectorId1="0" operatorId1="807" connectorId2="2" operatorId2="803"/>
+        <connection connectorId1="2" operatorId1="807" connectorId2="0" operatorId2="802"/>
+        <connection connectorId1="0" operatorId1="816" connectorId2="1" operatorId2="815"/>
+        <connection connectorId1="2" operatorId1="816" connectorId2="0" operatorId2="814"/>
+        <connection connectorId1="0" operatorId1="815" connectorId2="2" operatorId2="809"/>
+        <connection connectorId1="1" operatorId1="815" connectorId2="0" operatorId2="816"/>
+        <connection connectorId1="2" operatorId1="815" connectorId2="0" operatorId2="810"/>
+        <connection connectorId1="0" operatorId1="814" connectorId2="2" operatorId2="816"/>
+        <connection connectorId1="1" operatorId1="814" connectorId2="2" operatorId2="810"/>
+        <connection connectorId1="2" operatorId1="814" connectorId2="2" operatorId2="811"/>
+        <connection connectorId1="3" operatorId1="814" connectorId2="1" operatorId2="811"/>
+        <connection connectorId1="0" operatorId1="813" connectorId2="3" operatorId2="812"/>
+        <connection operatorId1="813" compositionId2="123" connectorId1="2" connectorId2="1"/>
+        <connection connectorId1="0" operatorId1="812" connectorId2="3" operatorId2="802"/>
+        <connection connectorId1="3" operatorId1="812" connectorId2="0" operatorId2="813"/>
+        <connection compositionId1="123" operatorId2="813" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="123" operatorId2="809" connectorId1="2" connectorId2="0"/>
+        <connection compositionId1="123" operatorId2="801" connectorId1="3" connectorId2="1"/>
+        <connection compositionId1="122" operatorId2="811" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="121" operatorId2="806" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="121" operatorId2="808" connectorId1="2" connectorId2="2"/>
+        <connection operatorId1="817" compositionId2="122" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="122" operatorId2="817" connectorId1="1" connectorId2="1"/>
+        <connection connectorId1="0" operatorId1="818" connectorId2="1" operatorId2="829"/>
+        <connection connectorId1="1" operatorId1="818" connectorId2="1" operatorId2="823"/>
+        <connection connectorId1="2" operatorId1="818" connectorId2="1" operatorId2="819"/>
+        <connection connectorId1="3" operatorId1="818" connectorId2="0" operatorId2="822"/>
+        <connection connectorId1="0" operatorId1="819" connectorId2="2" operatorId2="824"/>
+        <connection connectorId1="1" operatorId1="819" connectorId2="2" operatorId2="818"/>
+        <connection connectorId1="2" operatorId1="819" connectorId2="1" operatorId2="820"/>
+        <connection connectorId1="3" operatorId1="819" connectorId2="0" operatorId2="820"/>
+        <connection connectorId1="0" operatorId1="822" connectorId2="3" operatorId2="818"/>
+        <connection connectorId1="1" operatorId1="822" connectorId2="0" operatorId2="824"/>
+        <connection connectorId1="2" operatorId1="822" connectorId2="0" operatorId2="826"/>
+        <connection connectorId1="0" operatorId1="821" connectorId2="2" operatorId2="826"/>
+        <connection connectorId1="2" operatorId1="821" connectorId2="0" operatorId2="825"/>
+        <connection connectorId1="0" operatorId1="820" connectorId2="3" operatorId2="819"/>
+        <connection connectorId1="1" operatorId1="820" connectorId2="2" operatorId2="819"/>
+        <connection operatorId1="820" compositionId2="123" connectorId1="2" connectorId2="2"/>
+        <connection connectorId1="0" operatorId1="829" connectorId2="1" operatorId2="827"/>
+        <connection connectorId1="1" operatorId1="829" connectorId2="0" operatorId2="818"/>
+        <connection connectorId1="2" operatorId1="829" connectorId2="0" operatorId2="828"/>
+        <connection connectorId1="0" operatorId1="828" connectorId2="2" operatorId2="829"/>
+        <connection connectorId1="1" operatorId1="828" connectorId2="0" operatorId2="823"/>
+        <connection operatorId1="827" compositionId2="123" connectorId1="0" connectorId2="1"/>
+        <connection connectorId1="1" operatorId1="827" connectorId2="0" operatorId2="829"/>
+        <connection connectorId1="2" operatorId1="827" connectorId2="1" operatorId2="825"/>
+        <connection connectorId1="0" operatorId1="826" connectorId2="2" operatorId2="822"/>
+        <connection operatorId1="826" compositionId2="123" connectorId1="1" connectorId2="3"/>
+        <connection connectorId1="2" operatorId1="826" connectorId2="0" operatorId2="821"/>
+        <connection connectorId1="0" operatorId1="825" connectorId2="2" operatorId2="821"/>
+        <connection connectorId1="1" operatorId1="825" connectorId2="2" operatorId2="827"/>
+        <connection connectorId1="0" operatorId1="824" connectorId2="1" operatorId2="822"/>
+        <connection operatorId1="824" compositionId2="123" connectorId1="1" connectorId2="4"/>
+        <connection connectorId1="2" operatorId1="824" connectorId2="0" operatorId2="819"/>
+        <connection connectorId1="0" operatorId1="823" connectorId2="1" operatorId2="828"/>
+        <connection connectorId1="1" operatorId1="823" connectorId2="1" operatorId2="818"/>
+        <connection operatorId1="823" compositionId2="123" connectorId1="2" connectorId2="5"/>
+        <connection compositionId1="123" operatorId2="827" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="123" operatorId2="820" connectorId1="2" connectorId2="2"/>
+        <connection compositionId1="123" operatorId2="826" connectorId1="3" connectorId2="1"/>
+        <connection compositionId1="123" operatorId2="824" connectorId1="4" connectorId2="1"/>
+        <connection compositionId1="123" operatorId2="823" connectorId1="5" connectorId2="2"/>
+        <connection connectorId1="0" operatorId1="830" connectorId2="2" operatorId2="831"/>
+        <connection operatorId1="830" compositionId2="124" connectorId1="2" connectorId2="1"/>
+        <connection operatorId1="831" compositionId2="124" connectorId1="0" connectorId2="2"/>
+        <connection connectorId1="2" operatorId1="831" connectorId2="0" operatorId2="830"/>
+        <connection compositionId1="124" operatorId2="830" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="124" operatorId2="831" connectorId1="2" connectorId2="0"/>
+        <connection operatorId1="832" compositionId2="125" connectorId1="0" connectorId2="1"/>
+        <connection connectorId1="1" operatorId1="832" connectorId2="1" operatorId2="833"/>
+        <connection operatorId1="832" compositionId2="125" connectorId1="2" connectorId2="2"/>
+        <connection connectorId1="1" operatorId1="833" connectorId2="1" operatorId2="832"/>
+        <connection compositionId1="125" operatorId2="832" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="125" operatorId2="832" connectorId1="2" connectorId2="2"/>
+        <connection operatorId1="834" compositionId2="126" connectorId1="1" connectorId2="1"/>
+        <connection connectorId1="2" operatorId1="834" connectorId2="0" operatorId2="835"/>
+        <connection connectorId1="3" operatorId1="834" connectorId2="1" operatorId2="835"/>
+        <connection connectorId1="0" operatorId1="835" connectorId2="2" operatorId2="834"/>
+        <connection connectorId1="1" operatorId1="835" connectorId2="3" operatorId2="834"/>
+        <connection operatorId1="835" compositionId2="126" connectorId1="3" connectorId2="2"/>
+        <connection compositionId1="126" operatorId2="834" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="126" operatorId2="835" connectorId1="2" connectorId2="3"/>
+        <connection operatorId1="837" compositionId2="127" connectorId1="0" connectorId2="6"/>
+        <connection connectorId1="1" operatorId1="837" connectorId2="2" operatorId2="844"/>
+        <connection connectorId1="0" operatorId1="841" connectorId2="3" operatorId2="843"/>
+        <connection connectorId1="2" operatorId1="841" connectorId2="1" operatorId2="842"/>
+        <connection operatorId1="840" compositionId2="127" connectorId1="2" connectorId2="3"/>
+        <connection connectorId1="3" operatorId1="840" connectorId2="0" operatorId2="838"/>
+        <connection connectorId1="0" operatorId1="839" connectorId2="2" operatorId2="842"/>
+        <connection connectorId1="1" operatorId1="839" connectorId2="2" operatorId2="846"/>
+        <connection operatorId1="839" compositionId2="127" connectorId1="2" connectorId2="1"/>
+        <connection operatorId1="839" compositionId2="127" connectorId1="3" connectorId2="2"/>
+        <connection connectorId1="0" operatorId1="838" connectorId2="3" operatorId2="840"/>
+        <connection connectorId1="2" operatorId1="838" connectorId2="1" operatorId2="845"/>
+        <connection connectorId1="3" operatorId1="838" connectorId2="0" operatorId2="844"/>
+        <connection connectorId1="0" operatorId1="844" connectorId2="3" operatorId2="838"/>
+        <connection connectorId1="2" operatorId1="844" connectorId2="1" operatorId2="837"/>
+        <connection connectorId1="3" operatorId1="844" connectorId2="0" operatorId2="843"/>
+        <connection connectorId1="0" operatorId1="843" connectorId2="3" operatorId2="844"/>
+        <connection connectorId1="2" operatorId1="843" connectorId2="1" operatorId2="846"/>
+        <connection connectorId1="3" operatorId1="843" connectorId2="0" operatorId2="841"/>
+        <connection connectorId1="1" operatorId1="842" connectorId2="2" operatorId2="841"/>
+        <connection connectorId1="2" operatorId1="842" connectorId2="0" operatorId2="839"/>
+        <connection operatorId1="846" compositionId2="127" connectorId1="0" connectorId2="4"/>
+        <connection connectorId1="1" operatorId1="846" connectorId2="2" operatorId2="843"/>
+        <connection connectorId1="2" operatorId1="846" connectorId2="1" operatorId2="839"/>
+        <connection operatorId1="845" compositionId2="127" connectorId1="0" connectorId2="5"/>
+        <connection connectorId1="1" operatorId1="845" connectorId2="2" operatorId2="838"/>
+        <connection compositionId1="127" operatorId2="839" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="127" operatorId2="839" connectorId1="2" connectorId2="3"/>
+        <connection compositionId1="127" operatorId2="840" connectorId1="3" connectorId2="2"/>
+        <connection compositionId1="127" operatorId2="846" connectorId1="4" connectorId2="0"/>
+        <connection compositionId1="127" operatorId2="845" connectorId1="5" connectorId2="0"/>
+        <connection compositionId1="127" operatorId2="837" connectorId1="6" connectorId2="0"/>
+        <connection operatorId1="847" compositionId2="128" connectorId1="0" connectorId2="1"/>
+        <connection connectorId1="1" operatorId1="847" connectorId2="1" operatorId2="848"/>
+        <connection operatorId1="847" compositionId2="128" connectorId1="2" connectorId2="2"/>
+        <connection connectorId1="1" operatorId1="848" connectorId2="1" operatorId2="847"/>
+        <connection compositionId1="128" operatorId2="847" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="128" operatorId2="847" connectorId1="2" connectorId2="2"/>
+        <connection connectorId1="1" operatorId1="849" connectorId2="0" operatorId2="851"/>
+        <connection connectorId1="2" operatorId1="849" connectorId2="1" operatorId2="851"/>
+        <connection connectorId1="0" operatorId1="850" connectorId2="2" operatorId2="851"/>
+        <connection connectorId1="2" operatorId1="850" connectorId2="1" operatorId2="852"/>
+        <connection connectorId1="0" operatorId1="852" connectorId2="1" operatorId2="853"/>
+        <connection connectorId1="1" operatorId1="852" connectorId2="2" operatorId2="850"/>
+        <connection operatorId1="852" compositionId2="130" connectorId1="2" connectorId2="4"/>
+        <connection connectorId1="0" operatorId1="851" connectorId2="1" operatorId2="849"/>
+        <connection connectorId1="1" operatorId1="851" connectorId2="2" operatorId2="849"/>
+        <connection connectorId1="2" operatorId1="851" connectorId2="0" operatorId2="850"/>
+        <connection connectorId1="1" operatorId1="853" connectorId2="0" operatorId2="852"/>
+        <connection connectorId1="0" operatorId1="858" connectorId2="1" operatorId2="854"/>
+        <connection operatorId1="858" compositionId2="129" connectorId1="1" connectorId2="3"/>
+        <connection operatorId1="858" compositionId2="130" connectorId1="2" connectorId2="5"/>
+        <connection operatorId1="857" compositionId2="129" connectorId1="0" connectorId2="2"/>
+        <connection operatorId1="857" compositionId2="131" connectorId1="1" connectorId2="1"/>
+        <connection operatorId1="857" compositionId2="130" connectorId1="2" connectorId2="3"/>
+        <connection connectorId1="0" operatorId1="856" connectorId2="1" operatorId2="855"/>
+        <connection operatorId1="855" compositionId2="130" connectorId1="0" connectorId2="2"/>
+        <connection connectorId1="1" operatorId1="855" connectorId2="0" operatorId2="856"/>
+        <connection operatorId1="855" compositionId2="129" connectorId1="2" connectorId2="1"/>
+        <connection connectorId1="1" operatorId1="854" connectorId2="0" operatorId2="858"/>
+        <connection compositionId1="131" operatorId2="857" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="130" operatorId2="855" connectorId1="2" connectorId2="0"/>
+        <connection compositionId1="130" operatorId2="857" connectorId1="3" connectorId2="2"/>
+        <connection compositionId1="130" operatorId2="852" connectorId1="4" connectorId2="2"/>
+        <connection compositionId1="130" operatorId2="858" connectorId1="5" connectorId2="2"/>
+        <connection compositionId1="129" operatorId2="855" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="129" operatorId2="857" connectorId1="2" connectorId2="0"/>
+        <connection compositionId1="129" operatorId2="858" connectorId1="3" connectorId2="1"/>
+        <connection connectorId1="0" operatorId1="859" connectorId2="3" operatorId2="863"/>
+        <connection connectorId1="2" operatorId1="859" connectorId2="1" operatorId2="865"/>
+        <connection connectorId1="3" operatorId1="859" connectorId2="0" operatorId2="860"/>
+        <connection operatorId1="861" compositionId2="130" connectorId1="2" connectorId2="3"/>
+        <connection connectorId1="3" operatorId1="861" connectorId2="0" operatorId2="863"/>
+        <connection connectorId1="0" operatorId1="860" connectorId2="3" operatorId2="859"/>
+        <connection connectorId1="2" operatorId1="860" connectorId2="1" operatorId2="864"/>
+        <connection connectorId1="1" operatorId1="864" connectorId2="2" operatorId2="860"/>
+        <connection connectorId1="2" operatorId1="864" connectorId2="0" operatorId2="866"/>
+        <connection connectorId1="0" operatorId1="863" connectorId2="3" operatorId2="861"/>
+        <connection connectorId1="2" operatorId1="863" connectorId2="1" operatorId2="867"/>
+        <connection connectorId1="3" operatorId1="863" connectorId2="0" operatorId2="859"/>
+        <connection operatorId1="862" compositionId2="130" connectorId1="0" connectorId2="5"/>
+        <connection connectorId1="2" operatorId1="862" connectorId2="0" operatorId2="865"/>
+        <connection operatorId1="867" compositionId2="130" connectorId1="0" connectorId2="4"/>
+        <connection connectorId1="1" operatorId1="867" connectorId2="2" operatorId2="863"/>
+        <connection connectorId1="2" operatorId1="867" connectorId2="1" operatorId2="866"/>
+        <connection connectorId1="0" operatorId1="866" connectorId2="2" operatorId2="864"/>
+        <connection connectorId1="1" operatorId1="866" connectorId2="2" operatorId2="867"/>
+        <connection operatorId1="866" compositionId2="130" connectorId1="2" connectorId2="1"/>
+        <connection operatorId1="866" compositionId2="130" connectorId1="3" connectorId2="2"/>
+        <connection connectorId1="0" operatorId1="865" connectorId2="2" operatorId2="862"/>
+        <connection connectorId1="1" operatorId1="865" connectorId2="2" operatorId2="859"/>
+        <connection compositionId1="130" operatorId2="866" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="130" operatorId2="866" connectorId1="2" connectorId2="3"/>
+        <connection compositionId1="130" operatorId2="861" connectorId1="3" connectorId2="2"/>
+        <connection compositionId1="130" operatorId2="867" connectorId1="4" connectorId2="0"/>
+        <connection compositionId1="130" operatorId2="862" connectorId1="5" connectorId2="0"/>
+        <connection operatorId1="868" compositionId2="135" connectorId1="0" connectorId2="1"/>
+        <connection operatorId1="868" compositionId2="131" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="135" operatorId2="868" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="135" compositionId2="132" connectorId1="2" connectorId2="1"/>
+        <connection compositionId1="132" compositionId2="135" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="132" compositionId2="131" connectorId1="2" connectorId2="1"/>
+        <connection compositionId1="131" compositionId2="132" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="131" operatorId2="868" connectorId1="2" connectorId2="1"/>
+        <connection connectorId1="0" operatorId1="869" connectorId2="3" operatorId2="875"/>
+        <connection operatorId1="869" compositionId2="134" connectorId1="1" connectorId2="3"/>
+        <connection connectorId1="2" operatorId1="869" connectorId2="1" operatorId2="871"/>
+        <connection connectorId1="3" operatorId1="869" connectorId2="0" operatorId2="871"/>
+        <connection connectorId1="0" operatorId1="870" connectorId2="2" operatorId2="879"/>
+        <connection connectorId1="3" operatorId1="870" connectorId2="0" operatorId2="884"/>
+        <connection connectorId1="0" operatorId1="874" connectorId2="3" operatorId2="872"/>
+        <connection connectorId1="2" operatorId1="874" connectorId2="0" operatorId2="879"/>
+        <connection connectorId1="0" operatorId1="873" connectorId2="3" operatorId2="878"/>
+        <connection connectorId1="2" operatorId1="873" connectorId2="1" operatorId2="872"/>
+        <connection connectorId1="1" operatorId1="872" connectorId2="2" operatorId2="873"/>
+        <connection connectorId1="3" operatorId1="872" connectorId2="0" operatorId2="874"/>
+        <connection connectorId1="0" operatorId1="871" connectorId2="3" operatorId2="869"/>
+        <connection connectorId1="1" operatorId1="871" connectorId2="2" operatorId2="869"/>
+        <connection operatorId1="871" compositionId2="132" connectorId1="2" connectorId2="1"/>
+        <connection connectorId1="0" operatorId1="879" connectorId2="2" operatorId2="874"/>
+        <connection connectorId1="2" operatorId1="879" connectorId2="0" operatorId2="870"/>
+        <connection operatorId1="878" compositionId2="132" connectorId1="2" connectorId2="2"/>
+        <connection connectorId1="3" operatorId1="878" connectorId2="0" operatorId2="873"/>
+        <connection operatorId1="877" compositionId2="134" connectorId1="0" connectorId2="2"/>
+        <connection connectorId1="2" operatorId1="877" connectorId2="0" operatorId2="881"/>
+        <connection connectorId1="0" operatorId1="876" connectorId2="2" operatorId2="881"/>
+        <connection connectorId1="2" operatorId1="876" connectorId2="1" operatorId2="882"/>
+        <connection operatorId1="875" compositionId2="133" connectorId1="0" connectorId2="1"/>
+        <connection connectorId1="1" operatorId1="875" connectorId2="3" operatorId2="882"/>
+        <connection connectorId1="2" operatorId1="875" connectorId2="2" operatorId2="882"/>
+        <connection connectorId1="3" operatorId1="875" connectorId2="0" operatorId2="869"/>
+        <connection connectorId1="0" operatorId1="884" connectorId2="3" operatorId2="870"/>
+        <connection connectorId1="3" operatorId1="884" connectorId2="0" operatorId2="883"/>
+        <connection connectorId1="0" operatorId1="883" connectorId2="3" operatorId2="884"/>
+        <connection operatorId1="883" compositionId2="134" connectorId1="2" connectorId2="1"/>
+        <connection connectorId1="0" operatorId1="882" connectorId2="2" operatorId2="880"/>
+        <connection connectorId1="1" operatorId1="882" connectorId2="2" operatorId2="876"/>
+        <connection connectorId1="2" operatorId1="882" connectorId2="2" operatorId2="875"/>
+        <connection connectorId1="3" operatorId1="882" connectorId2="1" operatorId2="875"/>
+        <connection connectorId1="0" operatorId1="881" connectorId2="2" operatorId2="877"/>
+        <connection connectorId1="1" operatorId1="881" connectorId2="0" operatorId2="880"/>
+        <connection connectorId1="2" operatorId1="881" connectorId2="0" operatorId2="876"/>
+        <connection connectorId1="0" operatorId1="880" connectorId2="1" operatorId2="881"/>
+        <connection connectorId1="2" operatorId1="880" connectorId2="0" operatorId2="882"/>
+        <connection compositionId1="134" operatorId2="883" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="134" operatorId2="877" connectorId1="2" connectorId2="0"/>
+        <connection compositionId1="134" operatorId2="869" connectorId1="3" connectorId2="1"/>
+        <connection compositionId1="133" operatorId2="875" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="132" operatorId2="871" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="132" operatorId2="878" connectorId1="2" connectorId2="2"/>
+        <connection operatorId1="885" compositionId2="133" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="133" operatorId2="885" connectorId1="1" connectorId2="1"/>
+        <connection connectorId1="0" operatorId1="886" connectorId2="1" operatorId2="891"/>
+        <connection connectorId1="1" operatorId1="886" connectorId2="1" operatorId2="897"/>
+        <connection connectorId1="2" operatorId1="886" connectorId2="1" operatorId2="887"/>
+        <connection connectorId1="3" operatorId1="886" connectorId2="0" operatorId2="888"/>
+        <connection connectorId1="0" operatorId1="887" connectorId2="2" operatorId2="896"/>
+        <connection connectorId1="1" operatorId1="887" connectorId2="2" operatorId2="886"/>
+        <connection connectorId1="2" operatorId1="887" connectorId2="1" operatorId2="890"/>
+        <connection connectorId1="3" operatorId1="887" connectorId2="0" operatorId2="890"/>
+        <connection connectorId1="0" operatorId1="890" connectorId2="3" operatorId2="887"/>
+        <connection connectorId1="1" operatorId1="890" connectorId2="2" operatorId2="887"/>
+        <connection operatorId1="890" compositionId2="134" connectorId1="2" connectorId2="2"/>
+        <connection connectorId1="0" operatorId1="889" connectorId2="2" operatorId2="894"/>
+        <connection connectorId1="2" operatorId1="889" connectorId2="0" operatorId2="895"/>
+        <connection connectorId1="0" operatorId1="888" connectorId2="3" operatorId2="886"/>
+        <connection connectorId1="1" operatorId1="888" connectorId2="0" operatorId2="896"/>
+        <connection connectorId1="2" operatorId1="888" connectorId2="0" operatorId2="894"/>
+        <connection connectorId1="0" operatorId1="897" connectorId2="1" operatorId2="892"/>
+        <connection connectorId1="1" operatorId1="897" connectorId2="1" operatorId2="886"/>
+        <connection operatorId1="897" compositionId2="134" connectorId1="2" connectorId2="5"/>
+        <connection connectorId1="0" operatorId1="896" connectorId2="1" operatorId2="888"/>
+        <connection operatorId1="896" compositionId2="134" connectorId1="1" connectorId2="4"/>
+        <connection connectorId1="2" operatorId1="896" connectorId2="0" operatorId2="887"/>
+        <connection connectorId1="0" operatorId1="895" connectorId2="2" operatorId2="889"/>
+        <connection connectorId1="1" operatorId1="895" connectorId2="2" operatorId2="893"/>
+        <connection connectorId1="0" operatorId1="894" connectorId2="2" operatorId2="888"/>
+        <connection operatorId1="894" compositionId2="134" connectorId1="1" connectorId2="3"/>
+        <connection connectorId1="2" operatorId1="894" connectorId2="0" operatorId2="889"/>
+        <connection operatorId1="893" compositionId2="134" connectorId1="0" connectorId2="1"/>
+        <connection connectorId1="1" operatorId1="893" connectorId2="0" operatorId2="891"/>
+        <connection connectorId1="2" operatorId1="893" connectorId2="1" operatorId2="895"/>
+        <connection connectorId1="0" operatorId1="892" connectorId2="2" operatorId2="891"/>
+        <connection connectorId1="1" operatorId1="892" connectorId2="0" operatorId2="897"/>
+        <connection connectorId1="0" operatorId1="891" connectorId2="1" operatorId2="893"/>
+        <connection connectorId1="1" operatorId1="891" connectorId2="0" operatorId2="886"/>
+        <connection connectorId1="2" operatorId1="891" connectorId2="0" operatorId2="892"/>
+        <connection compositionId1="134" operatorId2="893" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="134" operatorId2="890" connectorId1="2" connectorId2="2"/>
+        <connection compositionId1="134" operatorId2="894" connectorId1="3" connectorId2="1"/>
+        <connection compositionId1="134" operatorId2="896" connectorId1="4" connectorId2="1"/>
+        <connection compositionId1="134" operatorId2="897" connectorId1="5" connectorId2="2"/>
+        <connection connectorId1="0" operatorId1="898" connectorId2="2" operatorId2="899"/>
+        <connection operatorId1="898" compositionId2="135" connectorId1="2" connectorId2="1"/>
+        <connection operatorId1="899" compositionId2="135" connectorId1="0" connectorId2="2"/>
+        <connection connectorId1="2" operatorId1="899" connectorId2="0" operatorId2="898"/>
+        <connection compositionId1="135" operatorId2="898" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="135" operatorId2="899" connectorId1="2" connectorId2="0"/>
+    </compositions>
+</cameleon>
