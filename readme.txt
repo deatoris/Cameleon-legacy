@@ -1,3 +1,5 @@
+Use QT 4.8: http://download.qt.io/archive/qt/4.8/4.8.6/
+
 Definition: Caméléon is a graphical langage for functional programming.
 Website: http://www.shinoe.org/cameleon
 Authors: O. Cugnon de Sévricourt & V. Tariel
