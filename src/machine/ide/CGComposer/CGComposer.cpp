@@ -1235,7 +1235,7 @@ void CGComposer::showControler(){
 void CGComposer::showControl(){
     QGraphicsItem* item = CGCompositionManager::getInstance()->getCurrentComposerScene()->selectedItems().first();
     CGConnector* connector = qgraphicsitem_cast<CGConnector *>(item);
-    CGLayoutManager::getInstance()->showConnected(connector->getConnectedControlConnector());
+    if(connector->getIsControlConnected())CGLayoutManager::getInstance()->showConnected(connector->getConnectedControlConnector());
 }
 
 void CGComposer::disconnectComposerControl(){
