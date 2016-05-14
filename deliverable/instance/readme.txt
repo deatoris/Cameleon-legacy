@@ -1,9 +1,6 @@
 ##########################################
-Caméléon & Population are open source independant software
-
-Caméléon Creator v2.1.0
-Caméléon Machine v2.1.0
-
+Caméléon v2.1.0
+MIT licence (see licence.txt)
 Copyright Olivier Cugnon de Sévricourt et Vincent Tariel - 2012-2016
 ##########################################
 
