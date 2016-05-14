@@ -14,11 +14,11 @@ void diff::exec(){
     DataDateTime* input2 = dynamic_cast<DataDateTime *>(this->plugIn()[1]->getData());
     DataNumber* datetimeout = dynamic_cast<DataNumber *>(this->plugOut()[0]->getData());
 
-    QDateTime t1 = input1->getValue();
+   /* QDateTime t1 = input1->getValue();
     QDateTime t2 = input2->getValue();
     qint64 i = t2.toMSecsSinceEpoch() - t1.toMSecsSinceEpoch();
     if(i<0) i=-i;
-    datetimeout->setValue(i);
+    datetimeout->setValue(i);*/
 }
 
 COperator * diff::clone(){

@@ -11,4 +11,12 @@ public:
     virtual COperator * clone();
 };
 
+class CSDOperatorLog : public COperator
+{
+public:
+    CSDOperatorLog();
+    virtual void exec();
+    virtual COperator * clone();
+};
+
 #endif // CSDOPERATORPROJECTPATH_H

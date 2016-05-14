@@ -1,28 +1,28 @@
-14.05.2016 14:26:52.650 - INSTANCE - =========================
-14.05.2016 14:26:52.720 - INSTANCE - Application started ...
-14.05.2016 14:26:52.727 - INSTANCE - Init instance ...
-14.05.2016 14:26:52.739 - INSTANCE - Instance Initialized.
-14.05.2016 14:26:52.740 - INSTANCE - Launch cameleon ...
-14.05.2016 14:26:52.740 - INSTANCE - ===========================
-14.05.2016 14:26:52.740 - INSTANCE - Start IDE Process
-14.05.2016 14:26:52.785 - INSTANCE - Init client ...
-14.05.2016 14:26:52.786 - INSTANCE - INNER Start machine ...
-14.05.2016 14:26:52.787 - INSTANCE - INNER Machine started
-14.05.2016 14:26:52.787 - INSTANCE - Client initialized.
-14.05.2016 14:26:52.812 - INSTANCE - Connect to server ...
-14.05.2016 14:26:52.813 - INSTANCE - Server connected.
-14.05.2016 14:26:52.813 - INSTANCE - Start machine ...
-14.05.2016 14:26:52.814 - INSTANCE - Machine started.
-14.05.2016 14:26:52.816 - INSTANCE - Start instance ...
-14.05.2016 14:26:52.928 - INSTANCE - Population disabled
-14.05.2016 14:26:52.928 - INSTANCE - Opencv disabled
-14.05.2016 14:26:52.929 - INSTANCE - Number of datas loaded 10
-14.05.2016 14:26:52.929 - INSTANCE - Number of controls loaded 32
-14.05.2016 14:26:52.929 - INSTANCE - Number of operators loaded 93
-14.05.2016 14:26:52.948 - INSTANCE - Population disabled
-14.05.2016 14:26:52.948 - INSTANCE - Opencv disabled
-14.05.2016 14:26:52.948 - INSTANCE - Number of datas loaded 10
-14.05.2016 14:26:52.948 - INSTANCE - Number of controls loaded 32
-14.05.2016 14:26:52.948 - INSTANCE - Number of operators loaded 93
-14.05.2016 14:26:53.187 - INSTANCE - Instance started.
-14.05.2016 14:26:53.276 - INSTANCE - Cameleon launched.
+14.05.2016 14:50:03.693 - INSTANCE - =========================
+14.05.2016 14:50:03.768 - INSTANCE - Application started ...
+14.05.2016 14:50:03.780 - INSTANCE - Init instance ...
+14.05.2016 14:50:03.792 - INSTANCE - Instance Initialized.
+14.05.2016 14:50:03.792 - INSTANCE - Launch cameleon ...
+14.05.2016 14:50:03.792 - INSTANCE - ===========================
+14.05.2016 14:50:03.793 - INSTANCE - Start IDE Process
+14.05.2016 14:50:03.812 - INSTANCE - Init client ...
+14.05.2016 14:50:03.815 - INSTANCE - INNER Start machine ...
+14.05.2016 14:50:03.815 - INSTANCE - INNER Machine started
+14.05.2016 14:50:03.815 - INSTANCE - Client initialized.
+14.05.2016 14:50:03.847 - INSTANCE - Connect to server ...
+14.05.2016 14:50:03.847 - INSTANCE - Server connected.
+14.05.2016 14:50:03.848 - INSTANCE - Start machine ...
+14.05.2016 14:50:03.848 - INSTANCE - Machine started.
+14.05.2016 14:50:03.849 - INSTANCE - Start instance ...
+14.05.2016 14:50:03.944 - INSTANCE - Population disabled
+14.05.2016 14:50:03.944 - INSTANCE - Opencv disabled
+14.05.2016 14:50:03.944 - INSTANCE - Number of datas loaded 10
+14.05.2016 14:50:03.944 - INSTANCE - Number of controls loaded 38
+14.05.2016 14:50:03.944 - INSTANCE - Number of operators loaded 111
+14.05.2016 14:50:03.963 - INSTANCE - Population disabled
+14.05.2016 14:50:03.963 - INSTANCE - Opencv disabled
+14.05.2016 14:50:03.963 - INSTANCE - Number of datas loaded 10
+14.05.2016 14:50:03.963 - INSTANCE - Number of controls loaded 38
+14.05.2016 14:50:03.963 - INSTANCE - Number of operators loaded 111
+14.05.2016 14:50:04.193 - INSTANCE - Instance started.
+14.05.2016 14:50:04.310 - INSTANCE - Cameleon launched.

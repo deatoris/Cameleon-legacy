@@ -263,6 +263,9 @@ void CSDDictionnary::collectOperator(){
     this->registerOperator(new set);
     this->registerOperator(new size);
     this->registerOperator(new erase);
+    this->registerOperator(new compareVector);
+    this->registerOperator(new findVector);
+    this->registerOperator(new concatVector);
     this->registerOperator(new OperatorSortVector);
     this->registerOperator(new OperatorIteratorVector);
     this->registerOperator(new OperatorIteratorOutVector);
@@ -321,13 +324,13 @@ void CSDDictionnary::collectOperator(){
 //   this->registerOperator(new priority);
 
     //time
-//    this->registerOperator(new current);
-//    this->registerOperator(new diff);
-//    this->registerOperator(new getday);
-//    this->registerOperator(new getmonth);
-//    this->registerOperator(new gettime);
-//    this->registerOperator(new getyear);
-//    this->registerOperator(new msectostring);
+    this->registerOperator(new current);
+    this->registerOperator(new diff);
+    this->registerOperator(new getday);
+    this->registerOperator(new getmonth);
+    this->registerOperator(new gettime);
+    this->registerOperator(new getyear);
+    this->registerOperator(new msectostring);
 
 
     //File system
@@ -350,19 +353,20 @@ void CSDDictionnary::collectOperator(){
 
     this->registerOperator(new LoadImageQT);
     //Introspection
-//    this->registerOperator(new SCDOperatorGetDataKeysVector);
-//    this->registerOperator(new CSDOperatorHideShowInterface);
+    this->registerOperator(new CSDOperatorLog);
+    this->registerOperator(new SCDOperatorGetDataKeysVector);
+    this->registerOperator(new CSDOperatorHideShowInterface);
     this->registerOperator(new CSDOperatorProjectPath);
-//    this->registerOperator(new OperatorProjectTmpPath);
+    this->registerOperator(new OperatorProjectTmpPath);
     this->registerOperator(new OperatorExitInstance);
-//    this->registerOperator(new GetMode);
+    this->registerOperator(new GetMode);
     this->registerOperator(new OperatorBreakPoint);
-//    this->registerOperator(new OperatorPlay);
-//    this->registerOperator(new OperatorStop);
-//    this->registerOperator(new OperatorErrorString);
+    this->registerOperator(new OperatorPlay);
+    this->registerOperator(new OperatorStop);
     this->registerOperator(new COperatorAssert);
 
 //system
+    this->registerOperator(new CommandLineSync2);
     this->registerOperator(new CommandLineSync);
     this->registerOperator(new CommandLine);
 
@@ -391,14 +395,14 @@ void CSDDictionnary::collectControl(){
     this->registerControl(new EditorText);
     this->registerControl(new editorstringtext2);
     this->registerControl(new EditorButton);
-//    this->registerControl(new EditorDate);
-//    this->registerControl(new EditorTime);
-//    this->registerControl(new EditorDateTime);
+    this->registerControl(new EditorDate);
+    this->registerControl(new EditorTime);
+    this->registerControl(new EditorDateTime);
     this->registerControl(new SelectorFile);
     this->registerControl(new ListBoxVector);
     this->registerControl(new EditorVector);
     this->registerControl(new ViewVector);
-//    this->registerControl(new SelectorVector);
+    this->registerControl(new SelectorVector);
     this->registerControl(new ViewMap);
     this->registerControl(new EditorMap);
 
@@ -411,8 +415,8 @@ void CSDDictionnary::collectControl(){
     this->registerControl(new ControlEditorArgument);
     this->registerControl(new ViewLine);
     this->registerControl(new EditorStringWithInput);
-//    this->registerControl(new AlphaLayer);
-//    this->registerControl(new ColorSurface);
+    this->registerControl(new AlphaLayer);
+    this->registerControl(new ColorSurface);
     this->registerControl(new ViewMenu);
     this->registerControl(new BackgroundControl);
     this->registerControl(new EditorCheckBox);

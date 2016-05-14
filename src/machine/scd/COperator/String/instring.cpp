@@ -28,6 +28,8 @@ void instring::exec(){
             linesum+=line;
         }
         dynamic_cast<DataString *>(this->plugOut()[0]->getData())->setValue(linesum.toStdString());
+        file.close();
+
     }
 }
 

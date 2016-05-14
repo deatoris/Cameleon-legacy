@@ -142,24 +142,6 @@ CommandLineSync2::CommandLineSync2(){
     this->setKey("CommandLineSync2");
     this->setName("CLI-SYNC2");
     this->setInformation("to write");
-
-    p = new QProcess();
-        if(!connect(p, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(processStoped(int, QProcess::ExitStatus)),Qt::DirectConnection)){
-            this->error("connect finished error. code 1");
-        }
-
-        if(!connect(p, SIGNAL(error(QProcess::ProcessError)), this, SLOT(processError()))){
-            this->error("connect error error. code 2");
-        }
-
-        if(!connect(p, SIGNAL(readyReadStandardOutput ()), this, SLOT(readOut()))){
-            this->error("connect error error. code 3");
-        }
-
-        if(!connect(p, SIGNAL(readyReadStandardError ()), this, SLOT(readError()))){
-            this->error("connect error error. code 4");
-        }
-
 }
 
 void CommandLineSync2::exec(){
@@ -167,10 +149,25 @@ void CommandLineSync2::exec(){
     DataVector* v = dynamic_cast<DataVector *>(this->plugIn()[1]->getData());
     string run_path = dynamic_cast<DataString *>(this->plugIn()[2]->getData())->getValue();
 
-
+    p = new QProcess();
 
     QStringList args = processArgs(v);
 
+    if(!connect(p, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(processStoped(int, QProcess::ExitStatus)),Qt::DirectConnection)){
+        this->error("connect finished error. code 1");
+    }
+
+    if(!connect(p, SIGNAL(error(QProcess::ProcessError)), this, SLOT(processError()))){
+        this->error("connect error error. code 2");
+    }
+
+    if(!connect(p, SIGNAL(readyReadStandardOutput ()), this, SLOT(readOut()))){
+        this->error("connect error error. code 3");
+    }
+
+    if(!connect(p, SIGNAL(readyReadStandardError ()), this, SLOT(readError()))){
+        this->error("connect error error. code 4");
+    }
 
     QDir::setCurrent(QString::fromStdString(run_path));
 

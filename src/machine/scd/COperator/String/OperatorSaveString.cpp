@@ -24,6 +24,7 @@ void OperatorSaveString::exec(){
     else
         this->error("Cannot open file: "+file);
     dynamic_cast<DataBoolean *>(this->plugOut()[0]->getData())->setValue(true);
+    out.close();
 }
 
 COperator * OperatorSaveString::clone(){
