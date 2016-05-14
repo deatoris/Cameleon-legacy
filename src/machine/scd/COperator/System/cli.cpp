@@ -11,15 +11,7 @@ CommandLine::CommandLine(){
     this->setKey("CommandLine");
     this->setName("CLI");
     this->setInformation("to write");
-}
-
-void CommandLine::exec(){
-    string exec_path = dynamic_cast<DataString *>(this->plugIn()[0]->getData())->getValue();
-    DataVector* v = dynamic_cast<DataVector *>(this->plugIn()[1]->getData());
-
     p = new QProcess();
-
-    QStringList args = processArgs(v);
 
     if(!connect(p, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(processStoped(int, QProcess::ExitStatus)),Qt::DirectConnection)){
         this->error("connect finished error. code 1");
@@ -36,6 +28,15 @@ void CommandLine::exec(){
     if(!connect(p, SIGNAL(readyReadStandardError ()), this, SLOT(readError()))){
         this->error("connect error error. code 4");
     }
+}
+
+void CommandLine::exec(){
+    string exec_path = dynamic_cast<DataString *>(this->plugIn()[0]->getData())->getValue();
+    DataVector* v = dynamic_cast<DataVector *>(this->plugIn()[1]->getData());
+
+
+    QStringList args = processArgs(v);
+
 
     p->start(exec_path.c_str(),args);
     if (!p->waitForStarted(-1))
