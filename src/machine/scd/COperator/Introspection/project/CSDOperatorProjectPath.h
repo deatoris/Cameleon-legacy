@@ -18,5 +18,11 @@ public:
     virtual void exec();
     virtual COperator * clone();
 };
-
+class CSDInstancePath : public COperator
+{
+public:
+    CSDInstancePath();
+    virtual void exec();
+    virtual COperator * clone();
+};
 #endif // CSDOPERATORPROJECTPATH_H

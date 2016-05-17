@@ -356,6 +356,7 @@ void CSDDictionnary::collectOperator(){
     this->registerOperator(new CSDOperatorLog);
     this->registerOperator(new SCDOperatorGetDataKeysVector);
     this->registerOperator(new CSDOperatorHideShowInterface);
+    this->registerOperator(new CSDInstancePath);
     this->registerOperator(new CSDOperatorProjectPath);
     this->registerOperator(new OperatorProjectTmpPath);
     this->registerOperator(new OperatorExitInstance);

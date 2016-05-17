@@ -2,6 +2,31 @@
 #include "CMachine.h"
 #include "CLogger.h"
 #include "DataBoolean.h"
+#include "CGInstance.h"
+CSDInstancePath::CSDInstancePath(){
+    this->structurePlug().addPlugIn(DataBoolean::KEY,"in.bool");
+    this->structurePlug().addPlugOut(DataString::KEY,"out.str");
+    this->path().push_back("Introspection");
+    this->path().push_back("Instance");
+    this->setKey("stringCSDOperatorInstancePathstring");
+    this->setName("InstancePath");
+}
+
+void CSDInstancePath::exec(){
+    QFileInfo infos(CGInstance::getInstance()->getPath());
+    QString path = infos.absolutePath();
+    path.replace("/tmp","/");
+    path.replace("/tmp/","/");
+    path.replace("/tmp","/");
+    path.replace("///","/");
+    path.replace("//","/");
+    dynamic_cast<DataString *>(this->plugOut()[0]->getData())->setValue(path.toStdString());
+}
+
+COperator * CSDInstancePath::clone(){
+    return new CSDInstancePath();
+}
+
 CSDOperatorProjectPath::CSDOperatorProjectPath(){
     this->structurePlug().addPlugIn(DataBoolean::KEY,"in.bool");
     this->structurePlug().addPlugOut(DataString::KEY,"out.str");
