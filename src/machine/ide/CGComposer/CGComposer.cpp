@@ -1042,7 +1042,7 @@ void CGComposer::showProcessorStack(){
 }
 
 void CGComposer::reportABug(){
-    QDesktopServices::openUrl ( QUrl("http://www.shinoe.org/cameleon/help/"));
+    QDesktopServices::openUrl ( QUrl("https://git.framasoft.org/shinoe/Cameleon/issues/"));
 }
 
 void CGComposer::videoTutorial(){
@@ -1054,11 +1054,11 @@ void CGComposer::populationDocumentation(){
 }
 
 void CGComposer::documentation(){
-    QDesktopServices::openUrl ( QUrl("http://www.shinoe.org/cameleon/documentation/"));
+    QDesktopServices::openUrl ( QUrl("http://www.shinoe.org/cameleon/documentation.html"));
 }
 
 void CGComposer::sharePattern(){
-    QDesktopServices::openUrl ( QUrl("http://www.shinoe.org/cameleon/community/"));
+    QDesktopServices::openUrl ( QUrl("https://git.framasoft.org/shinoe/Cameleon"));
 }
 void CGComposer::shareProject(){
     QDesktopServices::openUrl ( QUrl("http://www.shinoe.org/forum"));
