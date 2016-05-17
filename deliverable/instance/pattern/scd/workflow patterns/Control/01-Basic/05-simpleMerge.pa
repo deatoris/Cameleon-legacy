@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts/>
+    <composerscreen viewx="-5909" viewy="-1228" viewscale="-5" windowsx="0" windowsy="61" windowswidth="1920" windowsheight="1019" numscreen="0" fullscreen="false"/>
+    <compositions>
+        <currentComposition id="20"/>
+        <composition id="20" name="05-simpleMerge" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc."/>
+        <connector compositionId="20" connectorId="1" side="IN" name="" x="-54.4351" y="-7.86282"/>
+        <connector compositionId="20" connectorId="2" side="IN" name="" x="-53.5599" y="12.5036"/>
+        <connector compositionId="20" connectorId="3" side="OUT" name="" x="52.6052" y="16.0529"/>
+        <operatorconnector opId="86" connectorId="0" x="-51.897" y="40.7762"/>
+        <operatorconnector opId="86" connectorId="1" x="-64.1162" y="-15.6563"/>
+        <operatorconnector opId="86" connectorId="2" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="87" connectorId="0" x="-64.3738" y="14.5607"/>
+        <operatorconnector opId="87" connectorId="1" x="56.8501" y="33.527"/>
+        <operator id="87" type="id" x="151" y="22" z="0" parentId="20"/>
+        <operatorconnector opId="87" connectorId="0" x="-64.3738" y="14.5607"/>
+        <operatorconnector opId="87" connectorId="1" x="56.8501" y="33.527"/>
+        <operator id="86" type="merge" x="-220" y="9" z="0" parentId="20"/>
+        <operatorconnector opId="86" connectorId="0" x="-51.897" y="40.7762"/>
+        <operatorconnector opId="86" connectorId="1" x="-64.1162" y="-15.6563"/>
+        <operatorconnector opId="86" connectorId="2" x="42.4433" y="42.4095"/>
+        <connection connectorId1="0" operatorId1="87" connectorId2="2" operatorId2="86"/>
+        <connection operatorId1="87" compositionId2="20" connectorId1="1" connectorId2="3"/>
+        <connection operatorId1="86" compositionId2="20" connectorId1="0" connectorId2="2"/>
+        <connection operatorId1="86" compositionId2="20" connectorId1="1" connectorId2="1"/>
+        <connection connectorId1="2" operatorId1="86" connectorId2="0" operatorId2="87"/>
+        <connection compositionId1="20" operatorId2="86" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="20" operatorId2="86" connectorId1="2" connectorId2="0"/>
+        <connection compositionId1="20" operatorId2="87" connectorId1="3" connectorId2="1"/>
+    </compositions>
+</cameleon>

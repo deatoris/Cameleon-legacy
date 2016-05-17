@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="199" operatorIdOut="158" controlConnectorIdIn="1" operatorConnectorIdOut="0"/>
+        <connection controlId="200" operatorIdOut="159" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="199" operatorIdOut="159" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+    </layouts>
+    <composerscreen viewx="-4666" viewy="749" viewscale="-3" windowsx="0" windowsy="40" windowswidth="1366" windowsheight="728" numscreen="0" fullscreen="true"/>
+    <compositions>
+        <currentComposition id="29"/>
+        <composition id="29" name="action2" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc."/>
+        <composition id="30" name="block" x="41" y="-176" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="-628" viewy="-185" viewscale="-9" parentId="29"/>
+        <connector compositionId="30" connectorId="1" side="IN" name="in0.gen" x="-59.1002" y="-10.352"/>
+        <connector compositionId="30" connectorId="2" side="OUT" name="out0.gen" x="59.0745" y="-10.4976"/>
+        <compositioncontrol id="199" type="EditorButton" x="-52" y="-93" z="1" width="227" height="85" parentId="29" content="YOUR ACTION"/>
+        <connection controlId="199" operatorIdOut="159" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="199" operatorIdOut="158" controlConnectorIdIn="1" operatorConnectorIdOut="0"/>
+        <compositioncontrol id="200" type="LineEditorString" x="-170" y="21" z="1" width="209" height="85" parentId="30" content="YOUR ACTION"/>
+        <operator id="158" type="OperatorLocker" x="97" y="-64" z="1" parentId="30"/>
+        <operatorconnector opId="158" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="158" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="158" connectorId="2" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="158" connectorId="3" x="60" y="0"/>
+        <operator id="159" type="id" x="110" y="64" z="0" parentId="30"/>
+        <operatorconnector opId="159" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="159" connectorId="1" x="42.4433" y="42.4095"/>
+        <connection controlId="200" operatorIdOut="159" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection operatorId1="158" compositionId2="30" connectorId1="1" connectorId2="1"/>
+        <connection operatorId1="158" compositionId2="30" connectorId1="3" connectorId2="2"/>
+        <connection compositionId1="30" operatorId2="158" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="30" operatorId2="158" connectorId1="2" connectorId2="3"/>
+    </compositions>
+</cameleon>

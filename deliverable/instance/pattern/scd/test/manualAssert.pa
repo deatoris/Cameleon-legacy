@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="79" operatorIdOut="16" controlConnectorIdIn="1" operatorConnectorIdOut="0"/>
+        <connection controlId="78" operatorIdOut="16" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="76" operatorIdOut="16" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+    </layouts>
+    <composerscreen viewx="-1056" viewy="-1323" viewscale="-1" windowsx="0" windowsy="61" windowswidth="1920" windowsheight="1019" numscreen="0" fullscreen="false"/>
+    <compositions>
+        <currentComposition id="1"/>
+        <composition id="1" name="manualAssert" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc."/>
+        <operatorconnector opId="15" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="15" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="15" connectorId="2" x="65.908" y="3.48296"/>
+        <operatorconnector opId="16" connectorId="0" x="-49.4383" y="49.5566"/>
+        <operatorconnector opId="16" connectorId="1" x="-67.5883" y="18.216"/>
+        <operatorconnector opId="16" connectorId="2" x="-67.646" y="-18.0006"/>
+        <operatorconnector opId="16" connectorId="3" x="49.5172" y="49.4778"/>
+        <operatorconnector opId="16" connectorId="4" x="76.4312" y="9.3416"/>
+        <operatorconnector opId="16" connectorId="5" x="70.8848" y="-30.0723"/>
+        <operator id="15" type="COperatorAssert" x="328.851" y="-36.3659" z="3" parentId="1"/>
+        <operatorconnector opId="15" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="15" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="15" connectorId="2" x="65.908" y="3.48296"/>
+        <compositioncontrol id="79" type="EditorButton" x="-404.518" y="6.36591" z="3" width="273.488" height="90" parentId="1" content="Apply"/>
+        <compositioncontrol id="78" type="editorboolean" x="-404.622" y="-37.5426" z="2" width="273.349" height="84" parentId="1" content="TRUE"/>
+        <compositioncontrol id="76" type="LineEditorString" x="-404.759" y="-78.7617" z="1" width="273.369" height="84" parentId="1" content="error in add boolean"/>
+        <operator id="16" type="OperatorLocker" x="-20.9243" y="-5.88904" z="0" parentId="1"/>
+        <operatorconnector opId="16" connectorId="0" x="-49.4383" y="49.5566"/>
+        <operatorconnector opId="16" connectorId="1" x="-67.5883" y="18.216"/>
+        <operatorconnector opId="16" connectorId="2" x="-67.646" y="-18.0006"/>
+        <operatorconnector opId="16" connectorId="3" x="49.5172" y="49.4778"/>
+        <operatorconnector opId="16" connectorId="4" x="76.4312" y="9.3416"/>
+        <operatorconnector opId="16" connectorId="5" x="70.8848" y="-30.0723"/>
+        <operatoraction opId="16" actionKey="AddPlug"/>
+        <connection controlId="79" operatorIdOut="16" controlConnectorIdIn="1" operatorConnectorIdOut="0"/>
+        <connection controlId="78" operatorIdOut="16" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="76" operatorIdOut="16" controlConnectorIdIn="0" operatorConnectorIdOut="2"/>
+        <connection connectorId1="0" operatorId1="15" connectorId2="4" operatorId2="16"/>
+        <connection connectorId1="1" operatorId1="15" connectorId2="5" operatorId2="16"/>
+        <connection connectorId1="4" operatorId1="16" connectorId2="0" operatorId2="15"/>
+        <connection connectorId1="5" operatorId1="16" connectorId2="1" operatorId2="15"/>
+    </compositions>
+</cameleon>

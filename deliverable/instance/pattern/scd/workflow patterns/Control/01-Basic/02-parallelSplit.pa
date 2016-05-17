@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts/>
+    <composerscreen viewx="-5188" viewy="-1342" viewscale="-5" windowsx="0" windowsy="61" windowswidth="1920" windowsheight="1019" numscreen="0" fullscreen="false"/>
+    <compositions>
+        <currentComposition id="16"/>
+        <composition id="16" name="02-parallelSplit" informations="With a multithreaded processor, inher ids should be launched in parallel."/>
+        <connector compositionId="16" connectorId="1" side="IN" name="input0.gen" x="-54.3485" y="8.44072"/>
+        <connector compositionId="16" connectorId="2" side="OUT" name="output0.gen" x="54.3249" y="-8.59085"/>
+        <connector compositionId="16" connectorId="3" side="OUT" name="output0.gen" x="39.9637" y="37.7876"/>
+        <operatorconnector opId="73" connectorId="0" x="-65.8505" y="4.43936"/>
+        <operatorconnector opId="73" connectorId="1" x="64.8905" y="12.0511"/>
+        <operatorconnector opId="74" connectorId="0" x="-65.4413" y="8.56969"/>
+        <operatorconnector opId="74" connectorId="1" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="74" connectorId="2" x="60" y="0"/>
+        <operatorconnector opId="75" connectorId="0" x="-54.8041" y="36.7765"/>
+        <operatorconnector opId="75" connectorId="1" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="76" connectorId="0" x="-61.9821" y="-22.6764"/>
+        <operatorconnector opId="76" connectorId="1" x="54.3662" y="37.4209"/>
+        <operator id="76" type="id" x="213" y="210" z="0" parentId="16"/>
+        <operatorconnector opId="76" connectorId="0" x="-61.9821" y="-22.6764"/>
+        <operatorconnector opId="76" connectorId="1" x="54.3662" y="37.4209"/>
+        <operator id="75" type="id" x="220" y="-74" z="0" parentId="16"/>
+        <operatorconnector opId="75" connectorId="0" x="-54.8041" y="36.7765"/>
+        <operatorconnector opId="75" connectorId="1" x="42.4433" y="42.4095"/>
+        <operator id="74" type="Copy" x="-26" y="29" z="0" parentId="16"/>
+        <operatorconnector opId="74" connectorId="0" x="-65.4413" y="8.56969"/>
+        <operatorconnector opId="74" connectorId="1" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="74" connectorId="2" x="60" y="0"/>
+        <operator id="73" type="id" x="-278" y="25" z="0" parentId="16"/>
+        <operatorconnector opId="73" connectorId="0" x="-65.8505" y="4.43936"/>
+        <operatorconnector opId="73" connectorId="1" x="64.8905" y="12.0511"/>
+        <connection connectorId1="0" operatorId1="76" connectorId2="1" operatorId2="74"/>
+        <connection operatorId1="76" compositionId2="16" connectorId1="1" connectorId2="3"/>
+        <connection connectorId1="0" operatorId1="75" connectorId2="2" operatorId2="74"/>
+        <connection operatorId1="75" compositionId2="16" connectorId1="1" connectorId2="2"/>
+        <connection connectorId1="0" operatorId1="74" connectorId2="1" operatorId2="73"/>
+        <connection connectorId1="1" operatorId1="74" connectorId2="0" operatorId2="76"/>
+        <connection connectorId1="2" operatorId1="74" connectorId2="0" operatorId2="75"/>
+        <connection operatorId1="73" compositionId2="16" connectorId1="0" connectorId2="1"/>
+        <connection connectorId1="1" operatorId1="73" connectorId2="0" operatorId2="74"/>
+        <connection compositionId1="16" operatorId2="73" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="16" operatorId2="75" connectorId1="2" connectorId2="1"/>
+        <connection compositionId1="16" operatorId2="76" connectorId1="3" connectorId2="1"/>
+    </compositions>
+</cameleon>

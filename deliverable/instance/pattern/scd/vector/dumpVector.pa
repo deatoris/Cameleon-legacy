@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="120" operatorIdOut="4" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+    </layouts>
+    <composerscreen viewx="-3719" viewy="-1626" viewscale="-2" windowsx="0" windowsy="61" windowswidth="1920" windowsheight="1019" numscreen="0" fullscreen="false"/>
+    <compositions>
+        <currentComposition id="8"/>
+        <composition id="8" name="dumpVector" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc."/>
+        <connector compositionId="8" connectorId="1" side="IN" name="in.vec" x="-44.2292" y="40.5435"/>
+        <connector compositionId="8" connectorId="2" side="OUT" name="m.vec" x="27.5654" y="-53.2931"/>
+        <operatorconnector opId="4" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="4" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="4" connectorId="2" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="4" connectorId="3" x="23.7" y="-61.598"/>
+        <operatorconnector opId="3" connectorId="0" x="-44.0922" y="49.1108"/>
+        <operatorconnector opId="3" connectorId="1" x="-65.9265" y="3.11437"/>
+        <operator id="3" type="OperatorLoadVector" x="168.117" y="-113.888" z="3" parentId="8"/>
+        <operatorconnector opId="3" connectorId="0" x="-44.0922" y="49.1108"/>
+        <operatorconnector opId="3" connectorId="1" x="-65.9265" y="3.11437"/>
+        <operator id="4" type="OperatorSaveVector" x="115.265" y="113.888" z="3" parentId="8"/>
+        <operatorconnector opId="4" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="4" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="4" connectorId="2" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="4" connectorId="3" x="23.7" y="-61.598"/>
+        <compositioncontrol id="120" type="LineEditorString" x="-228.117" y="-43.3167" z="1" width="334.987" height="84" parentId="8" content="../project/connectivity/Walker/tmp/vect.vect"/>
+        <connection controlId="120" operatorIdOut="4" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection connectorId1="0" operatorId1="3" connectorId2="3" operatorId2="4"/>
+        <connection operatorId1="3" compositionId2="8" connectorId1="1" connectorId2="2"/>
+        <connection operatorId1="4" compositionId2="8" connectorId1="0" connectorId2="1"/>
+        <connection connectorId1="3" operatorId1="4" connectorId2="0" operatorId2="3"/>
+        <connection compositionId1="8" operatorId2="4" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="8" operatorId2="3" connectorId1="2" connectorId2="1"/>
+    </compositions>
+</cameleon>

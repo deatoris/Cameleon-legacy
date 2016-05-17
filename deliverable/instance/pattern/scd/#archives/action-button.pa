@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cameleon>
+<cameleon version="1.0.0">
+    <mode isInterface="false"/>
+    <layouts>
+        <connection controlId="101" operatorIdOut="52" controlConnectorIdIn="1" operatorConnectorIdOut="0"/>
+        <connection controlId="102" operatorIdOut="51" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="101" operatorIdOut="51" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+    </layouts>
+    <composerscreen viewx="-1877" viewy="735" viewscale="-5" windowsx="0" windowsy="40" windowswidth="1366" windowsheight="728" numscreen="0" fullscreen="true"/>
+    <compositions>
+        <currentComposition id="9"/>
+        <composition id="9" name="action" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc."/>
+        <operatorconnector opId="52" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="52" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="52" connectorId="2" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="52" connectorId="3" x="60" y="0"/>
+        <operatorconnector opId="51" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="51" connectorId="1" x="42.4433" y="42.4095"/>
+        <compositioncontrol id="102" type="LineEditorString" x="-312.096" y="67.3913" z="1" width="209.917" height="85" parentId="9" content="YOUR ACTION"/>
+        <compositioncontrol id="101" type="EditorButton" x="91.7161" y="83.5739" z="1" width="220.38" height="85" parentId="9" content="YOUR ACTION"/>
+        <operator id="52" type="OperatorLocker" x="168.071" y="-108.574" z="1" parentId="9"/>
+        <operatorconnector opId="52" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="52" connectorId="1" x="-59.9999" y="0.0955592"/>
+        <operatorconnector opId="52" connectorId="2" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="52" connectorId="3" x="60" y="0"/>
+        <operator id="51" type="id" x="-13.1744" y="51.6339" z="0" parentId="9"/>
+        <operatorconnector opId="51" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="51" connectorId="1" x="42.4433" y="42.4095"/>
+        <connection controlId="102" operatorIdOut="51" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="101" operatorIdOut="51" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+        <connection controlId="101" operatorIdOut="52" controlConnectorIdIn="1" operatorConnectorIdOut="0"/>
+    </compositions>
+</cameleon>
