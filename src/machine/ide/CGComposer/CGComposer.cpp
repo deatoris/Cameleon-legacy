@@ -1728,7 +1728,7 @@ void CGComposer::showInfo(){
 //playerBar's
 void CGComposer::play(){
     isNext = false;
-    foreach(CGCompositionModel* comp, CGCompositionManager::getInstance()->getCompositionList()){
+    /*foreach(CGCompositionModel* comp, CGCompositionManager::getInstance()->getCompositionList()){
         comp->getScene()->unselectAll();
         foreach(CGOperatorModel* model, comp->getOperatorModelList()){
             model->getView()->setError("");
@@ -1754,7 +1754,7 @@ void CGComposer::play(){
             }
         }
     }
-    CGCompositionManager::getInstance()->clearError();
+    CGCompositionManager::getInstance()->clearError();*/
     playAction->setEnabled(false);
     pauseAction->setEnabled(true);
     stopAction->setEnabled(true);
