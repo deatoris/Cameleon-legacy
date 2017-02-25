@@ -125,7 +125,7 @@ void CommandLineSync::readOut(){
     qDebug("void CommandLineSync::readOut()");
     QString tmp = p->readAllStandardOutput();
     p_stdout = p_stdout+tmp;
-    qDebug(tmp.toStdString().c_str());
+    //qDebug(tmp.toStdString().c_str());
     CLogger::getInstance()->log("SCD",CLogger::INFO,tmp.toStdString().c_str());
 
 }
