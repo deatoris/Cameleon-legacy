@@ -61,12 +61,12 @@ COperator * CommandLineSync::clone(){
 }
 
 void CommandLineSync::updateMarkingAfterExecution(){
-    qDebug("void CommandLineSync::updateMarkingAfterExecution()");
+  //  qDebug("void CommandLineSync::updateMarkingAfterExecution()");
 
 }
 
 void CommandLineSync::processError(){
-    qDebug("void CommandLineSync::processError()");
+   // qDebug("void CommandLineSync::processError()");
     int exitCod = p->exitCode();
     QString p_stdout = p->readAllStandardOutput();
     QString p_stderr = p->readAllStandardError();
@@ -89,7 +89,7 @@ void CommandLineSync::processError(){
 }
 
 void CommandLineSync::processStoped(int exitCode, QProcess::ExitStatus exitStatus){
-    qDebug("void CommandLineSync::processStoped()");
+    //qDebug("void CommandLineSync::processStoped()");
     int exitCod = p->exitCode();
 
         dynamic_cast<DataNumber *>(this->plugOut()[0]->getData())->setValue(exitCod);
@@ -113,20 +113,20 @@ void CommandLineSync::processStoped(int exitCode, QProcess::ExitStatus exitStatu
 }
 
 void CommandLineSync::readError(){
-    qDebug("void CommandLineSync::readError()");
+   //qDebug("void CommandLineSync::readError()");
     QString tmp = p->readAllStandardError();
     p_stderr = p_stderr+tmp;
-    qDebug(tmp.toStdString().c_str());
-    CLogger::getInstance()->log("SCD",CLogger::INFO,tmp.toStdString().c_str());
+    //qDebug(tmp.toStdString().c_str());
+   // CLogger::getInstance()->log("SCD",CLogger::INFO,tmp.toStdString().c_str());
 
 }
 
 void CommandLineSync::readOut(){
-    qDebug("void CommandLineSync::readOut()");
+    //qDebug("void CommandLineSync::readOut()");
     QString tmp = p->readAllStandardOutput();
     p_stdout = p_stdout+tmp;
     //qDebug(tmp.toStdString().c_str());
-    CLogger::getInstance()->log("SCD",CLogger::INFO,tmp.toStdString().c_str());
+    //CLogger::getInstance()->log("SCD",CLogger::INFO,tmp.toStdString().c_str());
 
 }
 
@@ -190,12 +190,12 @@ COperator * CommandLineSync2::clone(){
 }
 
 void CommandLineSync2::updateMarkingAfterExecution(){
-    qDebug("void CommandLineSync2::updateMarkingAfterExecution()");
+   // qDebug("void CommandLineSync2::updateMarkingAfterExecution()");
 
 }
 
 void CommandLineSync2::processError(){
-    qDebug("void CommandLineSync2::processError()");
+    //qDebug("void CommandLineSync2::processError()");
     int exitCod = p->exitCode();
     QString p_stdout = p->readAllStandardOutput();
     QString p_stderr = p->readAllStandardError();
@@ -220,7 +220,7 @@ void CommandLineSync2::processError(){
 }
 
 void CommandLineSync2::processStoped(int exitCode, QProcess::ExitStatus exitStatus){
-    qDebug("void CommandLineSync2::processStoped()");
+    //qDebug("void CommandLineSync2::processStoped()");
     int exitCod = p->exitCode();
 
         dynamic_cast<DataNumber *>(this->plugOut()[0]->getData())->setValue(exitCod);
@@ -246,19 +246,19 @@ void CommandLineSync2::processStoped(int exitCode, QProcess::ExitStatus exitStat
 }
 
 void CommandLineSync2::readError(){
-    qDebug("void CommandLineSync2::readError()");
+   // qDebug("void CommandLineSync2::readError()");
     QString tmp = p->readAllStandardError();
     p_stderr = p_stderr+tmp;
-    qDebug(tmp.toStdString().c_str());
-    CLogger::getInstance()->log("SCD",CLogger::INFO,tmp.toStdString().c_str());
+  //  qDebug(tmp.toStdString().c_str());
+  //  CLogger::getInstance()->log("SCD",CLogger::INFO,tmp.toStdString().c_str());
 
 }
 
 void CommandLineSync2::readOut(){
-    qDebug("void CommandLineSync2::readOut()");
+  //  qDebug("void CommandLineSync2::readOut()");
     QString tmp = p->readAllStandardOutput();
     p_stdout = p_stdout+tmp;
-    qDebug(tmp.toStdString().c_str());
-    CLogger::getInstance()->log("SCD",CLogger::INFO,tmp.toStdString().c_str());
+  //  qDebug(tmp.toStdString().c_str());
+  // CLogger::getInstance()->log("SCD",CLogger::INFO,tmp.toStdString().c_str());
 
 }
