@@ -2,3 +2,4 @@
 cameleon
 cameleon-cli
 *.so
+*.tmp
