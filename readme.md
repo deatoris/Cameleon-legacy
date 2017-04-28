@@ -1,15 +1,18 @@
 * Install
+
 Use QT 4.8: http://download.qt.io/archive/qt/4.8/4.8.6/
 Build cameleon.pro with QT 4.8
 If you need help, contact-us at team at shinoe dot org.
 
 * What's this?
+
 Definition: Caméléon is a graphical langage for functional programming.
 Website: http://www.cmln.cc
 Authors: O. Cugnon de Sévricourt & V. Tariel
 Licence: MIT LICENCE (see above)
 
 * Licence
+
 This software is under the MIT license : 
 Copyright (c) 2009-2016 O. Cugnon de Sévricourt & V. Tariel<br>
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
