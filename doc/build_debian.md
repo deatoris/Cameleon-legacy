@@ -37,7 +37,6 @@ Pour un environnement de développement ajouter qtcreator via la commande:
 apt-get install qtcreator
 ``
 
-
 Construction de l'executable
 -------------------
 ``
