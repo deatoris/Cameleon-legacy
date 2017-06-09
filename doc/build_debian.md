@@ -40,7 +40,6 @@ apt-get install qtcreator
 
 Construction de l'executable
 -------------------
-
 ``
 mkdir cameleon-src
 cd cameleon-src/
