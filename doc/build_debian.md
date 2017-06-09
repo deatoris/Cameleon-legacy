@@ -1,4 +1,6 @@
-1.  Installation de l'environnement de construction
+Installation de l'environnement de construction
+-------------------
+
 VM debian - debian-8.8.0-amd64-xfce-CD-1.iso depuis https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/
 
 Lancer la commande:
@@ -36,7 +38,9 @@ apt-get install qtcreator
 ``
 
 
-2.  Construction de l'executable
+Construction de l'executable
+-------------------
+
 ``
 mkdir cameleon-src
 cd cameleon-src/
@@ -51,7 +55,9 @@ make
 
 tar -czvf cameleon-deb-vx.y.zk.tar.gz deliverable/instance/
 
-3.  Install
+Installation sur le poste client
+-------------------
+
 * apt-get build-essential
 * apt-get install qt4-default
 * tar -xvf cameleon-deb-vx.y.zk.tar.gz
