@@ -1,4 +1,8 @@
+*.log
+*.bck
+*.pro.autosave
 *.[oa]
+*.pro.user
 cameleon
 cameleon-cli
 *.so
