@@ -54,7 +54,7 @@ make
 
 tar -czvf cameleon-deb-vx.y.zk.tar.gz deliverable/instance/
 
-Installation sur le poste client
+Installation
 -------------------
 
 * apt-get build-essential
