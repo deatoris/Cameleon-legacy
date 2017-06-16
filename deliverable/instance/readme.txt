@@ -1,5 +1,5 @@
 ##########################################
-Caméléon v2.1.1-testing
+Caméléon v2.1.2-testing
 MIT licence (see licence.txt)
 Copyright Olivier Cugnon de Sévricourt et Vincent Tariel - 2012-2017
 ##########################################
