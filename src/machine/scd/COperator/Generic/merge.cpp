@@ -12,8 +12,8 @@ OperatorMergeGeneric::OperatorMergeGeneric(){
     this->path().push_back("Control-Flow");
     this->setKey("merge");
     this->setName("Merge");
-    this->setInformation("Copy input data at new to output data.\n<b>Execution Condition:</b>\n one input at new,\n output to OLD.\nAction:\ncan add input connector.");
-        this->structurePlug().addAction("AddPlug");
+    this->setInformation("Copy input data at new to output data.\n<b>Execution Condition:</b>\n one input at new,\n output to OLD.\nAction:\ncan add input connector.\nwarning: if the two input connectors are updated at the same execution cycle, the inputgen1 is lost.");
+    this->structurePlug().addAction("AddPlug");
 }
 void OperatorMergeGeneric::action(string key){
     QString s = key.c_str();
@@ -37,9 +37,6 @@ void OperatorMergeGeneric::exec(){
     }
 }
 bool OperatorMergeGeneric::executionCondition(){
-
-
-
     if(this->plugOut()[0]->getState()==CPlug::NEW&&this->plugOut()[0]->isConnected()==true){
         return false;
     }
