@@ -1058,7 +1058,7 @@ void CGComposer::documentation(){
 }
 
 void CGComposer::sharePattern(){
-    QDesktopServices::openUrl ( QUrl("https://git.framasoft.org/shinoe/Cameleon"));
+    QDesktopServices::openUrl ( QUrl("https://git.framasoft.org/shinoe"));
 }
 void CGComposer::shareProject(){
     QDesktopServices::openUrl ( QUrl("http://www.shinoe.org/forum"));
