@@ -1,21 +1,16 @@
 ##########################################
-Caméléon v2.1.0
+Caméléon v2.1.1-testing
 MIT licence (see licence.txt)
-Copyright Olivier Cugnon de Sévricourt et Vincent Tariel - 2012-2016
+Copyright Olivier Cugnon de Sévricourt et Vincent Tariel - 2012-2017
 ##########################################
 
 1) Description
-This directory contain Caméléon version 2.1.0
+This directory contain Caméléon version 2.1.1-testing
 
-2) Third Party Dictionaries
-The lib directory contain the first external Caméléon connectivity.
+2) Linux Launch
+On Linux/Unix, you need to install qt4 libraries:
+* apt-get install qt4-default
+* ./cameleon
 
-3) Linux Launch
-On Linux/Unix, you need to install qtcreator and glut:
-	sudo apt-get install qtcreator
-	sudo apt-get install freeglut3
-You should now be able to execute the file as normal. You can do this from the command line by typing:
-	./cameleon.sh.
-
-4) Windows Launch
-Double click on cameleon.bat at the root directory
+3) Windows Launch
+Double click on cameleon.exe at the root directory
