@@ -51,7 +51,6 @@ SOURCES += \
 		$${IDEPATH}/CGTool/CGProgressBar.cpp \
 		$${IDEPATH}/CGSerialization/CGInstanceSerialization.cpp \
 		$${IDEPATH}/CGSerialization/CGProjectSerialization.cpp \
-		$${IDEPATH}/CGLicence/CGLicence.cpp \
 		$${IDEPATH}/CGTool/CLauncher.cpp \
 		$${IDEPATH}/CGTool/CGApplication.cpp \
 		$${IDEPATH}/CGTool/CGUpdater.cpp \
@@ -100,7 +99,6 @@ HEADERS  += \
     $${IDEPATH}/CGTool/CGProgressBar.h \
     $${IDEPATH}/CGSerialization/CGInstanceSerialization.h \
     $${IDEPATH}/CGSerialization/CGProjectSerialization.h \
-    $${IDEPATH}/CGLicence/CGLicence.h \
     $${IDEPATH}/CGTool/CLauncher.h \
     $${IDEPATH}/CGTool/CGApplication.h \
     $${IDEPATH}/CGTool/CGUpdate.h \
