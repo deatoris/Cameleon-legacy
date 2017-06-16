@@ -16,16 +16,3 @@ Construction
 
 * open cameleon.pro avec QT Creator.
 * build via qtcreator
-
-Empaquetage
--------------------
-
-* copy deliverable/instance/* in a delivery zone,
-* copy qt*.dll in the bin directory of the delivery zone,
-* zip the delivery zone as cameleon-x.y.z.zip
-
-Installation sur un poste client
--------------------
-
-* unpack cameleon-win10-vx.y.zk.zip
-* launch cameleon.bat (double click or through CLI)

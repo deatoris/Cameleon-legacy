@@ -1081,7 +1081,7 @@ void CGComposer::csdDocumentation(){
 }
 
 void CGComposer::about(){
-    QFile aboutHTML("../ressource/about.html");
+    QFile aboutHTML("ressource/about.html");
 
     QString htmlContent = "";
     if (!aboutHTML.open(QIODevice::ReadOnly | QIODevice::Text))

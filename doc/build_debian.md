@@ -51,17 +51,3 @@ Dans le répertoire des sources:
 qmake
 make
 ``
-
-tar -czvf cameleon-deb-vx.y.zk.tar.gz deliverable/instance/
-
-Installation
--------------------
-
-* apt-get build-essential
-* apt-get install qt4-default
-* tar -xvf cameleon-deb-vx.y.zk.tar.gz
-* cd cameleon-deb-vx.y.zk
-* ./cameleon.sh
-
-ref:
-* [1] https://unix.stackexchange.com/questions/359252/problem-installing-build-essential-in-debian/359327

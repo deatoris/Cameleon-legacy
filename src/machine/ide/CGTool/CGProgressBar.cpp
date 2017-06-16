@@ -37,7 +37,7 @@ CGProgressBar::CGProgressBar()
 
     widget = new QWidget(0,Qt::Window);
     widget->setWindowFlags(Qt::FramelessWindowHint);
-    QImage* image = new QImage("../ressource/logo_front.png");
+    QImage* image = new QImage("ressource/logo_front.png");
     QLabel* imageLabel = new QLabel;
     imageLabel->setBackgroundRole(QPalette::Shadow);
     imageLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);

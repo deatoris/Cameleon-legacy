@@ -88,7 +88,7 @@ void CGInstanceSerialization::save(){
 
 void CGInstanceSerialization::load(){
     //read or create instance file
-    CGInstance::getInstance()->setPath("../instance.conf");
+    CGInstance::getInstance()->setPath("instance.conf");
     QFile fileInstance(CGInstance::getInstance()->getPath());
 
     QFileInfo infos(CGInstance::getInstance()->getPath());
