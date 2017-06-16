@@ -10,7 +10,7 @@
 
 #More informations can be found here: http://www.shinoe.org/cameleon
 #======================================
-
+IDEPATH = ../machine/ide
 SOURCES += \
 		$${IDEPATH}/CGComposer/CGComposer.cpp \
 		$${IDEPATH}/CGCommandManager.cpp \

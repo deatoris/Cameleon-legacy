@@ -3,36 +3,7 @@
 # Project created by QtCreator 2012-05-08T11:01:48
 #
 #-------------------------------------------------
-!include(../../configuration.pri)
-CONNECTIVITYPATH = $${SOURCEPATH}/dictionary/cconnectivity
-QT       += core gui webkit opengl
-QT       += core gui qt
-QT +=   webkit \
-        network \
-        sql
-INCLUDEPATH +=   core \
-    gui \
-    lib
-TARGET        = $$qtLibraryTarget(cconnectivity)
-TEMPLATE = lib
-CONFIG += plugin
-
-DESTDIR = $${BUILDPATHLIBS}
-LIBS += -L"$${BUILDPATH}"
-LIBS += -lcvm
-#MACHINE KERNEL INCLUDES (NEEDED BY BLANKLIB)
-!include(../../machine/kernel/includekernel.pri)
-
-!include(../../machine/ide/includeide.pri)
-!include(../../machine/kernel/includekernel.pri)
-!include(../../machine/client/includeclient.pri)
-!include(../../machine/scd/includescd.pri)
-!include(../../machine/scd/includescd.pri)
-
-INCLUDEPATH += \
-    $${CONNECTIVITYPATH}/Control \
-    $${CONNECTIVITYPATH}/Operator  \
-    $${CONNECTIVITYPATH}/Data
+CONNECTIVITYPATH = ../machine/cconnectivity
 
 SOURCES += \
     $${CONNECTIVITYPATH}/cconnectivityplugin.cpp \

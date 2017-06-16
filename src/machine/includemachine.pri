@@ -10,18 +10,19 @@
 
 #More informations can be found here: http://www.shinoe.org/cameleon
 #======================================
-SOURCEPATH = $$quote($$PWD)
+#CAMELEON INCLUDES
+!include(../machine/client/includeclient.pri)
+!include(../machine/kernel/includekernel.pri)
+!include(../machine/ide/includeide.pri)
 
-unix:BUILDPATH = $${SOURCEPATH}/../deliverable/instance/bin
-unix:BUILDPATHLIBS = $${SOURCEPATH}/../deliverable/instance/lib
+#CAMELEON SOURCES
+!include(../machine/client/client.pri)
+!include(../machine/kernel/kernel.pri)
+!include(../machine/ide/ide.pri)
 
-win32:DEPENDENCIES = $${SRCPATH}/../depedencies
-
-
-win32:BUILDPATH ="$${SOURCEPATH}/../deliverable/instance/bin"
-win32:BUILDPATHLIBS = "$${SOURCEPATH}/../deliverable/instance/lib"
-
-#win32:BUILDPATH ="E:/root/documents/00-Cameleon/03-Src/share/Cameleon2.2/deliverable/instance/bin"
-#win32:BUILDPATHLIBS = "E:/root/documents/00-Cameleon/03-Src/share/Cameleon2.2/deliverable/instance/lib"
+#LIB SOURCES
+!include(../machine/scd/includescd.pri)
+!include(../machine/scd/scd.pri)
+!include(../dictionary/connectivity/cconnectivity.pri)
 
 

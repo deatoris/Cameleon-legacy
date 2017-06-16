@@ -1,4 +1,4 @@
-SCDPATH = $${SOURCEPATH}/machine/scd
+SCDPATH = ../machine/scd
 INCLUDEPATH += \
         $${SCDPATH} \
                 $${SCDPATH}/CControl \
@@ -214,14 +214,14 @@ HEADERS += \
     $${SCDPATH}/COperator/Control-Flow/loopteleport.h \
     $${SCDPATH}/COperator/Control-Flow/endloopteleport.h \
     $${SCDPATH}/COperator/Test/COperatorAssert.h \
-    machine/scd/COperator/System/cli.h \
-    machine/scd/COperator/System/clisync.h \
-    machine/scd/COperator/Number/uid.h \
-    machine/scd/CControl/Number/doubleslidernumber.h \
-    machine/scd/COperator/Number/round.h \
-    machine/scd/COperator/Number/divint.h \
-    machine/scd/CControl/Number/slidernumber2.h \
-    machine/scd/CControl/String/editorstringtext2.h
+    $${SCDPATH}/COperator/System/cli.h \
+    $${SCDPATH}/COperator/System/clisync.h \
+    $${SCDPATH}/COperator/Number/uid.h \
+    $${SCDPATH}/CControl/Number/doubleslidernumber.h \
+    $${SCDPATH}/COperator/Number/round.h \
+    $${SCDPATH}/COperator/Number/divint.h \
+    $${SCDPATH}/CControl/Number/slidernumber2.h \
+    $${SCDPATH}/CControl/String/editorstringtext2.h
 
 
 SOURCES +=  \
@@ -401,14 +401,14 @@ SOURCES +=  \
     $${SCDPATH}/COperator/Control-Flow/loopteleport.cpp \
     $${SCDPATH}/COperator/Control-Flow/endloopteleport.cpp \
     $${SCDPATH}/COperator/Test/COperatorAssert.cpp \
-    machine/scd/COperator/System/cli.cpp \
-    machine/scd/COperator/System/clisync.cpp \
-    machine/scd/COperator/Number/uid.cpp \
-    machine/scd/CControl/Number/doubleslidernumber.cpp \
-    machine/scd/COperator/Number/round.cpp \
-    machine/scd/COperator/Number/divint.cpp \
-    machine/scd/CControl/Number/slidernumber2.cpp \
-    machine/scd/CControl/String/editorstringtext2.cpp
+    $${SCDPATH}/COperator/System/cli.cpp \
+    $${SCDPATH}/COperator/System/clisync.cpp \
+    $${SCDPATH}/COperator/Number/uid.cpp \
+    $${SCDPATH}/CControl/Number/doubleslidernumber.cpp \
+    $${SCDPATH}/COperator/Number/round.cpp \
+    $${SCDPATH}/COperator/Number/divint.cpp \
+    $${SCDPATH}/CControl/Number/slidernumber2.cpp \
+    $${SCDPATH}/CControl/String/editorstringtext2.cpp
 
 HEADERS += \
     $${SCDPATH}/COperator/Control-Flow/loop.h

@@ -1,5 +1,3 @@
-!include(configuration.pri)
-
 QT       += core gui opengl
 
 TEMPLATE = lib
@@ -22,8 +20,6 @@ CONFIG+=CAMELEON
 !include($${SOURCEPATH}/machine/kernel/includekernel.pri)
 !include($${SOURCEPATH}/machine/client/includeclient.pri)
 !include($${SOURCEPATH}/machine/scd/includescd.pri)
-
-
 
 #CAMELEON SOURCES
 !include($${SOURCEPATH}/machine/client/client.pri)

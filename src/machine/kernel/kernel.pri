@@ -10,7 +10,7 @@
 
 #More informations can be found here: http://www.shinoe.org/cameleon
 #======================================
-MACHINEPATH = $${SOURCEPATH}/machine/kernel
+MACHINEPATH = ../machine/kernel
 
 HEADERS += \
     $${MACHINEPATH}/CCore/CData/CData.h \

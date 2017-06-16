@@ -26,27 +26,7 @@ int main(int argc, char *argv[]){
     CGApplication a(argc, argv);
     //start instance logger
     CLoggerInstance::getInstance()->log("Application started ...");
-    /////////////////////////////////////////
-    //Licence part
-    bool validationExist = false;
-    QString fileName = "licence.txt";
-    QFile file(fileName);
-    if (file.open(QFile::ReadOnly | QFile::Text)) {
-        validationExist = true;
-    }
-    if(validationExist == false){
-        CAppLicence l;
-        if(l.exec() == QDialog::Accepted){
-            if (file.open(QFile::WriteOnly | QFile::Text)) {
-                validationExist = true;
-            }
-            file.close();
-        }
-    }
-    /////////////////////////////////////////
-
-    if(validationExist){
-        CLauncher * lau = new CLauncher();
+         CLauncher * lau = new CLauncher();
         lau->setDesktopSize(a.desktop()->screenGeometry().size());
 
         if(!QObject::connect(&a, SIGNAL(applicationStarted()),
@@ -54,6 +34,6 @@ int main(int argc, char *argv[]){
             //qDebug<<"[ERROR] Launch fatal Error";
         }
         return a.exec();
-    }
+
     return 0;
 }

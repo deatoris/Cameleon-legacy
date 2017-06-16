@@ -10,7 +10,7 @@
 
 #More informations can be found here: http://www.shinoe.org/cameleon
 #======================================
-CLIENTPATH = $${SOURCEPATH}/machine/client
+CLIENTPATH = ../machine/client
 
 SOURCES += \
                 $${CLIENTPATH}/CClient.cpp \

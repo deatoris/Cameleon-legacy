@@ -1042,7 +1042,7 @@ void CGComposer::showProcessorStack(){
 }
 
 void CGComposer::reportABug(){
-    QDesktopServices::openUrl ( QUrl("https://git.framasoft.org/shinoe/Cameleon/issues/"));
+    QDesktopServices::openUrl ( QUrl("https://git.framasoft.org/ocds/Cameleon/issues/"));
 }
 
 void CGComposer::videoTutorial(){

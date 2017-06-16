@@ -10,7 +10,7 @@
 
 #More informations can be found here: http://www.shinoe.org/cameleon
 #======================================
-IDEPATH = $${SOURCEPATH}/machine/ide
+IDEPATH = ../machine/ide
 INCLUDEPATH += \
         $${IDEPATH}/ \
         $${IDEPATH}/CGCommand \

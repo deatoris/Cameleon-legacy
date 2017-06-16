@@ -1,4 +1,4 @@
-SCDPATH = $${SOURCEPATH}/machine/scd
+SCDPATH = ../machine/scd
 INCLUDEPATH += \
         $${SCDPATH} \
 		$${SCDPATH}/CControl \
