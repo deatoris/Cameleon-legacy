@@ -1,11 +1,9 @@
 CONNECTIVITYPATH = cconnectivity
 
 SOURCES += \
-    $${CONNECTIVITYPATH}/cconnectivityplugin.cpp \
     $${CONNECTIVITYPATH}/cconnectivityDictionnary.cpp
 
 HEADERS += \
-    $${CONNECTIVITYPATH}/cconnectivityplugin.h \
     $${CONNECTIVITYPATH}/cconnectivityDictionnary.h
 
 SOURCES += \
