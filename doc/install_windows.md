@@ -1,6 +1,5 @@
-
 Installation sur un poste client
 -------------------
 
-* unpack cameleon-win10-vx.y.zk.zip
-* launch cameleon.bat (double click or through CLI)
+* Extraire cameleon-win10-vx.y.zk.zip
+* Lancer cameleon.exe (le binaire n'étant pas signé, windows vous demandera une confirmation de lancement)
