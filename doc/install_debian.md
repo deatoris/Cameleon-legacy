@@ -1,6 +1,6 @@
 Pré-requis
 -------------------
-Installation de l'environnement de construction principal (gcc/g++/make/qmake ...):
+Installation des dépendances:
 ``
 apt-get install qt4-default
 ``
