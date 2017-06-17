@@ -10,11 +10,9 @@
 
 #More informations can be found here: http://www.shinoe.org/cameleon
 #======================================
-CLIENTPATH = ../machine/client
+CLIENTPATH = client
 
-SOURCES += \
-                $${CLIENTPATH}/CClient.cpp \
-		$${CLIENTPATH}/CInterfaceClient.cpp
-HEADERS  += \
-		$${CLIENTPATH}/CClient.h \
-		$${CLIENTPATH}/CInterfaceClient.h
+INCLUDEPATH += \
+		$${CLIENTPATH}/
+
+

@@ -10,13 +10,14 @@
 
 #More informations can be found here: http://www.shinoe.org/cameleon
 #======================================
-MACHINEPATH = ../machine/kernel
+IDEPATH = ide
 INCLUDEPATH += \
-        $${MACHINEPATH}/ \
-        $${MACHINEPATH}/CMachine \
-		$${MACHINEPATH}/CCore/CData \
-		$${MACHINEPATH}/CCore \
-		$${MACHINEPATH}/CTool \
-		$${MACHINEPATH}/CGlossary
-
-
+        $${IDEPATH}/ \
+        $${IDEPATH}/CGCommand \
+        $${IDEPATH}/CGComposer \
+        $${IDEPATH}/CGController \
+        $${IDEPATH}/CGGlossary \
+        $${IDEPATH}/CGLicence \
+        $${IDEPATH}/CGProject \
+        $${IDEPATH}/CGSerialization \
+        $${IDEPATH}/CGTool

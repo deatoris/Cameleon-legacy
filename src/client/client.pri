@@ -1,5 +1,5 @@
 #======================================
-#Caméléon Creator & Population 
+#Caméléon
 #
 #Copyright 2012 O. Cugnon de Sévricourt & V. Tariel
 #
@@ -10,14 +10,11 @@
 
 #More informations can be found here: http://www.shinoe.org/cameleon
 #======================================
-IDEPATH = ../machine/ide
-INCLUDEPATH += \
-        $${IDEPATH}/ \
-        $${IDEPATH}/CGCommand \
-        $${IDEPATH}/CGComposer \
-        $${IDEPATH}/CGController \
-        $${IDEPATH}/CGGlossary \
-        $${IDEPATH}/CGLicence \
-        $${IDEPATH}/CGProject \
-        $${IDEPATH}/CGSerialization \
-        $${IDEPATH}/CGTool
+CLIENTPATH = client
+
+SOURCES += \
+                $${CLIENTPATH}/CClient.cpp \
+		$${CLIENTPATH}/CInterfaceClient.cpp
+HEADERS  += \
+		$${CLIENTPATH}/CClient.h \
+		$${CLIENTPATH}/CInterfaceClient.h

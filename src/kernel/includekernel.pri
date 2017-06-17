@@ -8,11 +8,15 @@
 #The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 #THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+#More informations can be found here: http://www.shinoe.org/cameleon
 #======================================
-!include(src/cameleon/configuration.pri)
+MACHINEPATH = kernel
+INCLUDEPATH += \
+        $${MACHINEPATH}/ \
+        $${MACHINEPATH}/CMachine \
+                $${MACHINEPATH}/CTool \
+		$${MACHINEPATH}/CCore/CData \
+                $${MACHINEPATH}/CCore \
+		$${MACHINEPATH}/CGlossary
 
-TEMPLATE = subdirs
-SUBDIRS = src/cameleon/cameleon.pro
 
-# build must be last:
-CONFIG += ordered

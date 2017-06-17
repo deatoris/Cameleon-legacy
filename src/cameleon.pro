@@ -1,5 +1,5 @@
 #======================================
-#Caméléon Creator & Population 
+#Caméléon
 #
 #Copyright 2012 O. Cugnon de Sévricourt & V. Tariel
 #
@@ -8,21 +8,38 @@
 #The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 #THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#More informations can be found here: http://www.shinoe.org/cameleon
 #======================================
-#CAMELEON INCLUDES
-!include(../machine/client/includeclient.pri)
-!include(../machine/kernel/includekernel.pri)
-!include(../machine/ide/includeide.pri)
+!include(configuration.pri)
+
+QT       += webkit opengl
+QT +=   webkit \
+        network \
+        sql
+QT       += core gui qt
+
+TARGET = cameleon
+
+TEMPLATE = app
+
+unix:DESTDIR += $$quote($${BUILDPATH})
+win32:DESTDIR += $$quote($${BUILDPATH})
+
+!include(kernel/includekernel.pri)
+!include(scd/includescd.pri)
+!include(cconnectivity/includecconnectivity.pri)
+!include(ide/includeide.pri)
+!include(client/includeclient.pri)
 
 #CAMELEON SOURCES
-!include(../machine/client/client.pri)
-!include(../machine/kernel/kernel.pri)
-!include(../machine/ide/ide.pri)
+!include(kernel/kernel.pri)
+!include(ide/ide.pri)
+!include(client/client.pri)
 
 #LIB SOURCES
-!include(../machine/scd/includescd.pri)
-!include(../machine/scd/scd.pri)
-!include(../dictionary/connectivity/cconnectivity.pri)
+!include(scd/scd.pri)
+!include(cconnectivity/cconnectivity.pri)
 
+SOURCES += ide/CGIde.cpp
 
+# build must be last:
+CONFIG += ordered
