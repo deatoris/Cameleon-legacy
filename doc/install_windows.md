@@ -1,4 +1,4 @@
-Installation sur un poste client
+Installation sous windows 7 à 10
 -------------------
 
 * Extraire cameleon-win10-vx.y.zk.zip
