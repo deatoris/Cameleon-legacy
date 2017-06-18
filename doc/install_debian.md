@@ -11,3 +11,8 @@ Installation
 * tar -xvf cameleon-deb-vx.y.zk.tar.gz
 * cd cameleon-deb-vx.y.zk
 * ./cameleon
+
+Update your instance with a new Caméléon version
+-------------------
+* tar -xvf cameleon-deb-vx.y.zk.tar.gz
+* copy content directory in your instance directory

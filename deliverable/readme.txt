@@ -5,7 +5,7 @@ Copyright Olivier Cugnon de Sévricourt et Vincent Tariel - 2012-2017
 ##########################################
 
 1) Description
-This directory contain Caméléon version 2.1.3-dev
+This directory contains Caméléon version 2.1.3-dev
 
 2) Linux Launch
 On Linux/Unix, you need to install qt4 libraries:
