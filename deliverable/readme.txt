@@ -1,11 +1,11 @@
 ##########################################
-Caméléon v2.1.2-testing
+Caméléon v2.1.3-dev
 MIT licence (see licence.txt)
 Copyright Olivier Cugnon de Sévricourt et Vincent Tariel - 2012-2017
 ##########################################
 
 1) Description
-This directory contain Caméléon version 2.1.1-testing
+This directory contain Caméléon version 2.1.3-dev
 
 2) Linux Launch
 On Linux/Unix, you need to install qt4 libraries:

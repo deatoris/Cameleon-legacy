@@ -1,4 +1,4 @@
-* Installation (fr)
+* Construction (fr)
 
 Sur debian suivre les instructions dans doc/build_debian.md.
 
@@ -9,8 +9,11 @@ Si vous avez besoin d'aide, vous pouvez nous contacter à team at shinoe dot org
 * What's this? (en)
 
 Definition: Caméléon is a graphical langage for functional programming.
-Website: http://www.cmln.cc
+
+Website: http://www.shinoe.org/cameleon
+
 Authors: O. Cugnon de Sévricourt & V. Tariel
+
 Licence: MIT LICENCE (see above)
 
 * Licence (en)

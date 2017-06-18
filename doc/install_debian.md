@@ -3,7 +3,7 @@ Pré-requis
 Installation des dépendances:
 ``
 apt-get install qt4-default
-apt install libqtwebkit4
+apt_get install libqtwebkit4
 ``
 
 Installation
