@@ -9,7 +9,7 @@ This directory contains Cameleon version 2.1.3-testing
 
 2) Linux Launch
 On Linux/Unix, you need to install qt4 libraries:
-* apt-get install qt4-default
+* apt-get install qt4-default libqtwebkit4
 * ./cameleon
 
 3) Windows Launch
