@@ -1,10 +1,6 @@
-* Construction (fr)
-
-Sur debian suivre les instructions dans doc/build_debian.md.
-
-Sur windows suivre les instructions dans doc/build_windows.md.
-
-Si vous avez besoin d'aide, vous pouvez nous contacter à team at shinoe dot org.
+<div align="center">
+<p style="text-align: center;"><img src="img/logo.jpg" align="middle" alt="Drawing" width="50"/></p>
+</div>
 
 * What's this? (en)
 
@@ -15,6 +11,14 @@ Website: http://www.shinoe.org/cameleon
 Authors: O. Cugnon de Sévricourt & V. Tariel
 
 Licence: MIT LICENCE (see above)
+
+* Construction (fr)
+
+Sur debian suivre les instructions dans doc/build_debian.md.
+
+Sur windows suivre les instructions dans doc/build_windows.md.
+
+Si vous avez besoin d'aide, vous pouvez nous contacter à team at shinoe dot org.
 
 * Licence (en)
 
