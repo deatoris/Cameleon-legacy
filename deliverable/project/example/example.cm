@@ -2,7 +2,7 @@
 <!DOCTYPE cameleon>
 <cameleon version="1.0.0">
     <readme text=""/>
-    <log path="log" active="false">
+    <log path="log" active="true">
         <rule component="FUNCTIONAL" level="ERRO"/>
         <rule component="INSTANCE" level="INFO"/>
         <rule component="MACHINE" level="ERRO"/>
@@ -18,13 +18,13 @@
     <target path="target"/>
     <threads max="1"/>
     <numbers nb_operators="0" nb_controls="" nb_compositions="0"/>
-    <controllerscreen viewx="0" viewy="0" viewscale="0" windowsx="50" windowsy="645" windowswidth="1820" windowsheight="440" numscreen="1" fullscreen="false"/>
+    <controllerscreen viewx="0" viewy="0" viewscale="0" windowsx="50" windowsy="489" windowswidth="1266" windowsheight="284" numscreen="0" fullscreen="false"/>
     <layouts>
         <currentLayout id="1"/>
         <layout id="0" type="interface" name="interface" viewx="0" viewy="0" viewscale="0" popup="false" resolution=""/>
         <layout id="1" type="interface" name="interface" viewx="0" viewy="0" viewscale="0" popup="false" resolution=""/>
     </layouts>
-    <composerscreen viewx="0" viewy="0" viewscale="0" windowsx="50" windowsy="60" windowswidth="1820" windowsheight="540" numscreen="1" fullscreen="false"/>
+    <composerscreen viewx="0" viewy="0" viewscale="0" windowsx="50" windowsy="60" windowswidth="1266" windowsheight="384" numscreen="0" fullscreen="false"/>
     <compositions>
         <currentComposition id="0"/>
         <composition id="0" name="INSTANCE" viewx="0" viewy="0" viewscale="0"/>

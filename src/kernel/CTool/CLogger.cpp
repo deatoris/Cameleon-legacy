@@ -15,10 +15,10 @@ CLogger* CLogger::loggerInstance = NULL;
 CLoggerInstance* CLoggerInstance::loggerInstance = NULL;
 
 CLoggerInstance::CLoggerInstance(){
-    if(QFile::exists("../log/cameleon.log")){
-        QFile::remove("../log/cameleon.log");
+    if(QFile::exists("log/cameleon.log")){
+        QFile::remove("log/cameleon.log");
     }
-    instancelogger.setFileName("../log/cameleon.log");
+    instancelogger.setFileName("log/cameleon.log");
     if (!instancelogger.open(QFile::WriteOnly | QFile::Text)) {
         qDebug() << "ERROR: can't open instance logger file ";
     }
