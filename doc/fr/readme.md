@@ -6,7 +6,8 @@
 > * en saisissant une demande de changement ici: [Demande de changement](issues)
 > * en proposant un merge-request en suivant la procédure ici: [Guide du contributeur](./guide_contribution.md)
 
-Documentation pour les utilisateurs:
+Documentation utilisateur
+-------------------
 * [Introduction](./introduction.md)
 * [Grammaire](./grammaire.md)
 * Installation [debian](./installation_debian.md) [windows](./installation_windows.md)
@@ -23,8 +24,8 @@ Documentation pour les utilisateurs:
 * Tutoriel - SCD / Caméléon en mode GUI
 * [Manuel de référence](./notice.md)
 
-
-Documentation pour les développeurs:
+Documentation pour les développeurs
+-------------------
 * [Guide du contributeur](./guide_contribution.md)
 * Compilation [debian](./compilation_debian.md) [windows](./compilation_windows.md)
 * Empaquetage [debian](./empaquetage_debian.md) [windows](./empaquetage_windows.md)
