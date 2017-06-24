@@ -6,19 +6,16 @@
 
 Definition: Caméléon is a graphical langage for functional programming.
 
+Content:
+* license.md: MIT license,
+* src: the source code directory,
+* doc: the documentation in french (fr) and in english (en)
+
 Website: http://www.shinoe.org/cameleon
 
 Authors: O. Cugnon de Sévricourt & V. Tariel
 
 Licence: MIT LICENCE (see above)
-
-* Construction (fr)
-
-Sur debian suivre les instructions dans doc/build_debian.md.
-
-Sur windows suivre les instructions dans doc/build_windows.md.
-
-Si vous avez besoin d'aide, vous pouvez nous contacter à team at shinoe dot org.
 
 * Licence (en)
 
