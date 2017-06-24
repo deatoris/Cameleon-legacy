@@ -29,12 +29,12 @@ make
 
 Debian packages repositories
 -------------------
-Lancer la commande:
+Launch:
 ``
 sudo apt edit-sources
 ``
 
-Modifier le fichier afin d'ajouter ces dépôts au source.list:
+Add those repositories to the source.list:
 ``
 deb http://httpredir.debian.org/debian jessie main contrib
 deb-src http://httpredir.debian.org/debian jessie main contrib
@@ -44,7 +44,7 @@ deb http://security.debian.org/ jessie/updates main contrib
 deb-src http://security.debian.org/ jessiel/updates main contrib 
 ``
 
-Maj des sources:
+Update sources:
 ``
 apt-get update
 apt-get upgrade
