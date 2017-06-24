@@ -6,7 +6,7 @@
 > * en saisissant une demande de changement ici: [Demande de changement](issues)
 > * en proposant un merge-request en suivant la procédure ici: [Guide du contributeur](./guide_contribution.md)
 
-Documentation utilisateur
+Documentation pour les utilisateurs
 -------------------
 * [Introduction](./introduction.md)
 * [Grammaire](./grammaire.md)
