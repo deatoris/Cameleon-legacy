@@ -1,11 +1,11 @@
-Installation de l'environnement de construction (windows 10)
+Install build environnement
 -------------------
 
 * install mingwn-get then through mingwinget, install mignwin32-make and gdb, 
 * install qt4 lib from http://download.qt.io/archive/qt/4.8/4.8.6/,
 * install qtcreator from http://download.qt.io/archive/qtcreator/2.5/qt-creator-win-opensource-2.5.2.exe
 
-Build environment
+Configure QT environment
 -------------------
 * open cameleon.pro with qtcreator.
 
