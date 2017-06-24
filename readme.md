@@ -9,7 +9,8 @@ Definition: Caméléon is a graphical langage for functional programming.
 Content:
 * license.md: MIT license,
 * src: the source code directory,
-* doc: the documentation in french (fr) and in english (en)
+* doc: the documentation in french (fr) and in english (en),
+* blank: a QT project to develop a Caméléon dictionary as a C++ shared library.
 
 Website: http://www.shinoe.org/cameleon
 
