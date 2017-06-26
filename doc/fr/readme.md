@@ -2,7 +2,7 @@
 <p style="text-align: center;"><img src="img/logo.jpg" align="middle" alt="Drawing" width="50"/></p>
 </div>
 
-> Cette documentation est en construction et soumise à amendements. Si vous souhaitez contribuer à son amélioration, n'hésitez pas à faire une proposition, soit:
+> Cette documentation est en construction et soumise à modifications. Si vous souhaitez contribuer à son amélioration, n'hésitez pas à faire une proposition, soit:
 > * en saisissant une demande de changement ici: [Demande de changement](issues)
 > * en proposant un merge-request en suivant la procédure ici: [Guide du contributeur](./guide_contribution.md)
 
