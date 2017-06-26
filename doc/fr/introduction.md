@@ -27,7 +27,7 @@ Caméléon est un langage graphique de programmation fonctionnelle [1]. Il perme
 
 Caméléon est un dérivé de pétri[4]. Caméléon est un langage turing complet[5].
 
-Autrement dit, c'est un langage visuel qui, théoriquement, permet de programmer toute la logique d'un langage textuel classique.
+Autrement dit, c'est un langage visuel qui, théoriquement, permet de programmer toute la logique d'un langage textuel classique (logique booléenne, boucles, encapsulation).
 
 Néanmoins, Caméléon ne se substitue pas à la programmation textuelle, il la complète. Il est toujours nécessaire de coder un opérateur. Et il est possible de le faire dans n'importe quel langage.
 
