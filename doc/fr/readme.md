@@ -27,6 +27,9 @@ Documentation pour les utilisateurs
 Documentation pour les développeurs
 -------------------
 * [Guide du contributeur](./guide_contribution.md)
+
+Documentation pour les développeurs
+-------------------
 * Compilation [debian](./compilation_debian.md) [windows](./compilation_windows.md)
 * Empaquetage [debian](./empaquetage_debian.md) [windows](./empaquetage_windows.md)
 * [Spécification](./spec.md)
