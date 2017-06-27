@@ -13,7 +13,7 @@ Licence: MIT LICENCE (see above)
 Content
 -------------------
 * license.md: MIT license,
-* src: the source code directory,
+* src: the source code directory based on QT,
 * doc: the documentation in french (fr) and in english (en),
 * blank: a QT project to develop a Caméléon dictionary as a C++ shared library.
 
