@@ -24,7 +24,7 @@ Documentation pour les utilisateurs
 * Tutoriel - SCD / Caméléon en mode GUI
 * [Manuel de référence](./notice.md)
 
-Documentation pour les développeurs
+Documentation pour les contributeurs
 -------------------
 * [Guide du contributeur](./guide_contribution.md)
 
