@@ -4,7 +4,7 @@
 
 * What's this? (en)
 
-Definition: Caméléon is a graphical langage for functional programming.
+Definition: Caméléon is a visual language.
 
 Content:
 * license.md: MIT license,
