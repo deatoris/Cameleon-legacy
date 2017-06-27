@@ -8,8 +8,6 @@ Caméléon is a visual language.
 
 Website: http://www.shinoe.org/cameleon
 
-Authors: O. Cugnon de Sévricourt & V. Tariel
-
 Licence: MIT LICENCE (see above)
 
 Content
