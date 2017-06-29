@@ -18,8 +18,6 @@ Documentation pour les utilisateurs
 * Tutoriel - SCD / Les types standards
 * Tutoriel - SCD / Intéragir avec le système
 * Tutoriel - SCD / Génériques et flux de contrôle
-* Tutoriel - SCD / Manipuler une page web
-* Tutoriel - SCD / Manipuler des images
 * Tutoriel - SCD / Caméléon en mode CLI
 * Tutoriel - SCD / Caméléon en mode GUI
 * [Manuel de référence](./notice.md)
