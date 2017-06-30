@@ -51,6 +51,7 @@ void SelectorVector::updatePlugInControl(int , CData* data){
 void SelectorVector::geInformation(int index){
     _index = index;
     test = true;
+    this->apply();
 }
 
 CControl * SelectorVector::clone(){
