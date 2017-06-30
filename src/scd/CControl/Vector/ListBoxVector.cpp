@@ -7,7 +7,7 @@ ListBoxVector::ListBoxVector(QWidget * parent)
     :CControl(parent)
 {
     this->path().push_back("Vector");
-    this->setName("ListBoxVector");
+    this->setName("ListBox2");
     this->setKey("ListBoxVector");
     this->structurePlug().addPlugIn(DataVector::KEY,"in.vec");
     this->structurePlug().addPlugOut(DataString::KEY,"data.str");
