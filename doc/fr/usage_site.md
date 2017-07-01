@@ -1,3 +1,5 @@
+> Cette documentation est en construction et soumise à modification. 
+
 Intégration
 -------------------
 L'histoire d'une composition simple afin d'appréhender les concepts de base de Caméléon.
