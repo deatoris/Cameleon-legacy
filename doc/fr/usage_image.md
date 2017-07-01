@@ -1,3 +1,5 @@
+> Cette documentation est en construction et soumise à modification. 
+
 Intégration
 -------------------
 L'histoire de l'intégration du script graytoning[1] basé sur ImageMagick écrit par Fred (http://www.fmwconcepts.com/imagemagick/).
