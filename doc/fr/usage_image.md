@@ -13,7 +13,7 @@ L'histoire de la composition d'un traitement automatique de mélange de couche b
 
 Composition 2
 -------------------
-L'histoire de la composition d'un traitement manuel de mélange de couche basé sur graytoning et permettant d'étalonner une image noir et blanc.
+L'histoire de la composition d'un traitement manuel de mélange de couche basé sur graytoning et permettant d'étalonner une image fixe noir et blanc.
 
 Références
 -------------------
