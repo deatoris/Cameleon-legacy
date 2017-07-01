@@ -9,13 +9,13 @@ Trois étapes pour une montée en échelle. Les patterns finaux sont disponibles
 
 Composition 1
 -------------------
-L'histoire de la composition d'un traitement automatique de mélange de couche basé sur graytoning et permettant de faire scintiller une vidéo.
+L'histoire de la composition d'un traitement manuel de mélange de couche basé sur graytoning et permettant d'étalonner une image fixe noir et blanc.
 
 Composition 2
 -------------------
-L'histoire de la composition d'un traitement manuel de mélange de couche basé sur graytoning et permettant d'étalonner une image fixe noir et blanc.
+L'histoire de la composition d'un traitement automatique de mélange de couche basé sur graytoning et permettant de faire scintiller une vidéo.
 
 Références
 -------------------
-[1] http://www.fmwconcepts.com/imagemagick/graytoning/index.php
-[2] https://framagit.org/ocds/Grapher Grapher > Imagemagick > fred 
+* [1] http://www.fmwconcepts.com/imagemagick/graytoning/index.php
+* [2] https://framagit.org/ocds/Grapher Grapher > Imagemagick > fred 
