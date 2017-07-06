@@ -23,7 +23,7 @@ Documentation pour les utilisateurs
 * Tutoriel - SCD / Intégration Python
 * Tutoriel - SCD / Caméléon en mode CLI
 * Tutoriel - SCD / Caméléon en mode GUI
-* Tutoriel - SCD / Plugin C++
+* Tutoriel - SCD / Greffon C++
 * [Manuel de référence](./notice.md)
 
 Documentation pour les contributeurs
