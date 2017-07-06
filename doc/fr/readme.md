@@ -18,8 +18,12 @@ Documentation pour les utilisateurs
 * Tutoriel - SCD / Les types standards
 * Tutoriel - SCD / Intéragir avec le système
 * Tutoriel - SCD / Génériques et flux de contrôle
+* Tutoriel - SCD / Boucles
+* Tutoriel - SCD / Patrons
+* Tutoriel - SCD / Intégration Python
 * Tutoriel - SCD / Caméléon en mode CLI
 * Tutoriel - SCD / Caméléon en mode GUI
+* Tutoriel - SCD / Plugin C++
 * [Manuel de référence](./notice.md)
 
 Documentation pour les contributeurs
