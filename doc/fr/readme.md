@@ -12,14 +12,18 @@ Documentation pour les utilisateurs
 * [Grammaire](./grammaire.md)
 * Installation [debian](./installation_debian.md) [windows](./installation_windows.md)
 * Usage - [Génération d'un site web](./usage_site.md)
-* Usage - [Traitement de photos avec imagemagick](./usage_image.md)
+* Usage - [Traitement de photographies avec imagemagick](./usage_image.md)
 * Usage - [Capatation et traitement de données avec python](./usage_twitter.md)
 * Tutoriel - bases
 * Tutoriel - SCD / Les types standards
 * Tutoriel - SCD / Intéragir avec le système
 * Tutoriel - SCD / Génériques et flux de contrôle
+* Tutoriel - SCD / Boucles
+* Tutoriel - SCD / Patrons
+* Tutoriel - SCD / Intégration Python
 * Tutoriel - SCD / Caméléon en mode CLI
 * Tutoriel - SCD / Caméléon en mode GUI
+* Tutoriel - SCD / Greffon C++
 * [Manuel de référence](./notice.md)
 
 Documentation pour les contributeurs
