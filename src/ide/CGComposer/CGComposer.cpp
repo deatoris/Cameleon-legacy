@@ -158,8 +158,8 @@ void CGComposer::openRecent(QAction * action){
                 CGProject::getInstance()->load();
                 loadOpenRecent();
                 CGCompositionManager::getInstance()->showSceneFromModel(CGCompositionManager::getInstance()->getCurrentCompositionModel());
-                setWindowTitle(tr("Caméléon Composer (beta) %1").arg(fileName));
-                CGLayoutManager::getInstance()->getController()->setWindowTitle(tr("Caméléon Controller (beta) %1").arg(fileName));
+                setWindowTitle(tr("Caméléon Composer (testing) %1").arg(fileName));
+                CGLayoutManager::getInstance()->getController()->setWindowTitle(tr("Caméléon Controller (testing) %1").arg(fileName));
                 if(CGProject::getInstance()->getShowController()){
                     CGLayoutManager::getInstance()->getController()->show();
                 }else{
@@ -821,7 +821,7 @@ void CGComposer::addActionList(QMenu* menu){
 
 void CGComposer::createScene(){
     CGCompositionManager::getInstance()->init(this);
-    setWindowTitle(tr("Caméléon Composer (beta)"));
+    setWindowTitle(tr("Caméléon Composer (testing)"));
 }
 
 void CGComposer::newComposition(){
@@ -898,8 +898,8 @@ void CGComposer::saveAsComposition(){
             CGInstance::getInstance()->addRecentProject(compath);
             loadOpenRecent();
             CGInstance::getInstance()->save();
-            CGLayoutManager::getInstance()->getController()->setWindowTitle(tr("Caméléon Controller (beta) %1").arg(compath));;
-            setWindowTitle(tr("Caméléon Composer (beta) %1").arg(compath));
+            CGLayoutManager::getInstance()->getController()->setWindowTitle(tr("Caméléon Controller (testing) %1").arg(compath));;
+            setWindowTitle(tr("Caméléon Composer (testing) %1").arg(compath));
         }
     }
     this->purgeTmp();
@@ -923,8 +923,8 @@ void CGComposer::saveComposition(){
         CGInstance::getInstance()->addRecentProject(fileName);
         loadOpenRecent();
         CGInstance::getInstance()->save();
-        setWindowTitle(tr("Caméléon Composer (beta) %1").arg(fileName));
-        CGLayoutManager::getInstance()->getController()->setWindowTitle(tr("Caméléon Controller (beta) %1").arg(fileName));;
+        setWindowTitle(tr("Caméléon Composer (testing) %1").arg(fileName));
+        CGLayoutManager::getInstance()->getController()->setWindowTitle(tr("Caméléon Controller (testing) %1").arg(fileName));;
     }else{
         this->saveAsComposition();
     }
@@ -952,8 +952,8 @@ void CGComposer::openComposition(){
                 CGProject::getInstance()->load();
                 loadOpenRecent();
                 CGCompositionManager::getInstance()->showSceneFromModel(CGCompositionManager::getInstance()->getCurrentCompositionModel());
-                setWindowTitle(tr("Caméléon Composer (beta) %1").arg(fileName));
-                CGLayoutManager::getInstance()->getController()->setWindowTitle(tr("Caméléon Controller (beta) %1").arg(fileName));;
+                setWindowTitle(tr("Caméléon Composer (testing) %1").arg(fileName));
+                CGLayoutManager::getInstance()->getController()->setWindowTitle(tr("Caméléon Controller (testing) %1").arg(fileName));;
                 CGInstance::getInstance()->save();
                 if(CGProject::getInstance()->getShowController()){
                     CGLayoutManager::getInstance()->getController()->show();
@@ -985,8 +985,8 @@ void CGComposer::openCompositionByFile(QString fileName){
 
             loadOpenRecent();
             CGCompositionManager::getInstance()->showSceneFromModel(CGCompositionManager::getInstance()->getCurrentCompositionModel());
-            setWindowTitle(tr("Caméléon Composer (beta) %1").arg(fileName));
-            CGLayoutManager::getInstance()->getController()->setWindowTitle(tr("Caméléon Controller (beta) %1").arg(fileName));;
+            setWindowTitle(tr("Caméléon Composer (testing) %1").arg(fileName));
+            CGLayoutManager::getInstance()->getController()->setWindowTitle(tr("Caméléon Controller (testing) %1").arg(fileName));;
             CGInstance::getInstance()->save();
             CGLayoutManager::getInstance()->getController()->hide();
             CGCompositionManager::getInstance()->getComposer()->hide();
@@ -1836,9 +1836,11 @@ void CGComposer::paused(){
     isstopped = true;
     dialogThread->hide();
     this->setEnabled(true);
-    CGLayoutManager::getInstance()->getController()->setEnabled(true);
-    CGCompositionManager::getInstance()->getCurrentComposerScene()->update();
-    CGLayoutManager::getInstance()->getCurrentLayout()->update();
+    if(CGInstance::getInstance()->getMode() == CGInstance::GUI){
+        CGLayoutManager::getInstance()->getController()->setEnabled(true);
+        CGCompositionManager::getInstance()->getCurrentComposerScene()->update();
+        CGLayoutManager::getInstance()->getCurrentLayout()->update();
+    }
 }
 
 void CGComposer::stopped(){
@@ -1846,9 +1848,11 @@ void CGComposer::stopped(){
     isstopped = true;
     dialogThread->hide();
     this->setEnabled(true);
-    CGLayoutManager::getInstance()->getController()->setEnabled(true);
-    CGCompositionManager::getInstance()->getCurrentComposerScene()->update();
-    CGLayoutManager::getInstance()->getCurrentLayout()->update();
+    if(CGInstance::getInstance()->getMode() == CGInstance::GUI){
+        CGLayoutManager::getInstance()->getController()->setEnabled(true);
+        CGCompositionManager::getInstance()->getCurrentComposerScene()->update();
+        CGLayoutManager::getInstance()->getCurrentLayout()->update();
+    }
 }
 
 void CGComposer::timerEnd(){

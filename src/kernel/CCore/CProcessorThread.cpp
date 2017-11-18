@@ -154,6 +154,7 @@ bool CProcessorThread::executeOperator(int opid){
     return true;
 }
 void CProcessorThread::executingLoop(){
+
     emit tryExecutedOperatorSignal();
 }
 bool CProcessorThread::endExecutingLoop(){

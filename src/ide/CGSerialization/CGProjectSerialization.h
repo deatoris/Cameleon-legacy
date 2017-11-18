@@ -34,6 +34,7 @@ public:
     CGProjectSerialization();
 
     void load();
+    void loadWithoutGui();
 
     static void saveAs(QString path, CGCompositionModel* topModel, QList<CGLayout*> layoutL, bool patterned=false, bool isInterface=false);
     static CGCompositionModel* compositionFromFile(QString file, CGCompositionModel* parentModel);

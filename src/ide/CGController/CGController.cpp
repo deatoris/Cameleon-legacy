@@ -308,7 +308,7 @@ QMenu* CGController::getControllerMenu(){
 
 void CGController::attachLayout(){
     CGLayoutManager::getInstance()->init(this);
-    setWindowTitle(tr("Cameleon Controller (beta)"));
+    setWindowTitle(tr("Cameleon Controller (testing)"));
 }
 
 void CGController::closeEvent(QCloseEvent *)

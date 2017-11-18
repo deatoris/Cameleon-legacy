@@ -114,11 +114,18 @@ void CLauncher::launchCli(QList<argument> appArgs){
         CArguments::printCompositionHelp(compositionPath,compArgs);
         exit(0);
     }
+    qDebug()<<"blabla4";
 
     //SET ARGUMENTS
     CGCompositionManager::getInstance()->setArguments(appArgs);
-    if(compositionPath.compare("")!=0)CGCompositionManager::getInstance()->getComposer()->openCompositionByFile(compositionPath);
+    qDebug()<<"blabla4.1";
+    //if(compositionPath.compare("")!=0)CGCompositionManager::getInstance()->getComposer()->openCompositionByFile(compositionPath);
+    qDebug()<<"blabla4.2";
     CGCompositionManager::getInstance()->getComposer()->play();
+    qDebug()<<"blabla4.3";
+   // CClientSingleton::getInstance()->getCInterfaceClient2Server()->startSend();
+    qDebug()<<"blabla5";
+
 }
 
 void CLauncher::launchGui(QList<argument> ){
@@ -258,10 +265,10 @@ void CLauncher::startWithoutProgress(){
     controller = new CGController();
     composer->hide();
     controller->hide();
-    QSize size = desktopSize;
+    /*QSize size = desktopSize;
     size.width();
     composer->setGeometry(50,60,size.width()-100,size.height()/2);
-    controller->setGeometry(50,105+size.height()/2,size.width()-100,-100+size.height()/2);
+    controller->setGeometry(50,105+size.height()/2,size.width()-100,-100+size.height()/2);*/
 
     QObject::connect(composer, SIGNAL(destroyed()),
                      controller, SLOT(close()));
@@ -279,6 +286,8 @@ void CLauncher::startWithoutProgress(){
     CMachineSingleton::getInstance()->start();
     CGInstance::getInstance()->setMode(CGInstance::CMD);
     CGInstance::getInstance()->start();
+    qDebug()<<"blabla3";
+
 }
 
 void CLauncher::startIDE(){

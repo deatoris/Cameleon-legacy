@@ -1088,6 +1088,945 @@ void CGProjectSerialization::load(){
     CLogger::getInstance()->start();
 }
 
+
+void CGProjectSerialization::loadWithoutGui(){
+    qDebug()<<"blabla2.13";
+
+    emit progressSerial(0);
+    //    ////qDebug << "try load project from " << CGProject::getInstance()->getPath();
+    //    CGLayout* layout0 = CGLayoutManager::getInstance()->getLayout();
+    //    layout0->setName("pattern");
+
+    //    layout0 = CGLayoutManager::getInstance()->getLayout();
+    //    layout0->setName("configuration");
+    CGProject::getInstance()->setName("");
+    CGProject::getInstance()->setVersion("");
+    QFile file(CGProject::getInstance()->getPath());
+    //    QFileInfo fileInfos(file);
+
+    //    ////qDebug << "";
+    //    ////qDebug << "==========================";
+    //    ////qDebug << "read " << fileInfos.absoluteFilePath();
+    if (!file.open(QFile::ReadOnly | QFile::Text)) {
+        return;
+    }
+    qDebug()<<"blabla2.12";
+
+    QMap<int,int> mapOldNewControl;
+    QMap<int,int> mapOldNewOperator;
+    QMap<int,int> mapOldNewLayout;
+    QMap<int,CGCompositionModel*> mapOldNewComposition;
+    //CGCompositionManager::getInstance()->reinit();
+    CGProject::getInstance()->clearProcesses();
+    mapOldNewComposition.insert(0,CGCompositionManager::getInstance()->getCurrentCompositionModel());
+    QXmlStreamReader xmlReader;
+    xmlReader.setDevice(&file);
+    int currentLayout = -1;
+    int currentComposition = 0;
+    int nb_operators =0;
+    int nb_controls = 0;
+    int nb_compositions = 0;
+    CLogger::getInstance()->clear();
+    while (!xmlReader.atEnd()) {
+        xmlReader.readNext();
+        if (xmlReader.isStartElement()) {
+            if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+            }else{
+                //                ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+            }
+        }else{
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+                    if (xmlReader.name() == "readme"){
+                        QString readme = xmlReader.attributes().value("text").toString();
+                        CGProject::getInstance()->setReadMe(readme);
+                    }
+                    if (xmlReader.name() == "structure"){
+                        QString sp = xmlReader.attributes().value("showproject").toString();
+                        QString sg = xmlReader.attributes().value("showglossary").toString();
+                        QString c = xmlReader.attributes().value("showcontroller").toString();
+                        QString m = xmlReader.attributes().value("showmachine").toString();
+
+                        if(c.compare("true")==0){
+                            CGProject::getInstance()->setShowController(true);
+                        }else{
+                            CGProject::getInstance()->setShowController(false);
+                        }
+
+                    }
+                    if (xmlReader.name() == "log"){
+                        QString logPath = CGProjectSerialization::makeAbsolute(xmlReader.attributes().value("path").toString());
+                        CGProject::getInstance()->setLogPath(logPath);
+                        CLogger::getInstance()->setPath(logPath);
+                        QString b = xmlReader.attributes().value("active").toString();
+                        if(b.compare("true")==0){
+                            CLogger::getInstance()->setActive(true);
+                        }else{
+                            CLogger::getInstance()->setActive(false);
+                        }
+                    }
+                    if (xmlReader.name() == "rule"){
+                        QString componentName = xmlReader.attributes().value("component").toString();
+                        QString level = xmlReader.attributes().value("level").toString();
+                        CLogger::getInstance()->registerComponent(componentName);
+                        CLogger::getInstance()->setComponentLevel(componentName, CLogger::getInstance()->fromString(level));
+                    }
+                    if (xmlReader.name() == "controllerscreen"){
+                        int x = xmlReader.attributes().value("windowsx").toString().toInt();
+                        int y = xmlReader.attributes().value("windowsy").toString().toInt();
+                        int w = xmlReader.attributes().value("windowswidth").toString().toInt();
+                        int h = xmlReader.attributes().value("windowsheight").toString().toInt();
+                        int num = xmlReader.attributes().value("numscreen").toString().toInt();
+                        QString full = xmlReader.attributes().value("fullscreen").toString();
+
+                        CGLayoutManager::getInstance()->getController()->setGeometry(x,y,w,h);
+                        if(num != 0){
+                            QWidget* widget = QApplication::desktop()->screen(num);
+                            CGLayoutManager::getInstance()->getController()->setParent(widget);
+                        }
+                        if(full.compare("true") == 0){
+                            //                            CGLayoutManager::getInstance()->getController()->showMaximized();
+                        }
+                    }
+
+                    if (xmlReader.name() == "threads"){
+                        int max = xmlReader.attributes().value("max").toString().toInt();
+                        CGProject::getInstance()->setNumberThread(max);
+
+                    }
+                    if (xmlReader.name() == "currentLayout"){
+                        currentLayout = xmlReader.attributes().value("id").toString().toInt();
+                    }
+                    if (xmlReader.name() == "currentComposition"){
+                        currentComposition = xmlReader.attributes().value("id").toString().toInt();
+                    }
+                    if (xmlReader.name() == "version"){
+                        QString version = xmlReader.attributes().value("version").toString();
+                        CGProject::getInstance()->setVersion(version);
+                    }
+                    if (xmlReader.name() == "name"){
+                        QString name = xmlReader.attributes().value("name").toString();
+                        CGProject::getInstance()->setName(name);
+                    }
+                    if (xmlReader.name() == "target"){
+                        QString targetPath = CGProjectSerialization::makeAbsolute(xmlReader.attributes().value("path").toString());
+                        CGProject::getInstance()->setTargetPath(targetPath);
+                    }
+                    if(xmlReader.name() == "connectorOrder"){
+                        QString m = xmlReader.attributes().value("mode").toString();
+                        CGProject::getInstance()->setConnectorOrderMode("HARD");
+                    }
+                    if (xmlReader.name() == "tmp"){
+                        QString tmpPath = CGProjectSerialization::makeAbsolute(xmlReader.attributes().value("path").toString());
+                        CGProject::getInstance()->setTmpPath(tmpPath);
+                    }
+
+                    if (xmlReader.name() == "ressource"){
+                        CLogger::getInstance()->log("SERIALIZE",CLogger::INFO,"Ressources not supported by this version!");
+
+                        //QString ressourcePath = CGProjectSerialization::makeAbsolute(xmlReader.attributes().value("path").toString());
+                        //CGProject::getInstance()->setRessourcePath(ressourcePath);
+                    }
+                    if (xmlReader.name() == "layout"){
+                        QString name = xmlReader.attributes().value("name").toString();
+                        QString type = xmlReader.attributes().value("type").toString();
+                        QString resolution = xmlReader.attributes().value("resolution").toString();
+                        QString popup = xmlReader.attributes().value("popup").toString();
+                        int id = xmlReader.attributes().value("id").toString().toInt();
+                        ////qDebug << "rebuild layout name: " <<name;
+                        CGLayout* layout;
+                        if(id == 0){
+                            layout = CGLayoutManager::getInstance()->getLayout(id);
+                            layout->setType("interface");
+                        }else{
+                            layout = CGLayoutManager::getInstance()->getLayout();
+                            layout->setName(name);
+                            layout->setType(type);
+                            CGProject::getInstance()->addLayout(layout);
+                        }
+                        layout->setResolution(resolution);
+
+                        if(popup.compare("true")==0)layout->setIsPopup(true);
+                        if(popup.compare("false")==0)layout->setIsPopup(false);
+
+                        //check id
+                        if(layout->getId() == id){
+                            CLogger::getInstance()->log("INSTANCE",CLogger::INFO,"Good layout id!");
+                        }else{
+                            CLogger::getInstance()->log("INSTANCE",CLogger::ERROR,"Bad layout id!"+QString::number(id)+" "+QString::number(layout->getId()));
+                        }
+                        mapOldNewLayout.insert(id, layout->getId());
+                    }
+                    if (xmlReader.name() == "composition"){
+                        if(!xmlReader.attributes().value("parentId").isNull()){
+                            int id = xmlReader.attributes().value("id").toString().toInt();
+                            QString name = xmlReader.attributes().value("name").toString();
+                            ////qDebug << "rebuild composition name: " <<name;
+                            CGCompositionModel* compositionModel = new CGCompositionModel();
+                            QString informations = xmlReader.attributes().value("informations").toString();
+                            compositionModel->setInformation(informations);
+                            //                            int idNew;
+                            //                            CClientSingleton::getInstance()->getCInterfaceClient2Server()->createUnitProcessSend(idNew);
+                            //                            compositionModel->setId(idNew);
+                            mapOldNewComposition.insert(id,compositionModel);
+                        }else{
+                            //nothing to be done
+                        }
+                    }
+                    if (xmlReader.name() == "numbers"){
+                        nb_operators = xmlReader.attributes().value("nb_operators").toString().toInt();
+                        nb_controls = xmlReader.attributes().value("nb_controls").toString().toInt();
+                        nb_compositions = xmlReader.attributes().value("nb_compositions").toString().toInt();
+                    }
+                }
+            }
+        }
+    }
+    qDebug()<<"blabla2.11";
+
+    file.reset();
+    xmlReader.clear ();
+    xmlReader.setDevice(&file);
+    emit progressSerial(10);
+    int countCompo = 0;
+    while (!xmlReader.atEnd()) {
+        xmlReader.readNext();
+        if (xmlReader.isStartElement()) {
+            if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+            }else{
+                ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+            }
+        }else{
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+                    if (xmlReader.name() == "composition"){
+                        if(!xmlReader.attributes().value("parentId").isNull()){
+                            int parentId = xmlReader.attributes().value("parentId").toString().toInt();
+                            int id = xmlReader.attributes().value("id").toString().toInt();
+                            QString name = xmlReader.attributes().value("name").toString();
+                            int x = xmlReader.attributes().value("x").toString().toDouble();
+                            int y = xmlReader.attributes().value("y").toString().toDouble();
+                            int z = xmlReader.attributes().value("z").toString().toDouble();
+                            //                            int rayon = xmlReader.attributes().value("rayon").toString().toDouble();
+                            ////qDebug << "rebuild composition name: " <<name;
+
+                            CGCompositionModel* par = mapOldNewComposition.value(parentId);
+                            CGCompositionModel* child = mapOldNewComposition.value(id);
+                            //                            CClientSingleton::getInstance()->getCInterfaceClient2Server()->linkUnitProcess(child->getId(), par->getId());
+                            QString informations = xmlReader.attributes().value("informations").toString();
+                            child->setInformation(informations);
+
+                            child->setParentCompositionModel(par);
+                            child->initialise();
+                            par->getScene()->unselectAll();
+                            par->getScene()->getModel()->activate(child->getOuterView());
+
+                            CGMulti* multi = child->getOuterView();
+                            child->setName(name);
+                            multi->setPos(x,y);
+                            multi->setZValue(z);
+                            multi->setIsCompatibleMode(false);
+                            multi->setSelected(false);
+                            multi->setSelected(false);
+
+                            if(child->getId() == id){
+                                CLogger::getInstance()->log("INSTANCE",CLogger::INFO,"Good composition id!");
+                            }else{
+                                CLogger::getInstance()->log("INSTANCE",CLogger::ERROR,"Bad composition id! "+QString::number(id)+" "+QString::number(child->getId()));
+                            }
+                            CGProject::getInstance()->addComposition(child);
+                        }else{
+                        }
+                        //progress bar update
+                        countCompo++;
+                        int i = 0;
+                        if(nb_compositions!=0) i = 10*countCompo/nb_compositions;
+                        emit progressSerial(10+i);
+                    }
+                }
+            }
+        }
+    }
+    qDebug()<<"blabla2.10";
+
+    file.reset();
+    xmlReader.clear ();
+    xmlReader.setDevice(&file);
+    emit progressSerial(20);
+    int countOp=0;
+    while (!xmlReader.atEnd()) {
+        xmlReader.readNext();
+        if (xmlReader.isStartElement()) {
+            if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+            }else{
+                ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+            }
+        }else{
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+                    if (xmlReader.name() == "operator"){
+                        int parentId = xmlReader.attributes().value("parentId").toString().toInt();
+                        int id = xmlReader.attributes().value("id").toString().toInt();
+                        QString name = xmlReader.attributes().value("type").toString();
+                        int x = xmlReader.attributes().value("x").toString().toDouble();
+                        int y = xmlReader.attributes().value("y").toString().toDouble();
+                        int z = xmlReader.attributes().value("z").toString().toDouble();
+                        ////qDebug << "[Ref.]rebuild operator type: " << name << "" << id;
+                        CGCompositionModel* par = mapOldNewComposition.value(parentId);
+                        if(par!=NULL){
+                            CGOperatorModel* model = par->addOperatorByName(name);
+                            if(model!=NULL){
+                                CGOperator* view = model->getView();
+                                model->getView()->setPos(x,y);
+
+                                model->setPos(model->getView()->scenePos());
+                                par->getScene()->unselectAll();
+                                par->getScene()->getModel()->activate(view);
+                                model->getView()->setZValue(z);
+                                ////qDebug << "[check]rebuild operator type: " << name << "" << model->getId();
+                                CLogger::getInstance()->log("INSTANCE",CLogger::INFO,"Load operator named "+name);
+                                CLogger::getInstance()->log("INSTANCE",CLogger::INFO,"Load operator with position "+QString::number(x)+","+QString::number(y));
+                                //                                if(model->getId() == id){
+                                //                                    CLogger::getInstance()->log("INSTANCE",CLogger::INFO,"Good operator id!");
+                                //                                }else{
+                                //                                    CLogger::getInstance()->log("INSTANCE",CLogger::ERROR,"Bad operator id!");
+                                //                                }
+                                mapOldNewOperator.insert(id,model->getId());
+                            }else{
+                                mapOldNewOperator.insert(id,-1);
+                                CLogger::getInstance()->log("INSTANCE",CLogger::ERROR,"Can't create operator "+name);
+                            }
+                        }
+                        //progress bar update
+                        countOp++;
+                        int i = 0;
+                        if(nb_operators!=0) i = 30*countOp/nb_operators;
+                        emit progressSerial(20+i);
+                    }
+                }
+            }
+        }
+    }
+    qDebug()<<"blabla2.9";
+
+    file.reset();
+    xmlReader.clear ();
+    xmlReader.setDevice(&file);
+    emit progressSerial(50);
+    int countCt = 0;
+    while (!xmlReader.atEnd()) {
+        xmlReader.readNext();
+        if (xmlReader.isStartElement()) {
+            if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+            }else{
+                ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+            }
+        }else{
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+
+
+                    if (xmlReader.name() == "control"){
+                        int parentId = xmlReader.attributes().value("parentId").toString().toInt();
+                        int id = xmlReader.attributes().value("id").toString().toInt();
+                        QString name = xmlReader.attributes().value("type").toString();
+                        QString content = xmlReader.attributes().value("content").toString();
+                        int x = xmlReader.attributes().value("x").toString().toDouble();
+                        int y = xmlReader.attributes().value("y").toString().toDouble();
+                        int z = xmlReader.attributes().value("z").toString().toDouble();
+                        int width = xmlReader.attributes().value("width").toString().toDouble();
+                        int height = xmlReader.attributes().value("height").toString().toDouble();
+                        QString ispers = xmlReader.attributes().value("persistent").toString();
+
+                        ////qDebug << "[Ref.]rebuild operator type: " << name << "" << id;
+                        QRect rect(0,0,width,height);
+                        parentId = mapOldNewLayout.value(parentId);
+                        CGLayout* par = CGLayoutManager::getInstance()->getLayout(parentId);
+                        CGLayoutItem* layoutItem = CGLayoutFactory::getInstance()->getLayoutItemByName(name,par);
+                        if(layoutItem!=NULL && layoutItem->getControl()!=NULL){
+                            layoutItem->setSelected(false);
+                            layoutItem->setPos(x,y);
+                            if(ispers.compare("true") == 0){
+                                layoutItem->setIsPersistant(true);
+                            }else{
+                                layoutItem->setIsPersistant(false);
+                            }
+
+                            //                        layoutItem->resize(rect.bottomRight());
+                            //                        layoutItem->setRect(rect);
+                            par->activate(layoutItem);
+                            layoutItem->setZValue(z);
+                            layoutItem->resize(rect);
+                            ////qDebug << "[check]rebuild layoutItem type: " << name << "" << layoutItem->getControl()->getId();
+                            //                            if(layoutItem->getControl()->getId() == id){
+                            //                                CLogger::getInstance()->log("INSTANCE",CLogger::INFO,"Good layoutItem id!");
+                            //                            }else{
+                            //                                CLogger::getInstance()->log("INSTANCE",CLogger::ERROR,"Bad layoutItem id!");
+                            //                            }
+
+                            layoutItem->getControl()->fromString(content.toStdString());
+                            mapOldNewControl.insert(id,layoutItem->getControl()->getId());
+                        }else{
+                            CLogger::getInstance()->log("INSTANCE",CLogger::ERROR,"Can't create control "+name);
+                            mapOldNewControl.insert(id,-1);
+                        }
+                        countCt++;
+                        int i = 0;
+                        if(nb_controls!=0) i = 20*countCt/nb_controls;
+                        emit progressSerial(50+i);
+                    }
+                }
+            }
+        }
+    }
+    file.reset();
+    xmlReader.clear ();
+    xmlReader.setDevice(&file);
+    emit progressSerial(70);
+    qDebug()<<"blabla2.8";
+
+    while (!xmlReader.atEnd()) {
+        xmlReader.readNext();
+        if (xmlReader.isStartElement()) {
+            if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+            }else{
+                ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+            }
+        }else{
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+
+
+                    if (xmlReader.name() == "compositioncontrol"){
+                        int parentId = xmlReader.attributes().value("parentId").toString().toInt();
+                        int id = xmlReader.attributes().value("id").toString().toInt();
+                        QString name = xmlReader.attributes().value("type").toString();
+                        if(name.compare("RessourceProject") == 0){
+                            CLogger::getInstance()->log("SERIALIZE",CLogger::INFO,"Ressources not supported by this version!");
+                        }else{
+                            QString content = xmlReader.attributes().value("content").toString();
+                            int x = xmlReader.attributes().value("x").toString().toDouble();
+                            int y = xmlReader.attributes().value("y").toString().toDouble();
+                            int z = xmlReader.attributes().value("z").toString().toDouble();
+                            int width = xmlReader.attributes().value("width").toString().toDouble();
+                            int height = xmlReader.attributes().value("height").toString().toDouble();
+                            QString ispers = xmlReader.attributes().value("persistent").toString();
+
+                            ////qDebug << "[Ref.]rebuild operator type: " << name << "" << id;
+                            QRect rect(0,0,width,height);
+                            CGCompositionModel* compM = mapOldNewComposition.value(parentId);
+                            CGComposition* comp = compM->getScene();
+                            CGLayoutItem* layoutItem = CGLayoutFactory::getInstance()->getLayoutItemByName(name,comp);
+                            if(layoutItem!=NULL && layoutItem->getControl()!=NULL){
+                                layoutItem->setSelected(false);
+                                layoutItem->setPos(x,y);
+                                if(ispers.compare("true") == 0){
+                                    layoutItem->setIsPersistant(true);
+                                }else{
+                                    layoutItem->setIsPersistant(false);
+                                }
+
+                                //                        layoutItem->resize(rect.bottomRight());
+                                //                        layoutItem->setRect(rect);
+                                layoutItem->setZValue(z);
+                                compM->activate(layoutItem);
+                                layoutItem->resize(rect);
+                                ////qDebug << "[check]rebuild layoutItem type: " << name << "" << layoutItem->getControl()->getId();
+                                //                            if(layoutItem->getControl()->getId() == id){
+                                //                                CLogger::getInstance()->log("INSTANCE",CLogger::INFO,"Good layoutItem id!");
+                                //                            }else{
+                                //                                CLogger::getInstance()->log("INSTANCE",CLogger::ERROR,"Bad layoutItem id!");
+                                //                            }
+
+                                layoutItem->getControl()->fromString(content.toStdString());
+                                mapOldNewControl.insert(id,layoutItem->getControl()->getId());
+                            }else{
+                                CLogger::getInstance()->log("INSTANCE",CLogger::ERROR,"Can't create control "+name);
+                                mapOldNewControl.insert(id,-1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    file.reset();
+    xmlReader.clear ();
+    xmlReader.setDevice(&file);
+    emit progressSerial(70);
+    qDebug()<<"blabla2.7";
+
+    while (!xmlReader.atEnd()) {
+        xmlReader.readNext();
+        if (xmlReader.isStartElement()) {
+            if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+            }else{
+                ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+            }
+        }else{
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+
+                    if (xmlReader.name() == "shape"){
+                        ////qDebug << "rebuild shape" <<CGProject::getInstance()->getName();
+                        int parentid = xmlReader.attributes().value("parentId").toString().toInt();
+                        QString color = xmlReader.attributes().value("color").toString();
+                        int xrect = xmlReader.attributes().value("xrect").toString().toDouble();
+                        int yrect = xmlReader.attributes().value("yrect").toString().toDouble();
+                        int x = xmlReader.attributes().value("x").toString().toDouble();
+                        int y = xmlReader.attributes().value("y").toString().toDouble();
+                        int z = xmlReader.attributes().value("z").toString().toDouble();
+                        int width = xmlReader.attributes().value("width").toString().toDouble();
+                        int height = xmlReader.attributes().value("height").toString().toDouble();
+                        QString ispers = xmlReader.attributes().value("persistent").toString();
+                        QRect rect(xrect,yrect,width,height);
+                        if(!xmlReader.attributes().value("fromLayout").isNull()){
+                            parentid = mapOldNewLayout.value(parentid);
+                            CGLayout* lay = CGLayoutManager::getInstance()->getLayout(parentid);
+
+                            CGShape* shape = new CGShape(0,0,lay);
+                            //                            lay->addItem(shape);
+                            QColor c;
+                            c.setNamedColor(color);
+                            shape->setColor(color);
+                            shape->setRect(rect);
+                            shape->setPos(x,y);
+                            shape->setZValue(z);
+                            if(ispers.compare("true") == 0){
+                                shape->setPersistent(true);
+                            }else{
+                                shape->setPersistent(false);
+                            }
+                        }else{
+                            CGCompositionModel* par = mapOldNewComposition.value(parentid);
+                            //                            CGCompositionModel* par = CGCompositionManager::getInstance()->getCompositionById(parentid);
+                            CGShape* shape = new CGShape(0,0,par->getScene());
+                            //                            par->getScene()->addItem(shape);
+                            shape->setRect(rect);
+                            par->getScene()->unselectAll();
+                            par->getScene()->getModel()->activate(shape);
+                            QColor c;
+                            c.setNamedColor(color);
+                            shape->setPos(x,y);
+                            shape->setColor(color);
+                            shape->setZValue(z);
+                        }
+                    }
+
+                    if (xmlReader.name() == "text"){
+                        ////qDebug << "rebuild text";
+                        int parentid = xmlReader.attributes().value("parentId").toString().toInt();
+                        QString content = xmlReader.attributes().value("content").toString();
+                        QString color = xmlReader.attributes().value("color").toString();
+                        int police = xmlReader.attributes().value("police").toString().toInt();
+                        QString font = xmlReader.attributes().value("font").toString();
+                        int x = xmlReader.attributes().value("x").toString().toDouble();
+                        int y = xmlReader.attributes().value("y").toString().toDouble();
+                        int z = xmlReader.attributes().value("z").toString().toDouble();
+                        QString italic = xmlReader.attributes().value("italic").toString();
+                        QString bold = xmlReader.attributes().value("bold").toString();
+                        QString underline = xmlReader.attributes().value("underline").toString();
+
+                        if(!xmlReader.attributes().value("fromLayout").isNull()){
+                            CGText* text = new CGText();
+                            parentid = mapOldNewLayout.value(parentid);
+                            CGLayout* lay = CGLayoutManager::getInstance()->getLayout(parentid);
+                            //                            text->setFont(layout->font());
+                            text->setTextInteractionFlags(Qt::TextEditorInteraction);
+                            text->setZValue(1000.0);
+
+                            QObject::connect(text, SIGNAL(lostFocus(CGText*)),
+                                             lay, SLOT(editorLostFocus(CGText*)));
+                            QObject::connect(text, SIGNAL(selectedChange(QGraphicsItem*)),
+                                             lay, SIGNAL(itemSelected(QGraphicsItem*)));
+                            lay->addItem(text);
+                            text->setPos(x,y);
+                            text->setZValue(z);
+                            text->setPlainText(content);
+
+                            QColor c;
+                            c.setNamedColor(color);
+                            text->setDefaultTextColor(c);
+                            QFont f;
+                            f.setFamily(font);
+                            f.setPointSize(police);
+
+                            if(italic.compare("true") == 0){
+                                f.setItalic(true);
+                            }
+                            if(bold.compare("true") == 0){
+                                f.setBold(true);
+                            }
+                            if(underline.compare("true") == 0){
+                                f.setUnderline(true);
+                            }
+                            text->setFont(f);
+
+                            QString ispers = xmlReader.attributes().value("persistent").toString();
+                            if(ispers.compare("true") == 0){
+                                text->setPersistent(true);
+                            }else{
+                                text->setPersistent(false);
+                            }
+                        }else{
+                            CGText* text = new CGText();
+                            CGCompositionModel* par = mapOldNewComposition.value(parentid);
+                            //                            CGCompositionModel* par = CGCompositionManager::getInstance()->getCompositionById(parentid);
+                            text->setFont(par->getScene()->font());
+                            text->setTextInteractionFlags(Qt::TextEditorInteraction);
+                            text->setZValue(10000.0);
+
+                            QObject::connect(text, SIGNAL(lostFocus(CGText*)),
+                                             par->getScene(), SLOT(editorLostFocus(CGText*)));
+                            QObject::connect(text, SIGNAL(selectedChange(QGraphicsItem*)),
+                                             par->getScene(), SIGNAL(itemSelected(QGraphicsItem*)));
+                            par->getScene()->addItem(text);
+
+                            text->setDefaultTextColor(Qt::white);
+                            text->setPos(x,y);
+                            text->setZValue(z);
+                            par->getScene()->unselectAll();
+                            par->getScene()->getModel()->activate(text);
+                            text->setPlainText(content);
+
+                            QColor c;
+                            c.setNamedColor(color);
+                            text->setDefaultTextColor(c);
+
+                            QFont f;
+                            f.setFamily(font);
+                            f.setPointSize(police);
+
+                            if(italic.compare("true") == 0){
+                                f.setItalic(true);
+                            }
+                            if(bold.compare("true") == 0){
+                                f.setBold(true);
+                            }
+                            if(underline.compare("true") == 0){
+                                f.setUnderline(true);
+                            }
+                            text->setFont(f);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    qDebug()<<"blabla2.6";
+
+    file.reset();
+    xmlReader.clear ();
+    xmlReader.setDevice(&file);
+
+
+    emit progressSerial(80);
+    while (!xmlReader.atEnd()) {
+        xmlReader.readNext();
+        if (xmlReader.isStartElement()) {
+            if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+            }else{
+                ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+            }
+        }else{
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+                    if (xmlReader.name() == "operatoraction"){
+                        int id = xmlReader.attributes().value("opId").toString().toInt();
+                        QString actionKey = xmlReader.attributes().value("actionKey").toString();
+                        int newId = mapOldNewOperator.value(id);
+                        CClientSingleton::getInstance()->getCInterfaceClient2Server()->actionOperator(newId, actionKey.toStdString());
+
+                    }
+                }
+            }
+        }
+    }
+    qDebug()<<"blabla2.5";
+
+    file.reset();
+    xmlReader.clear ();
+    xmlReader.setDevice(&file);
+
+    emit progressSerial(80);
+    QList<CGMultiConnector*> multiConnectorList;
+    while (!xmlReader.atEnd()) {
+        xmlReader.readNext();
+        if (xmlReader.isStartElement()) {
+            if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+            }else{
+                ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+            }
+        }else{
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+                    if (xmlReader.name() == "connector"){
+                        int compositionId = xmlReader.attributes().value("compositionId").toString().toInt();
+                        QString side = xmlReader.attributes().value("side").toString();
+                        if(xmlReader.attributes().value("x").isNull()){
+                            CGCompositionModel* model = mapOldNewComposition.value(compositionId);
+                            QString name = xmlReader.attributes().value("name").toString();
+                            if(side.compare("IN") == 0){
+                                CGMultiConnector* m = model->getInnerView()->getParentView()->addConnector("OUTIN");
+                                m->getOuterConnector()->setName(name);
+                                m->getOuterConnector()->toolT();
+                            }
+                            if(side.compare("OUT") == 0) {
+                                CGMultiConnector* m = model->getInnerView()->getParentView()->addConnector("INOUT");
+                                m->getOuterConnector()->setName(name);
+                                m->getOuterConnector()->toolT();
+                            }
+                        }else{
+                            double x = xmlReader.attributes().value("x").toString().toDouble();
+                            double y = xmlReader.attributes().value("y").toString().toDouble();
+
+                            CGCompositionModel* model = mapOldNewComposition.value(compositionId);
+                            QString name = xmlReader.attributes().value("name").toString();
+                            if(side.compare("IN") == 0){
+                                CGMultiConnector* m = model->getInnerView()->getParentView()->addConnector("OUTIN");
+                                m->getOuterConnector()->setName(name);
+                                m->getOuterConnector()->toolT();
+                                QPointF p(x,y);
+                                multiConnectorList.append(m);
+                                m->getOuterConnector()->setPos(p);
+
+                            }
+                            if(side.compare("OUT") == 0) {
+                                CGMultiConnector* m = model->getInnerView()->getParentView()->addConnector("INOUT");
+                                m->getOuterConnector()->setName(name);
+                                m->getOuterConnector()->toolT();
+
+                                QPointF p(x,y);
+                                multiConnectorList.append(m);
+                                m->getOuterConnector()->setPos(p);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    foreach(CGMultiConnector*m,multiConnectorList){
+        double r = (m->getOuterConnector()->getRayon())/2;
+        double teta = acos(m->getOuterConnector()->pos().x()/r)*(SCD::sgn(m->getOuterConnector()->pos().y()));
+        m->getOuterConnector()->rePosition();
+
+        double x1 = cos(teta)*((m->getInnerConnector()->getRayon()-20)+20)/2;
+        double y1 = sin(teta)*((m->getInnerConnector()->getRayon()-20)+20)/2;
+        m->getInnerConnector()->setPos(x1,y1);
+    }
+    qDebug()<<"blabla2.4";
+
+    file.reset();
+    xmlReader.clear ();
+    xmlReader.setDevice(&file);
+    emit progressSerial(90);
+
+    while (!xmlReader.atEnd()) {
+        xmlReader.readNext();
+        if (xmlReader.isStartElement()) {
+            if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+            }else{
+                ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+            }
+        }else{
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+                    if (xmlReader.name() == "connection"){
+                        if(!xmlReader.attributes().value("operatorId1").isNull() && !xmlReader.attributes().value("operatorId2").isNull() ){
+                            int connectorId1 = xmlReader.attributes().value("connectorId1").toString().toInt();
+                            int connectorId2 = xmlReader.attributes().value("connectorId2").toString().toInt();
+                            int operatorId1 = xmlReader.attributes().value("operatorId1").toString().toInt();
+                            int operatorId2 = xmlReader.attributes().value("operatorId2").toString().toInt();
+                            if(mapOldNewOperator.value(operatorId1)!=-1 && mapOldNewOperator.value(operatorId2)!=-1){
+                                CGOperatorModel* ope1 = CGCompositionManager::getInstance()->searchOperatorById(mapOldNewOperator.value(operatorId1));
+                                CGOperatorModel* ope2 = CGCompositionManager::getInstance()->searchOperatorById(mapOldNewOperator.value(operatorId2));
+                                if(ope1->getView()->getConnectorById(connectorId1)!=0 && ope2->getView()->getConnectorById(connectorId2)!=0) ope1->getView()->getConnectorById(connectorId1)->connect(ope2->getView()->getConnectorById(connectorId2));
+                            }
+                        }
+                        if(!xmlReader.attributes().value("compositionId1").isNull() && !xmlReader.attributes().value("operatorId2").isNull()){
+                            int connectorId1 = xmlReader.attributes().value("connectorId1").toString().toInt();
+                            int connectorId2 = xmlReader.attributes().value("connectorId2").toString().toInt();
+                            int compositionId1 = xmlReader.attributes().value("compositionId1").toString().toInt();
+                            int operatorId2 = xmlReader.attributes().value("operatorId2").toString().toInt();
+                            if(mapOldNewOperator.value(operatorId2)!=-1){
+                                CGOperatorModel* ope2 = CGCompositionManager::getInstance()->searchOperatorById(mapOldNewOperator.value(operatorId2));
+                                CGCompositionModel* model = mapOldNewComposition.value(compositionId1);
+                                CGConnector* c2 = ope2->getView()->getConnectorById(connectorId2);
+                                CGConnector* cm;
+                                if(ope2->getView()->scene() == model->getOuterView()->scene()){
+                                    cm = model->getOuterView()->getConnectorById(connectorId1);
+                                }else{
+                                    cm = model->getInnerView()->getConnectorById(connectorId1);
+                                }
+                                if(c2 != 0 && cm != 0) c2->connect(cm);
+                            }
+                        }
+                        if(!xmlReader.attributes().value("operatorId1").isNull() && !xmlReader.attributes().value("compositionId2").isNull()){
+                            int connectorId1 = xmlReader.attributes().value("connectorId1").toString().toInt();
+                            int connectorId2 = xmlReader.attributes().value("connectorId2").toString().toInt();
+                            int operatorId1 = xmlReader.attributes().value("operatorId1").toString().toInt();
+                            int compositionId2 = xmlReader.attributes().value("compositionId2").toString().toInt();
+                            if(mapOldNewOperator.value(operatorId1)!=-1){
+                                CGOperatorModel* ope2 = CGCompositionManager::getInstance()->searchOperatorById(mapOldNewOperator.value(operatorId1));
+                                CGCompositionModel* model = mapOldNewComposition.value(compositionId2);
+
+                                CGConnector* c2 = ope2->getView()->getConnectorById(connectorId1);
+                                CGConnector* cm;
+                                if(ope2->getView()->scene() == model->getOuterView()->scene()){
+                                    cm = model->getOuterView()->getConnectorById(connectorId2);
+                                }else{
+                                    cm = model->getInnerView()->getConnectorById(connectorId2);
+                                }
+                                if(c2 != 0 && cm != 0) c2->connect(cm);
+                            }
+                        }
+                        if(!xmlReader.attributes().value("compositionId1").isNull() && !xmlReader.attributes().value("compositionId2").isNull()){
+                            int connectorId1 = xmlReader.attributes().value("connectorId1").toString().toInt();
+                            int connectorId2 = xmlReader.attributes().value("connectorId2").toString().toInt();
+                            int compositionId1 = xmlReader.attributes().value("compositionId1").toString().toInt();
+                            int compositionId2 = xmlReader.attributes().value("compositionId2").toString().toInt();
+                            CGCompositionModel* model1 = mapOldNewComposition.value(compositionId1);
+                            CGCompositionModel* model2 = mapOldNewComposition.value(compositionId2);
+                            if(model1->getParentCompositionModel() == model2){
+                                model1->getOuterView()->getConnectorById(connectorId1)->connect(model2->getInnerView()->getConnectorById(connectorId2));
+                            }
+                            if(model1 == model2->getParentCompositionModel()){
+                                model1->getInnerView()->getConnectorById(connectorId1)->connect(model2->getOuterView()->getConnectorById(connectorId2));
+                            }
+                            if(model1->getParentCompositionModel() == model2->getParentCompositionModel()){
+                                model1->getOuterView()->getConnectorById(connectorId1)->connect(model2->getOuterView()->getConnectorById(connectorId2));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    qDebug()<<"blabla2.3";
+
+    file.reset();
+    xmlReader.clear ();
+    xmlReader.setDevice(&file);
+    emit progressSerial(90);
+
+    while (!xmlReader.atEnd()) {
+        xmlReader.readNext();
+        if (xmlReader.isStartElement()) {
+            if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+            }else{
+                ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+            }
+        }else{
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+                    if (xmlReader.name() == "connection"){
+                        if(!xmlReader.attributes().value("controlConnectorIdIn").isNull() && !xmlReader.attributes().value("operatorConnectorIdOut").isNull()){
+                            int controlId = xmlReader.attributes().value("controlId").toString().toInt();
+                            int operatorIdOut = xmlReader.attributes().value("operatorIdOut").toString().toInt();
+                            int controlConnectorIdIn = xmlReader.attributes().value("controlConnectorIdIn").toString().toInt();
+                            int operatorConnectorIdOut = xmlReader.attributes().value("operatorConnectorIdOut").toString().toInt();
+                            if(mapOldNewOperator.value(operatorIdOut)!=-1 && mapOldNewControl.value(controlId) != -1){
+                                CGOperatorModel* ope1 = CGCompositionManager::getInstance()->searchOperatorById(mapOldNewOperator.value(operatorIdOut));
+                                CGLayoutItem* layoutItem = CGLayoutManager::getInstance()->getItemById(mapOldNewControl.value(controlId));
+                                if(ope1 != NULL && layoutItem != NULL){
+                                    if(ope1->getView()->getConnectorById(operatorConnectorIdOut)!=0
+                                            &&layoutItem->getConnectorById(controlConnectorIdIn)!=0){
+                                        //TODO: this control doesn't have to be there. Miss design here !
+                                        if(ope1->getView()->getConnectorById(operatorConnectorIdOut)->getSide().compare(layoutItem->getConnectorById(controlConnectorIdIn)->getSide()) != 0){
+                                            layoutItem->getConnectorById(controlConnectorIdIn)->setIsControlConnected(true);
+                                            ope1->getView()->getConnectorById(operatorConnectorIdOut)->setIsControlConnected(true);
+                                            ope1->getView()->getConnectorById(operatorConnectorIdOut)->connect(layoutItem->getConnectorById(controlConnectorIdIn));
+                                            layoutItem->getConnectorById(controlConnectorIdIn)->connect(ope1->getView()->getConnectorById(operatorConnectorIdOut));
+
+                                            layoutItem->getConnectorById(controlConnectorIdIn)->update();
+                                            ope1->getView()->getConnectorById(operatorConnectorIdOut)->update();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+
+    qDebug()<<"blabla2.1";
+
+    file.reset();
+    xmlReader.clear ();
+    xmlReader.setDevice(&file);
+    while (!xmlReader.atEnd()) {
+        xmlReader.readNext();
+        if (xmlReader.isStartElement()) {
+            if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+            }else{
+                ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+            }
+        }else{
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+                    if (xmlReader.name() == "operatorconnector"){
+                        int id = xmlReader.attributes().value("connectorId").toString().toInt();
+                        int operatorId = xmlReader.attributes().value("opId").toString().toInt();
+                        double x = xmlReader.attributes().value("x").toString().toDouble();
+                        double y = xmlReader.attributes().value("y").toString().toDouble();
+                        CGOperatorModel* ope1 = CGCompositionManager::getInstance()->searchOperatorById(mapOldNewOperator.value(operatorId));
+                        if(ope1!=0){
+                            CGConnector* c = ope1->getView()->getConnectorById(id);
+                            QPointF p(x,y);
+                            if(c!=0)c->setPos(p);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    qDebug()<<"blabla2.0";
+
+    CGProject::getInstance()->loadRessources();
+
+    //CGCompositionModel* child = CGCompositionManager::getInstance()->getCompositionById(currentC);
+//    qDebug()<<"SECOND ======================";
+   // if(currentL!=-1) CGLayoutManager::getInstance()->showLayout(currentL);
+//    qDebug()<<CGLayoutManager::getInstance()->getCurrentLayout()->getView()->verticalScrollBar()->value();
+//    qDebug()<<CGLayoutManager::getInstance()->getCurrentLayout()->getView()->horizontalScrollBar()->value();
+   // CGCompositionManager::getInstance()->showSceneFromModel(child);
+//    qDebug()<<"SECOND ======================";
+
+    //start project logger
+    CLogger::getInstance()->start();
+}
+
+
+
 void CGProjectSerialization::saveAs(QString path, CGCompositionModel* topModel, QList<CGLayout*> layoutL, bool patterned, bool isInterface){
     if (!patterned) CGProjectSerialization::createProject(path);
     QString savedPath = path;

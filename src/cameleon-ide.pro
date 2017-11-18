@@ -17,7 +17,7 @@ QT +=   webkit \
         sql
 QT       += core gui qt
 
-TARGET = cameleon
+TARGET = ecm
 
 TEMPLATE = app
 
@@ -26,7 +26,6 @@ win32:DESTDIR += $$quote($${BUILDPATH})
 
 !include(kernel/includekernel.pri)
 !include(scd/includescd.pri)
-!include(cconnectivity/includecconnectivity.pri)
 !include(ide/includeide.pri)
 !include(client/includeclient.pri)
 
@@ -37,7 +36,6 @@ win32:DESTDIR += $$quote($${BUILDPATH})
 
 #LIB SOURCES
 !include(scd/scd.pri)
-!include(cconnectivity/cconnectivity.pri)
 
 SOURCES += ide/CGIde.cpp
 

@@ -226,9 +226,21 @@ void CGInstance::start(){
         }
         j++;
     }
-
-    CGCompositionManager::getInstance()->getComposer()->createFactory();
-    CGLayoutManager::getInstance()->getController()->attachFactory();
+    if(mode == CGInstance::CMD){
+        if(currentProjectPath.compare("")!=0){
+            QFile file(currentProjectPath);
+            if (!file.open(QFile::ReadOnly | QFile::Text)) {
+                //            //qDebug << "ERROR: can't load previous project from " << currentProjectPath;
+            }else{
+                qDebug()<<"blabla";
+                CGProject::getInstance()->setPath(currentProjectPath);
+                serial->loadWithoutGui();
+                qDebug()<<"blabla2";
+            }
+        }
+    }else{
+        CGCompositionManager::getInstance()->getComposer()->createFactory();
+        CGLayoutManager::getInstance()->getController()->attachFactory();
 
     //try to load project (or create blank project)
     bool good = false;
@@ -242,8 +254,8 @@ void CGInstance::start(){
             CGProject::getInstance()->setPath(currentProjectPath);
             serial->load();
 
-            CGCompositionManager::getInstance()->getComposer()->setWindowTitle(QObject::tr("Caméléon Composer (beta) %1").arg(currentProjectPath));
-            CGLayoutManager::getInstance()->getController()->setWindowTitle(QObject::tr("Caméléon Controller (beta) %1").arg(currentProjectPath));
+            CGCompositionManager::getInstance()->getComposer()->setWindowTitle(QObject::tr("Caméléon Composer (testing) %1").arg(currentProjectPath));
+            CGLayoutManager::getInstance()->getController()->setWindowTitle(QObject::tr("Caméléon Controller (testing) %1").arg(currentProjectPath));
             CGCompositionManager::getInstance()->showSceneFromModel(CGCompositionManager::getInstance()->getCurrentCompositionModel());
             CGLayoutManager::getInstance()->getController()->hide();
             CGCompositionManager::getInstance()->getComposer()->hide();
@@ -275,12 +287,13 @@ void CGInstance::start(){
         CGInstance::getInstance()->addRecentProject(fileName);
         CGCompositionManager::getInstance()->getComposer()->loadOpenRecent();
         CGInstance::getInstance()->save();
-        CGCompositionManager::getInstance()->getComposer()->setWindowTitle(QObject::tr("Caméléon Composer (beta) %1").arg(fileName));
-        CGLayoutManager::getInstance()->getController()->setWindowTitle(QObject::tr("Caméléon Controller (beta) %1").arg(fileName));
+        CGCompositionManager::getInstance()->getComposer()->setWindowTitle(QObject::tr("Caméléon Composer (testing) %1").arg(fileName));
+        CGLayoutManager::getInstance()->getController()->setWindowTitle(QObject::tr("Caméléon Controller (testing) %1").arg(fileName));
         CGCompositionManager::getInstance()->showSceneFromModel(CGCompositionManager::getInstance()->getCurrentCompositionModel());
         CGLayoutManager::getInstance()->getController()->hide();
         CGCompositionManager::getInstance()->getComposer()->hide();
     }
+        }
 }
 
 void CGInstance::load(){

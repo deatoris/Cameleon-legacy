@@ -12,7 +12,7 @@ More informations can be found here: http://www.shinoe.org/cameleon
 ======================================*/
 #include "CGlossary.h"
 
-#include<../cconnectivityDictionnary.h>
+//#include<../cconnectivityDictionnary.h>
 
 #include <CSDDictionnary.h>
 //#include "PopulationDictionnary.h"
@@ -22,7 +22,7 @@ More informations can be found here: http://www.shinoe.org/cameleon
 CGlossary::CGlossary(){
 
     this->registerDictionnay(new CSDDictionnary);
-    this->registerDictionnay(new cconnectivityDictionary);
+    //this->registerDictionnay(new cconnectivityDictionary);
     CLoggerInstance::getInstance()->log("Population disabled");
     //this->registerDictionnay(new PopulationDictionnary);
     CLoggerInstance::getInstance()->log("Opencv disabled");
