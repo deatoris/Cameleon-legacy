@@ -23,3 +23,5 @@ SOURCES += cli/CGLcm.cpp
 
 win32:DESTDIR += $$quote($${BUILDPATH})
 unix:DESTDIR += $$quote($${BUILDPATH})
+
+QMAKE_CXXFLAGS += -std=c++98
