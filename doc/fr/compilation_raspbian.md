@@ -3,6 +3,8 @@ apt-get update
 apt-get install qt-sdk
 qmake cameleon-cli.pro
 make
+qmake cameleon-ide.pro
+make
 </code>
 
 si rapbian lite, installer le server x + activation du forward TCP:
