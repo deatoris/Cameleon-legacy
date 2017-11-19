@@ -16,3 +16,10 @@ sudo startx &
 cat /var/log/Xorg.1.log
 ./lcm -cm="project/example/example.cm" 
 </code>
+
+at reboot:
+<code>
+  158  sudo startx &
+  165  export DISPLAY=:0.0
+  166  sudo xhost + &
+</code>
