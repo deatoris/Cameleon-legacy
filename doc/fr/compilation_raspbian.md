@@ -6,7 +6,6 @@ make
 </code>
 
 si rapbian lite, installer le server x + activation du forward TCP:
-
 <code>
 sudo nano /etc/ssh/sshd_config
 TCPForwarding yes
