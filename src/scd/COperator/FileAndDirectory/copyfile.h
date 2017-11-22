@@ -11,6 +11,7 @@ public:
     copyfile();
     virtual void exec();
     virtual COperator * clone();
+    bool copyFile(QString oldFilePath, QString newFilePath);
 };
 
 #endif // COPYFILE_H

@@ -1,5 +1,7 @@
 #include "cli.h"
-#include "CGCompositionManager.h"
+//#include "CGCompositionManager.h"
+
+#include "CClient.h"
 CommandLine::CommandLine(){
     this->structurePlug().addPlugIn(DataString::KEY,"exePath.str");
     this->structurePlug().addPlugIn(DataVector::KEY,"parameters.vec");
@@ -80,7 +82,9 @@ void CommandLine::processError(){
     this->plugOut()[2]->setState(CPlug::NEW);
     this->plugOut()[2]->send();
     this->updateState();
-    CGCompositionManager::getInstance()->getComposer()->play();
+    //CGCompositionManager::getInstance()->getComposer()->play();
+    CClientSingleton::getInstance()->getCInterfaceClient2Server()->startSend();
+
 }
 
 void CommandLine::processStoped(int exitCode, QProcess::ExitStatus exitStatus){
@@ -103,7 +107,9 @@ void CommandLine::processStoped(int exitCode, QProcess::ExitStatus exitStatus){
     this->plugOut()[2]->setState(CPlug::NEW);
     this->plugOut()[2]->send();
     this->updateState();
-    CGCompositionManager::getInstance()->getComposer()->play();
+//    CGCompositionManager::getInstance()->getComposer()->play();
+    CClientSingleton::getInstance()->getCInterfaceClient2Server()->startSend();
+
 }
 
 void CommandLine::readError(){

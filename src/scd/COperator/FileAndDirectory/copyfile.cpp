@@ -1,6 +1,6 @@
 #include "copyfile.h"
-#include "CGProjectSerialization.h"
 #include<DataBoolean.h>
+#include "CLogger.h"
 copyfile::copyfile(){
     this->structurePlug().addPlugIn(DataString::KEY,"file1.str");
     this->structurePlug().addPlugIn(DataString::KEY,"file2.str");
@@ -20,7 +20,7 @@ void copyfile::exec(){
     if(info.isDir()){
         QFileInfo info1(filepath1.c_str());
         QString s = info.absoluteFilePath()+"/"+info1.fileName();
-        if(!CGProjectSerialization::copyFile(filepath1.c_str(),s)){
+        if(!this->copyFile(filepath1.c_str(),s)){
             string message = "Can't copy file! Check inputs paths file1="+filepath1+" and file 2="+filepath2;
             this->error(message);
             CLogger::getInstance()->log("SCD",CLogger::ERROR,message.c_str());
@@ -29,8 +29,7 @@ void copyfile::exec(){
             this->plugOut()[1]->getData()->dumpReception(this->plugIn()[1]->getData());
         }
     }else{
-
-        if(!CGProjectSerialization::copyFile(filepath1.c_str(),filepath2.c_str())){
+        if(!this->copyFile(filepath1.c_str(),filepath2.c_str())){
             string message = "Can't copy file! Check inputs paths file1="+filepath1+" and file 2="+filepath2;
             this->error(message);
             CLogger::getInstance()->log("SCD",CLogger::ERROR,message.c_str());
@@ -39,6 +38,36 @@ void copyfile::exec(){
             this->plugOut()[1]->getData()->dumpReception(this->plugIn()[1]->getData());
         }
     }
+}
+
+bool copyfile::copyFile(QString oldFilePath, QString newFilePath)
+{
+    //same file, no need to copy
+    if(oldFilePath.compare(newFilePath) == 0)
+        return true;
+
+    //load both files
+    QFile oldFile(oldFilePath);
+    QFile newFile(newFilePath);
+    bool openOld = oldFile.open( QIODevice::ReadOnly );
+    bool openNew = newFile.open( QIODevice::WriteOnly );
+
+    //if either file fails to open bail
+    if(!openOld || !openNew) { return false; }
+
+    //copy contents
+    uint BUFFER_SIZE = 16000;
+    char* buffer = new char[BUFFER_SIZE];
+    while(!oldFile.atEnd())
+    {
+        qint64 len = oldFile.read( buffer, BUFFER_SIZE );
+        newFile.write( buffer, len );
+    }
+
+    //deallocate buffer
+    delete[] buffer;
+    buffer = NULL;
+    return true;
 }
 
 COperator * copyfile::clone(){

@@ -1,6 +1,7 @@
 #include "clisync.h"
 #include <CLogger.h>
-#include "CGCompositionManager.h"
+#include "CClient.h"
+
 CommandLineSync::CommandLineSync(){
     this->structurePlug().addPlugIn(DataString::KEY,"exePath.str");
     this->structurePlug().addPlugIn(DataVector::KEY,"parameters.vec");
@@ -109,7 +110,9 @@ void CommandLineSync::processStoped(int exitCode, QProcess::ExitStatus exitStatu
     this->updateState();
     p_stderr = "";
     p_stdout = "";
-    CGCompositionManager::getInstance()->getComposer()->play();
+    //CGCompositionManager::getInstance()->getComposer()->play();
+    CClientSingleton::getInstance()->getCInterfaceClient2Server()->startSend();
+
 }
 
 void CommandLineSync::readError(){
@@ -216,7 +219,7 @@ void CommandLineSync2::processError(){
     this->plugOut()[2]->send();
     p_stderr = "";
     p_stdout = "";
-    CGCompositionManager::getInstance()->getComposer()->play();
+    CClientSingleton::getInstance()->getCInterfaceClient2Server()->startSend();
 }
 
 void CommandLineSync2::processStoped(int exitCode, QProcess::ExitStatus exitStatus){
@@ -242,7 +245,7 @@ void CommandLineSync2::processStoped(int exitCode, QProcess::ExitStatus exitStat
     this->updateState();
     p_stderr = "";
     p_stdout = "";
-    CGCompositionManager::getInstance()->getComposer()->play();
+    CClientSingleton::getInstance()->getCInterfaceClient2Server()->startSend();
 }
 
 void CommandLineSync2::readError(){
