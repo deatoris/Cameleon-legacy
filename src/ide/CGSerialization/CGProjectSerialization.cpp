@@ -1090,8 +1090,6 @@ void CGProjectSerialization::load(){
 
 
 void CGProjectSerialization::loadWithoutGui(){
-    qDebug()<<"blabla2.13";
-
     emit progressSerial(0);
     //    ////qDebug << "try load project from " << CGProject::getInstance()->getPath();
     //    CGLayout* layout0 = CGLayoutManager::getInstance()->getLayout();
@@ -1110,7 +1108,6 @@ void CGProjectSerialization::loadWithoutGui(){
     if (!file.open(QFile::ReadOnly | QFile::Text)) {
         return;
     }
-    qDebug()<<"blabla2.12";
 
     QMap<int,int> mapOldNewControl;
     QMap<int,int> mapOldNewOperator;
@@ -1284,7 +1281,6 @@ void CGProjectSerialization::loadWithoutGui(){
             }
         }
     }
-    qDebug()<<"blabla2.11";
 
     file.reset();
     xmlReader.clear ();
@@ -1351,7 +1347,6 @@ void CGProjectSerialization::loadWithoutGui(){
             }
         }
     }
-    qDebug()<<"blabla2.10";
 
     file.reset();
     xmlReader.clear ();
@@ -1413,7 +1408,6 @@ void CGProjectSerialization::loadWithoutGui(){
             }
         }
     }
-    qDebug()<<"blabla2.9";
 
     file.reset();
     xmlReader.clear ();
@@ -1491,7 +1485,6 @@ void CGProjectSerialization::loadWithoutGui(){
     xmlReader.clear ();
     xmlReader.setDevice(&file);
     emit progressSerial(70);
-    qDebug()<<"blabla2.8";
 
     while (!xmlReader.atEnd()) {
         xmlReader.readNext();
@@ -1564,7 +1557,6 @@ void CGProjectSerialization::loadWithoutGui(){
     xmlReader.clear ();
     xmlReader.setDevice(&file);
     emit progressSerial(70);
-    qDebug()<<"blabla2.7";
 
     while (!xmlReader.atEnd()) {
         xmlReader.readNext();
@@ -1726,7 +1718,6 @@ void CGProjectSerialization::loadWithoutGui(){
             }
         }
     }
-    qDebug()<<"blabla2.6";
 
     file.reset();
     xmlReader.clear ();
@@ -1757,7 +1748,6 @@ void CGProjectSerialization::loadWithoutGui(){
             }
         }
     }
-    qDebug()<<"blabla2.5";
 
     file.reset();
     xmlReader.clear ();
@@ -1833,7 +1823,6 @@ void CGProjectSerialization::loadWithoutGui(){
         double y1 = sin(teta)*((m->getInnerConnector()->getRayon()-20)+20)/2;
         m->getInnerConnector()->setPos(x1,y1);
     }
-    qDebug()<<"blabla2.4";
 
     file.reset();
     xmlReader.clear ();
@@ -1923,7 +1912,6 @@ void CGProjectSerialization::loadWithoutGui(){
             }
         }
     }
-    qDebug()<<"blabla2.3";
 
     file.reset();
     xmlReader.clear ();
@@ -1976,7 +1964,6 @@ void CGProjectSerialization::loadWithoutGui(){
     }
 
 
-    qDebug()<<"blabla2.1";
 
     file.reset();
     xmlReader.clear ();
@@ -2009,7 +1996,6 @@ void CGProjectSerialization::loadWithoutGui(){
             }
         }
     }
-    qDebug()<<"blabla2.0";
 
     CGProject::getInstance()->loadRessources();
 

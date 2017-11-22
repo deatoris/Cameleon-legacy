@@ -224,10 +224,8 @@ void CGInstance::start(){
             if (!file.open(QFile::ReadOnly | QFile::Text)) {
                 //            //qDebug << "ERROR: can't load previous project from " << currentProjectPath;
             }else{
-                qDebug()<<"blabla";
                 CGProject::getInstance()->setPath(currentProjectPath);
                 serial->loadWithoutGui();
-                qDebug()<<"blabla2";
             }
         }
     }

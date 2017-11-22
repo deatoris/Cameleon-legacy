@@ -71,15 +71,12 @@ void CLauncher::launchCli(QList<argument> appArgs){
         CArguments::printCompositionHelp(compositionPath,compArgs);
         exit(0);
     }
-    qDebug()<<"blabla4";
 
     //SET ARGUMENTS
    // CGCompositionManager::getInstance()->setArguments(appArgs);
     //if(compositionPath.compare("")!=0)CGCompositionManager::getInstance()->getComposer()->openCompositionByFile(compositionPath);
     //CGCompositionManager::getInstance()->getComposer()->play();
-    qDebug()<<"blabla4.3";
     CClientSingleton::getInstance()->getCInterfaceClient2Server()->startSend();
-    qDebug()<<"blabla5";
 
 }
 
@@ -106,7 +103,6 @@ void CLauncher::startWithoutProgress(){
     CMachineSingleton::getInstance()->start();
     CGInstance::getInstance()->setMode(CGInstance::CMD);
     CGInstance::getInstance()->start();
-    qDebug()<<"blabla3";
 
 }
 

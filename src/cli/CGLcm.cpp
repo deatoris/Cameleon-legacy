@@ -9,14 +9,12 @@ int main(int argc, char *argv[]){
     //start instance logger
     CLoggerInstance::getInstance()->log("Application started ...");
         CLauncher * lau = new CLauncher();
-        qDebug()<<"blabla0";
         //lau->setDesktopSize(a.desktop()->screenGeometry().size());
 
         if(!QObject::connect(&a, SIGNAL(applicationStarted()),
                              lau, SLOT(startCli()))){
             //qDebug<<"[ERROR] Launch fatal Error";
         }
-            qDebug()<<"blabla6";
         return a.exec();
 
     return 0;
