@@ -65,8 +65,29 @@ void CGProjectSerialization::loadWithoutGui(){
  *
 */
 
-
             /*
+
+            lcm -i /$DIR
+            Créer une arborescene Caméléon.
+
+            lcm -v
+            kernel 2.2.0
+
+            lcm -h
+            Donne la man page Caméléon (à écrire)
+
+            lcm example.cm
+            launch with default parameters seted on the editor.
+
+            lcm example.cm -h
+            Donne la man page du fichier (propriété, description).
+
+            lcm example.cm -v
+            Donne la version du fichier (propriété, version).
+
+            lcm example.cm param1 ... paramN
+            Permet de lancer le fichier avec des paramètres différents.
+
             #OPERATOR
             <operator id="1" type="sync" x="1035" y="-105.758" z="9" parentId="0"/>
             <operatorconnector opId="1" side="INPUT" connectorId="0" x="-49.2539" y="43.9324"/>
