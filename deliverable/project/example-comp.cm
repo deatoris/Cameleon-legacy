@@ -13,26 +13,53 @@
     <connectorOrder mode="HARD"/>
     <target path="target"/>
     <threads max="1"/>
-    <numbers nb_operators="2" nb_controls="" nb_compositions="0"/>
+    <numbers nb_operators="1" nb_controls="" nb_compositions="3"/>
     <controllerscreen windowsx="50" windowsy="480" windowswidth="1266" windowsheight="284" numscreen="0" fullscreen="false"/>
     <layouts/>
-    <composerscreen viewx="-824" viewy="-96" viewscale="0" windowsx="50" windowsy="60" windowswidth="1266" windowsheight="384" numscreen="0" fullscreen="false"/>
+    <composerscreen viewx="-342" viewy="-185" viewscale="0" windowsx="0" windowsy="53" windowswidth="1366" windowsheight="715" numscreen="0" fullscreen="true"/>
     <compositions>
-        <currentComposition id="0"/>
-        <composition id="0" name="INSTANCE" viewx="-824" viewy="-96" viewscale="0"/>
-        <compositioncontrol id="77" type="LineEditorString" x="-490" y="-65" z="1" width="167" height="83" parentId="0" content="ttt"/>
-        <controlconnector controlid="77" connectorid="0" side="OUT" name="testexp" datatype="DATASTRING" content="ttt"/>
-        <compositioncontrol id="76" type="EditorNumber" x="-676" y="32" z="1" width="87" height="83" parentId="0" content="100"/>
-        <controlconnector controlid="76" connectorid="0" side="OUT" name="edt" datatype="DATANUMBER" content="100"/>
-        <operator id="1" type="Copy" x="5" y="-30" z="0" parentId="0"/>
-        <operatorconnector opId="1" connectorId="0" side="IN" x="-65.9339" y="-2.95227"/>
-        <operatorconnector opId="1" connectorId="1" side="OUT" x="42.4433" y="42.4095"/>
-        <operatorconnector opId="1" connectorId="2" side="OUT" x="60" y="0"/>
-        <operator id="0" type="Copy" x="-214" y="135" z="0" parentId="0"/>
-        <operatorconnector opId="0" connectorId="0" side="IN" x="-42.3757" y="42.4771"/>
+        <currentComposition id="1"/>
+        <composition id="0" name="INSTANCE" viewx="-672" viewy="-240" viewscale="0"/>
+        <composition id="1" name="test" x="-122" y="83" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="-342" viewy="-185" viewscale="0" parentId="0"/>
+        <connector compositionId="1" connectorId="1" side="OUT" name="Other side not connected" x="44.7919" y="31.9169"/>
+        <composition id="2" name="testunder" x="151" y="44" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="-310" viewy="-231" viewscale="0" parentId="1"/>
+        <connector compositionId="2" connectorId="1" side="IN" name="" x="-55" y="0"/>
+        <connector compositionId="2" connectorId="2" side="OUT" name="" x="55" y="0"/>
+        <composition id="3" name="tstt" x="-183" y="62" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="-310" viewy="-231" viewscale="0" parentId="1"/>
+        <connector compositionId="3" connectorId="1" side="OUT" name="" x="55" y="0"/>
+        <compositioncontrol id="77" type="EditorNumber" x="-671" y="110" z="1" width="87" height="83" parentId="0" content="100"/>
+        <controlconnector controlid="77" connectorid="0" side="OUT" name="edt" datatype="DATANUMBER" content="100"/>
+        <compositioncontrol id="76" type="LineEditorString" x="-490" y="-65" z="1" width="167" height="83" parentId="0" content="ttt"/>
+        <controlconnector controlid="76" connectorid="0" side="OUT" name="testexp" datatype="DATASTRING" content="ttt"/>
+        <operator id="0" type="Copy" x="248" y="156" z="0" parentId="0"/>
+        <operatorconnector opId="0" connectorId="0" side="IN" x="-66" y="0"/>
         <operatorconnector opId="0" connectorId="1" side="OUT" x="42.4433" y="42.4095"/>
-        <operatorconnector opId="0" connectorId="2" side="OUT" x="60" y="0"/>
-        <connection controlId="77" operatorIdOut="1" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
-        <connection controlId="76" operatorIdOut="0" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <operatorconnector opId="0" connectorId="2" side="OUT" x="65.9837" y="-1.4663"/>
+        <connection controlId="77" operatorIdOut="2" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="76" operatorIdOut="3" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <operator id="1" type="Copy" x="-10.7273" y="83.5" z="0" parentId="2"/>
+        <operatorconnector opId="1" connectorId="0" x="-57.7659" y="31.9233"/>
+        <operatorconnector opId="1" connectorId="1" x="31.5597" y="57.9654"/>
+        <operatorconnector opId="1" connectorId="2" x="64.9354" y="-11.8064"/>
+        <operator id="3" type="Copy" x="-15.7273" y="-83.5" z="0" parentId="2"/>
+        <operatorconnector opId="3" connectorId="0" x="-65.9339" y="-2.95227"/>
+        <operatorconnector opId="3" connectorId="1" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="3" connectorId="2" x="60" y="0"/>
+        <operator id="2" type="Copy" x="-5" y="0" z="0" parentId="3"/>
+        <operatorconnector opId="2" connectorId="0" x="-42.3757" y="42.4771"/>
+        <operatorconnector opId="2" connectorId="1" x="42.4433" y="42.4095"/>
+        <operatorconnector opId="2" connectorId="2" x="60" y="0"/>
+        <connection operatorId1="0" compositionId2="1" connectorId1="0" connectorId2="1"/>
+        <connection compositionId1="1" operatorId2="0" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="2" compositionId2="3" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="2" compositionId2="1" connectorId1="2" connectorId2="1"/>
+        <connection compositionId1="3" compositionId2="2" connectorId1="1" connectorId2="1"/>
+        <connection compositionId1="1" compositionId2="2" connectorId1="1" connectorId2="2"/>
+        <connection operatorId1="1" compositionId2="2" connectorId1="0" connectorId2="1"/>
+        <connection operatorId1="1" compositionId2="2" connectorId1="1" connectorId2="2"/>
+        <connection compositionId1="2" operatorId2="1" connectorId1="1" connectorId2="0"/>
+        <connection compositionId1="2" operatorId2="1" connectorId1="2" connectorId2="1"/>
+        <connection operatorId1="2" compositionId2="3" connectorId1="2" connectorId2="1"/>
+        <connection compositionId1="3" operatorId2="2" connectorId1="1" connectorId2="2"/>
     </compositions>
 </cameleon>

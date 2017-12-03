@@ -201,7 +201,7 @@ void CGComposer::createMenus(){
 
     windowMenu  = menuBar()->addMenu(tr("&Windows"));
     //windowMenu->addAction(showController);
-    windowMenu->addAction(showProjectAction);
+    //windowMenu->addAction(showProjectAction);
     windowMenu->addAction(showLogAction);
     windowMenu->addAction(showFactoryAction);
 

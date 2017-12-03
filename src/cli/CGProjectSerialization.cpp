@@ -66,28 +66,248 @@ void CGProjectSerialization::loadWithoutGui(){
 */
 
 
-            /* OPERATOR
-                <operator id="1" type="sync" x="1035" y="-105.758" z="9" parentId="0"/>
-                <operatorconnector opId="1" side="INPUT" connectorId="0" x="-49.2539" y="43.9324"/>
-                <operatorconnector opId="1" side="INPUT" connectorId="1" x="-65.2423" y="9.97231"/>
-                <operatorconnector opId="1" side="OUTPUT" connectorId="2" x="58.3959" y="30.7558"/>
-                <operatorconnector opId="1" side="OUTPUT" connectorId="3" x="66" y="-0.0677037"/>
+            /*
+            #OPERATOR
+            <operator id="1" type="sync" x="1035" y="-105.758" z="9" parentId="0"/>
+            <operatorconnector opId="1" side="INPUT" connectorId="0" x="-49.2539" y="43.9324"/>
+            <operatorconnector opId="1" side="INPUT" connectorId="1" x="-65.2423" y="9.97231"/>
+            <operatorconnector opId="1" side="OUTPUT" connectorId="2" x="58.3959" y="30.7558"/>
+            <operatorconnector opId="1" side="OUTPUT" connectorId="3" x="66" y="-0.0677037"/>
 
+            #DATA (plugFromOutside)
+            <compositioncontrol id="76" type="EditorNumber" x="352" y="26" z="1" width="186" height="83" parentId="0" content="1000000"/>
+            <controlconnector controlid="76" connectorid="0" side="OUT" name="testexp" datatype="DATASTRING" content="ttt"/>
 
-            DATA (plugFromOutside)
-              <compositioncontrol id="78" type="EditorNumber" x="352" y="26" z="1" width="186" height="83" parentId="0" content="1000000"/>
-              <connection controlId="76" operatorIdOut="8" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+            #Connections
+            #oper oper
+            #control oper
+            #composition oper
+            #composition composition
 
-            les controleurs ont un seul connector out
-            a partir de la 2.2, il faut enregistrer le connecteur out,
-            avec son contenu, dans un controlconnector.
-            <controlconnector controlId="" exposedname="" side="" controlConnectorId="" datatype="XXX" content="XXXXXX"/>
-            Name vient de la fonction expose sur l'ihm.
-
-            Operator connection
             <connection connectorId1="0" operatorId1="0" connectorId2="2" operatorId2="1"/>
+            <connection controlId="76" operatorIdOut="8" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+            <connection compositionId1="1" operatorId2="3" connectorId1="1" connectorId2="0"/>
+            <connection operatorId1="0" compositionId2="1" connectorId1="0" connectorId2="1"/>
+            <connection compositionId1="1" operatorId2="0" connectorId1="1" connectorId2="0"/>
+            <connection compositionId1="2" compositionId2="3" connectorId1="1" connectorId2="1"/>
+            <connection compositionId1="2" compositionId2="1" connectorId1="2" connectorId2="1"/>
+            <connection compositionId1="3" compositionId2="2" connectorId1="1" connectorId2="1"/>
+            <connection compositionId1="1" compositionId2="2" connectorId1="1" connectorId2="2"/>
+            <connection operatorId1="1" compositionId2="2" connectorId1="0" connectorId2="1"/>
+            <connection operatorId1="1" compositionId2="2" connectorId1="1" connectorId2="2"/>
+            <connection compositionId1="2" operatorId2="1" connectorId1="1" connectorId2="0"/>
+            <connection compositionId1="2" operatorId2="1" connectorId1="2" connectorId2="1"/>
+            <connection operatorId1="2" compositionId2="3" connectorId1="2" connectorId2="1"/>
+            <connection compositionId1="3" operatorId2="2" connectorId1="1" connectorId2="2"/>
+
+            #compositions
+            <composition id="1" name="test" x="-122" y="84" z="-700" informations="Select this, clicking left then, click right, juste here, select properties and edit this doc." viewx="-341" viewy="-184" viewscale="0" parentId="0"/>
+            <connector compositionId="1" connectorId="1" side="OUT" name="" x="48.8639" y="34.8184"/>
+
 */
 
+    QXmlStreamReader xmlReader;
+    xmlReader.setDevice(&file);
 
+    file.reset();
+    xmlReader.clear ();
+    xmlReader.setDevice(&file);
+    while (!xmlReader.atEnd()) {
+        xmlReader.readNext();
+        if (xmlReader.isStartElement()) {
+            if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+            }else{
+                ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+            }
+        }else{
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+                    if (xmlReader.name() == "operator"){
+                        /*int id = xmlReader.attributes().value("connectorId").toString().toInt();
+                        int operatorId = xmlReader.attributes().value("opId").toString().toInt();
+                        double x = xmlReader.attributes().value("x").toString().toDouble();
+                        double y = xmlReader.attributes().value("y").toString().toDouble();
+                        CGOperatorModel* ope1 = CGCompositionManager::getInstance()->searchOperatorById(mapOldNewOperator.value(operatorId));
+                        if(ope1!=0){
+                            CGConnector* c = ope1->getView()->getConnectorById(id);
+                            QPointF p(x,y);
+                            if(c!=0)c->setPos(p);
+                        }*/
+                    }
+                }
+            }
+        }
+    }
+    file.reset();
+    xmlReader.clear ();
+    xmlReader.setDevice(&file);
+    while (!xmlReader.atEnd()) {
+        xmlReader.readNext();
+        if (xmlReader.isStartElement()) {
+            if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+            }else{
+                ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+            }
+        }else{
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+                    if (xmlReader.name() == "operatorconnector"){
+                        /*int id = xmlReader.attributes().value("connectorId").toString().toInt();
+                        int operatorId = xmlReader.attributes().value("opId").toString().toInt();
+                        double x = xmlReader.attributes().value("x").toString().toDouble();
+                        double y = xmlReader.attributes().value("y").toString().toDouble();
+                        CGOperatorModel* ope1 = CGCompositionManager::getInstance()->searchOperatorById(mapOldNewOperator.value(operatorId));
+                        if(ope1!=0){
+                            CGConnector* c = ope1->getView()->getConnectorById(id);
+                            QPointF p(x,y);
+                            if(c!=0)c->setPos(p);
+                        }*/
+                    }
+                }
+            }
+        }
+    }
+
+    file.reset();
+    xmlReader.clear ();
+    xmlReader.setDevice(&file);
+    while (!xmlReader.atEnd()) {
+        xmlReader.readNext();
+        if (xmlReader.isStartElement()) {
+            if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+            }else{
+                ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+            }
+        }else{
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+                    if (xmlReader.name() == "controlconnector"){
+                        /*int id = xmlReader.attributes().value("connectorId").toString().toInt();
+                        int operatorId = xmlReader.attributes().value("opId").toString().toInt();
+                        double x = xmlReader.attributes().value("x").toString().toDouble();
+                        double y = xmlReader.attributes().value("y").toString().toDouble();
+                        CGOperatorModel* ope1 = CGCompositionManager::getInstance()->searchOperatorById(mapOldNewOperator.value(operatorId));
+                        if(ope1!=0){
+                            CGConnector* c = ope1->getView()->getConnectorById(id);
+                            QPointF p(x,y);
+                            if(c!=0)c->setPos(p);
+                        }*/
+                    }
+                }
+            }
+        }
+    }
+
+    file.reset();
+    xmlReader.clear ();
+    xmlReader.setDevice(&file);
+    while (!xmlReader.atEnd()) {
+        xmlReader.readNext();
+        if (xmlReader.isStartElement()) {
+            if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+            }else{
+                ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+            }
+        }else{
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+                    if (xmlReader.name() == "connector"){
+                        /*int id = xmlReader.attributes().value("connectorId").toString().toInt();
+                        int operatorId = xmlReader.attributes().value("opId").toString().toInt();
+                        double x = xmlReader.attributes().value("x").toString().toDouble();
+                        double y = xmlReader.attributes().value("y").toString().toDouble();
+                        CGOperatorModel* ope1 = CGCompositionManager::getInstance()->searchOperatorById(mapOldNewOperator.value(operatorId));
+                        if(ope1!=0){
+                            CGConnector* c = ope1->getView()->getConnectorById(id);
+                            QPointF p(x,y);
+                            if(c!=0)c->setPos(p);
+                        }*/
+                    }
+                }
+            }
+        }
+    }
+
+            file.reset();
+            xmlReader.clear ();
+            xmlReader.setDevice(&file);
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+                    if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                        xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+                    }else{
+                        ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+                    }
+                }else{
+                    while (!xmlReader.atEnd()) {
+                        xmlReader.readNext();
+                        if (xmlReader.isStartElement()) {
+                            if (xmlReader.name() == "connexion"){
+                                /*int id = xmlReader.attributes().value("connectorId").toString().toInt();
+                                int operatorId = xmlReader.attributes().value("opId").toString().toInt();
+                                double x = xmlReader.attributes().value("x").toString().toDouble();
+                                double y = xmlReader.attributes().value("y").toString().toDouble();
+                                CGOperatorModel* ope1 = CGCompositionManager::getInstance()->searchOperatorById(mapOldNewOperator.value(operatorId));
+                                if(ope1!=0){
+                                    CGConnector* c = ope1->getView()->getConnectorById(id);
+                                    QPointF p(x,y);
+                                    if(c!=0)c->setPos(p);
+                                }*/
+                            }
+                        }
+                    }
+                }
+            }
+            file.reset();
+            xmlReader.clear ();
+            xmlReader.setDevice(&file);
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+                    if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                        xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+                    }else{
+                        ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+                    }
+                }else{
+                    while (!xmlReader.atEnd()) {
+                        xmlReader.readNext();
+                        if (xmlReader.isStartElement()) {
+                            if (xmlReader.name() == "composition"){
+                                /*int id = xmlReader.attributes().value("connectorId").toString().toInt();
+                                int operatorId = xmlReader.attributes().value("opId").toString().toInt();
+                                double x = xmlReader.attributes().value("x").toString().toDouble();
+                                double y = xmlReader.attributes().value("y").toString().toDouble();
+                                CGOperatorModel* ope1 = CGCompositionManager::getInstance()->searchOperatorById(mapOldNewOperator.value(operatorId));
+                                if(ope1!=0){
+                                    CGConnector* c = ope1->getView()->getConnectorById(id);
+                                    QPointF p(x,y);
+                                    if(c!=0)c->setPos(p);
+                                }*/
+                            }
+                        }
+                    }
+                }
+            }
+
+
+//    qDebug()<<"SECOND ======================";
+//    qDebug()<<CGLayoutManager::getInstance()->getCurrentLayout()->getView()->verticalScrollBar()->value();
+//    qDebug()<<CGLayoutManager::getInstance()->getCurrentLayout()->getView()->horizontalScrollBar()->value();
+//    qDebug()<<"SECOND ======================";
+
+    //start project logger
+
+
+            //START MACHINE
 
 }
