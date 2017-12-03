@@ -73,6 +73,7 @@ public slots:
     void disconnect();
     void disconnectControl();
     void disconnectComposerControl();
+    void expose();
     void showControl();
     void addConnector();
     void rmvConnector();
@@ -225,6 +226,8 @@ private:
     QAction *addConnectorAction;
     QAction *rmvConnectorAction;
     QAction *disconnectConnectorControlAction;
+    QAction *exposeAction;
+
     //multiselection's actions
     QAction *mergeAction;
     QAction *multiPropertiesAction;
@@ -323,6 +326,25 @@ private:
      QLabel *label;
      QLineEdit *lineEdit;
      QCheckBox *interfaceBox;
+     QDialogButtonBox *buttonBox;
+     QPushButton *okButton;
+     QPushButton *cancelButton;
+     QWidget *extension;
+ };
+
+ class namedialog : public QDialog
+ {
+     Q_OBJECT
+
+ public:
+     namedialog(QWidget *parent = 0);
+
+     QString getName();
+     void setName(QString name);
+     bool ret();
+ private:
+     QLabel *label;
+     QLineEdit *lineEdit;
      QDialogButtonBox *buttonBox;
      QPushButton *okButton;
      QPushButton *cancelButton;

@@ -187,14 +187,6 @@ CGInstance::Mode CGInstance::getMode(){
 }
 
 void CGInstance::start(){
-    //position dock
-
-    //    CGCompositionManager::getInstance()->getComposer()->addDockWidget(machine, CGCompositionManager::getInstance()->getComposer()->getMachine());
-    //    CGCompositionManager::getInstance()->getComposer()->addDockWidget(composerglossary, CGCompositionManager::getInstance()->getComposer()->getGlossary());
-    //    CGCompositionManager::getInstance()->getComposer()->addDockWidget(composerproject, CGCompositionManager::getInstance()->getComposer()->getProject());
-    //    CGLayoutManager::getInstance()->getController()->addDockWidget(controllerproject,CGLayoutManager::getInstance()->getController()->getProject());
-    //    CGLayoutManager::getInstance()->getController()->addDockWidget(controllerglossary,CGLayoutManager::getInstance()->getController()->getGlossary());
-
     CLogger::getInstance()->log("INSTANCE",CLogger::INFO,"=======================================================");
     CLogger::getInstance()->log("INSTANCE",CLogger::INFO,"Start cameleon engine version "+this->instanceVersion);
     //try to load activated libs

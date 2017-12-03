@@ -10,14 +10,14 @@ THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED
 
 More informations can be found here: http://www.shinoe.org/cameleon
 ======================================*/
-#include "CGlossary-cli.h"
+#include "CGlossary.h"
 
 //#include<../cconnectivityDictionnary.h>
 
 #include <CSDDictionnary-cli.h>
 //#include "PopulationDictionnary.h"
 #include "CLogger.h"
-#include<CDictionnary-cli.h>
+#include<CDictionnary.h>
 //#include "OpenCVDictionnary.h"
 CGlossary::CGlossary(){
 

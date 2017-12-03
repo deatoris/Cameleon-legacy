@@ -10,14 +10,6 @@
 
 #More informations can be found here: http://www.shinoe.org/cameleon
 #======================================
-IDEPATH = ide
+IDEPATH = cli
 INCLUDEPATH += \
-        $${IDEPATH}/ \
-        $${IDEPATH}/CGCommand \
-        $${IDEPATH}/CGComposer \
-        $${IDEPATH}/CGController \
-        $${IDEPATH}/CGGlossary \
-        $${IDEPATH}/CGLicence \
-        $${IDEPATH}/CGProject \
-        $${IDEPATH}/CGSerialization \
-        $${IDEPATH}/CGTool
+        $${IDEPATH}/

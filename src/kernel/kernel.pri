@@ -31,13 +31,13 @@ HEADERS += \
     $${MACHINEPATH}/CTool/CFactory.h \
     $${MACHINEPATH}/CTool/CTree.h \
     $${MACHINEPATH}/CMachine/CMachine.h \
-    $${MACHINEPATH}/CCore/CControl.h \
-    $${MACHINEPATH}/CTool/CFactoryControl.h \
+    $${MACHINEPATH}/CControl/CControl.h \
+    $${MACHINEPATH}/CControl/CFactoryControl.h \
     $${MACHINEPATH}/CTool/CLogger.h \
     $${MACHINEPATH}/CCore/CProcessorObject.h \
     $${MACHINEPATH}/CCore/CProcessorThread.h \
     $${MACHINEPATH}/CTool/CPerf.h \
-    $${MACHINEPATH}/CCore/CControlRessource.h \
+    $${MACHINEPATH}/CControl/CControlRessource.h \
     $${MACHINEPATH}/CMachine/CMode.h \
     $${MACHINEPATH}/CGlossary/ICDictionary.h\
     $${MACHINEPATH}/CTool/CException.h
@@ -54,12 +54,12 @@ SOURCES +=  \
     $${MACHINEPATH}/CGlossary/CGlossary.cpp \
     $${MACHINEPATH}/CGlossary/CDictionnary.cpp \
     $${MACHINEPATH}/CMachine/CMachine.cpp \
-    $${MACHINEPATH}/CCore/CControl.cpp \
+    $${MACHINEPATH}/CControl/CControl.cpp \
     $${MACHINEPATH}/CTool/CLogger.cpp \
     $${MACHINEPATH}/CCore/CProcessorObject.cpp \
     $${MACHINEPATH}/CCore/CProcessorThread.cpp \
     $${MACHINEPATH}/CTool/CPerf.cpp \
-    $${MACHINEPATH}/CCore/CControlRessource.cpp \
+    $${MACHINEPATH}/CControl/CControlRessource.cpp \
     $${MACHINEPATH}/CTool/CException.cpp
 
 

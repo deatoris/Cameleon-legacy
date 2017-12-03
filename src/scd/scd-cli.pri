@@ -1,6 +1,5 @@
 SCDPATH = scd
-INCLUDEPATH += \
-        $${SCDPATH} \
+INCLUDEPATH +=  $${SCDPATH}/scd-cli \
                 $${SCDPATH}/CControl \
                 $${SCDPATH}/COperator \
                 $${SCDPATH}/CData \
@@ -25,8 +24,7 @@ INCLUDEPATH += \
                 $${SCDPATH}/COperator/System
 
 
-HEADERS += \
-    $${SCDPATH}/CData/DataString.h \
+HEADERS += $${SCDPATH}/CData/DataString.h \
     $${SCDPATH}/CData/DataBoolean.h \
     $${SCDPATH}/CData/DataMap.h \
     $${SCDPATH}/CData/DataVector.h \
@@ -35,7 +33,7 @@ HEADERS += \
     $${SCDPATH}/CData/DataTime.h \
     $${SCDPATH}/CData/DataDate.h \
     $${SCDPATH}/CData/DataNumber.h \
-    $${SCDPATH}/CSDDictionnary-cli.h \
+    $${SCDPATH}/scd-cli/CSDDictionnary-cli.h \
     $${SCDPATH}/COperator/Copy.h \
     $${SCDPATH}/COperator/CSDOperatorMerge.h \
     $${SCDPATH}/Common/table.h \
@@ -158,10 +156,9 @@ HEADERS += \
     $${SCDPATH}/COperator/Number/uid.h \
     $${SCDPATH}/COperator/Number/round.h \
     $${SCDPATH}/COperator/Number/divint.h
-SOURCES +=  \
-    $${SCDPATH}/CData/DataNumber.cpp \
+SOURCES += $${SCDPATH}/CData/DataNumber.cpp \
     $${SCDPATH}/COperator/Copy.cpp \
-    $${SCDPATH}/CSDDictionnary-cli.cpp \
+    $${SCDPATH}/scd-cli/CSDDictionnary-cli.cpp \
     $${SCDPATH}/COperator/CSDOperatorMerge.cpp \
     $${SCDPATH}/CData/DataString.cpp \
     $${SCDPATH}/CData/DataBoolean.cpp \

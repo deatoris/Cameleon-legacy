@@ -351,6 +351,8 @@ void CInterfaceClient::updateOperatorStructureReceive(COperator::Id opid,COperat
     //CGCompositionManager::getInstance()->updateStructOperator(opid,opstructure);
 }
 
+/*
+ * CUT FOR CLI
 int CInterfaceClient::addListenerPlugOutOperator2PlugInControl(COperator::Id opid,COperator::PlugKey plugkeyop,CControl * control,CControl::PlugKey plugkeycontrol){
     CLogger::getInstance()->log("CLIENTTOSERVER",CLogger::DEBUG,"addListenerPlugOutOperator2PlugInControl");
     _v_control.push_back(make_pair(true,make_pair(opid,make_pair(plugkeyop,make_pair(control,plugkeycontrol)))));
@@ -374,7 +376,7 @@ void CInterfaceClient::removeListenerPlugOutOperator2PlugInControl(int controlid
     if(_touch == false)
         emit disconnectListening( opid,  plugkey);
 
-}
+}*/
 
 void CInterfaceClient::setTmpPath(string str){
     CLogger::getInstance()->log("CLIENTTOSERVER",CLogger::DEBUG,"setTmpPath");

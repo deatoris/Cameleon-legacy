@@ -1,18 +1,12 @@
 #include "CSDDictionnary-cli.h"
 //#include<CData.h>
 #include<InNumber.h>
-#include<InFile.h>
-#include<ControlBrowseDirectory.h>
 #include<Copy.h>
-#include<CGInNumber.h>
 #include<CSDOperatorMerge.h>
-#include<cimage.h>
-#include<CControlRessource.h>
 //#include <CGInNumber.h>
 #include <divint.h>
 
 #include "uid.h"
-#include <InFile.h>
 #include <DataBoolean.h>
 #include <DataDateTime.h>
 #include <DataMap.h>
@@ -128,10 +122,7 @@
 #include <erase.h>
 #include<OperatorLoadVector.h>
 #include<OperatorSaveVector.h>
-#include <Boolean/ViewBoolean.h>
-#include <Boolean/EditorBoolean.h>
 #include <compare.h>
-#include "Boolean/Button.h"
 
 #include <locker.h>
 #include <LoadImageQT.h>

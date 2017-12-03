@@ -10,7 +10,7 @@
 
 #More informations can be found here: http://www.shinoe.org/cameleon
 #======================================
-CLIENTPATH = client
+CLIENTPATH = client-cli
 
 INCLUDEPATH += \
 		$${CLIENTPATH}/

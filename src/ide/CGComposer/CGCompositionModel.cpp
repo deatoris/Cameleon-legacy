@@ -453,6 +453,16 @@ void CGConnectorModel::setName(QString name){
     this->name = name;
 }
 
+
+void CGConnectorModel::setExposedName(QString name){
+    this->exposedName = name;
+
+}
+
+QString CGConnectorModel::getExposedName(){
+    return exposedName;
+}
+
 QString CGConnectorModel::getName(){
     return name;
 }

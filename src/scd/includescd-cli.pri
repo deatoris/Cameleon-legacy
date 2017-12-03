@@ -1,6 +1,5 @@
-SCDPATH = ../machine/scd
-INCLUDEPATH += \
-        $${SCDPATH} \
+SCDPATH = scd
+INCLUDEPATH +=  $${SCDPATH}/scd-cli \
 		$${SCDPATH}/CControl \
 		$${SCDPATH}/COperator \
 		$${SCDPATH}/CData \

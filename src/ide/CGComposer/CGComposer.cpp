@@ -270,6 +270,7 @@ void CGComposer::createMenus(){
 
     connectorControlMenu = new QMenu();
     connectorControlMenu->addAction(disconnectConnectorControlAction);
+    connectorControlMenu->addAction(exposeAction);
 
     multiMenu = new QMenu();
     multiMenu->addAction(showInfos);
@@ -665,6 +666,13 @@ void CGComposer::createActions(){
     disconnectConnectorControlAction->setStatusTip(tr("disconnect"));
     connect(disconnectConnectorControlAction, SIGNAL(triggered()),
             this, SLOT(disconnectComposerControl()));
+
+    exposeAction = new QAction(QIcon(":/icons/arrow_right.png"),
+                                                   tr("expose"), this);
+    exposeAction->setStatusTip(tr("disconnect"));
+    connect(exposeAction, SIGNAL(triggered()),
+            this, SLOT(expose()));
+
 
     disconnectControlAction= new QAction(QIcon(":/icons/disconnect.png"),
                                          tr("disconnect control"), this);
@@ -1237,6 +1245,24 @@ void CGComposer::showControl(){
     CGConnector* connector = qgraphicsitem_cast<CGConnector *>(item);
     if(connector->getIsControlConnected())CGLayoutManager::getInstance()->showConnected(connector->getConnectedControlConnector());
 }
+
+void CGComposer::expose(){
+    foreach (QGraphicsItem *item, CGCompositionManager::getInstance()->getCurrentComposerScene()->selectedItems()) {
+        if(item->type() == CGLayoutItemConnector::Type){
+            CGLayoutItemConnector* connector = qgraphicsitem_cast<CGLayoutItemConnector *>(item);
+
+            namedialog dialog;
+            dialog.setName(connector->getModel()->getExposedName());
+            dialog.exec();
+            dialog.show();
+            QString text = dialog.getName();
+            bool ok = dialog.ret();
+
+            connector->getModel()->setExposedName(text);
+        }
+    }
+}
+
 
 void CGComposer::disconnectComposerControl(){
     QList<QGraphicsItem*> items = CGCompositionManager::getInstance()->getCurrentComposerScene()->selectedItems();
@@ -2322,3 +2348,54 @@ bool patterndialog::ret(){
     return okButton->isChecked();
 }
 
+namedialog::namedialog(QWidget *parent)
+    : QDialog(parent)
+{
+    label = new QLabel(tr("Input data name for lcm"));
+    lineEdit = new QLineEdit;
+    label->setBuddy(lineEdit);
+
+    okButton = new QPushButton(tr("&Ok"));
+    okButton->setCheckable(true);
+    okButton->setChecked(false);
+
+    cancelButton = new QPushButton(tr("&Cancel"));
+
+    buttonBox = new QDialogButtonBox(Qt::Horizontal);
+    buttonBox->addButton(okButton, QDialogButtonBox::ActionRole);
+    buttonBox->addButton(cancelButton, QDialogButtonBox::ActionRole);
+
+    connect(okButton, SIGNAL(clicked()), this, SLOT(close()));
+    connect(cancelButton, SIGNAL(clicked()), this, SLOT(close()));
+
+    QHBoxLayout *topLeftLayout = new QHBoxLayout;
+    topLeftLayout->addWidget(label);
+    topLeftLayout->addWidget(lineEdit);
+
+    QVBoxLayout *leftLayout = new QVBoxLayout;
+    leftLayout->addLayout(topLeftLayout);
+    //     leftLayout->addWidget(interfaceBox);
+
+    QGridLayout *mainLayout = new QGridLayout;
+
+    mainLayout->addLayout(leftLayout, 0, 0);
+    mainLayout->addWidget(buttonBox, 1, 0);
+    mainLayout->setRowStretch(2, 1);
+
+    setLayout(mainLayout);
+
+    setWindowTitle(tr("Input data exposition"));
+}
+
+QString namedialog::getName(){
+    return lineEdit->text();
+}
+
+void namedialog::setName(QString name){
+    lineEdit->setText(name);
+}
+
+
+bool namedialog::ret(){
+    return okButton->isChecked();
+}

@@ -17,6 +17,6 @@ INCLUDEPATH += \
                 $${MACHINEPATH}/CTool \
 		$${MACHINEPATH}/CCore/CData \
                 $${MACHINEPATH}/CCore \
-		$${MACHINEPATH}/CGlossary
+                $${MACHINEPATH}/CGlossary-cli
 
 

@@ -162,10 +162,13 @@ public:
     bool getIsConnected();
     void setName(QString name);
     QString getName();
+    void setExposedName(QString name);
+    QString getExposedName();
     CGConnectorModel* getConnectedConnector();
     CGOperatorModel* getCGOperatorModel();
 private:
     QString name;
+    QString exposedName;
     int id;
     CData::Key dataType;
     QString side;

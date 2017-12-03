@@ -26,18 +26,18 @@ HEADERS += \
     $${MACHINEPATH}/CTool/CDisplayComposition.h \
     $${MACHINEPATH}/CCore/CProcessor.h \
     $${MACHINEPATH}/CTool/CError.h \
-    $${MACHINEPATH}/CGlossary/CDictionnary-cli.h \
-    $${MACHINEPATH}/CGlossary/CGlossary-cli.h \
+    $${MACHINEPATH}/CGlossary-cli/CDictionnary.h \
+    $${MACHINEPATH}/CGlossary-cli/CGlossary.h \
     $${MACHINEPATH}/CTool/CFactory.h \
     $${MACHINEPATH}/CTool/CTree.h \
     $${MACHINEPATH}/CMachine/CMachine.h \
-    $${MACHINEPATH}/CTool/CFactoryControl.h \
+    #$${MACHINEPATH}/CTool/CFactoryControl.h \
     $${MACHINEPATH}/CTool/CLogger.h \
     $${MACHINEPATH}/CCore/CProcessorObject.h \
     $${MACHINEPATH}/CCore/CProcessorThread.h \
     $${MACHINEPATH}/CTool/CPerf.h \
     $${MACHINEPATH}/CMachine/CMode.h \
-    $${MACHINEPATH}/CGlossary/ICDictionary-cli.h\
+    $${MACHINEPATH}/CGlossary-cli/ICDictionary.h\
     $${MACHINEPATH}/CTool/CException.h
 
 SOURCES +=  \
@@ -49,8 +49,8 @@ SOURCES +=  \
     $${MACHINEPATH}/CTool/CDisplayComposition.cpp \
     $${MACHINEPATH}/CCore/CProcessor.cpp \
     $${MACHINEPATH}/CTool/CError.cpp \
-    $${MACHINEPATH}/CGlossary/CGlossary-cli.cpp \
-    $${MACHINEPATH}/CGlossary/CDictionnary-cli.cpp \
+    $${MACHINEPATH}/CGlossary-cli/CGlossary.cpp \
+    $${MACHINEPATH}/CGlossary-cli/CDictionnary.cpp \
     $${MACHINEPATH}/CMachine/CMachine.cpp \
     $${MACHINEPATH}/CTool/CLogger.cpp \
     $${MACHINEPATH}/CCore/CProcessorObject.cpp \

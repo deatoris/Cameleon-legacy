@@ -1,4 +1,4 @@
-/*
+/*======================================
 Caméléon Creator & Population 
 
 Copyright 2012 O. Cugnon de Sévricourt & V. Tariel
@@ -10,22 +10,51 @@ THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED
 
 More informations can be found here: http://www.shinoe.org/cameleon
 ======================================*/
-#ifndef ICGLOSSARY_H
-#define ICGLOSSARY_H
+#include "CDictionnary.h"
 
-#include <QtPlugin>
-#include "CDictionnary-cli.h"
-class ICDictionary
+CDictionnary::~CDictionnary()
 {
 
-public:
-    virtual ~ICDictionary() {}
+    for(int i=0;i<(int)_v_data.size();i++)
+        delete _v_data[i];
+    for(int i=0;i<(int)_v_op.size();i++)
+        delete _v_op[i];
+}
+void CDictionnary::registerData(CData * data){
+    _v_data.push_back(data);
+}
 
-    virtual CDictionnary* getDictionary()=0;
-};
+void CDictionnary::setInformation(string info){
+    _information = info;
+}
 
-QT_BEGIN_NAMESPACE
-Q_DECLARE_INTERFACE(ICDictionary, "shinoe.cameleon.dictionary/2.0")
-QT_END_NAMESPACE
+string CDictionnary::getInformation(){
+    return _information;
+}
+void CDictionnary::registerOperator(COperator * op){
+    _v_op.push_back(op);
+}
+vector<CData*> & CDictionnary::datas(){
+    return _v_data;
+}
 
-#endif // ICGLOSSARY_H
+vector<COperator*> & CDictionnary::operators(){
+    return _v_op;
+}
+
+
+void CDictionnary::setVersion(string version){
+    this->version = version;
+}
+
+string CDictionnary::getVersion(){
+    return version;
+}
+
+string CDictionnary::getNameDictionnary(){
+    return _namedictionnary;
+}
+
+void CDictionnary::setNameDictionnary(string namedictionnary){
+    _namedictionnary = namedictionnary;
+}

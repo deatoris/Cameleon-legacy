@@ -13,9 +13,9 @@ More informations can be found here: http://www.shinoe.org/cameleon
 #ifndef CINTERFACECLIENT2SERVERLOCAL_H
 #define CINTERFACECLIENT2SERVERLOCAL_H
 
+#include<QWaitCondition>
 #include<CInterfaceClient.h>
 #include<QObject>
-#include<CControl.h>
 #include<CProcessorObject.h>
 class Compare
 {
@@ -31,7 +31,7 @@ private:
     COperatorStructure  _opstructure;
     QMutex _mutex;
     QWaitCondition _condition;
-    vector<pair<bool, pair<int,pair<int, pair<CControl *,int> > > > > _v_control;
+    //vector<pair<bool, pair<int,pair<int, pair<CControl *,int> > > > > _v_control;
     bool _alllistening;
     bool _isstop;
     int _unitprocessid;
@@ -132,9 +132,9 @@ public:
     virtual void updatePlugOutReceive(COperator::Id opid,COperator::PlugKey plugkeyn, CData * data, CPlug::State state);
     virtual   void updateOperatorStructureReceive(COperator::Id opid,COperatorStructure   opstructure);
      virtual   void progressionExecution(double ratio);
-    //LISTENER
-    virtual int addListenerPlugOutOperator2PlugInControl(COperator::Id opid,COperator::PlugKey plugkeyn,CControl * control,CControl::PlugKey plugkeycontrol);
-    virtual void removeListenerPlugOutOperator2PlugInControl(int controlid);
+    //LISTENER: cut for CLI
+//    virtual int addListenerPlugOutOperator2PlugInControl(COperator::Id opid,COperator::PlugKey plugkeyn,CControl * control,CControl::PlugKey plugkeycontrol);
+//    virtual void removeListenerPlugOutOperator2PlugInControl(int controlid);
 
     //Set
     virtual void setTmpPath(string str);

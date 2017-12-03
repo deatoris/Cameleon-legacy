@@ -43,5 +43,51 @@ QString CGProjectSerialization::makeRelative(QString it){
 }
 
 void CGProjectSerialization::loadWithoutGui(){
+    CGProject::getInstance()->setName("");
+    CGProject::getInstance()->setVersion("");
+    QFile file(CGProject::getInstance()->getPath());
+    if (!file.open(QFile::ReadOnly | QFile::Text)) {
+        return;
+    }
+
+/*
+ *The main
+ *
+ *Algo
+ *operator: type/id
+ *connection: opid:opid1:connectorid:connectorid1
+ *inputs datas:controlid:controlConnectorId:datatype:content
+ *inputs connection:
+ *ignore controls inputs, take just outputs. controls must have only one output connector.
+ *
+ *Règles:
+ *  * Pas de controlleur faisant office de "passeur" dans une boucle.
+ *
+*/
+
+
+            /* OPERATOR
+                <operator id="1" type="sync" x="1035" y="-105.758" z="9" parentId="0"/>
+                <operatorconnector opId="1" side="INPUT" connectorId="0" x="-49.2539" y="43.9324"/>
+                <operatorconnector opId="1" side="INPUT" connectorId="1" x="-65.2423" y="9.97231"/>
+                <operatorconnector opId="1" side="OUTPUT" connectorId="2" x="58.3959" y="30.7558"/>
+                <operatorconnector opId="1" side="OUTPUT" connectorId="3" x="66" y="-0.0677037"/>
+
+
+            DATA (plugFromOutside)
+              <compositioncontrol id="78" type="EditorNumber" x="352" y="26" z="1" width="186" height="83" parentId="0" content="1000000"/>
+              <connection controlId="76" operatorIdOut="8" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
+
+            les controleurs ont un seul connector out
+            a partir de la 2.2, il faut enregistrer le connecteur out,
+            avec son contenu, dans un controlconnector.
+            <controlconnector controlId="" exposedname="" side="" controlConnectorId="" datatype="XXX" content="XXXXXX"/>
+            Name vient de la fonction expose sur l'ihm.
+
+            Operator connection
+            <connection connectorId1="0" operatorId1="0" connectorId2="2" operatorId2="1"/>
+*/
+
+
 
 }
