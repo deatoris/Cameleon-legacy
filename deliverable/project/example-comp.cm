@@ -16,20 +16,23 @@
     <numbers nb_operators="2" nb_controls="" nb_compositions="0"/>
     <controllerscreen windowsx="50" windowsy="480" windowswidth="1266" windowsheight="284" numscreen="0" fullscreen="false"/>
     <layouts/>
-    <composerscreen viewx="-500" viewy="-157" viewscale="0" windowsx="50" windowsy="60" windowswidth="1266" windowsheight="384" numscreen="0" fullscreen="false"/>
+    <composerscreen viewx="-824" viewy="-96" viewscale="0" windowsx="50" windowsy="60" windowswidth="1266" windowsheight="384" numscreen="0" fullscreen="false"/>
     <compositions>
         <currentComposition id="0"/>
-        <composition id="0" name="INSTANCE" viewx="-500" viewy="-157" viewscale="0"/>
-        <compositioncontrol id="76" type="LineEditorString" x="-430" y="34" z="1" width="167" height="83" parentId="0" content="ttt"/>
-        <controlconnector controlid="76" connectorid="0" side="OUT" name="testexp" datatype="DATASTRING" content="ttt"/>
-        <operator id="1" type="Copy" x="-10" y="-35" z="0" parentId="0"/>
-        <operatorconnector opId="1" connectorId="0" side="IN" x="-65.421" y="8.72281"/>
+        <composition id="0" name="INSTANCE" viewx="-824" viewy="-96" viewscale="0"/>
+        <compositioncontrol id="77" type="LineEditorString" x="-490" y="-65" z="1" width="167" height="83" parentId="0" content="ttt"/>
+        <controlconnector controlid="77" connectorid="0" side="OUT" name="testexp" datatype="DATASTRING" content="ttt"/>
+        <compositioncontrol id="76" type="EditorNumber" x="-676" y="32" z="1" width="87" height="83" parentId="0" content="100"/>
+        <controlconnector controlid="76" connectorid="0" side="OUT" name="edt" datatype="DATANUMBER" content="100"/>
+        <operator id="1" type="Copy" x="5" y="-30" z="0" parentId="0"/>
+        <operatorconnector opId="1" connectorId="0" side="IN" x="-65.9339" y="-2.95227"/>
         <operatorconnector opId="1" connectorId="1" side="OUT" x="42.4433" y="42.4095"/>
         <operatorconnector opId="1" connectorId="2" side="OUT" x="60" y="0"/>
-        <operator id="0" type="Copy" x="-307" y="-99" z="0" parentId="0"/>
+        <operator id="0" type="Copy" x="-214" y="135" z="0" parentId="0"/>
         <operatorconnector opId="0" connectorId="0" side="IN" x="-42.3757" y="42.4771"/>
         <operatorconnector opId="0" connectorId="1" side="OUT" x="42.4433" y="42.4095"/>
         <operatorconnector opId="0" connectorId="2" side="OUT" x="60" y="0"/>
-        <connection controlId="76" operatorIdOut="1" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="77" operatorIdOut="1" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
+        <connection controlId="76" operatorIdOut="0" controlConnectorIdIn="0" operatorConnectorIdOut="0"/>
     </compositions>
 </cameleon>
