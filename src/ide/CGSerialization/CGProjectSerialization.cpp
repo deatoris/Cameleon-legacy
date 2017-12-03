@@ -522,6 +522,7 @@ void CGProjectSerialization::load(){
 
                                 layoutItem->getControl()->fromString(content.toStdString());
                                 mapOldNewControl.insert(id,layoutItem->getControl()->getId());
+                                layoutItem->getControl()->apply();
                             }else{
                                 CLogger::getInstance()->log("INSTANCE",CLogger::ERROR,"Can't create control "+name);
                                 mapOldNewControl.insert(id,-1);
@@ -735,6 +736,10 @@ void CGProjectSerialization::load(){
     file.reset();
     xmlReader.clear ();
     xmlReader.setDevice(&file);
+
+    //patch #105
+    //lire le connector out:
+    //<controlconnector name="XXX" datatype="XXX" content="XXXXXX"\/>
 
     emit progressSerial(80);
     QList<CGMultiConnector*> multiConnectorList;
@@ -1074,6 +1079,15 @@ void CGProjectSerialization::load(){
         }
     }
 
+
+
+
+
+
+
+
+
+
     CGProject::getInstance()->loadRessources();
 
     CGCompositionModel* child = CGCompositionManager::getInstance()->getCompositionById(currentC);
@@ -1086,6 +1100,44 @@ void CGProjectSerialization::load(){
 
     //start project logger
     CLogger::getInstance()->start();
+
+
+
+
+    file.reset();
+    xmlReader.clear ();
+    xmlReader.setDevice(&file);
+    while (!xmlReader.atEnd()) {
+        xmlReader.readNext();
+        if (xmlReader.isStartElement()) {
+            if (!xmlReader.name().compare("cameleon") == 0 || xmlReader.attributes().value("version") != CGInstance::getInstance()->getInstanceVersion()){
+                xmlReader.raiseError(QObject::tr("The cameleon project file is not compatible with this ide version."));
+            }else{
+                ////qDebug << "ide instance version " << CGInstance::getInstance()->getInstanceVersion();
+            }
+        }else{
+            while (!xmlReader.atEnd()) {
+                xmlReader.readNext();
+                if (xmlReader.isStartElement()) {
+                    if (xmlReader.name() == "compositioncontrol"){
+                        int id = xmlReader.attributes().value("id").toString().toInt();
+                        CGLayoutItem* layoutItem = CGLayoutManager::getInstance()->getItemById(mapOldNewControl.value(id));
+                        layoutItem->getControl()->apply();
+                    }
+
+                    if (xmlReader.name() == "controlconnector"){
+                        int id = xmlReader.attributes().value("controlid").toString().toInt();
+                        int connectorid = xmlReader.attributes().value("connectorid").toString().toInt();
+                        QString name = xmlReader.attributes().value("name").toString();
+                        CGLayoutItem* layoutItem = CGLayoutManager::getInstance()->getItemById(mapOldNewControl.value(id));
+
+                        layoutItem->getConnectorById(connectorid)->getModel()->setExposedName(name);
+
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -1543,6 +1595,7 @@ void CGProjectSerialization::loadWithoutGui(){
 
                                 layoutItem->getControl()->fromString(content.toStdString());
                                 mapOldNewControl.insert(id,layoutItem->getControl()->getId());
+                                layoutItem->getControl()->apply();
                             }else{
                                 CLogger::getInstance()->log("INSTANCE",CLogger::ERROR,"Can't create control "+name);
                                 mapOldNewControl.insert(id,-1);
@@ -2180,6 +2233,20 @@ void CGProjectSerialization::saveAs(QString path, CGCompositionModel* topModel, 
                     xmlWriter.writeAttribute("parentId", QString::number(layout->getId()));
                     xmlWriter.writeAttribute("content",QString::fromStdString(ctrl->getControl()->toString()));
                     xmlWriter.writeEndElement();
+
+                    //patch #105
+                    //prendre le connector out et écrire:
+                    //<controlconnector controlid="" connectorid="" name="XXX" datatype="XXX" content="XXXXXX"\/>
+                    foreach(CGLayoutItemConnector* connector, ctrl->getConnectorsL()){
+                        xmlWriter.writeStartElement("controlconnector");
+                        xmlWriter.writeAttribute("controlid", QString::number(ctrl->getControl()->getId()));
+                        xmlWriter.writeAttribute("connectorid", QString::number(connector->getId()));
+                        xmlWriter.writeAttribute("side", connector->getModel()->getSide());
+                        xmlWriter.writeAttribute("name", connector->getModel()->getExposedName());
+                        xmlWriter.writeAttribute("datatype", connector->getModel()->getDataType());
+                        xmlWriter.writeAttribute("content", ctrl->getControl()->getData());
+                        xmlWriter.writeEndElement();
+                    }
                 }
                 if(item->type() == CGText::Type){
                     CGText *text = qgraphicsitem_cast<CGText *>(item);
@@ -2497,6 +2564,21 @@ void CGProjectSerialization::saveAs(QString path, CGCompositionModel* topModel, 
             xmlWriter.writeAttribute("parentId", QString::number(topModel->getId()));
             xmlWriter.writeAttribute("content",QString::fromStdString(ctrl->getControl()->toString()));
             xmlWriter.writeEndElement();
+
+            //patch #105
+            //prendre le connector out et écrire:
+            //<controlconnector controlid="" connectorid="" name="XXX" datatype="XXX" content="XXXXXX"\/>
+            foreach(CGLayoutItemConnector* connector, ctrl->getConnectorsL()){
+                xmlWriter.writeStartElement("controlconnector");
+                xmlWriter.writeAttribute("controlid", QString::number(ctrl->getControl()->getId()));
+                xmlWriter.writeAttribute("connectorid", QString::number(connector->getId()));
+                xmlWriter.writeAttribute("side", connector->getModel()->getSide());
+                xmlWriter.writeAttribute("name", connector->getModel()->getExposedName());
+                xmlWriter.writeAttribute("datatype", connector->getModel()->getDataType());
+                xmlWriter.writeAttribute("content", ctrl->getControl()->getData());
+                xmlWriter.writeEndElement();
+            }
+
         }
         if(item->type() == CGOperator::Type){
             CGOperator *ope =
@@ -2513,6 +2595,7 @@ void CGProjectSerialization::saveAs(QString path, CGCompositionModel* topModel, 
                 xmlWriter.writeStartElement("operatorconnector");
                 xmlWriter.writeAttribute("opId", QString::number(ope->getModel()->getId()));
                 xmlWriter.writeAttribute("connectorId", QString::number(connector->getId()));
+                xmlWriter.writeAttribute("side", connector->getModel()->getSide());
                 xmlWriter.writeAttribute("x", QString::number(connector->pos().x()));
                 xmlWriter.writeAttribute("y", QString::number(connector->pos().y()));
                 xmlWriter.writeEndElement();

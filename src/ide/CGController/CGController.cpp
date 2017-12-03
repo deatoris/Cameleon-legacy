@@ -255,7 +255,7 @@ void CGController::attachBar(){
 }
 
 void CGController::popupClick(){
-    CGLayoutManager::getInstance()->getCurrentLayout()->setIsPopup(popupBox->isChecked());
+    if(CGLayoutManager::getInstance()->getCurrentLayout()) CGLayoutManager::getInstance()->getCurrentLayout()->setIsPopup(popupBox->isChecked());
 }
 
 void CGController::interactiveClick(){
@@ -273,7 +273,7 @@ void CGController::setResolution(QString s){
 }
 
 void CGController::changeResolution(QString s){
-    CGLayoutManager::getInstance()->getCurrentLayout()->setResolution(s);
+    if(CGLayoutManager::getInstance()->getCurrentLayout()) CGLayoutManager::getInstance()->getCurrentLayout()->setResolution(s);
 }
 
 
@@ -496,21 +496,24 @@ void CGController::disconnectAll(){
     CGCommandManager::getInstance()->startAction("DICSONNECT ALL");
     if(CClientSingleton::getInstance()->applyStopForEachAction()==true)
         CGCompositionManager::getInstance()->getComposer()->stop();
-    QGraphicsItem* item = CGLayoutManager::getInstance()->getCurrentLayout()->selectedItems().first();
-    CGLayoutItem* layout = qgraphicsitem_cast<CGLayoutItem *>(item);
-    foreach(CGLayoutItemConnector* connector, layout->getConnectorsL()){
-        if(connector->getConnectedConnector() != 0){
-            CGDisconnectConnector* disconnect = new CGDisconnectConnector();
-            disconnect->setControl(layout->getControl());
-            disconnect->setControlConnector(connector);
-            disconnect->setConnector(connector->getConnectedConnector());
-            disconnect->doCommand();
+    if(CGLayoutManager::getInstance()->getCurrentLayout()){
+        QGraphicsItem* item = CGLayoutManager::getInstance()->getCurrentLayout()->selectedItems().first();
+        CGLayoutItem* layout = qgraphicsitem_cast<CGLayoutItem *>(item);
+        foreach(CGLayoutItemConnector* connector, layout->getConnectorsL()){
+            if(connector->getConnectedConnector() != 0){
+                CGDisconnectConnector* disconnect = new CGDisconnectConnector();
+                disconnect->setControl(layout->getControl());
+                disconnect->setControlConnector(connector);
+                disconnect->setConnector(connector->getConnectedConnector());
+                disconnect->doCommand();
+            }
         }
     }
     CGCommandManager::getInstance()->endAction("DICSONNECT ALL");
 }
 
 void CGController::disconnect(){
+    if(CGLayoutManager::getInstance()->getCurrentLayout()){
     QList<QGraphicsItem*> items = CGLayoutManager::getInstance()->getCurrentLayout()->selectedItems();
     foreach(QGraphicsItem* item, items){
         if(item->type() == CGLayoutItemConnector::Type){
@@ -526,6 +529,7 @@ void CGController::disconnect(){
                 CGCommandManager::getInstance()->endAction("DISCONNECT");
             }
         }
+    }
     }
 }
 
@@ -684,19 +688,21 @@ void CGController::nextStep(){
 
 //commentBar's
 void CGController::toFront(){
-    if (CGLayoutManager::getInstance()->getCurrentLayout()->selectedItems().isEmpty())
-        return;
+    if(CGLayoutManager::getInstance()->getCurrentLayout()){
+        if (CGLayoutManager::getInstance()->getCurrentLayout()->selectedItems().isEmpty())
+            return;
 
-    QList<QGraphicsItem *> selectedItems = CGLayoutManager::getInstance()->getCurrentLayout()->selectedItems();
+        QList<QGraphicsItem *> selectedItems = CGLayoutManager::getInstance()->getCurrentLayout()->selectedItems();
 
-    foreach(QGraphicsItem* selectedItem, selectedItems){
-        QList<QGraphicsItem *> overlapItems = CGLayoutManager::getInstance()->getCurrentLayout()->items();
-        qreal zValue = 0;
-        foreach (QGraphicsItem *item, overlapItems) {
-            if (selectedItem->zValue() >= zValue)
-                zValue = item->zValue() + 1;
+        foreach(QGraphicsItem* selectedItem, selectedItems){
+            QList<QGraphicsItem *> overlapItems = CGLayoutManager::getInstance()->getCurrentLayout()->items();
+            qreal zValue = 0;
+            foreach (QGraphicsItem *item, overlapItems) {
+                if (selectedItem->zValue() >= zValue)
+                    zValue = item->zValue() + 1;
+            }
+            selectedItem->setZValue(zValue);
         }
-        selectedItem->setZValue(zValue);
     }
 }
 

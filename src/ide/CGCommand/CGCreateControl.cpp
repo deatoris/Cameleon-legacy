@@ -89,38 +89,40 @@ void CGCreateControl::exec(){
                 if(name.compare("Ressource")==0)layoutItem->getControl()->fromString(CGInstance::getInstance()->makeRelative(path).toStdString());
 
                 item->setSelected(true);
-                CGLayoutManager::getInstance()->getController()->toFront();
+               if(CGLayoutManager::getInstance()->getCurrentLayout()) CGLayoutManager::getInstance()->getController()->toFront();
             }else{
                 CLogger::getInstance()->log("INSTANCE",CLogger::ERROR,"Can't create object named "+name);
             }
-            CGLayoutManager::getInstance()->getCurrentLayout()->unselectAll();
-            CGLayoutManager::getInstance()->getCurrentLayout()->activate(item);
+           if(CGLayoutManager::getInstance()->getCurrentLayout()) CGLayoutManager::getInstance()->getCurrentLayout()->unselectAll();
+           if(CGLayoutManager::getInstance()->getCurrentLayout()) CGLayoutManager::getInstance()->getCurrentLayout()->activate(item);
             item->setSelected(true);
-            CGLayoutManager::getInstance()->getController()->toFront();
+           if(CGLayoutManager::getInstance()->getCurrentLayout()) CGLayoutManager::getInstance()->getController()->toFront();
             item->update();
         }else if(typeItem == CGLayoutItem::Type){
-            CGLayoutItem* layoutItem = CGLayoutFactory::getInstance()->getLayoutItemByName(name, CGLayoutManager::getInstance()->getCurrentLayout());
-            if(layoutItem != NULL){
-                layoutItem->setSelected(false);
-                eventScenePos.setX(eventScenePos.x()-layoutItem->getRect().width()/2);
-                eventScenePos.setY(eventScenePos.y()-layoutItem->getRect().height()/2);
-                layoutItem->setPos(eventScenePos);
-                item = layoutItem;
+            if(CGLayoutManager::getInstance()->getCurrentLayout()){
+                CGLayoutItem* layoutItem = CGLayoutFactory::getInstance()->getLayoutItemByName(name, CGLayoutManager::getInstance()->getCurrentLayout());
+                if(layoutItem != NULL){
+                    layoutItem->setSelected(false);
+                    eventScenePos.setX(eventScenePos.x()-layoutItem->getRect().width()/2);
+                    eventScenePos.setY(eventScenePos.y()-layoutItem->getRect().height()/2);
+                    layoutItem->setPos(eventScenePos);
+                    item = layoutItem;
+                    item->setSelected(true);
+                    CGLayoutManager::getInstance()->getController()->toFront();
+                }else{
+                    CLogger::getInstance()->log("INSTANCE",CLogger::ERROR,"Can't create object named "+name);
+                }
+                if(CGLayoutManager::getInstance()->getCurrentLayout())CGLayoutManager::getInstance()->getCurrentLayout()->unselectAll();
+                if(CGLayoutManager::getInstance()->getCurrentLayout())CGLayoutManager::getInstance()->getCurrentLayout()->activate(item);
                 item->setSelected(true);
                 CGLayoutManager::getInstance()->getController()->toFront();
-            }else{
-                CLogger::getInstance()->log("INSTANCE",CLogger::ERROR,"Can't create object named "+name);
             }
-            CGLayoutManager::getInstance()->getCurrentLayout()->unselectAll();
-            CGLayoutManager::getInstance()->getCurrentLayout()->activate(item);
-            item->setSelected(true);
-            CGLayoutManager::getInstance()->getController()->toFront();
         }else if(typeItem == CGShape::Type){
             CGShape* shape = new CGShape(0,0,CGLayoutManager::getInstance()->getCurrentLayout());
             shape->setPos(eventScenePos);
             item = shape;
-            CGLayoutManager::getInstance()->getCurrentLayout()->unselectAll();
-            CGLayoutManager::getInstance()->getCurrentLayout()->activate(item);
+            if(CGLayoutManager::getInstance()->getCurrentLayout())CGLayoutManager::getInstance()->getCurrentLayout()->unselectAll();
+           if(CGLayoutManager::getInstance()->getCurrentLayout()) CGLayoutManager::getInstance()->getCurrentLayout()->activate(item);
             item->setSelected(true);
             CGLayoutManager::getInstance()->getController()->toFront();
         }else if(typeItem == CGText::Type){

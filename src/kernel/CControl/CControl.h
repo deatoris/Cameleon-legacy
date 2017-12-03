@@ -60,7 +60,7 @@ public:
     virtual string toString();
     virtual void fromString(string );
     QMenu* getMenu();
-
+    QString getData();
 protected:
 
     int _id;
@@ -94,6 +94,7 @@ protected:
     virtual void wheelEvent ( QWheelEvent * event );
     QMenu* menu;
 private:
+    QString dataout;
     vector<pair<bool,int> > _v_plug_in;
     vector<pair<bool,pair<int,int> > > _v_plug_in_processor;
     vector<pair<bool,pair<int,int> > > _v_plug_out;

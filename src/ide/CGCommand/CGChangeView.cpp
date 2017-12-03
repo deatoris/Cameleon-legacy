@@ -37,9 +37,9 @@ void CGChangeView::exec()
             compositionModel->getSceneView()->centerOn(previousModel->getOuterView()->scenePos());
         }
     }else{
-        previousLayout = CGLayoutManager::getInstance()->getCurrentLayout();
-        CGLayoutManager::getInstance()->showLayout(layout->getId());
-        CGProject::getInstance()->switchToLayout(layout);
+        if(CGLayoutManager::getInstance()->getCurrentLayout()) previousLayout = CGLayoutManager::getInstance()->getCurrentLayout();
+        if(CGLayoutManager::getInstance()->getCurrentLayout()) CGLayoutManager::getInstance()->showLayout(layout->getId());
+        if(CGLayoutManager::getInstance()->getCurrentLayout()) CGProject::getInstance()->switchToLayout(layout);
     }
 }
 

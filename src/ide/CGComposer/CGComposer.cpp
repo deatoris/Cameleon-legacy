@@ -1258,7 +1258,7 @@ void CGComposer::expose(){
             QString text = dialog.getName();
             bool ok = dialog.ret();
 
-            connector->getModel()->setExposedName(text);
+            if(ok) connector->getModel()->setExposedName(text);
         }
     }
 }

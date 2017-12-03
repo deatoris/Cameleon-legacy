@@ -74,6 +74,7 @@ void ListBoxVector::apply(){
             type->setValue(stype.toStdString());
             this->sendPlugOutControl(0,data,CPlug::NEW);
             this->sendPlugOutControl(1,type,CPlug::NEW);
+
         }
     }
 }

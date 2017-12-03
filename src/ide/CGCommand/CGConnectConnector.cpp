@@ -34,7 +34,7 @@ void CGConnectConnector::exec()
         controlconnector->update();
         connector->update();
         CGCompositionManager::getInstance()->getCurrentComposerScene()->update();
-        CGLayoutManager::getInstance()->getCurrentLayout()->update();
+       // CGLayoutManager::getInstance()->getCurrentLayout()->update();
     }else{
         if(endItem != NULL){ //connection standard
             startItem->connect(endItem);
@@ -123,7 +123,7 @@ void CGConnectConnector::unexec()
         controlconnector->update();
         connector->update();
         CGCompositionManager::getInstance()->getCurrentComposerScene()->update();
-        CGLayoutManager::getInstance()->getCurrentLayout()->update();
+       if(CGLayoutManager::getInstance()->getCurrentLayout()) CGLayoutManager::getInstance()->getCurrentLayout()->update();
     }else if(endItem != NULL){
         startItem->disconnect();
         endItem->disconnect();

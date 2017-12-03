@@ -18,6 +18,7 @@ CControl::CControl(QWidget * parent)
 {
     _id=_idglobal;
     _idglobal++;
+    dataout="";
     //fixed size?
     //
     //    QHBoxLayout* layout = new QHBoxLayout();
@@ -82,6 +83,8 @@ void CControl::deconnectPlugOut(int myindexplugout){
 }
 
 void CControl::sendPlugOutControl(int indexplugout,CData* data,CPlug::State state){
+    //#107 - un control est adapté uniquement s'il n'a qu'un seul connecteur out
+    if(indexplugout==0) dataout = data->toString().c_str();
     if(_v_plug_out[indexplugout].first == true){
         CClientSingleton::getInstance()->getCInterfaceClient2Server()->setPlugInSend(_v_plug_out[indexplugout].second.first,_v_plug_out[indexplugout].second.second,data,state);
     }
@@ -131,6 +134,11 @@ void CControl::deconnectPlugIn(int myindexplugin){
 void CControl::updatePlugInControl(int ,CData* ){
     ////qDebug<<"[ERROR]"<<endl;
 }
+
+QString CControl::getData(){
+    return dataout;
+}
+
 void CControl::updatePlugInControlComingFromMachine(int plugkey, CData * data, CPlug::State state){
 
     if(state==CPlug::NEW || (_v_plug_in_firstime[plugkey]==true&& state==CPlug::OLD))
