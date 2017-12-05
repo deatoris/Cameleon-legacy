@@ -53,12 +53,26 @@ void CGProjectSerialization::loadWithoutGui(){
 /*
  *The main
  *
- *Algo
+ *Struct macro:
  *operator: type/id
  *connection: opid:opid1:connectorid:connectorid1
  *inputs datas:controlid:controlConnectorId:datatype:content
  *inputs connection:
  *ignore controls inputs, take just outputs. controls must have only one output connector.
+ *
+ *Besoin des structures suivantes:
+ *mapOldNewOper <id, COperator*>
+ *mapOldNewData <id, CData*>
+ *connexionsOO <id:id, id:id>
+ *connexionsCO <id:id, id:id>
+ *connexionsCC <id:id, id:id>
+ *connexionsDO <id:id, id:id>
+ *
+ *Algo:
+ *1/ Lire fichier pour produire les structures,
+ *2/ Retrouver l'opérateur connecté à un autre operateur s'il y a des compositions entre les deux,
+ *3/ Instancier le programme dans le kernel,
+ *4/ Lancer l'exécution.
  *
  *Règles:
  *  * Pas de controlleur faisant office de "passeur" dans une boucle.
@@ -68,16 +82,17 @@ void CGProjectSerialization::loadWithoutGui(){
             /*
 
             lcm -i /$DIR
-            Créer une arborescene Caméléon.
+            Créer une arbo Caméléon.
 
             lcm -v
             kernel 2.2.0
+            lcm 1.0.0
 
             lcm -h
             Donne la man page Caméléon (à écrire)
 
             lcm example.cm
-            launch with default parameters seted on the editor.
+            launch with default parameters setted on the editor.
 
             lcm example.cm -h
             Donne la man page du fichier (propriété, description).
@@ -88,6 +103,9 @@ void CGProjectSerialization::loadWithoutGui(){
             lcm example.cm param1 ... paramN
             Permet de lancer le fichier avec des paramètres différents.
 
+
+
+
             #OPERATOR
             <operator id="1" type="sync" x="1035" y="-105.758" z="9" parentId="0"/>
             <operatorconnector opId="1" side="INPUT" connectorId="0" x="-49.2539" y="43.9324"/>
@@ -95,15 +113,25 @@ void CGProjectSerialization::loadWithoutGui(){
             <operatorconnector opId="1" side="OUTPUT" connectorId="2" x="58.3959" y="30.7558"/>
             <operatorconnector opId="1" side="OUTPUT" connectorId="3" x="66" y="-0.0677037"/>
 
+            => creator operator + mapOldNew <id, COperator>
+
             #DATA (plugFromOutside)
             <compositioncontrol id="76" type="EditorNumber" x="352" y="26" z="1" width="186" height="83" parentId="0" content="1000000"/>
             <controlconnector controlid="76" connectorid="0" side="OUT" name="testexp" datatype="DATASTRING" content="ttt"/>
+
+            => create data + mapOldNew <id, CData*>
 
             #Connections
             #oper oper
             #control oper
             #composition oper
             #composition composition
+
+            => create map connection oper/oper
+            <id, oper*;id, oper*>
+
+            => create map connection data/oper
+            <id, CData*;id, oper*>
 
             <connection connectorId1="0" operatorId1="0" connectorId2="2" operatorId2="1"/>
             <connection controlId="76" operatorIdOut="8" controlConnectorIdIn="0" operatorConnectorIdOut="1"/>
@@ -272,7 +300,7 @@ void CGProjectSerialization::loadWithoutGui(){
                     while (!xmlReader.atEnd()) {
                         xmlReader.readNext();
                         if (xmlReader.isStartElement()) {
-                            if (xmlReader.name() == "connexion"){
+                            if (xmlReader.name() == "connection"){
                                 /*int id = xmlReader.attributes().value("connectorId").toString().toInt();
                                 int operatorId = xmlReader.attributes().value("opId").toString().toInt();
                                 double x = xmlReader.attributes().value("x").toString().toDouble();
