@@ -51,7 +51,7 @@ void CGProjectSerialization::loadWithoutGui(){
 
 
 
-/*
+    /*
  *The main
  *
  *Besoin des structures suivantes:
@@ -60,8 +60,8 @@ void CGProjectSerialization::loadWithoutGui(){
  *operatorsMap <id, TYPE>
  *actionOperator <id, action> output
  *
- *dataMap <id, TYPE>
- *dataMapContent <id, CONTENT>
+ *dataMap <id:id, TYPE>
+ *dataMapContent <id:id, CONTENT>
  *
  *connexionsOO <id:id, id:id>
  *connexionsCO <id:id, id:id>
@@ -89,7 +89,7 @@ void CGProjectSerialization::loadWithoutGui(){
  *  * Pas de controlleur faisant office de "passeur" dans une boucle sinon ERROR.
  *
 */
-/*
+    /*
             lcm -i /$DIR
             Créer une arbo Caméléon.
 
@@ -184,34 +184,92 @@ void CGProjectSerialization::loadWithoutGui(){
         xmlReader.readNext();
         if (xmlReader.isStartElement()) {
             if (xmlReader.name() == "operator"){
-/*
+                /*
  *operatorsMap <id, TYPE>
  *actionOperator <id, action> output
 */
+                int id = xmlReader.attributes().value("id").toString().toInt();
+                QString type = xmlReader.attributes().value("type").toString();
                 qDebug() << ("Operator");
 
             }
+            if (xmlReader.name() == "operatoraction"){
+                        /*
+         *operatorsMap <id, TYPE>
+         *actionOperator <id, action> output
+        */
+                        int id = xmlReader.attributes().value("opId").toString().toInt();
+                        QString actionKey = xmlReader.attributes().value("actionKey").toString();
+                        qDebug() << ("OperatorAction");
+
+            }
             if (xmlReader.name() == "controlconnector"){
-/*
- *dataMap <id, TYPE>
- *dataMapContent <id, CONTENT>
+                /*
+ *dataMap <id:id, TYPE>
+ *dataMapContent <id:id, CONTENT>
+            <controlconnector controlid="76" connectorid="0" side="OUT" name="testexp" datatype="DATASTRING" content="ttt"/>
+
 */
+                int ctrlid = xmlReader.attributes().value("controlid").toString().toInt();
+                int connectorid = xmlReader.attributes().value("connectorid").toString().toInt();
+                QString type = xmlReader.attributes().value("datatype").toString();
+                QString content = xmlReader.attributes().value("content").toString();
                 qDebug() << ("controlconnector");
 
             }
             if (xmlReader.name() == "connection"){
-/*
+                /*
  *connexionsOO <id:id, id:id>
  *connexionsCO <id:id, id:id>
  *connexionsCC <id:id, id:id>
  *connexionsDO <id:id, id:id> output
 */
+                if(!xmlReader.attributes().value("operatorId1").isNull() && !xmlReader.attributes().value("operatorId2").isNull() ){
+                    int connectorId1 = xmlReader.attributes().value("connectorId1").toString().toInt();
+                    int connectorId2 = xmlReader.attributes().value("connectorId2").toString().toInt();
+                    int operatorId1 = xmlReader.attributes().value("operatorId1").toString().toInt();
+                    int operatorId2 = xmlReader.attributes().value("operatorId2").toString().toInt();
+
+                }
+                if(!xmlReader.attributes().value("compositionId1").isNull() && !xmlReader.attributes().value("operatorId2").isNull()){
+                    int connectorId1 = xmlReader.attributes().value("connectorId1").toString().toInt();
+                    int connectorId2 = xmlReader.attributes().value("connectorId2").toString().toInt();
+                    int compositionId1 = xmlReader.attributes().value("compositionId1").toString().toInt();
+                    int operatorId2 = xmlReader.attributes().value("operatorId2").toString().toInt();
+
+                }
+                if(!xmlReader.attributes().value("operatorId1").isNull() && !xmlReader.attributes().value("compositionId2").isNull()){
+                    int connectorId1 = xmlReader.attributes().value("connectorId1").toString().toInt();
+                    int connectorId2 = xmlReader.attributes().value("connectorId2").toString().toInt();
+                    int operatorId1 = xmlReader.attributes().value("operatorId1").toString().toInt();
+                    int compositionId2 = xmlReader.attributes().value("compositionId2").toString().toInt();
+
+                }
+                if(!xmlReader.attributes().value("compositionId1").isNull() && !xmlReader.attributes().value("compositionId2").isNull()){
+                    int connectorId1 = xmlReader.attributes().value("connectorId1").toString().toInt();
+                    int connectorId2 = xmlReader.attributes().value("connectorId2").toString().toInt();
+                    int compositionId1 = xmlReader.attributes().value("compositionId1").toString().toInt();
+                    int compositionId2 = xmlReader.attributes().value("compositionId2").toString().toInt();
+
+                }
+
+                if(!xmlReader.attributes().value("controlConnectorIdIn").isNull() && !xmlReader.attributes().value("operatorConnectorIdOut").isNull()){
+                    int controlId = xmlReader.attributes().value("controlId").toString().toInt();
+                    int operatorIdOut = xmlReader.attributes().value("operatorIdOut").toString().toInt();
+                    int controlConnectorIdIn = xmlReader.attributes().value("controlConnectorIdIn").toString().toInt();
+                    int operatorConnectorIdOut = xmlReader.attributes().value("operatorConnectorIdOut").toString().toInt();
+
+
+
+
+                }
+
                 qDebug() << ("connection");
+
             }
 
         }
     }
-
     file.close();
 
     /*
