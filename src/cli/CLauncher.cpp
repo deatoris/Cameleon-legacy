@@ -42,7 +42,6 @@ CLauncher::CLauncher()
 
 
 void CLauncher::launchCli(QList<argument> appArgs){
-    this->startWithoutProgress();
     QString compositionPath = CArguments::getCompositionFromAppArgs(appArgs);
 
     if(compositionPath.compare("")==0)compositionPath = CGProject::getInstance()->getPath();
@@ -60,6 +59,9 @@ void CLauncher::launchCli(QList<argument> appArgs){
         exit(0);
     }
 
+    CGInstance::getInstance()->setCurrentProjectPath(compositionPath);
+    CGProject::getInstance()->setPath(compositionPath);
+
     QList<argument> compArgs = CArguments::getArgumentsFromComposition(compositionPath);
 
     if(CArguments::isCompositionHelp(appArgs)){
@@ -71,6 +73,8 @@ void CLauncher::launchCli(QList<argument> appArgs){
         CArguments::printCompositionHelp(compositionPath,compArgs);
         exit(0);
     }
+
+    this->startWithoutProgress();
 
     //SET ARGUMENTS
    // CGCompositionManager::getInstance()->setArguments(appArgs);
