@@ -53,13 +53,6 @@ void CGProjectSerialization::loadWithoutGui(){
 /*
  *The main
  *
- *Struct macro:
- *operator: type/id
- *connection: opid:opid1:connectorid:connectorid1
- *inputs datas:controlid:controlConnectorId:datatype:content
- *inputs connection:
- *ignore controls inputs, take just outputs. controls must have only one output connector.
- *
  *Besoin des structures suivantes:
  *Lecture:
  *operatorsMap <id, TYPE>
