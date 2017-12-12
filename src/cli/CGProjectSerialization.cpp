@@ -75,7 +75,7 @@ void CGProjectSerialization::loadWithoutGui(){
  *
  *Algo:
  *1/ Lire fichier pour produire les structures,
- *2/ Retrouver l'opérateur connecté à un autre operateur s'il y a des compositions entre les deux,
+ *2/ Retrouver l'opérateur connecté à un autre operateur, s'il y a des compositions entre les deux,
  *3/ Instancier les opérateurs et les datas dans le kernel,
  *4/ Lancer les actions sur les opérateurs,
  *5/ Connecter les opérateurs,
@@ -83,7 +83,7 @@ void CGProjectSerialization::loadWithoutGui(){
  *7/ Lancer l'exécution du programme.
  *
  *Règles:
- *  * Pas de controlleur faisant office de "passeur" dans une boucle.
+ *  * Pas de controlleur faisant office de "passeur" dans une boucle sinon ERROR.
  *
 */
 
