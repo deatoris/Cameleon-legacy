@@ -61,21 +61,25 @@ void CGProjectSerialization::loadWithoutGui(){
  *ignore controls inputs, take just outputs. controls must have only one output connector.
  *
  *Besoin des structures suivantes:
- *operatorsMap <id, TYPE> output
- *dataMap <id, TYPE> output
- *
+ *Lecture:
+ *operatorsMap <id, TYPE>
+ *dataMap <id, TYPE>
  *connexionsOO <id:id, id:id>
  *connexionsCO <id:id, id:id>
  *connexionsCC <id:id, id:id>
  *connexionsDO <id:id, id:id> output
- *actionOperator<id, action> output
+ *actionOperator <id, action> output
  *
- *Déduit:
+ *Déduction:
  *connexionsOOTarget <id:id, id:id> output
  *
- *Algo:
+ *Construction:
+ *mapOldNewOperator<id, COperator*> output
+ *mapOldNewData<id, CData*> output
+ *
+ *Processus:
  *1/ Lire fichier pour produire les structures,
- *2/ Retrouver l'opérateur connecté à un autre operateur, s'il y a des compositions entre les deux,
+ *2/ Déduire l'opérateur connecté à un autre operateur, s'il y a des compositions entre les deux,
  *3/ Instancier les opérateurs et les datas dans le kernel,
  *4/ Lancer les actions sur les opérateurs,
  *5/ Connecter les opérateurs,
