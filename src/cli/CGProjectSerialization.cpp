@@ -237,14 +237,14 @@ void CGProjectSerialization::loadWithoutGui(){
 
             }
             if (xmlReader.name() == "operatoraction"){
-                        /*
+                /*
                          *operatorsMap <id, TYPE>
                          *actionOperator <id, action> output
                         */
-                        QString id = xmlReader.attributes().value("opId").toString();
-                        QString actionKey = xmlReader.attributes().value("actionKey").toString();
-                        qDebug() << ("OperatorAction");
-                        actionOperator.insert(id,actionKey);
+                QString id = xmlReader.attributes().value("opId").toString();
+                QString actionKey = xmlReader.attributes().value("actionKey").toString();
+                qDebug() << ("OperatorAction");
+                actionOperator.insert(id,actionKey);
 
             }
             if (xmlReader.name() == "controlconnector"){
@@ -384,8 +384,9 @@ void CGProjectSerialization::loadWithoutGui(){
      *operatorMap
      *dataMap
      *dataContent
-     *
+     *actionOperator
      */
+
     QMapIterator<QString, QString> j(operatorMap);
     while (j.hasNext()) {
         j.next();
@@ -393,6 +394,12 @@ void CGProjectSerialization::loadWithoutGui(){
         COperatorStructure opstruc;
         CClientSingleton::getInstance()->getCInterfaceClient2Server()->createOperatorSend(j.value().toStdString(),opid,opstruc);
         qDebug() << "Operator created: " << opstruc.getName().c_str();
+    }
+
+    QMapIterator<QString, QString> n(actionOperator);
+    while (n.hasNext()) {
+        n.next();
+        //CClientSingleton::getInstance()->getCInterfaceClient2Server()->actionOperator(ope->getId(), actionKey.toStdString());
     }
 
     QMapIterator<QString, QString> k(dataMap);
@@ -410,15 +417,17 @@ void CGProjectSerialization::loadWithoutGui(){
      *
      */
     QMapIterator<QString, QString> l(connexionsOO);
-        while (l.hasNext()) {
-            l.next();
-       /* int idop1   = this->getCGOperatorModel()->getId();
-        int idplug1 = this->getId();
+    while (l.hasNext()) {
+        l.next();
+        /*
+            int idop1   = this->getCGOperatorModel()->getId();
+            int idplug1 = this->getId();
 
-        int idop2   = connectedConnector->getCGOperatorModel()->getId();
-        int idplug2 = connectedConnector->getId();
-        int nPlugIn = this->getCGOperatorModel()->getNumPlugIn();
-        CClientSingleton::getInstance()->getCInterfaceClient2Server()->connectPlugOut2PlugInSend(idop1,idplug1-nPlugIn,idop2,idplug2);*/
+            int idop2   = connectedConnector->getCGOperatorModel()->getId();
+            int idplug2 = connectedConnector->getId();
+            int nPlugIn = this->getCGOperatorModel()->getNumPlugIn();
+            CClientSingleton::getInstance()->getCInterfaceClient2Server()->connectPlugOut2PlugInSend(idop1,idplug1-nPlugIn,idop2,idplug2);
+        */
     }
 
 
