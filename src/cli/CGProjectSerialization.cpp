@@ -42,6 +42,38 @@ QString CGProjectSerialization::makeRelative(QString it){
     }
 }
 
+QString CGProjectSerialization::searchFriend(QString operid,
+                                             QString compid,
+                                             QMap<QString,QString> connexionsOC,
+                                             QMap<QString,QString> connexionsCC,
+                                             QMap<QString,QString> connexionsCCreverse
+                                             ){
+    QString friendid = NULL;
+    QMapIterator<QString, QString> i(connexionsOC);
+    while (i.hasNext()) {
+        i.next();
+        qDebug()<< i.key() << ": " << i.value() << endl;
+        if(i.value()==compid && i.key()!=operid) friendid=i.key();
+    }
+
+    if(friendid!=NULL) return friendid;
+    QString cmid1 = connexionsCC.value(compid);
+    if(cmid1!=NULL) return cmid1;
+    QString cmid2 = connexionsCCreverse.value(compid);
+    if(cmid2!=NULL) return cmid2;
+    return NULL;
+
+    /*
+    *  COper* searchFriend(operid, compid, connexionsOC, connexionsCO, connexionsCC, connexionsCCreverse)
+    *      if friendid = connexionsCO[compid]
+    *          return friendid
+    *      if cmid = connexionsCC[compid]
+    *          return searchFriend(operid,cmid, connexionsCO, connexionsCC, connexionsCCreverse)
+    *      if cmid = connexionsCCreverse[compid]
+    *          return searchFriend(operid,cmid, connexionsCO, connexionsCC, connexionsCCreverse)
+    */
+
+}
 void CGProjectSerialization::loadWithoutGui(){
     qDebug() << ("loadWithoutGui");
     QFile file(CGProject::getInstance()->getPath());
@@ -173,7 +205,6 @@ void CGProjectSerialization::loadWithoutGui(){
     QMap<QString,QString> dataContent;
 
     QMap<QString,QString> connexionsOO;
-    QMap<QString,QString> connexionsCO;
     QMap<QString,QString> connexionsOC;
     QMap<QString,QString> connexionsCC;
     QMap<QString,QString> connexionsCCreverse;
@@ -246,8 +277,6 @@ void CGProjectSerialization::loadWithoutGui(){
                     QString operatorId2 = xmlReader.attributes().value("operatorId2").toString();
                     qDebug() << ("connectionOC: "+operatorId2+":"+connectorId2+" "+compositionId1+":"+connectorId1);
                     connexionsOC.insert(operatorId2+":"+connectorId2, compositionId1+":"+connectorId1);
-                    connexionsCO.insert(compositionId1+":"+connectorId1, operatorId2+":"+connectorId2);
-
 
                 }
                 if(!xmlReader.attributes().value("operatorId1").isNull() && !xmlReader.attributes().value("compositionId2").isNull()){
@@ -257,7 +286,6 @@ void CGProjectSerialization::loadWithoutGui(){
                     QString compositionId2 = xmlReader.attributes().value("compositionId2").toString();
                     qDebug() << ("connectionOC: "+operatorId1+":"+connectorId1+" "+compositionId2+":"+connectorId2);
                     connexionsOC.insert(operatorId1+":"+connectorId1, compositionId2+":"+connectorId2);
-                    connexionsCO.insert(compositionId2+":"+connectorId2, operatorId1+":"+connectorId1);
 
                 }
                 if(!xmlReader.attributes().value("compositionId1").isNull() && !xmlReader.attributes().value("compositionId2").isNull()){
@@ -293,12 +321,10 @@ void CGProjectSerialization::loadWithoutGui(){
     qDebug() << "connexionsDO: " << connexionsDO;
     qDebug() << "connexionsOO: " << connexionsOO;
     qDebug() << "connexionsOC: " << connexionsOC;
-    qDebug() << "connexionsCO: " << connexionsCO;
     qDebug() << "connexionsCC: " << connexionsCC;
     qDebug() << "connexionsCCreverse: " << connexionsCCreverse;
 
     file.close();
-
     /*
      A déduire:
          *connexionsOOTarget <id:id, id:id> output
@@ -308,7 +334,6 @@ void CGProjectSerialization::loadWithoutGui(){
          *
          *Inputs:
          *  connexionsOC
-         *  connexionsCO
          *  connexionsCC
          *  connexionsCCreverse
          *
@@ -317,18 +342,30 @@ void CGProjectSerialization::loadWithoutGui(){
          *
          *Algo (pseudo code c++pythonesque):
          *  foreach operid in connexionsOC:
-         *      operFriendId = searchFriend(operid, connexionsOC[operid], connexionsOC, connexionsCO, connexionsCC, connexionsCCreverse)
+         *      operFriendId = searchFriend(operid, connexionsOC[operid], connexionsOC, connexionsCC, connexionsCCreverse)
          *      connexionsOO.insert(oper, operFriendId)
          *
-         *  COper* searchFriend(operid, compid, connexionsOC, connexionsCO, connexionsCC, connexionsCCreverse)
-         *      if friendid = connexionsCO[compid]
-         *          return friend
+         *  COper* searchFriend(operid, compid, connexionsOC, connexionsCC, connexionsCCreverse)
+         *      if friendid = connexionsOC[compid]
+         *          return friendid
          *      if cmid = connexionsCC[compid]
-         *          return searchFriend(operid,cmid, connexionsCO, connexionsCC, connexionsCCreverse)
+         *          return searchFriend(operid,cmid, connexionsCC, connexionsCCreverse)
          *      if cmid = connexionsCCreverse[compid]
-         *          return searchFriend(operid,cmid, connexionsCO, connexionsCC, connexionsCCreverse)
+         *          return searchFriend(operid,cmid, connexionsCC, connexionsCCreverse)
          *
          */
+
+
+    QMapIterator<QString, QString> i(connexionsOC);
+    while (i.hasNext()) {
+        i.next();
+        qDebug() << i.key() << ": " << i.value() << endl;
+        QString friendid = CGProjectSerialization::searchFriend(i.key(),i.value(),connexionsOC,connexionsCC,connexionsCCreverse);
+        if(friendid!=NULL) connexionsOO.insert(i.key(),friendid);
+    }
+
+    qDebug() << "connexionsOO++: " << connexionsOO;
+
 
     /*
      A construire:

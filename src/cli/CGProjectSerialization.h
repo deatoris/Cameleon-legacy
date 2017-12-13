@@ -30,7 +30,12 @@ public:
     static QString makeAbsolute(QString it);
     static QString makeRelative(QString it);
     static bool copyFile(QString oldFilePath, QString newFilePath);
-
+    static QString searchFriend(QString operid,
+                                                 QString compid,
+                                                 QMap<QString,QString> connexionsOC,
+                                                 QMap<QString,QString> connexionsCC,
+                                                 QMap<QString,QString> connexionsCCreverse
+                                                 );
 
 
 };
