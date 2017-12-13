@@ -176,6 +176,7 @@ void CGProjectSerialization::loadWithoutGui(){
     QMap<QString,QString> connexionsCO;
     QMap<QString,QString> connexionsOC;
     QMap<QString,QString> connexionsCC;
+    QMap<QString,QString> connexionsCCreverse;
     QMap<QString,QString> connexionsDO;
 
     QXmlStreamReader xmlReader;
@@ -191,7 +192,7 @@ void CGProjectSerialization::loadWithoutGui(){
                 int id = xmlReader.attributes().value("id").toString().toInt();
                 QString type = xmlReader.attributes().value("type").toString();
                 qDebug() << ("Operator");
-                actionOperator.insert(id,type);
+                operatorMap.insert(id,type);
 
             }
             if (xmlReader.name() == "operatoraction"){
@@ -216,9 +217,10 @@ void CGProjectSerialization::loadWithoutGui(){
                 QString connectorid = xmlReader.attributes().value("connectorid").toString();
                 QString type = xmlReader.attributes().value("datatype").toString();
                 QString content = xmlReader.attributes().value("content").toString();
+                QString side = xmlReader.attributes().value("side").toString();
                 qDebug() << ("controlconnector");
-                dataMap.insert(ctrlid+":"+connectorid, type);
-                dataMap.insert(ctrlid+":"+connectorid, content);
+                if(side == "OUT") dataMap.insert(ctrlid+":"+connectorid, type);
+                if(side == "OUT") dataContent.insert(ctrlid+":"+connectorid, content);
 
             }
             if (xmlReader.name() == "connection"){
@@ -244,6 +246,8 @@ void CGProjectSerialization::loadWithoutGui(){
                     QString operatorId2 = xmlReader.attributes().value("operatorId2").toString();
                     qDebug() << ("connectionOC: "+operatorId2+":"+connectorId2+" "+compositionId1+":"+connectorId1);
                     connexionsOC.insert(operatorId2+":"+connectorId2, compositionId1+":"+connectorId1);
+                    connexionsCO.insert(compositionId1+":"+connectorId1, operatorId2+":"+connectorId2);
+
 
                 }
                 if(!xmlReader.attributes().value("operatorId1").isNull() && !xmlReader.attributes().value("compositionId2").isNull()){
@@ -253,6 +257,7 @@ void CGProjectSerialization::loadWithoutGui(){
                     QString compositionId2 = xmlReader.attributes().value("compositionId2").toString();
                     qDebug() << ("connectionOC: "+operatorId1+":"+connectorId1+" "+compositionId2+":"+connectorId2);
                     connexionsOC.insert(operatorId1+":"+connectorId1, compositionId2+":"+connectorId2);
+                    connexionsCO.insert(compositionId2+":"+connectorId2, operatorId1+":"+connectorId1);
 
                 }
                 if(!xmlReader.attributes().value("compositionId1").isNull() && !xmlReader.attributes().value("compositionId2").isNull()){
@@ -262,6 +267,7 @@ void CGProjectSerialization::loadWithoutGui(){
                     QString compositionId2 = xmlReader.attributes().value("compositionId2").toString();
                     if(compositionId2+":"+connectorId2!=connexionsCC.value(compositionId1+":"+connectorId1)){
                         connexionsCC.insert(compositionId2+":"+connectorId2, compositionId1+":"+connectorId1);
+                        connexionsCCreverse.insert(compositionId1+":"+connectorId1, compositionId2+":"+connectorId2);
                         qDebug() << ("connectionCC: "+compositionId2+":"+connectorId2+" "+compositionId1+":"+connectorId1);
                     }
                 }
@@ -283,23 +289,46 @@ void CGProjectSerialization::loadWithoutGui(){
     }
 
     qDebug() << "dataMap: " << dataMap;
+    qDebug() << "dataContent: " << dataContent;
     qDebug() << "connexionsDO: " << connexionsDO;
     qDebug() << "connexionsOO: " << connexionsOO;
     qDebug() << "connexionsOC: " << connexionsOC;
+    qDebug() << "connexionsCO: " << connexionsCO;
     qDebug() << "connexionsCC: " << connexionsCC;
-
-    QMap<QString, QString>::const_iterator i = connexionsCO.constBegin();
-    while (i != connexionsCO.constEnd()) {
-        qDebug() << i.key() << ": " << i.value() << endl;
-        ++i;
-    }
+    qDebug() << "connexionsCCreverse: " << connexionsCCreverse;
 
     file.close();
 
     /*
      A déduire:
          *connexionsOOTarget <id:id, id:id> output
-     */
+         *
+         *Base conceptuelle:
+         *  https://www.shinoe.org/meta/
+         *
+         *Inputs:
+         *  connexionsOC
+         *  connexionsCO
+         *  connexionsCC
+         *  connexionsCCreverse
+         *
+         *Signautre:
+         *  COper* searchFriend(Coper*, connexionsOC, connexionsCC)
+         *
+         *Algo (pseudo code c++pythonesque):
+         *  foreach operid in connexionsOC:
+         *      operFriendId = searchFriend(operid, connexionsOC[operid], connexionsOC, connexionsCO, connexionsCC, connexionsCCreverse)
+         *      connexionsOO.insert(oper, operFriendId)
+         *
+         *  COper* searchFriend(operid, compid, connexionsOC, connexionsCO, connexionsCC, connexionsCCreverse)
+         *      if friendid = connexionsCO[compid]
+         *          return friend
+         *      if cmid = connexionsCC[compid]
+         *          return searchFriend(operid,cmid, connexionsCO, connexionsCC, connexionsCCreverse)
+         *      if cmid = connexionsCCreverse[compid]
+         *          return searchFriend(operid,cmid, connexionsCO, connexionsCC, connexionsCCreverse)
+         *
+         */
 
     /*
      A construire:
