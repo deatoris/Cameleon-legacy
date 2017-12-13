@@ -260,9 +260,10 @@ void CGProjectSerialization::loadWithoutGui(){
                     QString connectorId2 = xmlReader.attributes().value("connectorId2").toString();
                     QString compositionId1 = xmlReader.attributes().value("compositionId1").toString();
                     QString compositionId2 = xmlReader.attributes().value("compositionId2").toString();
-                    qDebug() << ("connectionCC");
-                    connexionsCC.insert(compositionId2+":"+connectorId2, compositionId1+":"+connectorId1);
-
+                    if(compositionId2+":"+connectorId2!=connexionsCC.value(compositionId1+":"+connectorId1)){
+                        connexionsCC.insert(compositionId2+":"+connectorId2, compositionId1+":"+connectorId1);
+                        qDebug() << ("connectionCC: "+compositionId2+":"+connectorId2+" "+compositionId1+":"+connectorId1);
+                    }
                 }
 
                 if(!xmlReader.attributes().value("controlConnectorIdIn").isNull() && !xmlReader.attributes().value("operatorConnectorIdOut").isNull()){
@@ -283,9 +284,8 @@ void CGProjectSerialization::loadWithoutGui(){
 
     qDebug() << "dataMap: " << dataMap;
     qDebug() << "connexionsDO: " << connexionsDO;
-    qDebug() << "connexionsCO: " << connexionsCO;
-    qDebug() << "connexionsOC: " << connexionsOC;
     qDebug() << "connexionsOO: " << connexionsOO;
+    qDebug() << "connexionsOC: " << connexionsOC;
     qDebug() << "connexionsCC: " << connexionsCC;
 
     QMap<QString, QString>::const_iterator i = connexionsCO.constBegin();
