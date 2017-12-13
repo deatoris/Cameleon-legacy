@@ -13,6 +13,8 @@ More informations can be found here: http://www.shinoe.org/cameleon
 #include "CGProjectSerialization.h"
 #include<CUtilitySTL.h>
 
+#include <CGlossary.h>
+
 CGProjectSerialization::CGProjectSerialization()
 {   
     CLogger::getInstance()->registerComponent("SERIALIZE");
@@ -52,15 +54,23 @@ QString CGProjectSerialization::searchFriend(QString operid,
     QMapIterator<QString, QString> i(connexionsOC);
     while (i.hasNext()) {
         i.next();
-        qDebug()<< i.key() << ": " << i.value() << endl;
         if(i.value()==compid && i.key()!=operid) friendid=i.key();
     }
 
     if(friendid!=NULL) return friendid;
     QString cmid1 = connexionsCC.value(compid);
-    if(cmid1!=NULL) return cmid1;
+
+    if(cmid1!=NULL) return CGProjectSerialization::searchFriend(operid,
+                                                                cmid1,
+                                                                connexionsOC,
+                                                                connexionsCC,
+                                                                connexionsCCreverse);;
     QString cmid2 = connexionsCCreverse.value(compid);
-    if(cmid2!=NULL) return cmid2;
+    if(cmid2!=NULL) return CGProjectSerialization::searchFriend(operid,
+                                                                cmid1,
+                                                                connexionsOC,
+                                                                connexionsCC,
+                                                                connexionsCCreverse);;
     return NULL;
 
     /*
@@ -199,8 +209,8 @@ void CGProjectSerialization::loadWithoutGui(){
 
 */
 
-    QMap<int,QString> operatorMap;
-    QMap<int,QString> actionOperator;
+    QMap<QString,QString> operatorMap;
+    QMap<QString,QString> actionOperator;
     QMap<QString,QString> dataMap;
     QMap<QString,QString> dataContent;
 
@@ -220,7 +230,7 @@ void CGProjectSerialization::loadWithoutGui(){
                  *operatorsMap <id, TYPE>
                  *actionOperator <id, action> output
                 */
-                int id = xmlReader.attributes().value("id").toString().toInt();
+                QString id = xmlReader.attributes().value("id").toString();
                 QString type = xmlReader.attributes().value("type").toString();
                 qDebug() << ("Operator");
                 operatorMap.insert(id,type);
@@ -231,7 +241,7 @@ void CGProjectSerialization::loadWithoutGui(){
                          *operatorsMap <id, TYPE>
                          *actionOperator <id, action> output
                         */
-                        int id = xmlReader.attributes().value("opId").toString().toInt();
+                        QString id = xmlReader.attributes().value("opId").toString();
                         QString actionKey = xmlReader.attributes().value("actionKey").toString();
                         qDebug() << ("OperatorAction");
                         actionOperator.insert(id,actionKey);
@@ -267,8 +277,7 @@ void CGProjectSerialization::loadWithoutGui(){
                     QString operatorId1 = xmlReader.attributes().value("operatorId1").toString();
                     QString operatorId2 = xmlReader.attributes().value("operatorId2").toString();
                     qDebug() << ("connectionOO");
-                    connexionsOO.insert(operatorId1+":"+connectorId1, operatorId2+":"+connectorId2);
-
+                    if(connexionsOO.value(operatorId2+":"+connectorId2)==NULL) connexionsOO.insert(operatorId1+":"+connectorId1, operatorId2+":"+connectorId2);
                 }
                 if(!xmlReader.attributes().value("compositionId1").isNull() && !xmlReader.attributes().value("operatorId2").isNull()){
                     QString connectorId1 = xmlReader.attributes().value("connectorId1").toString();
@@ -318,6 +327,7 @@ void CGProjectSerialization::loadWithoutGui(){
 
     qDebug() << "dataMap: " << dataMap;
     qDebug() << "dataContent: " << dataContent;
+    qDebug() << "operatorMap: " << operatorMap;
     qDebug() << "connexionsDO: " << connexionsDO;
     qDebug() << "connexionsOO: " << connexionsOO;
     qDebug() << "connexionsOC: " << connexionsOC;
@@ -359,21 +369,65 @@ void CGProjectSerialization::loadWithoutGui(){
     QMapIterator<QString, QString> i(connexionsOC);
     while (i.hasNext()) {
         i.next();
-        qDebug() << i.key() << ": " << i.value() << endl;
         QString friendid = CGProjectSerialization::searchFriend(i.key(),i.value(),connexionsOC,connexionsCC,connexionsCCreverse);
-        if(friendid!=NULL) connexionsOO.insert(i.key(),friendid);
+        if(friendid!=NULL && connexionsOO.value(friendid)==NULL) connexionsOO.insert(i.key(),friendid);
     }
-
     qDebug() << "connexionsOO++: " << connexionsOO;
 
 
     /*
-     A construire:
-         *mapOldNewOperator<id, COperator*> output
-         *mapOldNewData<id, CData*> output
+     *A construire via l'api du kernel:
+     *  mapOldNewOperator<id, COperator*> output
+     *  mapOldNewData<id, CData*> output
+     *
+     *A partir de:
+     *operatorMap
+     *dataMap
+     *dataContent
+     *
      */
+    QMapIterator<QString, QString> j(operatorMap);
+    while (j.hasNext()) {
+        j.next();
+        int opid;
+        COperatorStructure opstruc;
+        CClientSingleton::getInstance()->getCInterfaceClient2Server()->createOperatorSend(j.value().toStdString(),opid,opstruc);
+        qDebug() << "Operator created: " << opstruc.getName().c_str();
+    }
+
+    QMapIterator<QString, QString> k(dataMap);
+    while (k.hasNext()) {
+        k.next();
+        CData* data = CGlossarySingletonClient::getInstance()->createData(k.value().toStdString());
+        data->fromString(dataContent.value(k.key()).toStdString());
+        qDebug() << "Data created: " << data->getKey().c_str();
+    }
+
+    /*
+     *A connecter via l'api du kernel:
+     *  connexionsOO++
+     *  connexionsDO filtrés par dataMap
+     *
+     */
+    QMapIterator<QString, QString> l(connexionsOO);
+        while (l.hasNext()) {
+            l.next();
+       /* int idop1   = this->getCGOperatorModel()->getId();
+        int idplug1 = this->getId();
+
+        int idop2   = connectedConnector->getCGOperatorModel()->getId();
+        int idplug2 = connectedConnector->getId();
+        int nPlugIn = this->getCGOperatorModel()->getNumPlugIn();
+        CClientSingleton::getInstance()->getCInterfaceClient2Server()->connectPlugOut2PlugInSend(idop1,idplug1-nPlugIn,idop2,idplug2);*/
+    }
+
+
+    QMapIterator<QString, QString> m(connexionsDO);
+    while (m.hasNext()) {
+        m.next();
+        //CClientSingleton::getInstance()->getCInterfaceClient2Server()->setPlugInSend(opid,plugkeyin,data,CPlug::NEW);
+    }
+
 }
-
-
 
 
