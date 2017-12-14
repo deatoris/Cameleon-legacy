@@ -24,4 +24,14 @@ private:
     QProcess* p;
 };
 
+class StdOuptutOperator: public COperator
+{
+        Q_OBJECT
+
+public:
+    StdOuptutOperator();
+    virtual void exec();
+    virtual COperator * clone();
+};
+
 #endif // CommandLine_H

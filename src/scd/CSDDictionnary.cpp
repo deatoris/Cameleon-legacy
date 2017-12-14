@@ -370,6 +370,7 @@ void CSDDictionnary::collectOperator(){
     this->registerOperator(new CommandLineSync2);
     this->registerOperator(new CommandLineSync);
     this->registerOperator(new CommandLine);
+    this->registerOperator(new StdOuptutOperator);
 
     //collectOperator()_end
 }

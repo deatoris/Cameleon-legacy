@@ -1,6 +1,6 @@
 #include "cli.h"
 //#include "CGCompositionManager.h"
-
+#include <QtCore>
 #include "CClient.h"
 CommandLine::CommandLine(){
     this->structurePlug().addPlugIn(DataString::KEY,"exePath.str");
@@ -130,4 +130,20 @@ void CommandLine::readOut(){
     dynamic_cast<DataString *>(this->plugOut()[0]->getData())->setValue(p_stdout.toStdString());
     this->plugOut()[0]->setState(CPlug::NEW);
     this->plugOut()[0]->send();
+}
+
+StdOuptutOperator::StdOuptutOperator(){
+    this->structurePlug().addPlugIn(DataString::KEY,"message.str");
+    this->path().push_back("System");
+    this->setKey("StdOuptutOperator");
+    this->setName("StdOutput");
+    this->setInformation("Write message string to standard output");
+}
+void StdOuptutOperator::exec(){
+    string v1 = dynamic_cast<DataString *>(this->plugIn()[0]->getData())->getValue();
+    qDebug() << v1.c_str();
+}
+
+COperator * StdOuptutOperator::clone(){
+    return new StdOuptutOperator();
 }

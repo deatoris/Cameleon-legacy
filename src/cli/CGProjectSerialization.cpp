@@ -413,7 +413,7 @@ void CGProjectSerialization::loadWithoutGui(){
         k.next();
         CData* data = CGlossarySingletonClient::getInstance()->createData(k.value().toStdString());
         data->fromString(dataContent.value(k.key()).toStdString());
-        qDebug() << "Data created: " << data->getKey().c_str();
+        qDebug() << "Data created: " << data->getKey().c_str() << " with content " << dataContent.value(k.key());
         mapOldNewData.insert(k.key(),data);
     }
 
@@ -425,16 +425,28 @@ void CGProjectSerialization::loadWithoutGui(){
      */
     QMapIterator<QString, QString> l(connexionsOO);
     while (l.hasNext()) {
+ /*
         l.next();
-        /*
-            int idop1   = this->getCGOperatorModel()->getId();
-            int idplug1 = this->getId();
+        QStringList listO1 = l.key().split(":");
+        QStringList listO2 = l.value().split(":");
 
-            int idop2   = connectedConnector->getCGOperatorModel()->getId();
-            int idplug2 = connectedConnector->getId();
-            int nPlugIn = this->getCGOperatorModel()->getNumPlugIn();
-            CClientSingleton::getInstance()->getCInterfaceClient2Server()->connectPlugOut2PlugInSend(idop1,idplug1-nPlugIn,idop2,idplug2);
-        */
+        int idop1   = listO1.at(0).toInt();
+        int idplug1 = listO1.at(1).toInt();
+
+        int idop2   = listO2.at(0).toInt();
+        int idplug2 = listO2.at(1).toInt();
+
+        //identification du plug in et du plug out
+        COperatorStructure op1 = mapOldNewOperator.value(l.key());
+        COperatorStructure op2 = mapOldNewOperator.value(l.value());
+
+        //besoin d'une map operatorConnectorSide + compositionConnectorSide
+
+        //pour plug out
+        int nPlugIn = op2.plugIn().size();
+
+        CClientSingleton::getInstance()->getCInterfaceClient2Server()->connectPlugOut2PlugInSend(idop1,idplug1-nPlugIn,idop2,idplug2);
+*/
     }
 
 
