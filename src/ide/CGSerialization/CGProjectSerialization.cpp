@@ -2513,6 +2513,7 @@ void CGProjectSerialization::saveAs(QString path, CGCompositionModel* topModel, 
                 xmlWriter.writeStartElement("operatorconnector");
                 xmlWriter.writeAttribute("opId", QString::number(ope->getId()));
                 xmlWriter.writeAttribute("connectorId", QString::number(connector->getId()));
+                xmlWriter.writeAttribute("side", connector->getModel()->getSide());
                 xmlWriter.writeAttribute("x", QString::number(connector->pos().x()));
                 xmlWriter.writeAttribute("y", QString::number(connector->pos().y()));
                 xmlWriter.writeEndElement();
@@ -2690,6 +2691,7 @@ void CGProjectSerialization::saveAs(QString path, CGCompositionModel* topModel, 
                     xmlWriter.writeStartElement("operatorconnector");
                     xmlWriter.writeAttribute("opId", QString::number(ope->getModel()->getId()));
                     xmlWriter.writeAttribute("connectorId", QString::number(connector->getId()));
+                    xmlWriter.writeAttribute("side", connector->getModel()->getSide());
                     xmlWriter.writeAttribute("x", QString::number(connector->pos().x()));
                     xmlWriter.writeAttribute("y", QString::number(connector->pos().y()));
                     xmlWriter.writeEndElement();

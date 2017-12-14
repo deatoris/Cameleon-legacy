@@ -80,7 +80,6 @@ void CLauncher::launchCli(QList<argument> appArgs){
    // CGCompositionManager::getInstance()->setArguments(appArgs);
     //if(compositionPath.compare("")!=0)CGCompositionManager::getInstance()->getComposer()->openCompositionByFile(compositionPath);
     //CGCompositionManager::getInstance()->getComposer()->play();
-    CClientSingleton::getInstance()->getCInterfaceClient2Server()->startSend();
 
 }
 

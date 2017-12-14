@@ -13,6 +13,7 @@ More informations can be found here: http://www.shinoe.org/cameleon
 #include "CData.h"
 #include "CPlug.h"
 #include"COperator.h"
+#include <QtCore>
 CData::CData()
     :_key(CData::KEY),_plug(NULL),_mode(BYFILE),_isdata(false)
 {
@@ -83,7 +84,7 @@ void CData::dumpReception(CData * data)throw(std::string){
             }
             else{
                 error=true;
-                this->getPlug()->getOperator()->error("Dump error between two diferrent data 1="+this->getKey() +" and 2=" +data->getKey());
+                this->getPlug()->getOperator()->error("Dump error between two diferrent data type 1="+this->getKey() +" and 2=" +data->getKey());
             }
         }
         else
@@ -92,6 +93,8 @@ void CData::dumpReception(CData * data)throw(std::string){
     if(error==false){
 //        this->getPlug()->getOperator()->setError(false);
         d->dumpReceptionCast(data);
+    }else{
+        qDebug() << "Kernel: Dump error between two diferrent data type 1=" << this->getKey().c_str() <<" and 2=" <<data->getKey().c_str();
     }
 }
 

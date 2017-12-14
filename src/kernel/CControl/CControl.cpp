@@ -83,8 +83,9 @@ void CControl::deconnectPlugOut(int myindexplugout){
 }
 
 void CControl::sendPlugOutControl(int indexplugout,CData* data,CPlug::State state){
-    //#107 - un control est adapté uniquement s'il n'a qu'un seul connecteur out
+    //#107 - un control est adapté à la lcm uniquement s'il n'a qu'un seul connecteur out
     if(indexplugout==0) dataout = data->toString().c_str();
+    //Fin #107
     if(_v_plug_out[indexplugout].first == true){
         CClientSingleton::getInstance()->getCInterfaceClient2Server()->setPlugInSend(_v_plug_out[indexplugout].second.first,_v_plug_out[indexplugout].second.second,data,state);
     }
