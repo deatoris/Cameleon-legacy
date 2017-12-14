@@ -120,6 +120,7 @@ void CProcessorObject::setPlugInSlot(COperator::Id opid, COperator::PlugKey plug
     this->setPlugInReceive(opid,  plugkeyin,  data, state);
 }
 void CProcessorObject::actionOperatorSlot(COperator::Id opid, string actionkey){
+    qDebug() << "Kernel trace: "<<actionkey.c_str();
     actionOperator(opid,  actionkey);
 }
 

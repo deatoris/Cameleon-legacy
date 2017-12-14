@@ -411,8 +411,7 @@ void CInterfaceClient::connectWithServer2(CProcessorObject * processor){
     qRegisterMetaType<COperatorStructure>("COperatorStructure");
     qRegisterMetaType<string>("string");
     qRegisterMetaType<COperator *>("COpreator*");
-/*
- *NO CONNECTION NEEDED BY THE CLIENT
+
     connect(this,SIGNAL(createOperatorSignal(COperator::Key)),processor,SLOT(createOperatorSlot(COperator::Key)),Qt::DirectConnection);
     connect(processor,SIGNAL(createOperatorReceptionSignal(COperator::Id ,COperatorStructure)),this,SLOT(createOperatorReceptionSlot(COperator::Id ,COperatorStructure)),Qt::DirectConnection);
 
@@ -467,6 +466,6 @@ void CInterfaceClient::connectWithServer2(CProcessorObject * processor){
 
     connect(processor,SIGNAL(executedOperatorInClientSignal(COperator*)),this,SLOT(executedOperatorInClientSlot(COperator*)));
     connect(this,SIGNAL(endExecutedOperatorInClientSignal(COperator*)),processor,SLOT(endExecutedOperatorInClientSlot(COperator*)));
-*/
+
 }
 

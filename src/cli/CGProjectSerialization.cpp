@@ -386,6 +386,9 @@ void CGProjectSerialization::loadWithoutGui(){
      *dataContent
      *actionOperator
      */
+    QMap<QString,int> mapOldNewOperatorId;
+    QMap<QString,COperatorStructure> mapOldNewOperator;
+    QMap<QString,CData*> mapOldNewData;
 
     QMapIterator<QString, QString> j(operatorMap);
     while (j.hasNext()) {
@@ -394,12 +397,15 @@ void CGProjectSerialization::loadWithoutGui(){
         COperatorStructure opstruc;
         CClientSingleton::getInstance()->getCInterfaceClient2Server()->createOperatorSend(j.value().toStdString(),opid,opstruc);
         qDebug() << "Operator created: " << opstruc.getName().c_str();
+        mapOldNewOperator.insert(j.key(),opstruc);
+        mapOldNewOperatorId.insert(j.key(), opid);
     }
 
     QMapIterator<QString, QString> n(actionOperator);
     while (n.hasNext()) {
         n.next();
-        //CClientSingleton::getInstance()->getCInterfaceClient2Server()->actionOperator(ope->getId(), actionKey.toStdString());
+        CClientSingleton::getInstance()->getCInterfaceClient2Server()->actionOperator(mapOldNewOperatorId.value(n.key()), n.value().toStdString());
+        qDebug() << "Operator action: " << n.value();
     }
 
     QMapIterator<QString, QString> k(dataMap);
@@ -408,6 +414,7 @@ void CGProjectSerialization::loadWithoutGui(){
         CData* data = CGlossarySingletonClient::getInstance()->createData(k.value().toStdString());
         data->fromString(dataContent.value(k.key()).toStdString());
         qDebug() << "Data created: " << data->getKey().c_str();
+        mapOldNewData.insert(k.key(),data);
     }
 
     /*
