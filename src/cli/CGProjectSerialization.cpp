@@ -411,7 +411,7 @@ void CGProjectSerialization::loadWithoutGui(){
         COperatorStructure opstruc;
         CClientSingleton::getInstance()->getCInterfaceClient2Server()->createOperatorSend(j.value().toStdString(),opid,opstruc);
         CClientSingleton::getInstance()->getCInterfaceClient2Server()->activateOperatorSend(opid);
-        qDebug() << "Operator created: " << opstruc.getName().c_str();
+        qDebug() << "Operator created: " << opstruc.getName().c_str() << " id: " <<opid;
         mapOldNewOperator.insert(j.key(),&opstruc);
         mapOldNewOperatorId.insert(j.key(), opid);
     }
