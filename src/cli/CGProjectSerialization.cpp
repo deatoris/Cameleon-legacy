@@ -339,6 +339,7 @@ void CGProjectSerialization::loadWithoutGui(){
     qDebug() << "dataMap: " << dataMap;
     qDebug() << "dataContent: " << dataContent;
     qDebug() << "operatorMap: " << operatorMap;
+    qDebug() << "actionOperator: " << actionOperator;
     qDebug() << "connexionsDO: " << connexionsDO;
     qDebug() << "connexionsOO: " << connexionsOO;
     qDebug() << "connexionsOC: " << connexionsOC;
@@ -408,11 +409,11 @@ void CGProjectSerialization::loadWithoutGui(){
     while (j.hasNext()) {
         j.next();
         int opid;
-        COperatorStructure opstruc;
-        CClientSingleton::getInstance()->getCInterfaceClient2Server()->createOperatorSend(j.value().toStdString(),opid,opstruc);
+        COperatorStructure* opstruc = new COperatorStructure();
+        CClientSingleton::getInstance()->getCInterfaceClient2Server()->createOperatorSend(j.value().toStdString(),opid,*opstruc);
         CClientSingleton::getInstance()->getCInterfaceClient2Server()->activateOperatorSend(opid);
-        qDebug() << "Operator created: " << opstruc.getName().c_str() << " id: " <<opid;
-        mapOldNewOperator.insert(j.key(),&opstruc);
+        qDebug() << "Operator created: " << opstruc->getName().c_str() << " id: " <<opid;
+        mapOldNewOperator.insert(j.key(),opstruc);
         mapOldNewOperatorId.insert(j.key(), opid);
     }
 
