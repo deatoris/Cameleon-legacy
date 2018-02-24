@@ -42,5 +42,5 @@ SOURCES += ide/CGIde.cpp
 # build must be last:
 CONFIG += ordered
 
-QMAKE_CXXFLAGS += -std=c++98
+unix:QMAKE_CXXFLAGS += -std=c++98
 
