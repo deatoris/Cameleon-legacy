@@ -22,3 +22,4 @@ win32:DESTDIR += $$quote($${BUILDPATH})
 unix:DESTDIR += $$quote($${BUILDPATH})
 
 unix:QMAKE_CXXFLAGS += -std=c++98
+win32:QMAKE_CXXFLAGS += -std=gnu++98

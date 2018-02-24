@@ -43,4 +43,5 @@ SOURCES += ide/CGIde.cpp
 CONFIG += ordered
 
 unix:QMAKE_CXXFLAGS += -std=c++98
+win32:QMAKE_CXXFLAGS += -std=gnu++98
 
