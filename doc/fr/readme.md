@@ -6,14 +6,17 @@
 > * en saisissant une demande de changement ici: [Demande de changement](issues)
 > * en proposant un merge-request en suivant la procédure ici: [Guide du contributeur](./guide_contribution.md)
 
+Usages
+-------------------
+* Usage - [Génération d'un site web](./usage_site.md)
+* Usage - [Traitement de photographies avec imagemagick](./usage_image.md)
+* Usage - [Capatation et traitement de données avec python](./usage_twitter.md)
+
 Documentation pour les utilisateurs
 -------------------
 * [Introduction](./introduction.md)
 * [Grammaire](./grammaire.md)
 * Installation [debian](./installation_debian.md) [windows](./installation_windows.md)
-* Usage - [Génération d'un site web](./usage_site.md)
-* Usage - [Traitement de photographies avec imagemagick](./usage_image.md)
-* Usage - [Capatation et traitement de données avec python](./usage_twitter.md)
 * Tutoriel - bases
 * Tutoriel - SCD / Les types standards
 * Tutoriel - SCD / Intéragir avec le système
