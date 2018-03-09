@@ -414,7 +414,7 @@ void CSDDictionnary::collectControl(){
     this->registerControl(new ViewTable);
     this->registerControl(new ControlProgressBar);
 //    this->registerControl(new ChangeLayout);
-    this->registerControl(new ControlEditorArgument);
+   // this->registerControl(new ControlEditorArgument);
     this->registerControl(new ViewLine);
     this->registerControl(new EditorStringWithInput);
     this->registerControl(new AlphaLayer);

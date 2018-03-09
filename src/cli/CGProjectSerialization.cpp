@@ -280,6 +280,19 @@ void CGProjectSerialization::loadWithoutGui(){
                 if(side == "OUT") dataContent.insert(ctrlid+":"+connectorid, content);
 
             }
+            /*
+            if (xmlReader.name() == "operatoraction"){
+                int id = xmlReader.attributes().value("opId").toString().toInt();
+                QString actionKey = xmlReader.attributes().value("actionKey").toString();
+                int newId = mapOldNewOperator.value(id);
+                CGOperatorModel* ope = CGCompositionManager::getInstance()->searchOperatorById(newId);
+                if(ope!=0){
+                    ope->getView()->saveAction(actionKey);
+                    ope->setWaiting(true);
+                    CClientSingleton::getInstance()->getCInterfaceClient2Server()->actionOperator(ope->getId(), actionKey.toStdString());
+                }
+            }
+            */
             if (xmlReader.name() == "connection"){
                 /*
                  *connexionsOO <id:id, id:id>
