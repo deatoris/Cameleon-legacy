@@ -84,6 +84,8 @@ QString CGProjectSerialization::searchFriend(QString operid,
     */
 
 }
+#include "CArguments.h"
+
 void CGProjectSerialization::loadWithoutGui(){
     qDebug() << ("loadWithoutGui");
     QFile file(CGProject::getInstance()->getPath());
@@ -256,10 +258,22 @@ void CGProjectSerialization::loadWithoutGui(){
                             <controlconnector controlid="76" connectorid="0" side="OUT" name="testexp" datatype="DATASTRING" content="ttt"/>
 
                 */
+                QString name = xmlReader.attributes().value("name").toString();
+
+                QList<argument>  appargs = CArguments::getArgumentsFromApplication();
+                argument a = CArguments::getArgument(name, appargs);
+                QString content="";
+                qDebug() << a.key;
+                qDebug() << name;
+                if(a.key.compare("NONE") != 0){
+                    content = a.value;
+                    qDebug() << "apply " << a.value;
+                }else{
+                    content = xmlReader.attributes().value("content").toString();
+                }
                 QString ctrlid = xmlReader.attributes().value("controlid").toString();
                 QString connectorid = xmlReader.attributes().value("connectorid").toString();
                 QString type = xmlReader.attributes().value("datatype").toString();
-                QString content = xmlReader.attributes().value("content").toString();
                 QString side = xmlReader.attributes().value("side").toString();
                 qDebug() << ("controlconnector");
                 if(side == "OUT") dataMap.insert(ctrlid+":"+connectorid, type);

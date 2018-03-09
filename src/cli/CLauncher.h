@@ -29,11 +29,14 @@ signals:
 
 public:
     CLauncher();
-
+    QList<argument> getCompArgs();
+    QList<argument> getAppArgs();
     void launchCli(QList<argument> appArgs);
 
 private:
     bool first;
+    QList<argument> compArgs;
+    QList<argument> appArgs;
 
 
 };

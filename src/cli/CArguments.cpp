@@ -67,6 +67,34 @@ QList<argument> CArguments::getArgumentsFromComposition(QString cmPath){
             while (!xmlReader.atEnd()) {
                 xmlReader.readNext();
                 if (xmlReader.isStartElement()) {
+
+                    //read input control and exposure parameters
+                    //<controlconnector controlid="77" connectorid="0" side="OUT" name="edt" datatype="DATANUMBER" content="100"/>
+                    if (xmlReader.name() == "controlconnector"){
+                                            QString name = xmlReader.attributes().value("name").toString();
+                                            QString datatype = xmlReader.attributes().value("datatype").toString();
+                                            QString content = xmlReader.attributes().value("content").toString();
+                                            qDebug()<<name;
+                                            qDebug()<<datatype;
+                                            qDebug()<<content;
+                                            argument a;
+                                            a.key = name;
+                                            a.value = content;
+                                            a.datatype = datatype;
+                                            l.append(a);
+                                            //string s = ControlEditorArgument::KEY;
+                                            //if(name.compare(s.c_str()) == 0){
+                                                /*argument a;
+                                                QStringList listContent = content.split("<$>");
+                                                a.key = "-"+listContent[0];
+                                                a.value = listContent[1];
+                                                a.description = listContent[2];
+                                                if(listContent[3].compare("TRUE") == 0) a.optional = true;
+                                                if(listContent[3].compare("FALSE") == 0) a.optional = false;
+                                                l.append(a);*/
+                                            }
+                                        //}
+
                     /*
                      REFACTOR: argument a rebrancher
                      *if (xmlReader.name() == "control"){
@@ -110,6 +138,7 @@ QList<argument> CArguments::getArgumentsFromComposition(QString cmPath){
 }
 
 argument CArguments::getArgument(QString key, QList<argument> fromArguments){
+    //inner keys: compositionPath (must be valide path), help flag (true or false)
     argument a;
     a.key="NONE";
     foreach(argument arg, fromArguments){
@@ -121,14 +150,42 @@ argument CArguments::getArgument(QString key, QList<argument> fromArguments){
 }
 
 QList<argument> CArguments::getArgumentsFromApplication(){
-    QStringList argsL = qApp->arguments(); // QString : "-h", "-mode=$MODE", "-cm=$cmPath", "-$key=$value"
+    QStringList argsL = qApp->arguments();
     QList<argument> l;
+    /*
+        lcm example.cm
+        lcm example.cm message="hello world!" occures="10"
+        lcm example.cm -h
+        lcm -h
+     */
+
+    //arg 1 == -h et argL.size > 2
+    //arg1 == *.cm et anyarg == -h
+
+    QRegExp rx("*.cm");
+    rx.setPatternSyntax(QRegExp::Wildcard);
+    rx.exactMatch("README.txt");        // returns true
+
+
     foreach(QString arg, argsL){
+        qDebug() << arg;
         if(arg != argsL[0]){
             if(arg.compare("-h") == 0){
                 argument a;
                 a.key="-h";
                 l.append(a);
+            }else if(rx.exactMatch(arg)){
+                if(!isFileExist(arg)){
+                    qDebug() << "[ERROR] *.cm file doesn't exist!";
+                    CArguments::printCameleonHelp();
+                    exit(0);
+                }else{
+                    qDebug() << "[OK] *.cm file exists!";
+                    argument a;
+                    a.key="-cm";
+                    a.value=arg;
+                    l.append(a);
+                }
             }else{
                 QStringList li = arg.split("=");
                 if(li.size()==2){
@@ -157,6 +214,8 @@ bool CArguments::isCompositionForced(QList<argument> commandArgs){
 QString CArguments::getCompositionFromAppArgs(QList<argument> commandArgs){
     QString cmp = "";
     foreach(argument a, commandArgs){
+        qDebug()<<a.key.toStdString().c_str();
+        qDebug()<<a.value.toStdString().c_str();
         if(a.key.compare("-cm")==0) cmp = a.value;
     }
     return cmp;
@@ -221,6 +280,10 @@ bool CArguments::isCompositionHelp(QList<argument> commandArgs){
 
 bool CArguments::checkArguments(QList<argument>  commandArgs, QList<argument> compositionArgs ){ // QString : "-h", "-mode=$MODE", "-cm=$cmPath", "-key"
     foreach(argument cmparg, compositionArgs){
+        qDebug()<< "compositionArgs";
+        qDebug()<< cmparg.key;
+        qDebug()<< cmparg.value;
+        qDebug()<< cmparg.datatype;
         if(!cmparg.optional){
             bool check = false;
             foreach(argument cmdarg, commandArgs){
@@ -235,6 +298,11 @@ bool CArguments::checkArguments(QList<argument>  commandArgs, QList<argument> co
         }
     }
     foreach(argument cmdarg, commandArgs){
+        qDebug()<< "commandArgs";
+        qDebug()<< cmdarg.key;
+        qDebug()<< cmdarg.value;
+        qDebug()<< cmdarg.datatype;
+
         if(CArguments::isDouble(cmdarg.key, commandArgs)){
             return false;
         }
@@ -244,17 +312,13 @@ bool CArguments::checkArguments(QList<argument>  commandArgs, QList<argument> co
 
 void CArguments::printCameleonHelp(){
     qDebug() << ("\nNAME");
-    qDebug() << ("\tCameleon program launcher");
+    qDebug() << ("\tCameleon program launcher v2.2.0 - 31/03/2018");
     qDebug() << ("SYNOPSIS");
     qDebug() << ("\tide.exe [options]");
     qDebug() << ("DESCRIPTION");
     qDebug() << ("\tIf no option is specified, it launch the .cm file specified in the Caméléon instance file");
     qDebug() << ("\t-h:\t print this help or print the .cm file help if -cm option is specified");
     qDebug() << ("\t-cm=[.cm file path]:\t launch a specific .cm file");
-    qDebug() << ("\t-mode=[IDE, GUI, CLI]:\t set the Caméléon mode");
-    qDebug() << ("\t\tIDE:\t launch Caméléon creator in IDE mode,");
-    qDebug() << ("\t\tGUI:\t launch Caméléon app with the related GUI interface,");
-    qDebug() << ("\t\tCLI:\t launch Caméléon in a command line mode,");
     qDebug() << ("EXAMPLES");
     qDebug() << ("\tStandard launch with full IDE\t cameleon.exe");
     qDebug() << ("\tSee the help of a specified .cm file\t cameleon.exe -h -cm=\"../project/tutorial/example-0XY-Arguments/example-0XY-Arguments.cm\"");

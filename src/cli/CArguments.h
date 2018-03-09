@@ -54,12 +54,14 @@ public:
     argument(){
         key="";
         value="";
+        datatype="";
         description="";
         optional=false;
         present=false;
     }
 
     QString key;
+    QString datatype;
     QString value;
     QString description;
     bool optional;

@@ -39,8 +39,6 @@ CLauncher::CLauncher()
     first = true;
 }
 
-
-
 void CLauncher::launchCli(QList<argument> appArgs){
     QString compositionPath = CArguments::getCompositionFromAppArgs(appArgs);
 
@@ -59,10 +57,12 @@ void CLauncher::launchCli(QList<argument> appArgs){
         exit(0);
     }
 
+    //TODO is file a correct composition?
+
     CGInstance::getInstance()->setCurrentProjectPath(compositionPath);
     CGProject::getInstance()->setPath(compositionPath);
 
-    QList<argument> compArgs = CArguments::getArgumentsFromComposition(compositionPath);
+    compArgs = CArguments::getArgumentsFromComposition(compositionPath);
 
     if(CArguments::isCompositionHelp(appArgs)){
         CArguments::printCompositionHelp(compositionPath,compArgs);
@@ -85,7 +85,7 @@ void CLauncher::launchCli(QList<argument> appArgs){
 
 void CLauncher::startCli(){
     //ANALYSE ARGUMENTS
-    QList<argument> appArgs = CArguments::getArgumentsFromApplication();
+    appArgs = CArguments::getArgumentsFromApplication();
     if(!CArguments::checkSurface(appArgs)){
         CArguments::printCameleonHelp();
         exit(0);
