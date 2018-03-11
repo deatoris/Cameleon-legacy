@@ -33,9 +33,9 @@ CLauncher::CLauncher()
     CLoggerInstance::getInstance()->log("Init instance ...");
     CGInstance::getInstance()->init();
     CLoggerInstance::getInstance()->log("Instance Initialized.");
-    CGProjectSerialization* py = CGInstance::getInstance()->getSerial();
-    if(!connect(py, SIGNAL(progressSerial(int)), this, SLOT(loadProgress(int)))){
-    }
+    //CGProjectSerialization* py = CGInstance::getInstance()->getSerial();
+    //if(!connect(py, SIGNAL(progressSerial(int)), this, SLOT(loadProgress(int)))){
+    //}
     first = true;
 }
 

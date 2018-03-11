@@ -87,7 +87,7 @@ QString CGProjectSerialization::searchFriend(QString operid,
 #include "CArguments.h"
 
 void CGProjectSerialization::loadWithoutGui(){
-    qDebug() << ("loadWithoutGui");
+    ////qDebug() << ("loadWithoutGui");
     QFile file(CGProject::getInstance()->getPath());
     if (!file.open(QFile::ReadOnly | QFile::Text)) {
         return;
@@ -236,7 +236,7 @@ void CGProjectSerialization::loadWithoutGui(){
                 */
                 QString id = xmlReader.attributes().value("id").toString();
                 QString type = xmlReader.attributes().value("type").toString();
-                qDebug() << ("Operator");
+                //qDebug() << ("Operator");
                 operatorMap.insert(id,type);
 
             }
@@ -247,7 +247,7 @@ void CGProjectSerialization::loadWithoutGui(){
                         */
                 QString id = xmlReader.attributes().value("opId").toString();
                 QString actionKey = xmlReader.attributes().value("actionKey").toString();
-                qDebug() << ("OperatorAction");
+                //qDebug() << ("OperatorAction");
                 actionOperator.insert(id,actionKey);
 
             }
@@ -263,11 +263,11 @@ void CGProjectSerialization::loadWithoutGui(){
                 QList<argument>  appargs = CArguments::getArgumentsFromApplication();
                 argument a = CArguments::getArgument(name, appargs);
                 QString content="";
-                qDebug() << a.key;
-                qDebug() << name;
+                //qDebug() << a.key;
+                //qDebug() << name;
                 if(a.key.compare("NONE") != 0){
                     content = a.value;
-                    qDebug() << "apply " << a.value;
+                    //qDebug() << "apply " << a.value;
                 }else{
                     content = xmlReader.attributes().value("content").toString();
                 }
@@ -275,7 +275,7 @@ void CGProjectSerialization::loadWithoutGui(){
                 QString connectorid = xmlReader.attributes().value("connectorid").toString();
                 QString type = xmlReader.attributes().value("datatype").toString();
                 QString side = xmlReader.attributes().value("side").toString();
-                qDebug() << ("controlconnector");
+                //qDebug() << ("controlconnector");
                 if(side == "OUT") dataMap.insert(ctrlid+":"+connectorid, type);
                 if(side == "OUT") dataContent.insert(ctrlid+":"+connectorid, content);
 
@@ -305,7 +305,7 @@ void CGProjectSerialization::loadWithoutGui(){
                     QString connectorId2 = xmlReader.attributes().value("connectorId2").toString();
                     QString operatorId1 = xmlReader.attributes().value("operatorId1").toString();
                     QString operatorId2 = xmlReader.attributes().value("operatorId2").toString();
-                    qDebug() << ("connectionOO");
+                    //qDebug() << ("connectionOO");
                     if(connexionsOO.value(operatorId2+":"+connectorId2)==NULL) connexionsOO.insert(operatorId1+":"+connectorId1, operatorId2+":"+connectorId2);
                 }
                 if(!xmlReader.attributes().value("compositionId1").isNull() && !xmlReader.attributes().value("operatorId2").isNull()){
@@ -313,7 +313,7 @@ void CGProjectSerialization::loadWithoutGui(){
                     QString connectorId2 = xmlReader.attributes().value("connectorId2").toString();
                     QString compositionId1 = xmlReader.attributes().value("compositionId1").toString();
                     QString operatorId2 = xmlReader.attributes().value("operatorId2").toString();
-                    qDebug() << ("connectionOC: "+operatorId2+":"+connectorId2+" "+compositionId1+":"+connectorId1);
+                    //qDebug() << ("connectionOC: "+operatorId2+":"+connectorId2+" "+compositionId1+":"+connectorId1);
                     connexionsOC.insert(operatorId2+":"+connectorId2, compositionId1+":"+connectorId1);
 
                 }
@@ -322,7 +322,7 @@ void CGProjectSerialization::loadWithoutGui(){
                     QString connectorId2 = xmlReader.attributes().value("connectorId2").toString();
                     QString operatorId1 = xmlReader.attributes().value("operatorId1").toString();
                     QString compositionId2 = xmlReader.attributes().value("compositionId2").toString();
-                    qDebug() << ("connectionOC: "+operatorId1+":"+connectorId1+" "+compositionId2+":"+connectorId2);
+                    //qDebug() << ("connectionOC: "+operatorId1+":"+connectorId1+" "+compositionId2+":"+connectorId2);
                     connexionsOC.insert(operatorId1+":"+connectorId1, compositionId2+":"+connectorId2);
 
                 }
@@ -334,7 +334,7 @@ void CGProjectSerialization::loadWithoutGui(){
                     if(compositionId2+":"+connectorId2!=connexionsCC.value(compositionId1+":"+connectorId1)){
                         connexionsCC.insert(compositionId2+":"+connectorId2, compositionId1+":"+connectorId1);
                         connexionsCCreverse.insert(compositionId1+":"+connectorId1, compositionId2+":"+connectorId2);
-                        qDebug() << ("connectionCC: "+compositionId2+":"+connectorId2+" "+compositionId1+":"+connectorId1);
+                        //qDebug() << ("connectionCC: "+compositionId2+":"+connectorId2+" "+compositionId1+":"+connectorId1);
                     }
                 }
 
@@ -343,12 +343,12 @@ void CGProjectSerialization::loadWithoutGui(){
                     QString operatorIdOut = xmlReader.attributes().value("operatorIdOut").toString();
                     QString controlConnectorIdIn = xmlReader.attributes().value("controlConnectorIdIn").toString();
                     QString operatorConnectorIdOut = xmlReader.attributes().value("operatorConnectorIdOut").toString();
-                    qDebug() << ("connectionDO");
+                    //qDebug() << ("connectionDO");
                     connexionsDO.insert(controlId+":"+controlConnectorIdIn, operatorIdOut+":"+operatorConnectorIdOut);
 
                 }
 
-                qDebug() << ("connection");
+                //qDebug() << ("connection");
 
             }
             if (xmlReader.name() == "operatorconnector"){
@@ -363,16 +363,16 @@ void CGProjectSerialization::loadWithoutGui(){
         }
     }
 
-    qDebug() << "dataMap: " << dataMap;
-    qDebug() << "dataContent: " << dataContent;
-    qDebug() << "operatorMap: " << operatorMap;
-    qDebug() << "actionOperator: " << actionOperator;
-    qDebug() << "connexionsDO: " << connexionsDO;
-    qDebug() << "connexionsOO: " << connexionsOO;
-    qDebug() << "connexionsOC: " << connexionsOC;
-    qDebug() << "connexionsCC: " << connexionsCC;
-    qDebug() << "connexionsCCreverse: " << connexionsCCreverse;
-    qDebug() << "operatorConnectorSide: " << operatorConnectorSide;
+    //qDebug() << "dataMap: " << dataMap;
+    //qDebug() << "dataContent: " << dataContent;
+    //qDebug() << "operatorMap: " << operatorMap;
+    //qDebug() << "actionOperator: " << actionOperator;
+    //qDebug() << "connexionsDO: " << connexionsDO;
+    //qDebug() << "connexionsOO: " << connexionsOO;
+    //qDebug() << "connexionsOC: " << connexionsOC;
+    //qDebug() << "connexionsCC: " << connexionsCC;
+    //qDebug() << "connexionsCCreverse: " << connexionsCCreverse;
+    //qDebug() << "operatorConnectorSide: " << operatorConnectorSide;
 
     file.close();
     /*
@@ -412,7 +412,7 @@ void CGProjectSerialization::loadWithoutGui(){
         QString friendid = CGProjectSerialization::searchFriend(i.key(),i.value(),connexionsOC,connexionsCC,connexionsCCreverse);
         if(friendid!=NULL && connexionsOO.value(friendid)==NULL) connexionsOO.insert(i.key(),friendid);
     }
-    qDebug() << "connexionsOO++: " << connexionsOO;
+    //qDebug() << "connexionsOO++: " << connexionsOO;
 
 
     /*
@@ -439,7 +439,7 @@ void CGProjectSerialization::loadWithoutGui(){
         COperatorStructure* opstruc = new COperatorStructure();
         CClientSingleton::getInstance()->getCInterfaceClient2Server()->createOperatorSend(j.value().toStdString(),opid,*opstruc);
         CClientSingleton::getInstance()->getCInterfaceClient2Server()->activateOperatorSend(opid);
-        qDebug() << "Operator created: " << opstruc->getName().c_str() << " id: " <<opid;
+        //qDebug() << "Operator created: " << opstruc->getName().c_str() << " id: " <<opid;
         mapOldNewOperator.insert(j.key(),opstruc);
         mapOldNewOperatorId.insert(j.key(), opid);
     }
@@ -448,7 +448,7 @@ void CGProjectSerialization::loadWithoutGui(){
     while (n.hasNext()) {
         n.next();
         CClientSingleton::getInstance()->getCInterfaceClient2Server()->actionOperator(mapOldNewOperatorId.value(n.key()), n.value().toStdString());
-        qDebug() << "Operator action: " << n.value();
+        //qDebug() << "Operator action: " << n.value();
     }
 
     QMapIterator<QString, QString> k(dataMap);
@@ -456,11 +456,11 @@ void CGProjectSerialization::loadWithoutGui(){
         k.next();
         CData* data = CGlossarySingletonClient::getInstance()->createData(k.value().toStdString());
         data->fromString(dataContent.value(k.key()).toStdString());
-        qDebug() << "Data created: " << data->getKey().c_str() << " with content " << dataContent.value(k.key());
+        //qDebug() << "Data created: " << data->getKey().c_str() << " with content " << dataContent.value(k.key());
         mapOldNewData.insert(k.key(),data);
     }
 
-    qDebug() << "mapOldNewOperatorId: " << mapOldNewOperatorId;
+    //qDebug() << "mapOldNewOperatorId: " << mapOldNewOperatorId;
 
     /*
      *A connecter via l'api du kernel:
@@ -474,7 +474,7 @@ void CGProjectSerialization::loadWithoutGui(){
         l.next();
         QStringList listKey = l.key().split(":");
         QStringList listValue = l.value().split(":");
-        qDebug() << "Connect operator: " << l.key()<< " with operator: " <<l.value();;
+        //qDebug() << "Connect operator: " << l.key()<< " with operator: " <<l.value();;
 
         QString idop1   = listKey.at(0);
         int idplug1 = listKey.at(1).toInt();
@@ -500,7 +500,7 @@ void CGProjectSerialization::loadWithoutGui(){
             idplugout=idplug2;
             COperatorStructure* op = mapOldNewOperator.value(listValue.at(0));
             int nPlugIn = op->plugIn().size();
-            qDebug() << "Connect operator (real): " << idopout<<":"<<idplugout-nPlugIn<< " with operator: " <<idopin <<":"<<idplugin <<" size: "<<nPlugIn;
+            //qDebug() << "Connect operator (real): " << idopout<<":"<<idplugout-nPlugIn<< " with operator: " <<idopin <<":"<<idplugin <<" size: "<<nPlugIn;
             CClientSingleton::getInstance()->getCInterfaceClient2Server()->connectPlugOut2PlugInSend(idopout,idplugout-nPlugIn,idopin,idplugin);
 
         }else{
@@ -510,7 +510,7 @@ void CGProjectSerialization::loadWithoutGui(){
             idplugout=idplug1;
             COperatorStructure* op = mapOldNewOperator.value(listKey.at(0));
             int nPlugIn = op->plugIn().size();
-            qDebug() << "Connect operator (real): " << idopout<<":"<<idplugout-nPlugIn<< " with operator: " <<idopin <<":"<<idplugin <<" size: "<<nPlugIn;
+            //qDebug() << "Connect operator (real): " << idopout<<":"<<idplugout-nPlugIn<< " with operator: " <<idopin <<":"<<idplugin <<" size: "<<nPlugIn;
             CClientSingleton::getInstance()->getCInterfaceClient2Server()->connectPlugOut2PlugInSend(idopout,idplugout-nPlugIn,idopin,idplugin);
 
         }
@@ -526,18 +526,18 @@ void CGProjectSerialization::loadWithoutGui(){
         if(dataMap.value(m.key())!=NULL && operatorConnectorSide.value(m.value())=="IN"){
             int opid=mapOldNewOperatorId.value(listId.at(0));
             int plugkeyin=listId.at(1).toInt();
-            qDebug() << "try connecting: data " << m.key()<< " with operator: " <<m.value();
+            //qDebug() << "try connecting: data " << m.key()<< " with operator: " <<m.value();
             CData* data=mapOldNewData.value(m.key());
             if(data!=NULL){
                 CClientSingleton::getInstance()->getCInterfaceClient2Server()->setPlugInSend(opid,plugkeyin,data,CPlug::NEW);
-                qDebug() << "Connect data: " << m.key()<< " with operator: " <<m.value();;
-                qDebug() << "Setplugin client " << opid<< ": " <<plugkeyin;
+                //qDebug() << "Connect data: " << m.key()<< " with operator: " <<m.value();;
+                //qDebug() << "Setplugin client " << opid<< ": " <<plugkeyin;
             }else{
-                qDebug() << "Can't find data: " << m.key();
+                qDebug() << "[WARNING] Can't find data: " << m.key();
             }
         }
     }
-    qDebug() << "END LOADING";
+    //qDebug() << "END LOADING";
 
 }
 

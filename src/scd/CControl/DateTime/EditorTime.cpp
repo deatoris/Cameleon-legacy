@@ -12,9 +12,9 @@ EditorTime::EditorTime(QWidget * parent)
 
     box = new QTimeEdit;
 
-    if(!QObject::connect(box, SIGNAL(currentIndexChanged(QString)),this, SLOT(geInformation()),Qt::DirectConnection)){
+  //  if(!QObject::connect(box, SIGNAL(currentIndexChanged(QString)),this, SLOT(geInformation()),Qt::DirectConnection)){
 //        //qDebug << "[WARN] Can't connect EditorTime and box" ;
-    }
+    //}
 
     QVBoxLayout *lay = new QVBoxLayout;
     lay->addWidget(box);

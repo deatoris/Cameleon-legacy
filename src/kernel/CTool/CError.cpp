@@ -33,7 +33,7 @@ std::string CErrorBuilder::file() const throw()
     return _file;
 }
 ostream & operator<<( ostream & os, const CErrorBuilder& v){
-    os<<"[SERVER][ERROR][BUILDER] :"<<v._msg<<" in file "<<v._file<<endl;
+    os<<"[SERVER][ERROR][BUILDER] "<<v._msg<<" in file "<<v._file<<endl;
     return os;
 }
 

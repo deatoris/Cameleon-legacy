@@ -71,32 +71,20 @@ QList<argument> CArguments::getArgumentsFromComposition(QString cmPath){
                     //read input control and exposure parameters
                     //<controlconnector controlid="77" connectorid="0" side="OUT" name="edt" datatype="DATANUMBER" content="100"/>
                     if (xmlReader.name() == "controlconnector"){
-                                            QString name = xmlReader.attributes().value("name").toString();
-                                            QString datatype = xmlReader.attributes().value("datatype").toString();
-                                            QString content = xmlReader.attributes().value("content").toString();
-                                            qDebug()<<name;
-                                            qDebug()<<datatype;
-                                            qDebug()<<content;
-                                            argument a;
-                                            a.key = name;
-                                            a.value = content;
-                                            a.datatype = datatype;
-                                            l.append(a);
-                                            //string s = ControlEditorArgument::KEY;
-                                            //if(name.compare(s.c_str()) == 0){
-                                                /*argument a;
-                                                QStringList listContent = content.split("<$>");
-                                                a.key = "-"+listContent[0];
-                                                a.value = listContent[1];
-                                                a.description = listContent[2];
-                                                if(listContent[3].compare("TRUE") == 0) a.optional = true;
-                                                if(listContent[3].compare("FALSE") == 0) a.optional = false;
-                                                l.append(a);*/
-                                            }
-                                        //}
+                        QString name = xmlReader.attributes().value("name").toString();
+                        QString datatype = xmlReader.attributes().value("datatype").toString();
+                        QString content = xmlReader.attributes().value("content").toString();
+
+                        argument a;
+                        a.key = name;
+                        a.value = content;
+                        a.datatype = datatype;
+                        l.append(a);
+                    }
+
 
                     /*
-                     REFACTOR: argument a rebrancher
+                     2.2 / REFACTOR: argument a rebrancher
                      *if (xmlReader.name() == "control"){
                         QString name = xmlReader.attributes().value("type").toString();
                         QString content = xmlReader.attributes().value("content").toString();
@@ -168,7 +156,7 @@ QList<argument> CArguments::getArgumentsFromApplication(){
 
 
     foreach(QString arg, argsL){
-        qDebug() << arg;
+        //qDebug() << arg;
         if(arg != argsL[0]){
             if(arg.compare("-h") == 0){
                 argument a;
@@ -180,7 +168,6 @@ QList<argument> CArguments::getArgumentsFromApplication(){
                     CArguments::printCameleonHelp();
                     exit(0);
                 }else{
-                    qDebug() << "[OK] *.cm file exists!";
                     argument a;
                     a.key="-cm";
                     a.value=arg;
@@ -214,8 +201,6 @@ bool CArguments::isCompositionForced(QList<argument> commandArgs){
 QString CArguments::getCompositionFromAppArgs(QList<argument> commandArgs){
     QString cmp = "";
     foreach(argument a, commandArgs){
-        qDebug()<<a.key.toStdString().c_str();
-        qDebug()<<a.value.toStdString().c_str();
         if(a.key.compare("-cm")==0) cmp = a.value;
     }
     return cmp;
@@ -231,7 +216,7 @@ QString CArguments::mode(QList<argument> commandArgs){
 
 bool CArguments::isFileExist(QString file){
     QFileInfo info(file);
-    if(!info.exists()) qDebug()<<"[ERROR] File setted in -cm option does not exist.";
+    if(!info.exists()) qDebug()<<"[ERROR] File *.cm does not exist.";
     return info.exists();
 }
 
@@ -280,10 +265,6 @@ bool CArguments::isCompositionHelp(QList<argument> commandArgs){
 
 bool CArguments::checkArguments(QList<argument>  commandArgs, QList<argument> compositionArgs ){ // QString : "-h", "-mode=$MODE", "-cm=$cmPath", "-key"
     foreach(argument cmparg, compositionArgs){
-        qDebug()<< "compositionArgs";
-        qDebug()<< cmparg.key;
-        qDebug()<< cmparg.value;
-        qDebug()<< cmparg.datatype;
         if(!cmparg.optional){
             bool check = false;
             foreach(argument cmdarg, commandArgs){
@@ -298,11 +279,6 @@ bool CArguments::checkArguments(QList<argument>  commandArgs, QList<argument> co
         }
     }
     foreach(argument cmdarg, commandArgs){
-        qDebug()<< "commandArgs";
-        qDebug()<< cmdarg.key;
-        qDebug()<< cmdarg.value;
-        qDebug()<< cmdarg.datatype;
-
         if(CArguments::isDouble(cmdarg.key, commandArgs)){
             return false;
         }

@@ -76,7 +76,7 @@ void CGProjectSerialization::load(){
     int nb_operators =0;
     int nb_controls = 0;
     int nb_compositions = 0;
-    CLogger::getInstance()->clear();
+    //CLogger::getInstance()->clear();
     while (!xmlReader.atEnd()) {
         xmlReader.readNext();
         if (xmlReader.isStartElement()) {
@@ -1175,7 +1175,7 @@ void CGProjectSerialization::loadWithoutGui(){
     int nb_operators =0;
     int nb_controls = 0;
     int nb_compositions = 0;
-    CLogger::getInstance()->clear();
+    //CLogger::getInstance()->clear();
     while (!xmlReader.atEnd()) {
         xmlReader.readNext();
         if (xmlReader.isStartElement()) {

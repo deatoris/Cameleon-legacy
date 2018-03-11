@@ -130,16 +130,16 @@ void DrawImage::createCommentBar(){
     colorToolButton->setMenu(createColorMenu(SLOT(colorChanged()),
                                              Qt::white));
     colorToolButton->setIcon(createColorToolButtonIcon(Qt::white));
-    connect(colorToolButton, SIGNAL(clicked()),
-            this, SLOT(buttonTriggered()));
+//    connect(colorToolButton, SIGNAL(clicked()),
+//            this, SLOT(buttonTriggered()));
 
     shapeToolButton = new QToolButton;
     shapeToolButton->setPopupMode(QToolButton::MenuButtonPopup);
     shapeToolButton->setMenu(createShapeMenu(SLOT(shapeChanged()),
                                              Square));
     shapeToolButton->setIcon(createShapeToolButtonIcon(Square));
-    connect(shapeToolButton, SIGNAL(clicked()),
-            this, SLOT(buttonTriggered()));
+    //connect(shapeToolButton, SIGNAL(clicked()),
+      //      this, SLOT(buttonTriggered()));
 
     fontSizeCombo = new QComboBox;
     fontSizeCombo->setEditable(true);

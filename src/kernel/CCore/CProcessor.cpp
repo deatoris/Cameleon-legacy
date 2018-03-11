@@ -274,15 +274,15 @@ void CProcessor::connectPlugOut2PlugIn(COperator::Id idop1,int plugindex1, COper
     try{
 
         if(idop1>=(int)_compo.size()||idop2>=(int)_compo.size()){
-            qDebug() << "kernel: Connexions error1 from "<< idop1 <<":"<<plugindex1 << "to " <<idop2 <<":"<<plugindex2;;
+            qDebug() << "[WARNING] Connexions error1 from "<< idop1 <<":"<<plugindex1 << "to " <<idop2 <<":"<<plugindex2;;
             throw CErrorBuilder("Over range in the operator vector ", "Cprocessor");
         }
         if(plugindex2>=(int)_compo[idop2].first->plugIn().size()){
-            qDebug() << "kernel: Connexions error2 from "<< idop1 <<":"<<plugindex1 << "to " <<idop2 <<":"<<plugindex2 << "size: " <<(int)_compo[idop2].first->plugIn().size();
+            qDebug() << "[WARNING] Connexions error2 from "<< idop1 <<":"<<plugindex1 << "to " <<idop2 <<":"<<plugindex2 << "size: " <<(int)_compo[idop2].first->plugIn().size();
             throw CErrorBuilder("Over range in the plug vector ", "Cprocessor");
         }
         if(plugindex1>=(int)_compo[idop1].first->plugOut().size()){
-            qDebug() << "kernel: Connexions error3 from "<< idop1 <<":"<<plugindex1 << "to " <<idop2 <<":"<<plugindex2;;
+            qDebug() << "[WARNING] Connexions error3 from "<< idop1 <<":"<<plugindex1 << "to " <<idop2 <<":"<<plugindex2;;
             throw CErrorBuilder("Over range in the plug vector ", "Cprocessor");
         }
         _compo[idop2].first->plugIn()[plugindex2]->connect(_compo[idop1].first->plugOut()[plugindex1]);
@@ -303,9 +303,7 @@ void CProcessor::connectPlugOut2PlugIn(COperator::Id idop1,int plugindex1, COper
     }
     catch(const CErrorBuilder & err)
     {
-        //        cerr<<err;
-        qDebug() << "kernel: Connexions error4 from "<< idop1 <<":"<<plugindex1 << "to " <<idop2 <<":"<<plugindex2 << "size: " <<(int)_compo[idop2].first->plugIn().size();
-
+        cerr<<err;
     }
 }
 bool CProcessor::isStartSleeping(){
@@ -340,7 +338,7 @@ void CProcessor::deconnectPlugIn(COperator::Id idop,int plugindex){
 }
 void CProcessor::        setPlugIn(COperator::Id opid, COperator::PlugKey plugkeyin, CData * data, CPlug::State state){
 
-    qDebug() << "setPlugIn: " << opid << ":" <<plugkeyin;
+    //qDebug() << "setPlugIn: " << opid << ":" <<plugkeyin;
 
     _compo[opid].first->plugIn()[plugkeyin]->getData()->dumpReception(data);
 

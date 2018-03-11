@@ -349,7 +349,7 @@ void CInterfaceClient::updatePlugOutReceive(COperator::Id opid,COperator::PlugKe
 
 void CInterfaceClient::updateOperatorStructureReceive(COperator::Id opid,COperatorStructure opstructure){
     //CGCompositionManager::getInstance()->updateStructOperator(opid,opstructure);
-    qDebug() << "Uncatch updateOperatorStruce " << opid << " " << opstructure.getName().c_str() << " " << opstructure.plugIn().size() << " " << opstructure.plugOut().size();
+    qDebug() << "[WARNING] Uncatch updateOperatorStructure (addPlug) " << opid << " " << opstructure.getName().c_str() << " " << opstructure.plugIn().size() << " " << opstructure.plugOut().size();
 }
 
 /*

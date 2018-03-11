@@ -12,9 +12,9 @@ EditorDate::EditorDate(QWidget * parent)
 
     box = new QDateEdit;
 
-    if(!QObject::connect(box, SIGNAL(currentIndexChanged(QString)),this, SLOT(geInformation()),Qt::DirectConnection)){
+    //if(!QObject::connect(box, SIGNAL(currentIndexChanged(QString)),this, SLOT(geInformation()),Qt::DirectConnection)){
 //        //qDebug << "[WARN] Can't connect EditorDate and box" ;
-    }
+    //}
 
     QVBoxLayout *lay = new QVBoxLayout;
     lay->addWidget(box);
