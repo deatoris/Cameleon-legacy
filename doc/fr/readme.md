@@ -20,14 +20,15 @@ Documentation pour les utilisateurs
 -------------------
 * [Introduction](./introduction.md)
 * Installation raspbian [debian](./installation_debian.md) [windows](./installation_windows.md)
-* Guide - Bonjour, oh monde ! (Hello world!)
+* Guide - Bonjour, oh monde ! (Hello world!) - Conception et construction
+* Guide - Bonjour, oh monde ! (Hello world!) - Déploiement
+* Guide - Bonjour, oh monde ! (Hello world!) - Patron
 * Guide - Bases / guide rapide
 * Guide - Partages de patrons et de compositions
 * Guide - SCD / Les types standards
 * Guide - SCD / Intéragir avec le système
 * Guide - SCD / Génériques et flux de contrôle
 * Guide - SCD / Boucles
-* Guide - SCD / Patrons
 * Guide - SCD / Intégration Python
 * Guide - SCD / Intégration R
 * Guide - SCD / Intégration CLI
