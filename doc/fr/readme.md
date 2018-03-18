@@ -38,6 +38,7 @@ Documentation pour les contributeurs
 Documentation pour les développeurs
 -------------------
 * Guide - Intégration C
+* Guide - Intégration Java
 * Guide - Intégration Python
 * Guide - Intégration R
 * Guide - Intégration Kotlin
