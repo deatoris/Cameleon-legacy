@@ -1,5 +1,5 @@
 <div align="center">
-<p style="text-align: center;"><img src="img/logo.jpg" align="middle" alt="Drawing" width="50"/></p>
+<p style="text-align: center;"><img src="img/logo.jpg" align="middle" alt="Drawing" width="100"/></p>
 </div>
 
 Documentation du langage Caméléon
