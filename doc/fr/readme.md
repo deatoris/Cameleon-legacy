@@ -6,6 +6,12 @@
 > * en saisissant une demande de changement ici: [Demande de changement](issues)
 > * en proposant un merge-request en suivant la procédure ici: [Guide du contributeur](./guide_contribution.md)
 
+Présentation générale
+-------------------
+* Vidéo courte de présentation du language
+* Présentation au format pdf
+* Site web /cameleon
+
 Usages
 -------------------
 * Usage - La brique en bois, un objet connecté
