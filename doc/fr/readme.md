@@ -37,10 +37,6 @@ Documentation pour les utilisateurs
 Documentation pour les contributeurs
 -------------------
 * [Guide de l'utilisateur contributeur](./guide_contribution.md)
-* Guide du développeur contributeur haut niveau (python, R ...)
-* Guide du développeur contributeur natif (C/C++/QT)
-* Guide du rédacteur contributeur
-* Guide du correcteur contributeur
 
 Documentation pour les développeurs
 -------------------
