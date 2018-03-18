@@ -2,7 +2,7 @@
 <p style="text-align: center;"><img src="img/logo.jpg" align="middle" alt="Drawing" width="50"/></p>
 </div>
 
-Caméléon documentation
+Documentation du langage Caméléon
 =============
 
 > Cette documentation est en construction et soumise à modification. Si vous souhaitez contribuer à son amélioration, n'hésitez pas à faire une proposition, soit:
