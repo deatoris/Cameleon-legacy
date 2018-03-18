@@ -8,33 +8,41 @@
 
 Usages
 -------------------
-* Usage - [Génération d'un site web](./usage_site.md)
+* Usage - La brique en bois, un objet connecté
 * Usage - [Traitement de photographies avec imagemagick](./usage_image.md)
 * Usage - [Capatation et traitement de données avec python](./usage_twitter.md)
+* Usage - Traitement d'image pour l'analyse scientifique de matériaux
+* Usage - Entrainement de réseaux de neuronnes
+* Usage - Réprésentation multi-échelle d'une organisation
+* Usage - Conception papier
 
 Documentation pour les utilisateurs
 -------------------
 * [Introduction](./introduction.md)
+* Installation raspbian [debian](./installation_debian.md) [windows](./installation_windows.md)
+* Guide - Bonjour, oh monde ! (Hello world!)
+* Guide - Bases
+* Guide - Partages de patrons et de compositions
+* Guide - SCD / Les types standards
+* Guide - SCD / Intéragir avec le système
+* Guide - SCD / Génériques et flux de contrôle
+* Guide - SCD / Boucles
+* Guide - SCD / Patrons
+* Guide - SCD / Intégration Python
+* Guide - SCD / Intégration R
+* Guide - SCD / Intégration CLI
+* Guide - Caméléon lanceur en ligne de commande (lcm)
+* Guide - Caméléon éditeur (ecm)
 * [Grammaire](./grammaire.md)
-* Installation [debian](./installation_debian.md) [windows](./installation_windows.md)
-* Tutoriel - bases
-* Tutoriel - SCD / Les types standards
-* Tutoriel - SCD / Intéragir avec le système
-* Tutoriel - SCD / Génériques et flux de contrôle
-* Tutoriel - SCD / Boucles
-* Tutoriel - SCD / Patrons
-* Tutoriel - SCD / Intégration Python
-* Tutoriel - SCD / Caméléon en mode CLI
-* Tutoriel - SCD / Caméléon en mode GUI
-* Tutoriel - SCD / Greffon C++
 * [Manuel de référence](./notice.md)
 
 Documentation pour les contributeurs
 -------------------
 * [Guide du contributeur](./guide_contribution.md)
 
-Documentation pour les développeurs
+Documentation pour les développeurs C++
 -------------------
 * Compilation [debian](./compilation_debian.md) [windows](./compilation_windows.md)
 * Empaquetage [debian](./empaquetage_debian.md) [windows](./empaquetage_windows.md)
+* Guide - SCD / Greffon C++
 * [Spécification](./spec.md)
