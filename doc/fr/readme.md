@@ -26,6 +26,7 @@ Documentation pour les utilisateurs
 * Guide - SCD / Génériques et flux de contrôle
 * Guide - SCD / Boucles
 * Guide - SCD / Intégration CLI
+* Guide - SCD / Intégration API
 * Guide - Caméléon lanceur en ligne de commande (lcm)
 * Guide - Caméléon éditeur (ecm)
 * [Grammaire](./grammaire.md)
