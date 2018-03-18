@@ -8,7 +8,7 @@
 
 Présentation générale
 -------------------
-* Vidéo courte de présentation du language
+* Storyboard & Vidéo courte de présentation du language
 * Site web /cameleon/fr
 
 Documentation pour les utilisateurs
