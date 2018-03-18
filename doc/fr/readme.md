@@ -25,8 +25,6 @@ Documentation pour les utilisateurs
 * Guide - SCD / Intéragir avec le système
 * Guide - SCD / Génériques et flux de contrôle
 * Guide - SCD / Boucles
-* Guide - SCD / Intégration Python
-* Guide - SCD / Intégration R
 * Guide - SCD / Intégration CLI
 * Guide - Caméléon lanceur en ligne de commande (lcm)
 * Guide - Caméléon éditeur (ecm)
@@ -47,9 +45,17 @@ Documentation pour les contributeurs
 -------------------
 * [Guide du contributeur](./guide_contribution.md)
 
-Documentation pour les développeurs C++
+Documentation pour les développeurs
 -------------------
 * Compilation raspbian [debian](./compilation_debian.md) [windows](./compilation_windows.md)
 * Empaquetage raspbian [debian](./empaquetage_debian.md) [windows](./empaquetage_windows.md)
+* Guide - SCD / Intégration C
+* Guide - SCD / Intégration Python
+* Guide - SCD / Intégration R
+* Guide - SCD / Intégration Kotlin
+* Guide - SCD / Intégration Go
+* Guide - SCD / Intégration Perl
+* Guide - SCD / Intégration Javascript
+* Guide - SCD / Intégration Haskell
 * Guide - Greffon C++
 * [Spécification](./spec.md)
