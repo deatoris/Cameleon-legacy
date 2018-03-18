@@ -42,7 +42,7 @@ Documentation pour les contributeurs
 
 Documentation pour les développeurs C++
 -------------------
-* Compilation [debian](./compilation_debian.md) [windows](./compilation_windows.md)
-* Empaquetage [debian](./empaquetage_debian.md) [windows](./empaquetage_windows.md)
+* Compilation raspbian [debian](./compilation_debian.md) [windows](./compilation_windows.md)
+* Empaquetage raspbian [debian](./empaquetage_debian.md) [windows](./empaquetage_windows.md)
 * Guide - Greffon C++
 * [Spécification](./spec.md)
