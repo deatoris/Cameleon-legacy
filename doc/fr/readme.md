@@ -65,3 +65,10 @@ Usages
 * Usage - Entrainement de réseaux de neuronnes
 * Usage - Réprésentation multi-échelle d'une organisation
 * Usage - Conception papier
+
+Pour aller plus loin
+-------------------
+* Safari#0 - Présentation générale (pdf)
+* Safari#1 - Etat de l'art et positionnement (pdf)
+* Safari#2 - L'histoire de Caméléon (pdf)
+* Safari#3 - BMG / SWOT
