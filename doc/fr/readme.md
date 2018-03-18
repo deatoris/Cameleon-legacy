@@ -44,5 +44,5 @@ Documentation pour les développeurs C++
 -------------------
 * Compilation [debian](./compilation_debian.md) [windows](./compilation_windows.md)
 * Empaquetage [debian](./empaquetage_debian.md) [windows](./empaquetage_windows.md)
-* Guide - SCD / Greffon C++
+* Guide - Greffon C++
 * [Spécification](./spec.md)
