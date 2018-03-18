@@ -31,6 +31,25 @@ Documentation pour les utilisateurs
 * [Grammaire](./grammaire.md)
 * [Manuel de référence](./notice.md)
 
+Documentation pour les contributeurs
+-------------------
+* [Guide du contributeur](./guide_contribution.md)
+
+Documentation pour les développeurs
+-------------------
+* Guide - Intégration C
+* Guide - Intégration Python
+* Guide - Intégration R
+* Guide - Intégration Kotlin
+* Guide - Intégration Go
+* Guide - Intégration Perl
+* Guide - Intégration Javascript
+* Guide - Intégration Haskell
+* Dev C++ Caméléon - Compilation raspbian [debian](./compilation_debian.md) [windows](./compilation_windows.md)
+* Dev C++ Caméléon - Empaquetage raspbian [debian](./empaquetage_debian.md) [windows](./empaquetage_windows.md)
+* Dev C++ Caméléon - Greffon C++
+* [Spécification](./spec.md)
+
 Usages
 -------------------
 * Usage - La brique en bois, un objet connecté
@@ -40,22 +59,3 @@ Usages
 * Usage - Entrainement de réseaux de neuronnes
 * Usage - Réprésentation multi-échelle d'une organisation
 * Usage - Conception papier
-
-Documentation pour les contributeurs
--------------------
-* [Guide du contributeur](./guide_contribution.md)
-
-Documentation pour les développeurs
--------------------
-* Compilation raspbian [debian](./compilation_debian.md) [windows](./compilation_windows.md)
-* Empaquetage raspbian [debian](./empaquetage_debian.md) [windows](./empaquetage_windows.md)
-* Guide - SCD / Intégration C
-* Guide - SCD / Intégration Python
-* Guide - SCD / Intégration R
-* Guide - SCD / Intégration Kotlin
-* Guide - SCD / Intégration Go
-* Guide - SCD / Intégration Perl
-* Guide - SCD / Intégration Javascript
-* Guide - SCD / Intégration Haskell
-* Guide - Greffon C++
-* [Spécification](./spec.md)
