@@ -21,7 +21,7 @@ Documentation pour les utilisateurs
 * [Introduction](./introduction.md)
 * Installation raspbian [debian](./installation_debian.md) [windows](./installation_windows.md)
 * Guide - Bonjour, oh monde ! (Hello world!)
-* Guide - Bases
+* Guide - Bases / guide rapide
 * Guide - Partages de patrons et de compositions
 * Guide - SCD / Les types standards
 * Guide - SCD / Intéragir avec le système
