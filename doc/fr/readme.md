@@ -9,8 +9,11 @@
 Présentation générale
 -------------------
 * Vidéo courte de présentation du language
-* Présentation au format pdf
-* Site web /cameleon
+* Safari#0 - Présentation générale (pdf)
+* Safari#1 - Etat de l'art et positionnement (pdf)
+* Safari#2 - L'histoire de Caméléon (pdf)
+* Safari#3 - BMG / SWOT
+* Site web /cameleon/fr
 
 Documentation pour les utilisateurs
 -------------------
