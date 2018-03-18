@@ -12,16 +12,6 @@ Présentation générale
 * Présentation au format pdf
 * Site web /cameleon
 
-Usages
--------------------
-* Usage - La brique en bois, un objet connecté
-* Usage - [Traitement de photographies avec imagemagick](./usage_image.md)
-* Usage - [Capatation et traitement de données avec python](./usage_twitter.md)
-* Usage - Traitement d'image pour l'analyse scientifique de matériaux
-* Usage - Entrainement de réseaux de neuronnes
-* Usage - Réprésentation multi-échelle d'une organisation
-* Usage - Conception papier
-
 Documentation pour les utilisateurs
 -------------------
 * [Introduction](./introduction.md)
@@ -42,6 +32,16 @@ Documentation pour les utilisateurs
 * Guide - Caméléon éditeur (ecm)
 * [Grammaire](./grammaire.md)
 * [Manuel de référence](./notice.md)
+
+Usages
+-------------------
+* Usage - La brique en bois, un objet connecté
+* Usage - [Traitement de photographies avec imagemagick](./usage_image.md)
+* Usage - [Capatation et traitement de données avec python](./usage_twitter.md)
+* Usage - Traitement d'image pour l'analyse scientifique de matériaux
+* Usage - Entrainement de réseaux de neuronnes
+* Usage - Réprésentation multi-échelle d'une organisation
+* Usage - Conception papier
 
 Documentation pour les contributeurs
 -------------------
