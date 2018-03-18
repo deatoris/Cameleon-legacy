@@ -40,6 +40,7 @@ Documentation pour les développeurs
 * Guide - Intégration C
 * Guide - Intégration Java
 * Guide - Intégration Python
+* Guide - Intégration Php
 * Guide - Intégration R
 * Guide - Intégration Kotlin
 * Guide - Intégration Go
