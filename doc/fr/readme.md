@@ -11,12 +11,12 @@ Documentation du langage Caméléon
 
 Présentation générale
 -------------------
+* [Introduction](./introduction.md)
 * Storyboard & Vidéo courte de présentation du language
 * Site web /cameleon/fr
 
 Documentation pour les utilisateurs
 -------------------
-* [Introduction](./introduction.md)
 * Installation raspbian [debian](./installation_debian.md) [windows](./installation_windows.md)
 * Guide - Bonjour, oh monde ! (Hello world!) - Conception et construction
 * Guide - Bonjour, oh monde ! (Hello world!) - Déploiement
