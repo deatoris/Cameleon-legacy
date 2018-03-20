@@ -40,6 +40,7 @@ Documentation pour les contributeurs
 
 Documentation pour les développeurs
 -------------------
+* Guide - Intégration d'un langage écrit
 * Guide - Intégration C
 * Guide - Intégration Java
 * Guide - Intégration Python
