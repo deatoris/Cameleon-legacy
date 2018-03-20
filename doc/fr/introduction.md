@@ -12,17 +12,14 @@ Nous pouvons aussi parler d'expériences en captation de données (la meute), en
 
 Caméléon a une conception bas niveau. Ainsi, il s'intègre facilement avec n'importe quel langage et n'importe quel système. Il ne prétend pas remplacer les développeurs mais plutôt les augmenter, les compléter exactement. Caméléon aime jouer avec python, R, Go, node.js entre autres! Il aime découvrir de nouveaux écosystèmes. Via API, CLI ou autre, il essaie toujours de se trouver un chemin. En fait, il aime un peu tout le monde Caméléon, il se fond dans l'univers de ses amis ;)
 
-
 Recherche de processus
 -------------------
 Caméléon aide les analystes à rechercher, tester et partager des processus de traitement de données.
 Il s'agit d'un langage visuel libre sous license MIT[6].
 
-
 Une synthaxe visuelle
 -------------------
 Caméléon possède une interface souple, intuitive et addictive. Sa grammaire visuelle peut-être apprise en quelques minutes.
-
 
 Omni domaines, Omni échelles
 -------------------
@@ -42,16 +39,17 @@ Caméléon est un langage graphique de programmation fonctionnelle [1]. Il perme
 
 Caméléon est un dérivé de pétri[4]. Caméléon est un langage turing complet[5].
 
-Autrement dit, c'est un langage visuel qui, théoriquement, permet de programmer toute la logique d'un langage textuel classique (logique booléenne, boucles, encapsulation).
+Autrement dit, c'est un langage visuel qui, théoriquement, permet de programmer toute la logique d'un langage textuel classique (logique booléenne, boucles, encapsulation, récurcivité).
 
 Néanmoins, Caméléon ne se substitue pas à la programmation textuelle, il la complète. Il est toujours nécessaire de coder un opérateur. Et il est possible de le faire dans n'importe quel langage.
 
 Il vous permet de fabriquer des traitements et de les calibrer en temps réel. Il rend lisible le besoin et accélère la calibration. 
 
-
 Fonctionnalités
 -------------------
-* Editeur graphique intuitif et (paraît-il) addictif,
+* Léger, rapide et adaptable,
+* Extensible avec vos propres fonctions écrites dans le langage écrit de votre choix,
+* Editeur graphique efficace et (paraît-il) addictif,
 * Orchestration de fonctions,
 * Calibration temps réel,
 * Librairie standard d'opérateurs pour les types simples (nombres, chaînes de caractères, map, vecteur, tableau),
@@ -60,7 +58,6 @@ Fonctionnalités
 Téléchargement
 -------------------
 * http://www.shinoe.org/cameleon/release
-
 
 Références
 -------------------
