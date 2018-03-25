@@ -149,6 +149,10 @@ void CGLayoutItem::setControl(CControl* control){
                      CGLayoutManager::getInstance()->getController(), SLOT(controllerError(int,string)));
 }
 
+QString CGLayoutItem::getError(){
+    return this->error;
+}
+
 void CGLayoutItem::setError(QString errormsg){
     this->error = errormsg;
     this->update();

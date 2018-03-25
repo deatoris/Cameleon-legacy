@@ -96,8 +96,6 @@ CGOperator* CGOperator::clone(){
 }
 
 void CGOperator::renderModel(){
-
-
     //process ray
     if(model->getConnectorsList().size()>4){
         for(int i=0;i<model->getConnectorsList().size()-4;i++){

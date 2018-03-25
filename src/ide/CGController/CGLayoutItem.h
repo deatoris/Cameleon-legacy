@@ -54,7 +54,7 @@ public:
     void setLayout(CGLayout* layout);
     bool getIsPersistant();
     void setIsPersistant(bool pers);
-
+    QString getError();
     void setError(QString errormsg);
 protected:
     QString error;

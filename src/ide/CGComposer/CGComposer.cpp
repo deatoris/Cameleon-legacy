@@ -285,7 +285,7 @@ void CGComposer::createMenus(){
     compositionMenu->addAction(showInfos);
     compositionMenu->addAction(upAction);
     compositionMenu->addSeparator();
-//    compositionMenu->addAction(pasteAction);
+    //    compositionMenu->addAction(pasteAction);
     compositionMenu->addAction(createMultiAction);
     //    compositionMenu->addAction(clearAction);
     compositionMenu->addSeparator();
@@ -668,7 +668,7 @@ void CGComposer::createActions(){
             this, SLOT(disconnectComposerControl()));
 
     exposeAction = new QAction(QIcon(":/icons/arrow_right.png"),
-                                                   tr("expose"), this);
+                               tr("expose"), this);
     exposeAction->setStatusTip(tr("disconnect"));
     connect(exposeAction, SIGNAL(triggered()),
             this, SLOT(expose()));
@@ -1806,10 +1806,11 @@ void CGComposer::stop(){
     CLogger::getInstance()->log("STOPPROCESS",CLogger::DEBUG,"CGComposer::stop");
     //patch pour bug #19
     foreach(CGCompositionModel* comp, CGCompositionManager::getInstance()->getCompositionList()){
-        comp->getScene()->unselectAll();
+        //comp->getScene()->unselectAll();
         foreach(CGOperatorModel* model, comp->getOperatorModelList()){
-            model->getView()->setError("");
-            model->getView()->update();
+            if(model->getView()->getError().compare("") != 0){
+                model->getView()->setError("");
+            }
         }
         comp->getScene()->update();
     }
@@ -1818,8 +1819,9 @@ void CGComposer::stop(){
         foreach(QGraphicsItem* item, l->items()){
             if(item->type() == CGLayoutItem::Type){
                 CGLayoutItem* ilayout = qgraphicsitem_cast<CGLayoutItem *>(item);
-                ilayout->setError("");
-                ilayout->update();
+                if(ilayout->getError().compare("") != 0){
+                    ilayout->setError("");
+                }
             }
         }
     }
