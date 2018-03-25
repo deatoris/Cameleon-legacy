@@ -387,12 +387,6 @@ void CGOperator::drawDocs(){
 void CGOperator::paint(QPainter * painter, const QStyleOptionGraphicsItem * , QWidget *  ){
     CLogger::getInstance()->log("PAINT",CLogger::DEBUG,"CGOperator::PAINT id:"+QString::number(this->getModel()->getId()));
 
-    //    foreach (CGConnector *connector, connectorsL) {
-    //        connector->updatePosition();
-    //        if(connector->isConnected()){
-    //            connector->getConnectedConnector()->updatePosition();
-    //        }
-    //    }
     if(errormsg.compare("") != 0){
         outerColor = Qt::red;
     }
@@ -409,8 +403,6 @@ void CGOperator::paint(QPainter * painter, const QStyleOptionGraphicsItem * , QW
     }else{
         painter->setPen(Qt::SolidLine);
     }
-    //    QString message = "operator position x: "+QString::number(this->scenePos().x())+" y: "+QString::number(this->scenePos().y());
-    //    CLogger::getInstance()->log("INSTANCE",CLogger::INFO,message);
 
     painter->setBrush(outerColor);
     painter->drawEllipse(-rayon/2, -rayon/2, rayon, rayon); //origin on circle center

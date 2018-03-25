@@ -1804,6 +1804,28 @@ void CGComposer::pause(){
 void CGComposer::stop(){
     isNext = false;
     CLogger::getInstance()->log("STOPPROCESS",CLogger::DEBUG,"CGComposer::stop");
+    //patch pour bug #19
+    foreach(CGCompositionModel* comp, CGCompositionManager::getInstance()->getCompositionList()){
+        comp->getScene()->unselectAll();
+        foreach(CGOperatorModel* model, comp->getOperatorModelList()){
+            model->getView()->setError("");
+            model->getView()->update();
+        }
+        comp->getScene()->update();
+    }
+    foreach(CGLayout* l, CGLayoutManager::getInstance()->getLayoutL()){
+        l->unselectAll();
+        foreach(QGraphicsItem* item, l->items()){
+            if(item->type() == CGLayoutItem::Type){
+                CGLayoutItem* ilayout = qgraphicsitem_cast<CGLayoutItem *>(item);
+                ilayout->setError("");
+                ilayout->update();
+            }
+        }
+    }
+
+    CGCompositionManager::getInstance()->getErrorDial()->clear();
+    //patch pour bug #19
 
     QTimer::singleShot(200, this, SLOT(timerEnd()));
     isstopped = false;
