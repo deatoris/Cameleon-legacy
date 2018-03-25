@@ -88,7 +88,7 @@ QDockWidget* CGGlossary::getWidgetCopy(){
     QObject::connect(edit, SIGNAL(textChanged(QString)),
                      tree, SLOT(searchOperator()));
 
-    QObject::connect(edit, SIGNAL(cursorPositionChanged(int,int)),
+    QObject::connect(edit, SIGNAL(selectionChanged()),
                      tree, SLOT(enterSearch()));
 
 
