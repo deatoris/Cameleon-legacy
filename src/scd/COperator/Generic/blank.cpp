@@ -14,13 +14,21 @@ blank::blank(){
 void blank::exec(){
     string datatype = dynamic_cast<DataString *>(this->plugIn()[0]->getData())->getValue();
 
-    CData * d = CGlossarySingletonServer::getInstance()->createData(datatype);
-    if(d!=NULL){
-        d->setPlug(this->plugOut()[0]);
-        DataGeneric* gen = dynamic_cast<DataGeneric *>(this->plugOut()[0]->getData());
-        gen->dumpReception(d);
-    }else{
-        this->error("data type doesn't exist"+datatype);
+    try
+    {
+        CData * d = CGlossarySingletonServer::getInstance()->createData(datatype);
+        if(d!=NULL){
+            d->setPlug(this->plugOut()[0]);
+            DataGeneric* gen = dynamic_cast<DataGeneric *>(this->plugOut()[0]->getData());
+            gen->dumpReception(d);
+        }else{
+            this->error("data type doesn't exist"+datatype);
+            return;
+        }
+    }
+    catch(exception)
+    {
+        this->error("data type doesn't exist: "+datatype);
         return;
     }
 }

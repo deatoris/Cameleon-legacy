@@ -75,8 +75,9 @@ vector<CDictionnary *> CGlossary::getDictionaries(){
 }
 
 
-CData * CGlossary::createData(CData::Key key) {
-    return _f_data.createObject(key);
+CData * CGlossary::createData(CData::Key key)throw(exception) {
+        CData * d = _f_data.createObject(key);
+        return d;
 }
 vector<string> CGlossary::getDataKeys(){
     return _f_data.listKey();

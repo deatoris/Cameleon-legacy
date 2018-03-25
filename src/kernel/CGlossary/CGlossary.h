@@ -36,7 +36,7 @@ public:
     CFactoryData & factoryData();
     CFactoryOperator & factoryOperator();
     vector<pair<vector<string>,string> > getOperatorsByName();
-    CData * createData(CData::Key key);
+    CData * createData(CData::Key key)throw(exception);
     vector<string> getDataKeys();
     vector<string> getOperatorKeys();
     COperator * createOperator(COperator::Key key)throw(exception);
