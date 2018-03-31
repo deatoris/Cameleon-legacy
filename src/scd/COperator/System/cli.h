@@ -5,6 +5,7 @@
 #include<DataVector.h>
 #include<DataNumber.h>
 #include <QProcess>
+#include<DataBoolean.h>
 class CommandLine: public COperator
 {
         Q_OBJECT

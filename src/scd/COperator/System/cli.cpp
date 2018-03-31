@@ -134,6 +134,7 @@ void CommandLine::readOut(){
 
 StdOuptutOperator::StdOuptutOperator(){
     this->structurePlug().addPlugIn(DataString::KEY,"message.str");
+    this->structurePlug().addPlugOut(DataBoolean::KEY,"out.bool");
     this->path().push_back("System");
     this->setKey("StdOuptutOperator");
     this->setName("StdOutput");
@@ -142,6 +143,8 @@ StdOuptutOperator::StdOuptutOperator(){
 void StdOuptutOperator::exec(){
     string v1 = dynamic_cast<DataString *>(this->plugIn()[0]->getData())->getValue();
     qDebug() << v1.c_str();
+    DataBoolean * dret = dynamic_cast<DataBoolean *>(this->plugOut()[0]->getData());
+    dret->setValue(true);
 }
 
 COperator * StdOuptutOperator::clone(){
