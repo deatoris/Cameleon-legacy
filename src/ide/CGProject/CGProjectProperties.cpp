@@ -48,7 +48,7 @@ CGProjectProperties::CGProjectProperties()
 
     layout->addWidget(tab);
     layout->addLayout(buttonLayout);
-    setWindowTitle("Project Properties");
+    setWindowTitle("Composition Properties");
 
     this->resize(900,500);
 
@@ -233,12 +233,12 @@ void CGProjectProperties::createLogsTab(){
 }
 
 void CGProjectProperties::createOptsTab(){
-    QLabel* nameLabel = new QLabel("project name");
+    QLabel* nameLabel = new QLabel("composition name");
     nameEdit = new QTextEdit();
     nameEdit->setMinimumHeight(30);
     nameEdit->setMaximumHeight(30);
 
-    QLabel* versionLabel = new QLabel("project version");
+    QLabel* versionLabel = new QLabel("composition version");
     versionEdit = new QTextEdit();
     versionEdit->setMinimumHeight(30);
     versionEdit->setMaximumHeight(30);
@@ -257,7 +257,7 @@ void CGProjectProperties::createOptsTab(){
     logEdit->setMaximumHeight(30);
     logEdit->setEnabled(false);
 
-    QLabel* projectLabel = new QLabel("projects path");
+    QLabel* projectLabel = new QLabel("compositions path");
     projectEdit = new QTextEdit();
     projectEdit->setMinimumHeight(30);
     projectEdit->setMaximumHeight(30);

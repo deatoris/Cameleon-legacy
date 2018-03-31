@@ -19,6 +19,7 @@ CGProject* CGProject::projectInstance = NULL;
 CGProject::CGProject()
 {
     this->logPath = "";
+    this->readme = "";
     this->name = "";
     this->version = "";
     this->path = "";
@@ -39,6 +40,16 @@ CGProject* CGProject::getInstance(){
         return projectInstance;
     }
 }
+
+void CGProject::setReadme(QString readme){
+    this->readme=readme;
+}
+
+
+QString CGProject::getReadme(){
+    return this->readme;
+}
+
 
 int CGProject::getNumberThread(){
     return this->nbThread;

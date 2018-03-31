@@ -229,6 +229,12 @@ void CGProjectSerialization::loadWithoutGui(){
     while (!xmlReader.atEnd()) {
         xmlReader.readNext();
         if (xmlReader.isStartElement()) {
+
+            if (xmlReader.name() == "readme"){
+                QString readme = xmlReader.attributes().value("text").toString();
+                CGProject::getInstance()->setReadme(readme);
+            }
+
             if (xmlReader.name() == "operator"){
                 /*
                  *operatorsMap <id, TYPE>

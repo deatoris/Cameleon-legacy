@@ -241,30 +241,20 @@ bool CArguments::checkArguments(QList<argument>  commandArgs, QList<argument> co
 }
 
 void CArguments::printCameleonHelp(){
-    qDebug() << ("\nNAME");
-    qDebug() << ("\tCameleon program launcher");
-    qDebug() << ("SYNOPSIS");
-    qDebug() << ("\tide.exe [options]");
-    qDebug() << ("DESCRIPTION");
-    qDebug() << ("\tIf no option is specified, it launch the .cm file specified in the Caméléon instance file");
-    qDebug() << ("\t-h:\t print this help or print the .cm file help if -cm option is specified");
-    qDebug() << ("\t-cm=[.cm file path]:\t launch a specific .cm file");
-    qDebug() << ("\t-mode=[IDE, GUI, CLI]:\t set the Caméléon mode");
-    qDebug() << ("\t\tIDE:\t launch Caméléon creator in IDE mode,");
-    qDebug() << ("\t\tGUI:\t launch Caméléon app with the related GUI interface,");
-    qDebug() << ("\t\tCLI:\t launch Caméléon in a command line mode,");
-    qDebug() << ("EXAMPLES");
-    qDebug() << ("\tStandard launch with full IDE\t cameleon.exe");
-    qDebug() << ("\tSee the help of a specified .cm file\t cameleon.exe -h -cm=\"../project/tutorial/example-0XY-Arguments/example-0XY-Arguments.cm\"");
-    qDebug() << ("\tLaunch a specified .cm file with full IDE\t cameleon.exe -cm=\"../project/tutorial/example-0XY-Arguments/example-0XY-Arguments.cm\"");
-    qDebug() << ("\tLaunch a specified .cm file in command line application mode\t cameleon.exe -mode=\"CMD\" -cm=\"../project/tutorial/example-0XY-Arguments/example-0XY-Arguments.cm\"");
-    qDebug() << ("\tLaunch a specified .cm file in GUI application mode\t cameleon.exe -mode=\"GUI\" -cm=\"../project/tutorial/example-0XY-Arguments/example-0XY-Arguments.cm\"");
+    QFile file(CGInstance::getInstance()->getRessourcePath()+"/ecm-man.txt");
+    if(!file.open(QIODevice::ReadOnly)) {
+        std::cout << file.errorString().toStdString();
+    }
 
-    /*
-        IDE, integrated development environment (controller + composer),
-        GUI, Graphical user interface (only controller),
-        CLI command line interface.
-    */
+    QTextStream in(&file);
+    std::cout << "\n";
+    while(!in.atEnd()) {
+        QString line = in.readLine();
+        std::cout << line.toStdString() <<"\n";
+    }
+    std::cout << "\n";
+
+    file.close();
 }
 
 void CArguments::printCompositionHelp(QString compositionPath, QList<argument>  compositionArgs){

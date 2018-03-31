@@ -13,6 +13,8 @@ More informations can be found here: http://www.shinoe.org/cameleon
 #include "CArguments.h"
 //#include "ControlEditorArgument.h"
 #include "CGInstance.h"
+#include "CGProject.h"
+#include <iostream>
 
 QString CArguments::getReadmeFromComposition(QString cmPath){
     QString readme = "No synopsis";
@@ -46,7 +48,7 @@ QString CArguments::getReadmeFromComposition(QString cmPath){
     file.close();
     return readme;
 }
-
+#include "CGProject.h"
 QList<argument> CArguments::getArgumentsFromComposition(QString cmPath){
     QFile file(cmPath);
     QList<argument> l;
@@ -67,6 +69,11 @@ QList<argument> CArguments::getArgumentsFromComposition(QString cmPath){
             while (!xmlReader.atEnd()) {
                 xmlReader.readNext();
                 if (xmlReader.isStartElement()) {
+
+                    if (xmlReader.name() == "readme"){
+                        QString readme = xmlReader.attributes().value("text").toString();
+                        CGProject::getInstance()->setReadme(readme);
+                    }
 
                     //read input control and exposure parameters
                     //<controlconnector controlid="77" connectorid="0" side="OUT" name="edt" datatype="DATANUMBER" content="100"/>
@@ -287,20 +294,20 @@ bool CArguments::checkArguments(QList<argument>  commandArgs, QList<argument> co
 }
 
 void CArguments::printCameleonHelp(){
-    qDebug() << ("\nNAME");
-    qDebug() << ("\tCameleon program launcher v2.2.0 - 31/03/2018");
-    qDebug() << ("SYNOPSIS");
-    qDebug() << ("\tide.exe [options]");
-    qDebug() << ("DESCRIPTION");
-    qDebug() << ("\tIf no option is specified, it launch the .cm file specified in the Caméléon instance file");
-    qDebug() << ("\t-h:\t print this help or print the .cm file help if -cm option is specified");
-    qDebug() << ("\t-cm=[.cm file path]:\t launch a specific .cm file");
-    qDebug() << ("EXAMPLES");
-    qDebug() << ("\tStandard launch with full IDE\t cameleon.exe");
-    qDebug() << ("\tSee the help of a specified .cm file\t cameleon.exe -h -cm=\"../project/tutorial/example-0XY-Arguments/example-0XY-Arguments.cm\"");
-    qDebug() << ("\tLaunch a specified .cm file with full IDE\t cameleon.exe -cm=\"../project/tutorial/example-0XY-Arguments/example-0XY-Arguments.cm\"");
-    qDebug() << ("\tLaunch a specified .cm file in command line application mode\t cameleon.exe -mode=\"CMD\" -cm=\"../project/tutorial/example-0XY-Arguments/example-0XY-Arguments.cm\"");
-    qDebug() << ("\tLaunch a specified .cm file in GUI application mode\t cameleon.exe -mode=\"GUI\" -cm=\"../project/tutorial/example-0XY-Arguments/example-0XY-Arguments.cm\"");
+    QFile file(CGInstance::getInstance()->getRessourcePath()+"/lcm-man.txt");
+    if(!file.open(QIODevice::ReadOnly)) {
+        std::cout << file.errorString().toStdString();
+    }
+
+    QTextStream in(&file);
+    std::cout << "\n";
+    while(!in.atEnd()) {
+        QString line = in.readLine();
+        std::cout << line.toStdString() <<"\n";
+    }
+    std::cout << "\n";
+
+    file.close();
 
     /*
         IDE, integrated development environment (controller + composer),
@@ -310,6 +317,11 @@ void CArguments::printCameleonHelp(){
 }
 
 void CArguments::printCompositionHelp(QString compositionPath, QList<argument>  compositionArgs){
+   //getReadme texte de la composition
+    std::cout << "\n";
+    std::cout << CGProject::getInstance()->getReadme().toStdString();
+    std::cout << "\n";
+/*
     qDebug()<<("\nPATH");
     qDebug()<<" "<<compositionPath;
     qDebug()<<("\nSYNOPSIS");
@@ -319,4 +331,5 @@ void CArguments::printCompositionHelp(QString compositionPath, QList<argument>  
         if(arg.optional)qDebug()<<"[OPTIONAL] "<<arg.key<<":    "<<arg.description;
         if(!arg.optional)qDebug()<<"[MANDATORY] "<<arg.key<<":    "<<arg.description;
     }
+*/
 }

@@ -24,6 +24,7 @@ class CGProject : QObject
     Q_OBJECT
 
 public slots:
+    void setReadme(QString readme);
     void setName(QString name);
     void setVersion(QString version);
     void setPath(QString path);
@@ -34,6 +35,7 @@ public slots:
     void setConnectorOrderMode(QString connectorOrderMode);
     void setNumberThread(int nb);
 
+    QString getReadme();
     QString getName();
     QString getVersion();
     QString getPath();
@@ -52,6 +54,7 @@ public:
     void createProject(QString path);
 private:
     bool showCler;
+    QString readme;
     QString name;
     QString version;
     QString path;
