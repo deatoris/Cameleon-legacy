@@ -21,7 +21,7 @@ Construction de l'executable
 -------------------
 Suite de commandes de construction:
 ``
-git clone https://ocds@framagit.org/ocds/Cameleon.git
+git clone https://framagit.org/ocds/Cameleon.git
 cd Cameleon/src
 qmake
 make
