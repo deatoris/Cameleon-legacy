@@ -373,7 +373,7 @@ void CGProjectSerialization::loadWithoutGui(){
     //qDebug() << "operatorMap: " << operatorMap;
     //qDebug() << "actionOperator: " << actionOperator;
     //qDebug() << "connexionsDO: " << connexionsDO;
-    qDebug() << "connexionsOO: " << connexionsOO;
+   // qDebug() << "connexionsOO: " << connexionsOO;
     //qDebug() << "connexionsOC: " << connexionsOC;
     //qDebug() << "connexionsCC: " << connexionsCC;
     //qDebug() << "connexionsCCreverse: " << connexionsCCreverse;
@@ -447,7 +447,7 @@ void CGProjectSerialization::loadWithoutGui(){
         COperatorStructure* opstruc = new COperatorStructure();
         CClientSingleton::getInstance()->getCInterfaceClient2Server()->createOperatorSend(j.value().toStdString(),opid,*opstruc);
         CClientSingleton::getInstance()->getCInterfaceClient2Server()->activateOperatorSend(opid);
-        qDebug() << "Operator created: " << opstruc->getName().c_str() << " oldid: " <<opid<< " newid: " <<opid;
+      //  qDebug() << "Operator created: " << opstruc->getName().c_str() << " oldid: " <<opid<< " newid: " <<opid;
         //mapOldNewOperator.insert(j.key(),opstruc);
         mapOldNewOperatorId.insert(j.key(), opid);
     }
@@ -457,7 +457,7 @@ void CGProjectSerialization::loadWithoutGui(){
         QString act = n.next();
         QStringList list = act.split(":");
         CClientSingleton::getInstance()->getCInterfaceClient2Server()->actionOperator(mapOldNewOperatorId.value(list.at(0)), list.at(1).toStdString());
-        qDebug() << "Operator action: " << list.at(0) <<":"<<list.at(1);
+       // qDebug() << "Operator action: " << list.at(0) <<":"<<list.at(1);
     }
 
     QMapIterator<QString, QString> k(dataMap);
@@ -483,7 +483,7 @@ void CGProjectSerialization::loadWithoutGui(){
         l.next();
         QStringList listKey = l.key().split(":");
         QStringList listValue = l.value().split(":");
-        qDebug() << "Connect operator: " << l.key()<< " with operator: " <<l.value();;
+       // qDebug() << "Connect operator: " << l.key()<< " with operator: " <<l.value();;
 
         QString idop1   = listKey.at(0);
         int idplug1 = listKey.at(1).toInt();
@@ -513,7 +513,7 @@ void CGProjectSerialization::loadWithoutGui(){
 
             int nPlugIn = op.plugIn().size();
             int nPlugIn2 = op2.plugIn().size();
-            qDebug() << "Connect operator (real): " << idopout<<":"<<idplugout-nPlugIn<< " with operator: " <<idopin <<":"<<idplugin <<" size: "<<nPlugIn<<" size2: "<<nPlugIn2;
+          //  qDebug() << "Connect operator (real): " << idopout<<":"<<idplugout-nPlugIn<< " with operator: " <<idopin <<":"<<idplugin <<" size: "<<nPlugIn<<" size2: "<<nPlugIn2;
             CClientSingleton::getInstance()->getCInterfaceClient2Server()->connectPlugOut2PlugInSend(idopout,idplugout-nPlugIn,idopin,idplugin);
 
         }else{
@@ -527,7 +527,7 @@ void CGProjectSerialization::loadWithoutGui(){
             int nPlugIn = op.plugIn().size();
             int nPlugIn2 = op2.plugIn().size();
 
-            qDebug() << "Connect operator (real): " << idopout<<":"<<idplugout-nPlugIn<< " with operator: " <<idopin <<":"<<idplugin <<" size: "<<nPlugIn<<" size2: "<<nPlugIn2;
+           // qDebug() << "Connect operator (real): " << idopout<<":"<<idplugout-nPlugIn<< " with operator: " <<idopin <<":"<<idplugin <<" size: "<<nPlugIn<<" size2: "<<nPlugIn2;
             CClientSingleton::getInstance()->getCInterfaceClient2Server()->connectPlugOut2PlugInSend(idopout,idplugout-nPlugIn,idopin,idplugin);
 
         }
@@ -543,11 +543,11 @@ void CGProjectSerialization::loadWithoutGui(){
         if(dataMap.value(m.key())!=NULL && operatorConnectorSide.value(m.value())=="IN"){
             int opid=mapOldNewOperatorId.value(listId.at(0));
             int plugkeyin=listId.at(1).toInt();
-            qDebug() << "try connecting: data " << m.key()<< " with operator: " <<m.value();
+            //qDebug() << "try connecting: data " << m.key()<< " with operator: " <<m.value();
             CData* data=mapOldNewData.value(m.key());
             if(data!=NULL){
-                qDebug() << "Connect data: " << m.key()<< " with operator: " <<m.value();;
-                qDebug() << "Setplugin client " << opid<< ": " <<plugkeyin;
+                //qDebug() << "Connect data: " << m.key()<< " with operator: " <<m.value();;
+                //qDebug() << "Setplugin client " << opid<< ": " <<plugkeyin;
                 CClientSingleton::getInstance()->getCInterfaceClient2Server()->setPlugInSend(opid,plugkeyin,data,CPlug::NEW);
             }else{
                 qDebug() << "[WARNING] Can't find data: " << m.key();

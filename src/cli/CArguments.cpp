@@ -236,7 +236,7 @@ bool CArguments::isDouble(QString key, QList<argument> commandArgs){
         }
     }
     if(i>1){
-        qDebug()<<"[ERROR] Argument "<<key<<" is set twice. Please see help.";
+        qDebug()<<"[ERROR] Argument "<<key<<" is setted twice. Please see help.";
         return true;
     }else{
         return false;
@@ -245,7 +245,6 @@ bool CArguments::isDouble(QString key, QList<argument> commandArgs){
 
 bool CArguments::checkSurface(QList<argument> commandArgs){
     foreach(argument a, commandArgs){
-        if(isDouble(a.key, commandArgs)) return false;
         if(a.key.compare("-cm") == 0 && !isFileExist(a.value)) return false;
     }
     return true;
@@ -280,16 +279,30 @@ bool CArguments::checkArguments(QList<argument>  commandArgs, QList<argument> co
                     check = true;
                 }
             }
-            if(!check){
+            /*   if(!check){
                 qDebug()<<"[ERROR] Argument "<<cmparg.key<<" is mandatory. Please see help.";
                 return false;
-            }
+            }*/
         }
     }
     foreach(argument cmdarg, commandArgs){
-        if(CArguments::isDouble(cmdarg.key, commandArgs)){
-            return false;
+        bool check = false;
+        if(cmdarg.key.compare("-cm")!=0){
+            foreach(argument cmparg, compositionArgs){
+                if(cmdarg.key.compare(cmparg.key) == 0){
+                    check = true;
+                }
+            }
+            if(!check){
+                qDebug()<<"[ERROR] Argument "<<cmdarg.key<<" does not exist. Please see help.";
+                return false;
+            }
+            if(CArguments::isDouble(cmdarg.key, commandArgs)){
+                qDebug()<<"[ERROR] Argument "<<cmdarg.key<<" is setted twice. Please see help.";
+                return false;
+            }
         }
+
     }
     return true;
 }
@@ -318,11 +331,11 @@ void CArguments::printCameleonHelp(){
 }
 
 void CArguments::printCompositionHelp(QString compositionPath, QList<argument>  compositionArgs){
-   //getReadme texte de la composition
+    //getReadme texte de la composition
     std::cout << "\n";
     std::cout << CGProject::getInstance()->getReadme().toStdString();
     std::cout << "\n";
-/*
+    /*
     qDebug()<<("\nPATH");
     qDebug()<<" "<<compositionPath;
     qDebug()<<("\nSYNOPSIS");
