@@ -189,7 +189,7 @@ void CGComposer::createMenus(){
     fileMenu = menuBar()->addMenu(tr("&File"));
     fileMenu->addAction(newProjectAction);
 
-    openRecentMenu = new QMenu("open recent project");
+    openRecentMenu = new QMenu("open recent composition ...");
     openRecentMenu->setIcon(QIcon(":/icons/page_save.png"));
     fileMenu->addMenu(openRecentMenu);
     fileMenu->addAction(openCompositionAction);
@@ -393,16 +393,16 @@ void CGComposer::createActions(){
             this, SLOT(openComposition()));
 
     openCompositionAction= new QAction(QIcon(":/icons/page_save.png"),
-                                       tr("open project ..."), this);
+                                       tr("open composition ..."), this);
     openCompositionAction->setShortcut(tr("Ctrl+O"));
     openCompositionAction->setStatusTip(tr("open composition ..."));
     connect(openCompositionAction, SIGNAL(triggered()),
             this, SLOT(openComposition()));
 
     newProjectAction= new QAction(QIcon(":/icons/page_save.png"),
-                                  tr("new project ..."), this);
+                                  tr("new composition ..."), this);
     newProjectAction->setShortcut(tr("Ctrl+N"));
-    newProjectAction->setStatusTip(tr("new project ..."));
+    newProjectAction->setStatusTip(tr("new composition ..."));
     connect(newProjectAction, SIGNAL(triggered()),
             this, SLOT(newComposition()));
 
@@ -419,15 +419,15 @@ void CGComposer::createActions(){
             this, SLOT(newComposition()));
 
     saveCompositionAction= new QAction(QIcon(":/icons/page_save.png"),
-                                       tr("save project"), this);
+                                       tr("save composition"), this);
     saveCompositionAction->setShortcut(tr("Ctrl+S"));
-    saveCompositionAction->setStatusTip(tr("save project"));
+    saveCompositionAction->setStatusTip(tr("save composition"));
     connect(saveCompositionAction, SIGNAL(triggered()),
             this, SLOT(saveComposition()));
 
     saveasCompositionAction= new QAction(QIcon(":/icons/page_save.png"),
-                                         tr("save project as ..."), this);
-    saveasCompositionAction->setStatusTip(tr("save project as ..."));
+                                         tr("save composition as ..."), this);
+    saveasCompositionAction->setStatusTip(tr("save composition as ..."));
     connect(saveasCompositionAction, SIGNAL(triggered()),
             this, SLOT(saveAsComposition()));
 
@@ -457,8 +457,8 @@ void CGComposer::createActions(){
             this, SLOT(workspaceProperties()));
 
     compositionPropertiesAction= new QAction(QIcon(":/icons/cog.png"),
-                                             tr("project"), this);
-    compositionPropertiesAction->setStatusTip(tr("project"));
+                                             tr("composition"), this);
+    compositionPropertiesAction->setStatusTip(tr("composition"));
     connect(compositionPropertiesAction, SIGNAL(triggered()),
             this, SLOT(compositionProperties()));
 
@@ -481,18 +481,18 @@ void CGComposer::createActions(){
             this, SLOT(showConsole()));
 
     showFactoryAction= new QAction(QIcon(":/icons/sitemap.png"),
-                                   tr("factory tree"), this);
+                                   tr("dictionary tree"), this);
     showFactoryAction->setCheckable(true);
     showFactoryAction->setChecked(true);
-    showFactoryAction->setStatusTip(tr("factory tree"));
+    showFactoryAction->setStatusTip(tr("dictionary tree"));
     connect(showFactoryAction, SIGNAL(triggered()),
             this, SLOT(showFactory()));
 
     showProjectAction= new QAction(QIcon(":/icons/sitemap.png"),
-                                   tr("project tree"), this);
+                                   tr("composition tree"), this);
     showProjectAction->setCheckable(true);
     showProjectAction->setChecked(false);
-    showProjectAction->setStatusTip(tr("project tree"));
+    showProjectAction->setStatusTip(tr("composition tree"));
     connect(showProjectAction, SIGNAL(triggered()),
             this, SLOT(showProject()));
 
@@ -503,16 +503,16 @@ void CGComposer::createActions(){
             this, SLOT(showPreview()));
 
     showMultiScaleTreeAction= new QAction(QIcon(":/icons/sitemap.png"),
-                                          tr("project tree"), this);
-    showMultiScaleTreeAction->setStatusTip(tr("project tree"));
+                                          tr("compotision tree"), this);
+    showMultiScaleTreeAction->setStatusTip(tr("composition tree"));
     connect(showMultiScaleTreeAction, SIGNAL(triggered()),
             this, SLOT(showMultiScaleTree()));
 
     //Help menu's actions
 
     shareProjectAction= new QAction(QIcon(":/icons/application_add.png"),
-                                    tr("share project ..."), this);
-    shareProjectAction->setStatusTip(tr("share project ..."));
+                                    tr("share composition ..."), this);
+    shareProjectAction->setStatusTip(tr("share composition ..."));
     connect(shareProjectAction, SIGNAL(triggered()),
             this, SLOT(shareProject()));
 
@@ -708,8 +708,8 @@ void CGComposer::createActions(){
 
     //multiselection's actions
     mergeAction= new QAction(QIcon(":/icons/arrow_in.png"),
-                             tr("merge into sub process"), this);
-    mergeAction->setStatusTip(tr("merge into sub process"));
+                             tr("group into sub process"), this);
+    mergeAction->setStatusTip(tr("group into sub process"));
     connect(mergeAction, SIGNAL(triggered()),
             this, SLOT(merge()));
 
@@ -892,7 +892,7 @@ void CGComposer::purgeTmp(){
 
 void CGComposer::saveAsComposition(){
     //call project save
-    QString compath = QFileDialog::getSaveFileName(this, tr("Save project"), CGInstance::getInstance()->getProjectPath(), tr("Saved Files (*.cm)"));
+    QString compath = QFileDialog::getSaveFileName(this, tr("Save composition"), CGInstance::getInstance()->getProjectPath(), tr("Saved Files (*.cm)"));
     if(compath.compare("")!=0){
         QFile file(compath);
         if (!file.open(QFile::WriteOnly | QFile::Text)) {
