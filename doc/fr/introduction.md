@@ -17,8 +17,9 @@ Recherche de processus
 Caméléon aide les analystes à rechercher, tester et partager des processus de traitement de données.
 Il s'agit d'un langage visuel libre sous license MIT[6].
 
-Une synthaxe visuelle
+Une synthaxe graphique
 -------------------
+Complémentaires aux langages écrits, Caméléon est un langage graphique puisant son inspiration dans les résultats de recherche de Pétri[] et de nombreuses tentatives de réaliser un langage graphique[] utile.
 Caméléon possède une interface souple, intuitive et addictive. Sa grammaire visuelle peut-être apprise en quelques minutes.
 
 Omni domaines, Omni échelles
