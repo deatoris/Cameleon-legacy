@@ -221,7 +221,7 @@ void CGProjectSerialization::loadWithoutGui(){
     QMap<QString,QString> connexionsCC;
     QMap<QString,QString> connexionsCCreverse;
     QMap<QString,QString> connexionsDO;
-
+    QMap<QString,QString> operatoridactionkey;
     QMap<QString,QString> operatorConnectorSide;
 
     QXmlStreamReader xmlReader;
@@ -374,11 +374,14 @@ void CGProjectSerialization::loadWithoutGui(){
     //qDebug() << "operatorMap: " << operatorMap;
     //qDebug() << "actionOperator: " << actionOperator;
     //qDebug() << "connexionsDO: " << connexionsDO;
-    //qDebug() << "connexionsOO: " << connexionsOO;
+    qDebug() << "connexionsOO: " << connexionsOO;
     //qDebug() << "connexionsOC: " << connexionsOC;
     //qDebug() << "connexionsCC: " << connexionsCC;
     //qDebug() << "connexionsCCreverse: " << connexionsCCreverse;
     //qDebug() << "operatorConnectorSide: " << operatorConnectorSide;
+
+
+
 
     file.close();
     /*
@@ -446,7 +449,7 @@ void CGProjectSerialization::loadWithoutGui(){
         CClientSingleton::getInstance()->getCInterfaceClient2Server()->createOperatorSend(j.value().toStdString(),opid,*opstruc);
         CClientSingleton::getInstance()->getCInterfaceClient2Server()->activateOperatorSend(opid);
         //qDebug() << "Operator created: " << opstruc->getName().c_str() << " id: " <<opid;
-        mapOldNewOperator.insert(j.key(),opstruc);
+        //mapOldNewOperator.insert(j.key(),opstruc);
         mapOldNewOperatorId.insert(j.key(), opid);
     }
 
@@ -504,9 +507,11 @@ void CGProjectSerialization::loadWithoutGui(){
             idplugin=idplug1;
             idopout=mapOldNewOperatorId.value(idop2);
             idplugout=idplug2;
-            COperatorStructure* op = mapOldNewOperator.value(listValue.at(0));
-            int nPlugIn = op->plugIn().size();
-            //qDebug() << "Connect operator (real): " << idopout<<":"<<idplugout-nPlugIn<< " with operator: " <<idopin <<":"<<idplugin <<" size: "<<nPlugIn;
+//            COperatorStructure* op = mapOldNewOperator.value(listValue.at(0));
+            COperatorStructure op = CClientSingleton::getInstance()->getCInterfaceClient2Server()->getOperatorStructureById(idopout);
+
+            int nPlugIn = op.plugIn().size();
+            qDebug() << "Connect operator (real): " << idopout<<":"<<idplugout-nPlugIn<< " with operator: " <<idopin <<":"<<idplugin <<" size: "<<nPlugIn;
             CClientSingleton::getInstance()->getCInterfaceClient2Server()->connectPlugOut2PlugInSend(idopout,idplugout-nPlugIn,idopin,idplugin);
 
         }else{
@@ -514,9 +519,10 @@ void CGProjectSerialization::loadWithoutGui(){
             idplugin=idplug2;
             idopout=mapOldNewOperatorId.value(idop1);
             idplugout=idplug1;
-            COperatorStructure* op = mapOldNewOperator.value(listKey.at(0));
-            int nPlugIn = op->plugIn().size();
-            //qDebug() << "Connect operator (real): " << idopout<<":"<<idplugout-nPlugIn<< " with operator: " <<idopin <<":"<<idplugin <<" size: "<<nPlugIn;
+            COperatorStructure op = CClientSingleton::getInstance()->getCInterfaceClient2Server()->getOperatorStructureById(idopout);
+//            COperatorStructure* op = mapOldNewOperator.value(listKey.at(0));
+            int nPlugIn = op.plugIn().size();
+            qDebug() << "Connect operator (real): " << idopout<<":"<<idplugout-nPlugIn<< " with operator: " <<idopin <<":"<<idplugin <<" size: "<<nPlugIn;
             CClientSingleton::getInstance()->getCInterfaceClient2Server()->connectPlugOut2PlugInSend(idopout,idplugout-nPlugIn,idopin,idplugin);
 
         }

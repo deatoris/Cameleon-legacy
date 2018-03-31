@@ -16,6 +16,7 @@ More informations can be found here: http://www.shinoe.org/cameleon
 #include<QWaitCondition>
 #include<CInterfaceClient.h>
 #include<QObject>
+#include<QMap>
 #include<CProcessorObject.h>
 class Compare
 {
@@ -35,6 +36,8 @@ private:
     bool _alllistening;
     bool _isstop;
     int _unitprocessid;
+    QMap<COperator::Id, COperatorStructure> mapidoperatorstruc;
+
 signals:
     void createOperatorSignal(COperator::Key opkey);
 //    void EndCreateOperatorSignal(COperator::Id opid);
@@ -86,6 +89,8 @@ public slots:
     void progressionExecutionSlot(double ratio);
 
 public:
+    COperatorStructure getOperatorStructureById(COperator::Id opid);
+
     //CInterfaceClient2ServerLocal(CReceptionClient * receptionclient);
     CInterfaceClient(bool alllistening);
     void launchSignal();

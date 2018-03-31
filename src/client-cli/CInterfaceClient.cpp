@@ -41,6 +41,7 @@ void CInterfaceClient::createOperatorSend(COperator::Key Key,COperator::Id &opid
     emit createOperatorSignal(Key);
     opid=_opid;
     opstructure=_opstructure;
+    mapidoperatorstruc.insert(opid,opstructure);
 }
 //void CInterfaceClient::EndCreateOperatorSend(COperator::Id opid){
 //    emit EndCreateOperatorSignal(opid);
@@ -349,7 +350,12 @@ void CInterfaceClient::updatePlugOutReceive(COperator::Id opid,COperator::PlugKe
 
 void CInterfaceClient::updateOperatorStructureReceive(COperator::Id opid,COperatorStructure opstructure){
     //CGCompositionManager::getInstance()->updateStructOperator(opid,opstructure);
-    qDebug() << "[WARNING] Uncatch updateOperatorStructure (addPlug) " << opid << " " << opstructure.getName().c_str() << " " << opstructure.plugIn().size() << " " << opstructure.plugOut().size();
+    //qDebug() << "[WARNING] Uncatch updateOperatorStructure (addPlug) " << opid << " " << opstructure.getName().c_str() << " " << opstructure.plugIn().size() << " " << opstructure.plugOut().size();
+    mapidoperatorstruc.insert(opid,opstructure);
+}
+
+COperatorStructure CInterfaceClient::getOperatorStructureById(COperator::Id opid){
+    return mapidoperatorstruc.value(opid);
 }
 
 /*

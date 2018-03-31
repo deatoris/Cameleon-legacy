@@ -81,12 +81,13 @@ QList<argument> CArguments::getArgumentsFromComposition(QString cmPath){
                         QString name = xmlReader.attributes().value("name").toString();
                         QString datatype = xmlReader.attributes().value("datatype").toString();
                         QString content = xmlReader.attributes().value("content").toString();
-
-                        argument a;
-                        a.key = name;
-                        a.value = content;
-                        a.datatype = datatype;
-                        l.append(a);
+                        if(name != ""){
+                            argument a;
+                            a.key = name;
+                            a.value = content;
+                            a.datatype = datatype;
+                            l.append(a);
+                        }
                     }
 
 
