@@ -1,12 +1,32 @@
+Installation de l'environnement de construction
+-------------------
 <code>
 apt-get update
 apt-get install qt-sdk
+</code>
+
+Pour un environnement de développement ajouter qtcreator via la commande:
+``
+apt-get install qtcreator
+``
+
+Construction de l'executable
+-------------------
+Suite de commandes de construction:
+``
+git clone https://framagit.org/ocds/Cameleon.git
+cd Cameleon/src
 qmake cameleon-cli.pro
 make
 qmake cameleon-ide.pro
 make
-</code>
+``
 
+``
+
+
+Forward display
+-------------------
 si rapbian lite, installer le server x + activation du forward TCP:
 <code>
 sudo nano /etc/ssh/sshd_config
