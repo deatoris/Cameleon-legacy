@@ -9,7 +9,7 @@ Installation
 -------------------
 * tar -xvf cameleon-deb-vx.y.zk.tar.gz
 * cd cameleon-deb-vx.y.zk
-* ./cameleon
+* ./ecm
 
 Mise à jour de votre version de travail
 -------------------
