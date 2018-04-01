@@ -49,7 +49,7 @@ TCPForwarding yes
 sudo apt-get install x11-xserver-utils
 sudo startx &
 cat /var/log/Xorg.1.log
-./ecm project/example/example.cm 
+./ecm
 </code>
 
 at reboot:
