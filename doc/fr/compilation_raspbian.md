@@ -40,7 +40,7 @@ cp lcm ../deliverable
 Lancer lcm en ligne de commande depuis deliverable
 
 
-Forward display
+Forward display: utiliser l'éditeur graphique depuis un serveur distant.
 -------------------
 si rapbian lite, installer le server x + activation du forward TCP:
 <code>
@@ -49,7 +49,7 @@ TCPForwarding yes
 sudo apt-get install x11-xserver-utils
 sudo startx &
 cat /var/log/Xorg.1.log
-./lcm -cm="project/example/example.cm" 
+./ecm project/example/example.cm 
 </code>
 
 at reboot:
