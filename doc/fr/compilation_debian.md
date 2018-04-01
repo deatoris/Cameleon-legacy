@@ -1,13 +1,9 @@
 Installation de l'environnement de construction
 -------------------
-
-VM debian - debian-8.8.0-amd64-xfce-CD-1.iso depuis https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/
-
 Installation de l'environnement de construction principal (gcc/g++/make/qmake):
 ``
 apt-get install build-essential
 apt-get install git
-apt-get install qt4-default libqtwebkit4
 ``
 
 Pour un environnement de développement ajouter qtcreator via la commande:
@@ -19,13 +15,33 @@ Sous debian, si vous n'avez pas accès à ces paquets, vous pouvez configurer le
 
 Construction de l'executable
 -------------------
-Suite de commandes de construction:
+Récupérez les sources:
 ``
 git clone https://framagit.org/ocds/Cameleon.git
-cd Cameleon/src
-qmake
-make
 ``
+
+Suite de commandes de construction pour construire ecm:
+``
+créer un répertoire build sous Cameleon/
+cd Cameleon/build
+qmake ../src/ecm.pro
+make
+cp ecm ../deliverable
+``
+
+Lancer ecm dans deliverable
+
+Suite de commandes de construction pour construire lcm:
+``
+créer un répertoire build-lcm sous Cameleon/
+cd Cameleon/build-lcm
+qmake ../src/lcm.pro
+make
+cp lcm ../deliverable
+``
+
+Lancer lcm en ligne de commande depuis deliverable
+
 
 Dépots des packets pour debian
 -------------------
