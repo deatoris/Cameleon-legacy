@@ -12,17 +12,32 @@ apt-get install qtcreator
 
 Construction de l'executable
 -------------------
-Suite de commandes de construction:
+Récupérez les sources:
 ``
 git clone https://framagit.org/ocds/Cameleon.git
-cd Cameleon/src
-qmake cameleon-cli.pro
-make
-qmake cameleon-ide.pro
-make
 ``
 
+Suite de commandes de construction pour construire ecm:
 ``
+créer un répertoire build sous Cameleon/
+cd Cameleon/build
+qmake ../src/ecm.pro
+make
+cp ecm ../deliverable
+``
+
+Lancer ecm dans deliverable
+
+Suite de commandes de construction pour construire lcm:
+``
+créer un répertoire build-lcm sous Cameleon/
+cd Cameleon/build-lcm
+qmake ../src/lcm.pro
+make
+cp lcm ../deliverable
+``
+
+Lancer lcm en ligne de commande depuis deliverable
 
 
 Forward display
