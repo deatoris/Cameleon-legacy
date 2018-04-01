@@ -1,7 +1,7 @@
 ##########################################
 Cameleon v2.2.2-testing
 MIT licence (see licence.txt)
-Copyright Olivier Cugnon de Sevricourt et Vincent Tariel - 2012-2017
+Copyright Olivier Cugnon de Sevricourt et Vincent Tariel - 2009-2018
 ##########################################
 
 1) Description
