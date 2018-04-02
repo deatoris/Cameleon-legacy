@@ -2,6 +2,7 @@ Installation de l'environnement de construction
 -------------------
 Installation de l'environnement de construction principal (gcc/g++/make/qmake):
 ``
+apt-get install build-essential
 apt-get install qt4-default
 apt-get install git
 ``
