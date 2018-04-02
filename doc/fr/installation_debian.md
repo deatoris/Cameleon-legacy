@@ -2,7 +2,7 @@ Pré-requis
 -------------------
 Installation des dépendances:
 ``
-apt-get install qt4-default
+sudo apt-get install libqtcore4 libqtgui4
 ``
 
 Installation
