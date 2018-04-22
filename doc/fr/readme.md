@@ -12,7 +12,7 @@ Documentation du langage Caméléon
 Présentation générale
 -------------------
 * [Introduction](./introduction.md)
-* Storyboard & Vidéo courte de présentation du language
+* Présentation générale et argumentaire produit
 * Site web /cameleon/fr
 
 Documentation pour les utilisateurs
