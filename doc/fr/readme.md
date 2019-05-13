@@ -59,6 +59,8 @@ Documentation pour les développeurs
 Usages
 -------------------
 * Usage - La brique en bois, un objet connecté
+* Usage - CI/CD
+* Usage - Automatisation de tests API
 * Usage - [Traitement de photographies avec imagemagick](./usage_image.md)
 * Usage - [Capatation et traitement de données avec python](./usage_twitter.md)
 * Usage - Traitement d'image pour l'analyse scientifique de matériaux
